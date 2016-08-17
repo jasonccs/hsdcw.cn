@@ -1,0 +1,10 @@
+[ 2016-06-24T11:05:41+08:00 ] 119.96.61.63 /Member/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-06-24T11:06:24+08:00 ] 119.96.61.63 /Member/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+

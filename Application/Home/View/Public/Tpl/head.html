@@ -1,0 +1,122 @@
+        <script type="text/javascript">
+         var userloginurl='{:U('Member/Login/login')}';//
+         var curenturl   ='__SELF__';
+       </script>
+
+       <js href="__PUBLIC__/js/jquery.cookie.js"/> 
+       <js href="__PUBLIC__/js/vip_userlogin.js"/> 
+       <css href="__PUBLIC__/css/nbase_b7e2fdc.css" />
+       
+     <!--顶部悬浮导航-->
+     <div class="top_xuanfu">
+      
+          <div class="top_nav">
+              <div class="top_tianqi">
+                  <span class="date">今天是：</span>
+                  <span class="weather">
+               
+                  <!-- <iframe width="340" scrolling="no" height="40" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&wind=0&num=2"></iframe> -->
+
+                  </span>
+              </div>
+              <div class="top_login">
+                <span class="login"> 
+                   <if condition=" cookie('username') nheq null and cookie('userid') nheq null">
+                      <i style="">
+                      <img src="{$Think.cookie.userphoto}" width="40" height="40"/></i>  
+                      <b><a href="" >你好{$Think.cookie.username}</a></b>
+                      <div class="user_center">
+                          <ul>
+                              <li><a href="">个人中心</a></li>
+                              <li><a href="javascript:void(0)" class="outlogin">退出</a></li>
+                          </ul>
+                      </div> 
+                    <else/>
+                      <a href="javascript:void(0)" class="userlogin"> 登录</a> / <a href="javascript:void(0)"> 注册</a>
+                  </if>
+
+                  </span>
+
+          <span class="msn"> <a href=""> <img src="__PUBLIC__/images/sina.png" width="16" height="16" alt="" title="关注新浪微博"></a>  <a href=""> <img src="__PUBLIC__/images/blog.png" width="16" height="16" alt="" title="关注腾讯微博"></a> <a href=""> <img src="__PUBLIC__/images/weixin.png" width="16" height="16" alt="" title="关注官方微信"></a></span>
+          <span class="tell"><img src="__PUBLIC__/images/contact.png" width="16" height="16" alt=""> <b>新闻热线：0714-12345678</b></span>
+              </div>
+          </div>
+
+    </div>
+
+
+    <!--第二层菜单nav导航-->
+
+    <div class="menu"> 
+          <div class="nav_body">
+              <div class="logo"><a href="/"><img src="__PUBLIC__/images/logo.png" width="190" height="71" alt=""></a></div>
+              <div class="nav">
+                   <ul>
+                          <li>
+                        <p class="b">
+                        <a href="{:U('News/index')}" target="_blank">黄石要闻</a>
+                        <a href="{:U('News/hsms')}" target="_blank">黄石民生</a></p>
+                        <p class="b">
+                        <a href="{:U('News/hbxw')}" target="_blank">湖北新闻</a>
+                        <a href="#" target="_blank">国内国际</a>
+                        </p>
+                        <p class="b">
+                        <a href="#" target="_blank">文娱体育</a>
+                        <a href="#" target="_blank">东楚论坛 </a>
+                        </p>
+                      </li>
+                      <li class="bd"></li>
+
+
+                      <li>
+                        <p class="b2">
+                        <a href="#" target="_blank">视频</a>
+                        <a href="#" target="_blank">读图</a></p>
+                        <p class="b2">
+                        <a href="#" target="_blank">专题</a>
+                        <a href="#" target="_blank">微博</a></p>
+                        <p class="b2">
+                         <a href="#" target="_blank">时评</a>
+                         <a href="#" target="_blank">人才</a></p>
+                      </li>
+                      <li class="bd"></li>
+
+
+                      <li>
+                        <p class="b2">
+                        <a href="#" target="_blank">汽车</a>
+                        <a href="#" target="_blank">房产</a></p>
+                        <p class="b2">
+                        <a href="#" target="_blank">消费</a>
+                        <a href="#" target="_blank">旅游</a></p>
+                        <p class="b2">
+                        <a href="#" target="_blank">摄影</a>
+                        <a href="#" target="_blank">医讯</a></p>
+                        <p class="b2">
+                        <a href="#" target="_blank">健康</a>
+                        <a href="#" target="_blank">财经</a></p>
+
+                      </li>
+                      <li class="bd"></li>
+
+                      <li>
+                        <p class="b">
+                        <a href="#" target="_blank">天天信息</a>
+                        <a href="#" target="_blank">在线商城</a></p>
+                        <p class="b">
+                        <a href="#" target="_blank">投资环境</a>
+                        <a href="#" target="_blank">广告业务</a></p>
+                       
+
+                      </li>
+                      
+
+                      
+
+                      
+                   </ul>
+
+              </div>  
+          </div>
+    </div>
+

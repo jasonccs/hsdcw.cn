@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>黄石民生_黄石最大新闻门户网</title>
+<meta name="keywords" content="黄石新闻门户网.梳理黄石,大冶,阳新新闻">
+<meta name="description" content="黄石新闻门户网.梳理黄石新闻,足不出户知天下事.">
+    <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <css href="__PUBLIC__/css/main.css" /> 
+    <css href="__PUBLIC__/css/news.css"/>
+    <js  href="__PUBLIC__/js/jquery.1.10.2.min.js"/>
+    <js  href="__PUBLIC__/js/date.js"/><!--头部日期js-->
+    <js  href="__PUBLIC__/js/common.js"/><!--commonjs-->
+
+</head>
+
+<body id="subIndex">
+
+<include file="Public/Tpl/head" />
+
+<div class="layout Q-g16b-b">
+	<div class="chief" role="main">
+		<h2 class="subTitle">黄石民生</h2>  	
+<div id="news">
+<div>
+<div id="subHot" bosszone="js_jdt">
+	
+       <?php 
+
+       	if(!isset($newtop['id'])){
+			   echo '<a target="_blank" href="#">';
+			}else{
+			   echo '<a target="_blank" href="{:U('.'/H_N_d/'.$newtop['id'].')}">';
+			}
+
+         if(preg_match('/|/',$newtop['desc_image']) && $newtop['desc_image']  != ''){
+         	$list_top_img=explode('|', $newtop['desc_image']);
+         //	foreach ($list_top_img as $value) {
+         		echo '<img src="'. $list_top_img[0].'" alt="'.$newtop['title'].'" width="750" height="346">';
+         	//}
+         }else{
+
+         		echo '<img src="__PUBLIC__/images/default.png" alt="'.$newtop['title'].'" width="100%" height="100%">';
+         	    
+         };
+ 
+       ?>
+		<!--  -->
+
+		<div class="overlay">{$newtop.title|msubstr=0,40}</div>
+	</a>
+</div>
+</div>
+
+<div class="list first" bosszone="js_zxl">
+
+<volist name="hsxw" id="vo" key="k">
+	<if condition="$k%6 neq 0">
+	<div class="Q-tpList">
+		<div class="Q-tpWrap">
+				<a target="_blank" class="pic" href="{:U('/H_N_d/'.$vo['id'])}">
+					<if condition="$vo['desc_image'] neq '' ">
+					    
+						   
+						     <?php  
+						       if (!empty($vo['desc_image'])) {
+						       	  $listimg=explode('|',$vo['desc_image']);
+						          
+						       	  	 if($key>=2){
+						       	  	 	echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">';
+						       	  	 }else{
+						       	  	 	echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">';
+						       	  	 }				       	
+						       }
+						     ?>
+						   
+						<else/>
+						  <img class="picto" src="__PUBLIC__/images/default.png"  width="" height="">
+					</if>
+				</a>
+				<div class="text">
+					<em class="f14 l24"><a target="_blank" class="linkto" href="{:U('/H_N_d/'.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
+					<p style="text-indent:20px">
+						{$vo.description|msubstr=0,100}
+					</p>
+						<div class="st">
+								<div class="info">
+									<span class="from">{$vo.time|date="Y-m-d H:i",###}</span>
+									<span class="keywords" style="display: inline;"><a href="" target="_blank">关键词</a>
+								    <?php
+									     $keywords=explode('|',$vo['keywords']);
+									  	 foreach ($keywords as $key => $value) {
+ 										    
+									  	       echo  '<a href="" target="_blank">'.$value.'</a>';	
+ 										   					
+									  	 }
+									  ?>
+
+									</span>
+								</div>
+							<div class="btns">
+											<a class="discuzBtn" title="评论数" target="_blank" href="">{$vo.commentnum}</a>
+											<div class="shareBtn" role="button"  aria-label="分享"></div>
+							</div>
+						</div>
+				</div>
+		</div>
+	</div>
+  </if>	
+  <if condition="$k%6 eq 0">
+		<div class="Q-pList">
+			<div class="content">
+			<em><a target="_blank" class="linkto" href="{:U('/H_N_d/'.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
+					<ul>
+				
+						   <?php  
+						       $newsurl='http://'.$_SERVER['HTTP_HOST']."/Home/News/detail/id/".$vo['id'].C('URL_HTML_SUFFIX');
+						       if (!empty($vo['desc_image'])) {
+						       	  $listimg=explode('|',$vo['desc_image']);
+						     
+						       foreach ($listimg as  $value){
+						       	    if(!empty($value)){
+						       	  	 	echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="'.$value.'" ></a></li>';
+						       	  	 }else{
+						       	  	 		echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="__PUBLIC__/images/default.png" ></a></li>';
+						       	  	 }	
+						       }
+						       	  				       	
+						       }
+						     ?>
+					</ul>
+			</div>
+			<div class="st">
+					<div class="info">
+					<span class="from">{$vo.time|date="Y-m-d H:i",###}</span><span class="keywords">情侣;恩爱</span>
+					</div>
+					<div class="btns">
+					<a class="discuzBtn" title="评论数" target="_blank" href="http://coral.qq.com/1413439104">2502</a>
+
+					</div>
+			</div>
+		</div>
+  </if>
+</volist>
+
+
+
+
+
+</div>
+
+
+
+</div>
+     <div class="page_tag">{$page}</div>
+</div>
+
+
+ <include file="News/right"/> 
+
+</div>
+
+    <include file="Public/Tpl/footer"/> 
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+[ 2016-06-15T00:47:16+08:00 ] 121.42.0.19 /editors/index.html
+ERR: 非法操作:editors
+
+[ 2016-06-15T00:47:36+08:00 ] 121.42.0.19 /job/templates/met/css/style.css
+ERR: 非法操作:job
+
+[ 2016-06-15T00:47:42+08:00 ] 121.42.0.19 /script/valid_formdata.js
+ERR: 非法操作:script
+
+[ 2016-06-15T00:47:45+08:00 ] 121.42.0.19 /wp-admin/js/farbtastic.js
+ERR: 非法操作:wp-admin
+
+[ 2016-06-15T00:47:45+08:00 ] 121.42.0.19 /wp-includes/js/swfupload/plugins/swfupload.queue.js
+ERR: 非法操作:wp-includes
+
+[ 2016-06-15T00:47:54+08:00 ] 121.42.0.19 /install/style.css
+ERR: 非法操作:install
+
+[ 2016-06-15T00:47:58+08:00 ] 121.42.0.19 /LICENSE.txt
+ERR: 非法操作:LICENSE.txt
+
+[ 2016-06-15T00:48:00+08:00 ] 121.42.0.19 /extensions/kindeditor/themes/default/default.png)
+ERR: 非法操作:extensions
+
+[ 2016-06-15T00:48:01+08:00 ] 121.42.0.19 /style/default/hdwiki.css
+ERR: 非法操作:style
+
+[ 2016-06-15T00:48:05+08:00 ] 121.42.0.19 /adfile/ad9.js
+ERR: 非法操作:adfile
+
+[ 2016-06-15T01:26:08+08:00 ] 123.119.15.170 /Home/News/ajaxmore.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 3,3   [ RunTime:0.0001s ]
+
+[ 2016-06-15T01:26:11+08:00 ] 123.119.15.170 /Home/News/ajaxmore.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 6,3   [ RunTime:0.0001s ]
+
+[ 2016-06-15T01:26:18+08:00 ] 123.119.15.170 /Home/News/ajaxmore.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 9,3   [ RunTime:0.0001s ]
+
+[ 2016-06-15T01:26:21+08:00 ] 123.119.15.170 /Home/News/ajaxmore.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 12,3   [ RunTime:0.0001s ]
+
+[ 2016-06-15T01:26:27+08:00 ] 123.119.15.170 /Home/News/ajaxmore.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 15,3   [ RunTime:0.0001s ]
+
+[ 2016-06-15T21:44:39+08:00 ] 14.17.34.191 /index.php/Home/Xuan/index/p/4.html
+ERR: 模板不存在:./Application/Home/View/Xuan/index.html
+
+[ 2016-06-15T21:44:39+08:00 ] 123.119.15.170 /index.php/Home/Xuan/index/p/4.html
+ERR: 模板不存在:./Application/Home/View/Xuan/index.html
+
+[ 2016-06-15T21:44:39+08:00 ] 101.226.68.215 /index.php/Home/Xuan/index/p/4.html
+ERR: 模板不存在:./Application/Home/View/Xuan/index.html
+
+[ 2016-06-15T21:44:40+08:00 ] 183.60.35.29 /index.php/Home/Xuan/index/p/4.html
+ERR: 模板不存在:./Application/Home/View/Xuan/index.html
+
+[ 2016-06-15T21:44:40+08:00 ] 112.90.82.196 /index.php/Home/Xuan/index/p/4.html
+ERR: 模板不存在:./Application/Home/View/Xuan/index.html
+

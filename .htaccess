@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+ 
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(hsdcw.cn)$ [NC]
+  RewriteRule ^(.*)$ http://www.hsdcw.cn/$1 [L,R=301]
+</IfModule>
+        
+        
+        
+        
+        
+        
+        
