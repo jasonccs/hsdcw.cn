@@ -19,7 +19,7 @@
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/index/page/017/017/%3C?php%20echo%20U(/H_N_d/17);?%3E';
+         var curenturl   ='/Home/News/index.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 

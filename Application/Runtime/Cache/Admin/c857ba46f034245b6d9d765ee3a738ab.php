@@ -119,7 +119,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="10"><div class="page_tag"><?php echo ($page); ?></div></th>
+                                 <th colspan="10"><div class="page_tag"><?php echo ($page); ?></div></th>
 
                                 </tr>
                             </tfoot>

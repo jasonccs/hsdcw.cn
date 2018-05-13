@@ -76,8 +76,7 @@ class NewsController extends Controller
         ->limit($page->limit())->join('LEFT JOIN __NEWS_CATEGORY__ b ON b.id=a.cateid')
         ->where("'a.display'=0")->order(array('a.time'=>'desc','a.id'=>'desc'))->select();     
         $this->assign('allnews',$data);
-        // dump($data);
-        $this->assign('page',$page->show(1));
+        $this->assign('page',$page->show());
         $this->display();
     }
 
