@@ -3,4 +3,5 @@ Application/Runtime/*
 .idea
 ThinkPHP
 Application/Common/Conf/config.php
-www.tar.gz
+.htaccess
+hsdcw3.cn.zip
