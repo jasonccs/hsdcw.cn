@@ -1,0 +1,18 @@
+[ 2018-06-13T14:42:55+08:00 ] 219.138.69.254 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-06-13T14:42:55+08:00 ] 219.138.69.254 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-06-13T20:43:00+08:00 ] 47.92.126.167 /Upload/20171111/1510381913121493.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+ERR: 无法加载模块:Upload
+

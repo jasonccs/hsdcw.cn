@@ -1,0 +1,1633 @@
+[ 2018-06-23T00:25:27+08:00 ] 203.208.60.212 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000568s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000613s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2018-06-23T00:47:54+08:00 ] 140.205.205.25 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000518s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000547s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2018-06-23T01:07:33+08:00 ] 218.241.108.87 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000586s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2018-06-23T01:16:27+08:00 ] 203.208.60.209 /Home/News/hbxw.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE ( cateid=4 and display=0 and type=1 ) ORDER BY `time` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 4 ORDER BY eye desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-06-23T01:21:17+08:00 ] 203.208.60.211 /Home/News/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2018-06-23T01:21:25+08:00 ] 203.208.60.211 /Home/News/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-06-23T02:02:55+08:00 ] 47.92.35.138 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000530s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000560s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2018-06-23T02:07:13+08:00 ] 42.236.46.85 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000566s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2018-06-23T02:07:18+08:00 ] 42.236.99.242 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000576s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-06-23T02:41:53+08:00 ] 180.97.35.217 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000573s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000610s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2018-06-23T02:42:56+08:00 ] 203.208.60.211 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000566s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2018-06-23T03:37:07+08:00 ] 140.205.205.23 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000546s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000577s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-06-23T03:37:08+08:00 ] 140.205.205.23 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000520s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000553s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-06-23T03:37:08+08:00 ] 140.205.205.23 /Home/News/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2018-06-23T03:37:08+08:00 ] 140.205.205.25 /Home/News/hbxw.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE ( cateid=4 and display=0 and type=1 ) ORDER BY `time` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 4 ORDER BY eye desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2018-06-23T03:37:08+08:00 ] 140.205.205.25 /Home/News/hsms.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 3 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 3 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE ( cateid=3 and display=0 and type=1 ) ORDER BY `time` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 3 ORDER BY eye desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2018-06-23T03:42:03+08:00 ] 203.208.60.210 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000634s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000664s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2018-06-23T03:51:15+08:00 ] 138.246.253.5 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000566s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2018-06-23T04:04:48+08:00 ] 140.205.205.29 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000596s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2018-06-23T04:48:27+08:00 ] 203.208.60.211 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000570s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000389s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-06-23T05:56:03+08:00 ] 203.208.60.210 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000561s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000591s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2018-06-23T05:58:00+08:00 ] 185.35.63.154 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000580s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000607s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-06-23T06:55:28+08:00 ] 203.208.60.212 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000550s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-06-23T07:10:59+08:00 ] 217.147.168.38 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000758s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000802s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2018-06-23T07:23:58+08:00 ] 54.224.21.156 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000585s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000622s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2018-06-23T07:24:30+08:00 ] 54.224.21.156 /Home/News/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2018-06-23T07:25:01+08:00 ] 54.224.21.156 /Home/News/hsms.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 3 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 3 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE ( cateid=3 and display=0 and type=1 ) ORDER BY `time` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 3 ORDER BY eye desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007795s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-06-23T07:25:01+08:00 ] 54.224.21.156 /Home/News/hbxw.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 4 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE ( cateid=4 and display=0 and type=1 ) ORDER BY `time` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 4 ORDER BY eye desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000439s ]
+
+[ 2018-06-23T07:25:32+08:00 ] 54.224.21.156 /Home/News/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-06-23T07:26:03+08:00 ] 54.224.21.156 /H_N_d/24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='79' WHERE ( id=24 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=24 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 24 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 24 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2018-06-23T07:26:35+08:00 ] 54.224.21.156 /H_N_d/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='10' WHERE ( id=33 ) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=33 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 33 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2018-06-23T07:27:06+08:00 ] 54.224.21.156 /H_N_d/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 32 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='11' WHERE ( id=32 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=32 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 32 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2018-06-23T07:27:38+08:00 ] 54.224.21.156 /H_N_d/31.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='56' WHERE ( id=31 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=31 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 31 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2018-06-23T07:28:09+08:00 ] 54.224.21.156 /H_N_d/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='59' WHERE ( id=30 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=30 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 30 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2018-06-23T07:28:41+08:00 ] 54.224.21.156 /H_N_d/26.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='39' WHERE ( id=26 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=26 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 26 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2018-06-23T07:29:14+08:00 ] 54.224.21.156 /H_N_d/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='45' WHERE ( id=25 ) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=25 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 25 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2018-06-23T07:29:45+08:00 ] 54.224.21.156 /Home/News/index/page/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 6,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 23 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2018-06-23T07:30:17+08:00 ] 54.224.21.156 /Home/News/tm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+ERR: 非法操作:tm
+
+[ 2018-06-23T07:30:17+08:00 ] 54.224.21.156 /H_N_d/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='643' WHERE ( id=17 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=17 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 17 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 17 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000543s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000576s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2018-06-23T07:30:49+08:00 ] 54.224.21.156 /H_N_d/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='410' WHERE ( id=13 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=13 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 13 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 13 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000247s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2018-06-23T07:31:20+08:00 ] 54.224.21.156 /H_N_d/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='302' WHERE ( id=15 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=15 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 15 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 15 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2018-06-23T07:31:52+08:00 ] 54.224.21.156 /H_N_d/16.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='285' WHERE ( id=16 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=16 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 16 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-06-23T07:32:23+08:00 ] 54.224.21.156 /H_N_d/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='80' WHERE ( id=24 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=24 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 24 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 24 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-06-23T07:32:55+08:00 ] 54.224.21.156 /H_N_d/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='53' WHERE ( id=23 ) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=23 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 23 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 23 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2018-06-23T07:33:26+08:00 ] 54.224.21.156 /H_N_d/28.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='82' WHERE ( id=28 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=28 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 28 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2018-06-23T07:33:58+08:00 ] 54.224.21.156 /H_N_d/27.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='56' WHERE ( id=27 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=27 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 27 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2018-06-23T07:34:29+08:00 ] 54.224.21.156 /H_N_d/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='72' WHERE ( id=29 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=29 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 29 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000303s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2018-06-23T07:35:01+08:00 ] 54.224.21.156 /H_N_d/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `hsdcw_news` SET `eye`='301' WHERE ( id=14 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_comment` WHERE ( arcticle_id=14 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_comment` WHERE `arcticle_id` = 14 ORDER BY time desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 14 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2018-06-23T07:36:35+08:00 ] 54.224.21.156 /Home/News/index/page/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2018-06-23T07:37:06+08:00 ] 54.224.21.156 /Home/News/index/page/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007848s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2018-06-23T07:37:37+08:00 ] 54.224.21.156 /Home/News/index/page/tm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `hsdcw_news` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `cateid` = 2 AND `display` = 0 AND `type` IN (2,3) ORDER BY `time` desc LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `hsdcw_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 32 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 31 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 30 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `hsdcw_comment` WHERE `arcticle_id` = 25 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM hsdcw_news a WHERE ( a.cateid=2 and a.display=0 and a.type=1 ) ORDER BY a.time desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `hsdcw_news` WHERE `display` = 0 AND `cateid` = 2 ORDER BY eye desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2018-06-23T08:08:10+08:00 ] 106.11.227.239 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000614s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000644s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2018-06-23T08:12:42+08:00 ] 220.181.108.162 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000526s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000567s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014321s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2018-06-23T08:36:33+08:00 ] 203.208.60.210 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000528s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000555s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2018-06-23T09:58:18+08:00 ] 203.208.60.211 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000554s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-06-23T12:05:25+08:00 ] 203.208.60.208 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000567s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000605s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-06-23T14:06:05+08:00 ] 169.54.244.89 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000584s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000612s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2018-06-23T14:08:42+08:00 ] 123.125.71.50 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000550s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000578s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-06-23T14:27:24+08:00 ] 203.208.60.209 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000528s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2018-06-23T14:39:24+08:00 ] 106.11.242.11 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000528s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000561s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2018-06-23T15:53:29+08:00 ] 114.216.232.162 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000547s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000582s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-06-23T17:30:43+08:00 ] 203.208.60.209 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000726s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000777s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2018-06-23T17:47:21+08:00 ] 123.125.143.158 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000523s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000560s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2018-06-23T18:57:23+08:00 ] 203.208.60.209 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000573s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000612s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2018-06-23T20:07:19+08:00 ] 220.181.108.181 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000538s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000575s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2018-06-23T20:13:25+08:00 ] 203.208.60.212 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000546s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000573s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2018-06-23T21:16:16+08:00 ] 123.125.143.21 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000573s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000609s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-06-23T22:10:55+08:00 ] 203.208.60.208 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000575s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000623s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2018-06-23T23:40:38+08:00 ] 138.246.253.5 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000598s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000631s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000432s ]
+
