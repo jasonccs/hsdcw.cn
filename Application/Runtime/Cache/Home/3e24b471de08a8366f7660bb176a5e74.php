@@ -19,7 +19,7 @@
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/index.html';
+         var curenturl   ='/Home/News/index/page/2.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
@@ -55,7 +55,7 @@
                   </span>
 
           <span class="msn"> <a href=""> <img src="/Application/Home/View/Public/images/sina.png" width="16" height="16" alt="" title="关注新浪微博"></a>  <a href=""> <img src="/Application/Home/View/Public/images/blog.png" width="16" height="16" alt="" title="关注腾讯微博"></a> <a href=""> <img src="/Application/Home/View/Public/images/weixin.png" width="16" height="16" alt="" title="关注官方微信"></a></span>
-          <span class="tell"><img src="/Application/Home/View/Public/images/contact.png" width="16" height="16" alt=""> <b>新闻热线：0714-12345678</b></span>
+          <span class="tell"><img src="/Application/Home/View/Public/images/contact.png" width="16" height="16" alt=""> <b>邮箱：1521910992@qq.com</b></span>
               </div>
           </div>
 
@@ -308,8 +308,8 @@
                     <a href="">太平洋时尚网</a>|<a href="">电视应用市场</a>|<a href="">智能电视</a></div>
                 </div>
                 <div class="banquan">
-                   <span>主 管：中共黄石市委宣传部 黄石市人民政府新闻办公室　主 办：蓝宝石网络工作室　电 话：0714-12345678 </span>
-                   <span>Copyright © 1998 - 2015 Tencent. All Rights Reserved. 鄂备0000000-1 蓝宝石公司 版权所有 腾讯网络文化经营许可证</span>
+                   <span>主 管：中共黄石市委宣传部 黄石市人民政府新闻办公室　主 办：蓝宝石网络　电 话：13554078820 </span>
+                   <span>Copyright © 2015 - 2019 Jasonccs. All Rights Reserved. 鄂ICP备15011090号-1 蓝宝石公司 版权所有 邮箱：1521910992@qq.com</span>
                 </div>
 
       </div>  

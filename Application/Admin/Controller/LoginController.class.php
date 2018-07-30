@@ -18,7 +18,7 @@ class LoginController extends Controller {
     */
     public function login(){
 
-    	  if(!IS_POST){
+    	  if(IS_POST){
         	$db=M('user');
 	      	$username =I('username',null);
 	      	$password =I('password',null); 

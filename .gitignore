@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+Application/Runtime/*
+.idea
+ThinkPHP
+Application/Common/Conf/config.php
+www.tar.gz

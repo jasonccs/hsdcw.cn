@@ -29,7 +29,7 @@ a:active { -moz-outline-style: none; outline: none; }
 .top_nav .top_tianqi .weather{float: left; height: 25px; line-height: 20px; margin:8px 20px;}
 .top_nav .top_login{width: 500px; height: 40px; line-height: 40px; float: left;}
 .top_nav .top_login .login{width: 200px; height: 40px; line-height: 40px; float: left;position: relative;}
-.top_nav .top_login .tell{width: 180px; height: 40px; line-height: 40px; float: right; }
+.top_nav .top_login .tell{width: 190px; height: 40px; line-height: 40px; float: right; }
 .top_nav .top_login .login i{border-radius:23px;width:36px; height:36px;float: left}
 .top_nav .top_login .login i img{border-radius:23px;width:36px; height:36px;overflow: hidden;}
 .top_nav .top_login .login b{ float: left;margin-left: 20px;width: 90px; overflow: hidden; text-align: center;}
