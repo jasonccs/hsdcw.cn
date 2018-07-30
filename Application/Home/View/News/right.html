@@ -61,19 +61,19 @@
 
 			</div>
 		</div>
-		
+
 
 		<div id="paih" bosszone="gjxw_rdph">
 			<div class="hd hd2">
 				<h2 class="subTitle">热度排行</h2>
 			</div>			<div class="bd bd2">
 				<ol class="current">
-				<volist name='hot' id='vo' offset='0' key='k' length='10' empty='没有数据'>	
+				<volist name='hot' id='vo' offset='0' key='k' length='10' empty='没有数据'>
 					<li>
 						<span class="topRank">{$k}</span>
-						<a target="_blank" href="{:U('/H_N_d/'.$vo['id'])}">{$vo.title|msubstr=0,18}</a>
+						<a target="_blank" href="{:U($current_url.$vo['id'])}">{$vo.title|msubstr=0,18}</a>
 					</li>
-                </volist> 
+                </volist>
 				</ol>
 			</div>
 		</div>
