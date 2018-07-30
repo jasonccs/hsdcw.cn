@@ -66,8 +66,9 @@ return array(
 
   // 开启路由
     'URL_ROUTER_ON'   => true,
+    'URL_CASE_INSENSITIVE'=>false, //url 不区分大小写
     'URL_ROUTE_RULES'=>array(
-       ':module/:controller/:action/:id\d'              => 'Home/News/detail',//文章详情页路由
+       'Home/:controller/:action/:id\d'              => 'Home/News/detail',//文章详情页路由
         // 'house'          => array('/Home/Fang/index'),
     ),
 

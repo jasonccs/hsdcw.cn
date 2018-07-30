@@ -7,7 +7,7 @@
     <title>后台</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="favicon.ico">
     <link href="/Application/Admin/View/Public/css/bootstrap.min14ed.css" rel="stylesheet">
     <link href="/Application/Admin/View/Public/css/font-awesome.min93e3.css" rel="stylesheet">
 
@@ -68,16 +68,16 @@
     text-align: center;
    }
 </style>
-<!-- 
+<!--
 <script type="text/javascript">
      $(function(){
-          $('#all').click(function(){    
-                   if(this.checked){    
-                        $("tbody :checkbox").attr("checked", true);   
-                    }else{    
-                        $("tbody :checkbox").attr("checked", false); 
-                    }    
-            });  
+          $('#all').click(function(){
+                   if(this.checked){
+                        $("tbody :checkbox").attr("checked", true);
+                    }else{
+                        $("tbody :checkbox").attr("checked", false);
+                    }
+            });
      })
 </script> -->
                         <table class="table table-striped table-bordered table-hover ">
@@ -108,14 +108,14 @@
                                     <td><?php echo (date("Y-m-d H:i",$vo["time"])); ?></td>
                                     <td class="content-tabs">
                                         <a class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="是否隐藏"><i class="fa fa-eye"></i></a>
-                 
+
                                         <a  class="btn btn-white btn-sm demo3" data-toggle="tooltip" data-placement="top" title="删除此文章"><i class="fa fa-trash"></i></a>
 
                                         <a  href="<?php echo U('Admin/News/editor',array('id'=>$vo['id']));?>"class=" J_menuItem btn btn-white btn-sm "  title="编辑此文章"  target="_self"><i class="fa fa-pencil"></i></a>
-                                       
+
                                     </td>
-                                </tr><?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?> 
-                           
+                                </tr><?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -125,11 +125,11 @@
                             </tfoot>
                         </table>
 <script type="text/javascript">
-    
+
    $(function(){
-  
+
         $('.fa-trash').parent('a').click(function(){
-           var html=$(this).parent('td').parent('tr'); 
+           var html=$(this).parent('td').parent('tr');
            var idtext=$(this).parent('td').prevAll('td:eq(5)').text();
              swal({
                 title: "您确定要删除这条信息吗",
@@ -147,7 +147,7 @@
                             alert('此文章不存在！');
                           }
                 },'json');
-                
+
             });
         })
 
@@ -161,7 +161,7 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
     <script src="/Application/Admin/View/Public/js/bootstrap.min.js"></script>
     <script src="/Application/Admin/View/Public/js/plugins/jeditable/jquery.jeditable.js"></script>
