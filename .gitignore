@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 Application/Runtime/*
 .idea
 ThinkPHP
 Application/Common/Conf/config.php
 www.tar.gz
+=======
+# Created by .ignore support plugin (hsz.mobi)
+Application/Runtime/*
+.idea
+ThinkPHP
+Application/Common/Conf/config.php
+.htaccess
+hsdcw3.cn.zip
+>>>>>>> 373eb4280eeb309808001b124872a2d1c4c8855d
