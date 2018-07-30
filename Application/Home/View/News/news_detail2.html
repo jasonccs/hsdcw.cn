@@ -1,153 +1,33 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>黄石新闻_黄石最大的门户网站_<?php echo ($result["title"]); ?>_黄石之窗</title>
-        <meta name="keywords" content="<?php echo ($result["keywords"]); ?>">
-        <meta name="description" content="<?php echo (msubstr($result["description"],0,180)); ?>">
-        <link href="/Application/Home/View/Public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title>黄石新闻_黄石最大的门户网站_{$result.title}_黄石之窗</title>
+        <meta name="keywords" content="{$result.keywords}">
+        <meta name="description" content="{$result.description|msubstr=0,180}">
+        <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/nbase_b7e2fdc.css" />
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_main.css" />
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_core_92bd36a.css" />
+        <css href="__PUBLIC__/css/main.css" /> 
+        <css  href="__PUBLIC__/css/nbase_b7e2fdc.css"/>
+        <css  href="__PUBLIC__/css/ndetail_main.css"/>
+        <css  href="__PUBLIC__/css/ndetail_core_92bd36a.css"/>
 
-        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script>
-        <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script>
-        <script type="text/javascript" src="/Application/Home/View/Public/js/common.js"></script>
+        <js href="__PUBLIC__/js/jquery.1.10.2.min.js"/> 
+        <js href="__PUBLIC__/js/date.js"/> 
+        <js href="__PUBLIC__/js/common.js"/> 
 
     </head>
-
+    
 <body >
 
         <script type="text/javascript">
-            var arcticle_id ='<?php echo ($result["id"]); ?>';
-         </script>
+            var arcticle_id ='{$result.id}';
+         </script>   
 
-        <script type="text/javascript">
-         var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/hbxw/14.html';
-       </script>
-
-       <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
-       <script type="text/javascript" src="/Application/Home/View/Public/js/vip_userlogin.js"></script> 
-       <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/nbase_b7e2fdc.css" />
+<include file="Public/Tpl/head" />
        
-     <!--顶部悬浮导航-->
-     <div class="top_xuanfu">
-      
-          <div class="top_nav">
-              <div class="top_tianqi">
-                  <span class="date">今天是：</span>
-                  <span class="weather">
-               
-                  <!-- <iframe width="340" scrolling="no" height="40" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&wind=0&num=2"></iframe> -->
-
-                  </span>
-              </div>
-              <div class="top_login">
-                <span class="login"> 
-                   <?php if( cookie('username') !== null and cookie('userid') !== null): ?><i style="">
-                      <img src="<?php echo (cookie('userphoto')); ?>" width="40" height="40"/></i>  
-                      <b><a href="" >你好<?php echo (cookie('username')); ?></a></b>
-                      <div class="user_center">
-                          <ul>
-                              <li><a href="">个人中心</a></li>
-                              <li><a href="javascript:void(0)" class="outlogin">退出</a></li>
-                          </ul>
-                      </div> 
-                    <?php else: ?>
-                      <a href="javascript:void(0)" class="userlogin"> 登录</a> / <a href="javascript:void(0)"> 注册</a><?php endif; ?>
-
-                  </span>
-
-          <span class="msn"> <a href=""> <img src="/Application/Home/View/Public/images/sina.png" width="16" height="16" alt="" title="关注新浪微博"></a>  <a href=""> <img src="/Application/Home/View/Public/images/blog.png" width="16" height="16" alt="" title="关注腾讯微博"></a> <a href=""> <img src="/Application/Home/View/Public/images/weixin.png" width="16" height="16" alt="" title="关注官方微信"></a></span>
-          <span class="tell"><img src="/Application/Home/View/Public/images/contact.png" width="16" height="16" alt=""> <b>邮箱：1521910992@qq.com</b></span>
-              </div>
-          </div>
-
-    </div>
-
-
-    <!--第二层菜单nav导航-->
-
-    <div class="menu"> 
-          <div class="nav_body">
-              <div class="logo"><a href="/"><img src="/Application/Home/View/Public/images/logo.png" width="190" height="71" alt=""></a></div>
-              <div class="nav">
-                   <ul>
-                          <li>
-                        <p class="b">
-                        <a href="<?php echo U('News/index');?>" target="_blank">黄石要闻</a>
-                        <a href="<?php echo U('News/hsms');?>" target="_blank">黄石民生</a></p>
-                        <p class="b">
-                        <a href="<?php echo U('News/hbxw');?>" target="_blank">湖北新闻</a>
-                        <a href="#" target="_blank">国内国际</a>
-                        </p>
-                        <p class="b">
-                        <a href="#" target="_blank">文娱体育</a>
-                        <a href="#" target="_blank">东楚论坛 </a>
-                        </p>
-                      </li>
-                      <li class="bd"></li>
-
-
-                      <li>
-                        <p class="b2">
-                        <a href="#" target="_blank">视频</a>
-                        <a href="#" target="_blank">读图</a></p>
-                        <p class="b2">
-                        <a href="#" target="_blank">专题</a>
-                        <a href="#" target="_blank">微博</a></p>
-                        <p class="b2">
-                         <a href="#" target="_blank">时评</a>
-                         <a href="#" target="_blank">人才</a></p>
-                      </li>
-                      <li class="bd"></li>
-
-
-                      <li>
-                        <p class="b2">
-                        <a href="#" target="_blank">汽车</a>
-                        <a href="#" target="_blank">房产</a></p>
-                        <p class="b2">
-                        <a href="#" target="_blank">消费</a>
-                        <a href="#" target="_blank">旅游</a></p>
-                        <p class="b2">
-                        <a href="#" target="_blank">摄影</a>
-                        <a href="#" target="_blank">医讯</a></p>
-                        <p class="b2">
-                        <a href="#" target="_blank">健康</a>
-                        <a href="#" target="_blank">财经</a></p>
-
-                      </li>
-                      <li class="bd"></li>
-
-                      <li>
-                        <p class="b">
-                        <a href="#" target="_blank">天天信息</a>
-                        <a href="#" target="_blank">在线商城</a></p>
-                        <p class="b">
-                        <a href="#" target="_blank">投资环境</a>
-                        <a href="#" target="_blank">广告业务</a></p>
-                       
-
-                      </li>
-                      
-
-                      
-
-                      
-                   </ul>
-
-              </div>  
-          </div>
-    </div>
-
-
-
         <div id="wrapper" class="detail-wrapper">
-
+          
             <div id="container" class="clearfix">
                 <div class="detail-main">
                     <div id="pagelet-article">
@@ -155,23 +35,23 @@
                             <a href="/" target="_blank" ga_event="click_index">
                                 首页
                             </a>
-
+                           
                             <a href="/news_politics/" target="_blank" ga_event="click_channel">
                                 国内
                             </a>
                         </div>
                         <div class="article-header">
                             <h1 class="title">
-                                <?php echo ($result["title"]); ?>
+                                {$result.title}
                             </h1>
                             <div class="minibar clearfix">
-                                <span class="src"><?php echo ($result["source"]); ?></span>
-                                <span class="time"><?php echo (date('Y-m-d h:i',$result["time"])); ?></span>
-                                <span class="eye"><i class="am-icon-github am-icon-sm"></i><?php echo ($result["eye"]); ?></span>
+                                <span class="src">{$result.source}</span>
+                                <span class="time">{$result.time|date='Y-m-d h:i',###}</span>
+                                <span class="eye"><i class="am-icon-github am-icon-sm"></i>{$result.eye}</span>
                             </div>
                         </div>
                         <div class="article-content" >
-                           <?php echo ($result["content"]); ?>
+                           {$result.content}
                         </div>
                         <div class="article-actions">
                             <div class="top-actions clearfix">
@@ -240,7 +120,6 @@
                             相关阅读
                         </div>
                         <ul class="relatednews" data-node="listBox">
-
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="title-box">
@@ -301,7 +180,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="lbox left">
@@ -386,19 +264,18 @@
                                     </div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                     <div class="d-union-1">
                     </div>
                     <div class="ad720" style="text-align:center;margin-bottom:20px">
                         <div class="ab1">
-
-
+                           
+                            
                         </div>
                         <div class="ab2 none">
-
-
+                           
+                           
                         </div>
                     </div>
                     <div id="pagelet-ncomment">
@@ -411,7 +288,7 @@
                             </div>
                             <div class="ctotal">
                                 <span class="ctotalnum" data-node="ctotalnum">
-                                    <?php echo ($count); ?>
+                                    {$count}
                                 </span>
                                 条
                             </div>
@@ -423,7 +300,7 @@
                                 <div class="ctextarea" >
                                     <textarea  name="cinput" class="cinput" maxlength="160"  placeholder="写下你的评论..."></textarea>
                                 </div>
-<script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script>
+<js href="__PUBLIC__/js/jquery.cookie.js"/>
 <script type="text/javascript">
 $(function(){
 
@@ -435,23 +312,23 @@ $(function(){
                    }else{
 
                         $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').removeClass('active');
-                   }
+                   }          
              })
  });
-
+               
                $('.csubmit').click(function(){
 
                         if($.cookie('<?php echo C('COOKIE_PREFIX') ?>username')==null || $.cookie('<?php echo C('COOKIE_PREFIX') ?>userid')==null){
-                                 login();
+                                 login(); 
                                  $('.rl-close').click(function(){
                                    loginhide();
                                  });
                                  viplogin();
                                  return ;
-
+                    
                         }
                         if($(this).hasClass('csubmit active')){
-                           $.post('<?php echo U('Home/News/comment');?>',{id:arcticle_id,content:
+                           $.post('{:U('Home/News/comment')}',{id:arcticle_id,content:
                            $("textarea[name='cinput']").val(),username:$.cookie('<?php echo C('COOKIE_PREFIX') ?>username')},function(data){
 
                                  if(data.status==true){
@@ -487,18 +364,18 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>';
+                            </li>';  
                                      $('.clist').prepend(commenthtml) ;
-                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加
+                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加  
                                      $('.ctotalnum').text(ctotalnum);
                                  }
 
                            },'json');
-
-                        }
-
-                      })
-
+                            
+                        }       
+                                 
+                      })  
+       
 })
 
 </script>
@@ -526,9 +403,10 @@ $(function(){
                             </div>
                         </div>
 
-             <ul id="clist" class="clist" >
-
-                 <?php if(is_array($comments)): $i = 0; $__LIST__ = $comments;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="citem clearfix">
+             <ul id="clist" class="clist" >   
+                 
+                 <volist name="comments" id="vo">    
+                            <li class="citem clearfix">
                                 <div class="cavatar">
                                     <a href="" target="_blank">
                                         <img src="" />
@@ -537,13 +415,13 @@ $(function(){
                                 <div class="cbody">
                                     <div class="cuser">
                                         <a class="cname" href="/user/6448930270/" target="_blank">
-                                            <?php echo ($vo["username"]); ?>
+                                            {$vo.username}
                                         </a>
                                     </div>
-                                    <div class="ctxt"><?php echo (msubstr($vo["content"],0,150)); ?></div>
+                                    <div class="ctxt">{$vo.content|msubstr=0,150}</div>
                                     <div class="cinfo clearfix">
                                         <span class="ctime">
-                                            <?php echo (date('Y-m-d H:i',$vo["time"])); ?>
+                                            {$vo.time|date='Y-m-d H:i',###}
                                         </span>
                                         <div class="c-actions">
                                             <a class="cdigg " href="javascript:;" data-node="cdigg" data-commentid="6608997803"
@@ -558,36 +436,39 @@ $(function(){
                                                 <i class="cbtn">
                                                 </i>
                                             </a>
-
+                                           
                                         </div>
                                     </div>
                                 </div>
-                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </li>
+                    </volist>
                 </ul>
-
-                     <?php if($count >= 3): ?><a class="cloadmore show" href="javascript:ajaxmore();" >
+                    
+                     <if condition="$count EGT 3">
+                        <a class="cloadmore show" href="javascript:ajaxmore();" >
                             点击加载更多
-                        </a><?php endif; ?>
+                        </a>
+                     </if>   
 				    </div>
                 </div>
 
 <script type="text/javascript">
                     var page=2;
-                    var pagenum=<?php echo ($pagenum); ?>;//总页数
+                    var pagenum={$pagenum};//总页数
 
                    function ajaxmore(){
-
+                        
                         $.ajax({
-                             url:"<?php echo U('Home/News/ajaxmore');?>",
-                             type:'post',
+                             url:"{:U('Home/News/ajaxmore')}",
+                             type:'post',   
                              data:{page:page,arcticle_id:arcticle_id},
                              datatype:'json',
                              beforeSend:function(){
                                 // $('.cloadmore').text('正在加载!');
                                 // setTimeout('alert(3)',3000);
                                 $('.cloadmore').css('background','none');
-                                $('.cloadmore').append('<img src="/Application/Home/View/Public/images/loading.gif"/>');
-                             },
+                                $('.cloadmore').append('<img src="__PUBLIC__/images/loading.gif"/>');
+                             }, 
                              success:function(data){
 
                                 if(page++<=pagenum && data !==null){
@@ -622,7 +503,7 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>';
+                            </li>'; 
 
                                         $('.clist').append(commenthtml) ;
                                      })
@@ -633,7 +514,7 @@ $(function(){
                               }
                              },
                              complete:function(){
-                                var shenyu=<?php echo ($count); ?>-(page-1)*3;
+                                var shenyu={$count}-(page-1)*3;
                                 if(shenyu<0){
                                     $('.cloadmore').css({'cursor':'not-allowed','background':'#A2A2A2'});
                                     $('.cloadmore').text('没有了');
@@ -641,9 +522,9 @@ $(function(){
 
                                 }else{
                                     $('.cloadmore').css('background','#A2A2A2');
-                                    $('.cloadmore').text('剩余'+shenyu+'条');
-                                }
-                             }
+                                    $('.cloadmore').text('剩余'+shenyu+'条');  
+                                } 
+                             }  
 
                         })
 
@@ -652,7 +533,7 @@ $(function(){
 
 
  <div class="detail-right">
-
+        
 
  <div id="pagelet-iad" class="sideGap" ga_event="click_banner_newspage_right">
       <div class="ab1">
@@ -662,7 +543,7 @@ $(function(){
         </div>
         </div>
 </div>
-
+   
 
 <div id="pagelet-hotgallery" class="sideGap" style="display: block;">
 <div class="dtag">精彩图片</div>
@@ -780,26 +661,14 @@ $(function(){
 
 </div>
  </div>
-
+           
 </div>
-
+     
      <!---->
 
-      <div class="footer">
-        
-                <div class="friendlink">
-                    <div class="friendlink_about"><a href="">关于我们</a>|<a href="">广告服务</a>|<a href="">商务洽谈</a></div>
-                    <div class="friendlink_link"><span>友情链接</span><a href="">114啦影视</a>|<a href="">海报网</a>|<a href="">178游戏网</a><a href="">电影网</a>|<a href="">刷机精灵</a>|<a href="">欢视网</a>
-                    <a href="">太平洋时尚网</a>|<a href="">电视应用市场</a>|<a href="">智能电视</a></div>
-                </div>
-                <div class="banquan">
-                   <span>主 管：中共黄石市委宣传部 黄石市人民政府新闻办公室　主 办：蓝宝石网络　电 话：13554078820 </span>
-                   <span>Copyright © 2015 - 2019 Jasonccs. All Rights Reserved. 鄂ICP备15011090号-1 蓝宝石公司 版权所有 邮箱：1521910992@qq.com</span>
-                </div>
+    <include file="Public/Tpl/footer"/> 
 
-      </div> 
-
-
+     
     </body>
 
 </html>
