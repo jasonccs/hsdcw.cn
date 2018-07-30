@@ -1,0 +1,40 @@
+[ 2018-06-01T20:08:25+08:00 ] 119.79.165.24 /Member/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `hsdcw_vipuser` [ RunTime:0.0639s ]
+SQL: SELECT * FROM `hsdcw_vipuser` WHERE `username` = '' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2018-06-01T20:08:26+08:00 ] 119.79.165.24 /Member/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `hsdcw_vipuser` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hsdcw_vipuser` WHERE `username` = '' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-06-01T20:08:26+08:00 ] 119.79.165.24 /Member/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `hsdcw_vipuser` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `hsdcw_vipuser` WHERE `username` = '' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-06-01T20:08:26+08:00 ] 119.79.165.24 /Member/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `hsdcw_vipuser` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `hsdcw_vipuser` WHERE `username` = '' LIMIT 1   [ RunTime:0.0002s ]
+
