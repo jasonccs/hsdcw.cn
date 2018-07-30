@@ -1,7 +1,0 @@
-[ 2016-06-27T12:22:24+08:00 ] 119.96.62.206 /Member/Login/login.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
-SQL: SHOW COLUMNS FROM `hsdcw_vipuser` [ RunTime:0.0005s ]
-SQL: SELECT * FROM `hsdcw_vipuser` WHERE `username` = 'a@qq.com' LIMIT 1   [ RunTime:0.0001s ]
-
