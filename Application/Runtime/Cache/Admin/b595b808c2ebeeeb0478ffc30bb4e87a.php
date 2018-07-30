@@ -2,7 +2,7 @@
 <html>
 
 
-<!-- Mirrored from www.zi-han.net/theme/hplus/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:16:41 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,11 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
 
-    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-    <link href="/Application/Admin/View/Public/css/bootstrap.min14ed.css" rel="stylesheet">
-    <link href="/Application/Admin/View/Public/css/font-awesome.min93e3.css" rel="stylesheet">
-    <link href="/Application/Admin/View/Public/css/animate.min.css" rel="stylesheet">
-    <link href="/Application/Admin/View/Public/css/style.css" rel="stylesheet">
+    <!-- <link rel="shortcut icon" target="_top" href="favicon.ico"> -->
+    <link target="_top" href="/Application/Admin/View/Public/css/bootstrap.min14ed.css" rel="stylesheet">
+    <link target="_top" href="/Application/Admin/View/Public/css/font-awesome.min93e3.css" rel="stylesheet">
+    <link target="_top" href="/Application/Admin/View/Public/css/animate.min.css" rel="stylesheet">
+    <link target="_top" href="/Application/Admin/View/Public/css/style.css" rel="stylesheet">
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -35,7 +35,7 @@
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <span><img alt="image" class="img-circle" src="/Application/Admin/View/Public/img/profile_small.jpg" /></span>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <a data-toggle="dropdown" class="dropdown-toggle" target="_top" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold"><?php echo (session('username')); ?> </strong></span>
                                 <span class="text-muted text-xs block"><?php if($userinfo['type'] == 0): ?>超级管理员<?php else: ?>
@@ -43,16 +43,16 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                                <li><a class="J_menuItem" target="_top" href="form_avatar.html">修改头像</a>
                                 </li>
-                                <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                                <li><a class="J_menuItem" target="_top" href="profile.html">个人资料</a>
                                 </li>
-                                <li><a class="J_menuItem" href="contacts.html">联系我们</a>
+                                <li><a class="J_menuItem" target="_top" href="contacts.html">联系我们</a>
                                 </li>
-                                <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                                <li><a class="J_menuItem" target="_top" href="mailbox.html">信箱</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="<?php echo U('Admin/Login/loginout');?>">安全退出</a>
+                                <li><a target="_top" href="<?php echo U('Admin/Login/loginout');?>">安全退出</a>
                                 </li>
                             </ul>
                         </div>
@@ -60,76 +60,76 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">
+                        <a target="_top" href="#">
                             <i class="fa fa-home"></i>
                             <span class="nav-label">主页</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="index_v1.html" data-index="0">主页示例一</a>
+                                <a class="J_menuItem" target="_top" href="index_v1.html" data-index="0">主页示例一</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="index_v2.html">主页示例二</a>
+                                <a class="J_menuItem" target="_top" href="index_v2.html">主页示例二</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="index_v3.html">主页示例三</a>
+                                <a class="J_menuItem" target="_top" href="index_v3.html">主页示例三</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="index_v4.html">主页示例四</a>
+                                <a class="J_menuItem" target="_top" href="index_v4.html">主页示例四</a>
                             </li>
                             <li>
-                                <a href="index_v5.html" target="_blank">主页示例五</a>
+                                <a target="_top" href="index_v5.html" target="_blank">主页示例五</a>
                             </li>
                         </ul>
 
                     </li>
                    <!--  <li>
-                        <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
+                        <a class="J_menuItem" target="_top" href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
                     </li> -->
                     <!-- <li>
-                        <a href="#">
+                        <a target="_top" href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">统计图表</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                                <a class="J_menuItem" target="_top" href="graph_echarts.html">百度ECharts</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                                <a class="J_menuItem" target="_top" href="graph_flot.html">Flot</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                                <a class="J_menuItem" target="_top" href="graph_morris.html">Morris.js</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
+                                <a class="J_menuItem" target="_top" href="graph_rickshaw.html">Rickshaw</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
+                                <a class="J_menuItem" target="_top" href="graph_peity.html">Peity</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
+                                <a class="J_menuItem" target="_top" href="graph_sparkline.html">Sparkline</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                                <a class="J_menuItem" target="_top" href="graph_metrics.html">图表组合</a>
                             </li>
                         </ul>
                     </li>
  -->
                     <li>
-                        <a href="#">
+                        <a target="_top" href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">文章管理</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="<?php echo U('Admin/News/allnews');?>">所有文章</a>
+                                <a class="J_menuItem" target="_top" href="<?php echo U('Admin/News/allnews');?>">所有文章</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="<?php echo U('Admin/News/addnews');?>">添加文章</a>
+                                <a class="J_menuItem" target="_top" href="<?php echo U('Admin/News/addnews');?>">添加文章</a>
                             </li>
                            
                           
@@ -137,255 +137,255 @@
                     </li>
 
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <a target="_top" href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                            <li><a class="J_menuItem" target="_top" href="mailbox.html">收件箱</a>
                             </li>
-                            <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                            <li><a class="J_menuItem" target="_top" href="mail_detail.html">查看邮件</a>
                             </li>
-                            <li><a class="J_menuItem" href="mail_compose.html">写信</a>
+                            <li><a class="J_menuItem" target="_top" href="mail_compose.html">写信</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                            <li><a class="J_menuItem" target="_top" href="form_basic.html">基本表单</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
+                            <li><a class="J_menuItem" target="_top" href="form_validate.html">表单验证</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
+                            <li><a class="J_menuItem" target="_top" href="form_advanced.html">高级插件</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
+                            <li><a class="J_menuItem" target="_top" href="form_wizard.html">表单向导</a>
                             </li>
                             <li>
-                                <a href="#">文件上传 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">文件上传 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_webuploader.html">百度WebUploader</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_file_upload.html">DropzoneJS</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_avatar.html">头像裁剪上传</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_avatar.html">头像裁剪上传</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">编辑器 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">编辑器 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_editors.html">富文本编辑器</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_simditor.html">simditor</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
+                                    <li><a class="J_menuItem" target="_top" href="form_markdown.html">MarkDown编辑器</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
+                                    <li><a class="J_menuItem" target="_top" href="code_editor.html">代码编辑器</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="suggest.html">搜索自动补全</a>
+                            <li><a class="J_menuItem" target="_top" href="suggest.html">搜索自动补全</a>
                             </li>
-                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            <li><a class="J_menuItem" target="_top" href="layerdate.html">日期选择器layerDate</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="contacts.html">联系人</a>
+                            <li><a class="J_menuItem" target="_top" href="contacts.html">联系人</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" target="_top" href="profile.html">个人资料</a>
                             </li>
                             <li>
-                                <a href="#">项目管理 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">项目管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="projects.html">项目</a>
+                                    <li><a class="J_menuItem" target="_top" href="projects.html">项目</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="project_detail.html">项目详情</a>
+                                    <li><a class="J_menuItem" target="_top" href="project_detail.html">项目详情</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="teams_board.html">团队管理</a>
+                            <li><a class="J_menuItem" target="_top" href="teams_board.html">团队管理</a>
                             </li>
-                            <li><a class="J_menuItem" href="social_feed.html">信息流</a>
+                            <li><a class="J_menuItem" target="_top" href="social_feed.html">信息流</a>
                             </li>
-                            <li><a class="J_menuItem" href="clients.html">客户管理</a>
+                            <li><a class="J_menuItem" target="_top" href="clients.html">客户管理</a>
                             </li>
-                            <li><a class="J_menuItem" href="file_manager.html">文件管理器</a>
+                            <li><a class="J_menuItem" target="_top" href="file_manager.html">文件管理器</a>
                             </li>
-                            <li><a class="J_menuItem" href="calendar.html">日历</a>
+                            <li><a class="J_menuItem" target="_top" href="calendar.html">日历</a>
                             </li>
                             <li>
-                                <a href="#">博客 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">博客 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="blog.html">文章列表</a>
+                                    <li><a class="J_menuItem" target="_top" href="blog.html">文章列表</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="article.html">文章详情</a>
+                                    <li><a class="J_menuItem" target="_top" href="article.html">文章详情</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="faq.html">FAQ</a>
+                            <li><a class="J_menuItem" target="_top" href="faq.html">FAQ</a>
                             </li>
                             <li>
-                                <a href="#">时间轴 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">时间轴 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="timeline.html">时间轴</a>
+                                    <li><a class="J_menuItem" target="_top" href="timeline.html">时间轴</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="timeline_v2.html">时间轴v2</a>
+                                    <li><a class="J_menuItem" target="_top" href="timeline_v2.html">时间轴v2</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="pin_board.html">标签墙</a>
+                            <li><a class="J_menuItem" target="_top" href="pin_board.html">标签墙</a>
                             </li>
                             <li>
-                                <a href="#">单据 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">单据 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="invoice.html">单据</a>
+                                    <li><a class="J_menuItem" target="_top" href="invoice.html">单据</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="invoice_print.html">单据打印</a>
+                                    <li><a class="J_menuItem" target="_top" href="invoice_print.html">单据打印</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="search_results.html">搜索结果</a>
+                            <li><a class="J_menuItem" target="_top" href="search_results.html">搜索结果</a>
                             </li>
-                            <li><a class="J_menuItem" href="forum_main.html">论坛</a>
+                            <li><a class="J_menuItem" target="_top" href="forum_main.html">论坛</a>
                             </li>
                             <li>
-                                <a href="#">即时通讯 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">即时通讯 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="chat_view.html">聊天窗口</a>
+                                    <li><a class="J_menuItem" target="_top" href="chat_view.html">聊天窗口</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="webim.html">layIM</a>
+                                    <li><a class="J_menuItem" target="_top" href="webim.html">layIM</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">登录注册相关 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">登录注册相关 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a href="login.html" target="_blank">登录页面</a>
+                                    <li><a target="_top" href="login.html" target="_blank">登录页面</a>
                                     </li>
-                                    <li><a href="login_v2.html" target="_blank">登录页面v2</a>
+                                    <li><a target="_top" href="login_v2.html" target="_blank">登录页面v2</a>
                                     </li>
-                                    <li><a href="register.html" target="_blank">注册页面</a>
+                                    <li><a target="_top" href="register.html" target="_blank">注册页面</a>
                                     </li>
-                                    <li><a href="lockscreen.html" target="_blank">登录超时</a>
+                                    <li><a target="_top" href="lockscreen.html" target="_blank">登录超时</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="404.html">404页面</a>
+                            <li><a class="J_menuItem" target="_top" href="404.html">404页面</a>
                             </li>
-                            <li><a class="J_menuItem" href="500.html">500页面</a>
+                            <li><a class="J_menuItem" target="_top" href="500.html">500页面</a>
                             </li>
-                            <li><a class="J_menuItem" href="empty_page.html">空白页</a>
+                            <li><a class="J_menuItem" target="_top" href="empty_page.html">空白页</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="typography.html">排版</a>
+                            <li><a class="J_menuItem" target="_top" href="typography.html">排版</a>
                             </li>
                             <li>
-                                <a href="#">字体图标 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">字体图标 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a class="J_menuItem" href="fontawesome.html">Font Awesome</a>
+                                        <a class="J_menuItem" target="_top" href="fontawesome.html">Font Awesome</a>
                                     </li>
                                     <li>
-                                        <a class="J_menuItem" href="glyphicons.html">Glyphicon</a>
+                                        <a class="J_menuItem" target="_top" href="glyphicons.html">Glyphicon</a>
                                     </li>
                                     <li>
-                                        <a class="J_menuItem" href="iconfont.html">阿里巴巴矢量图标库</a>
+                                        <a class="J_menuItem" target="_top" href="iconfont.html">阿里巴巴矢量图标库</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">拖动排序 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">拖动排序 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="draggable_panels.html">拖动面板</a>
+                                    <li><a class="J_menuItem" target="_top" href="draggable_panels.html">拖动面板</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="agile_board.html">任务清单</a>
+                                    <li><a class="J_menuItem" target="_top" href="agile_board.html">任务清单</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="buttons.html">按钮</a>
+                            <li><a class="J_menuItem" target="_top" href="buttons.html">按钮</a>
                             </li>
-                            <li><a class="J_menuItem" href="tabs_panels.html">选项卡 &amp; 面板</a>
+                            <li><a class="J_menuItem" target="_top" href="tabs_panels.html">选项卡 &amp; 面板</a>
                             </li>
-                            <li><a class="J_menuItem" href="notifications.html">通知 &amp; 提示</a>
+                            <li><a class="J_menuItem" target="_top" href="notifications.html">通知 &amp; 提示</a>
                             </li>
-                            <li><a class="J_menuItem" href="badges_labels.html">徽章，标签，进度条</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="grid_options.html">栅格</a>
-                            </li>
-                            <li><a class="J_menuItem" href="plyr.html">视频、音频</a>
+                            <li><a class="J_menuItem" target="_top" href="badges_labels.html">徽章，标签，进度条</a>
                             </li>
                             <li>
-                                <a href="#">弹框插件 <span class="fa arrow"></span></a>
+                                <a class="J_menuItem" target="_top" href="grid_options.html">栅格</a>
+                            </li>
+                            <li><a class="J_menuItem" target="_top" href="plyr.html">视频、音频</a>
+                            </li>
+                            <li>
+                                <a target="_top" href="#">弹框插件 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="layer.html">Web弹层组件layer</a>
+                                    <li><a class="J_menuItem" target="_top" href="layer.html">Web弹层组件layer</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="modal_window.html">模态窗口</a>
+                                    <li><a class="J_menuItem" target="_top" href="modal_window.html">模态窗口</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="sweetalert.html">SweetAlert</a>
+                                    <li><a class="J_menuItem" target="_top" href="sweetalert.html">SweetAlert</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">树形视图 <span class="fa arrow"></span></a>
+                                <a target="_top" href="#">树形视图 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="jstree.html">jsTree</a>
+                                    <li><a class="J_menuItem" target="_top" href="jstree.html">jsTree</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="tree_view.html">Bootstrap Tree View</a>
+                                    <li><a class="J_menuItem" target="_top" href="tree_view.html">Bootstrap Tree View</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="nestable_list.html">nestable</a>
+                                    <li><a class="J_menuItem" target="_top" href="nestable_list.html">nestable</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="toastr_notifications.html">Toastr通知</a>
+                            <li><a class="J_menuItem" target="_top" href="toastr_notifications.html">Toastr通知</a>
                             </li>
-                            <li><a class="J_menuItem" href="diff.html">文本对比</a>
+                            <li><a class="J_menuItem" target="_top" href="diff.html">文本对比</a>
                             </li>
-                            <li><a class="J_menuItem" href="spinners.html">加载动画</a>
+                            <li><a class="J_menuItem" target="_top" href="spinners.html">加载动画</a>
                             </li>
-                            <li><a class="J_menuItem" href="widgets.html">小部件</a>
+                            <li><a class="J_menuItem" target="_top" href="widgets.html">小部件</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                            <li><a class="J_menuItem" target="_top" href="table_basic.html">基本表格</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_data_tables.html">DataTables</a>
+                            <li><a class="J_menuItem" target="_top" href="table_data_tables.html">DataTables</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_jqgrid.html">jqGrid</a>
+                            <li><a class="J_menuItem" target="_top" href="table_jqgrid.html">jqGrid</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_foo_table.html">Foo Tables</a>
+                            <li><a class="J_menuItem" target="_top" href="table_foo_table.html">Foo Tables</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_bootstrap.html">Bootstrap Table
+                            <li><a class="J_menuItem" target="_top" href="table_bootstrap.html">Bootstrap Table
                                 <span class="label label-danger pull-right">推荐</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                            <li><a class="J_menuItem" target="_top" href="basic_gallery.html">基本图库</a>
                             </li>
-                            <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                            <li><a class="J_menuItem" target="_top" href="carousel.html">图片切换</a>
                             </li>
-                            <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                            <li><a class="J_menuItem" target="_top" href="blueimp.html">Blueimp相册</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                        <a class="J_menuItem" target="_top" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <a target="_top" href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            <li><a class="J_menuItem" target="_top" href="form_builder.html">表单构建器</a>
                             </li>
                         </ul>
                     </li>
@@ -398,8 +398,8 @@
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" method="post" action="http://www.zi-han.net/theme/hplus/search_results.html">
+                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " target="_top" href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="#">
                             <div class="form-group">
                                 <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
                             </div>
@@ -407,13 +407,13 @@
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" target="_top" href="#">
                                 <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
                             </a>
                             <ul class="dropdown-menu dropdown-messages">
                                 <li class="m-t-xs">
                                     <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
+                                        <a target="_top" href="profile.html" class="pull-left">
                                             <img alt="image" class="img-circle" src="/Application/Admin/View/Public/img/a7.jpg">
                                         </a>
                                         <div class="media-body">
@@ -427,7 +427,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
+                                        <a target="_top" href="profile.html" class="pull-left">
                                             <img alt="image" class="img-circle" src="/Application/Admin/View/Public/img/a4.jpg">
                                         </a>
                                         <div class="media-body ">
@@ -441,7 +441,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <div class="text-center link-block">
-                                        <a class="J_menuItem" href="mailbox.html">
+                                        <a class="J_menuItem" target="_top" href="mailbox.html">
                                             <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
                                         </a>
                                     </div>
@@ -449,12 +449,12 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" target="_top" href="#">
                                 <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
                             </a>
                             <ul class="dropdown-menu dropdown-alerts">
                                 <li>
-                                    <a href="mailbox.html">
+                                    <a target="_top" href="mailbox.html">
                                         <div>
                                             <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
                                             <span class="pull-right text-muted small">4分钟前</span>
@@ -463,7 +463,7 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="profile.html">
+                                    <a target="_top" href="profile.html">
                                         <div>
                                             <i class="fa fa-qq fa-fw"></i> 3条新回复
                                             <span class="pull-right text-muted small">12分钟钱</span>
@@ -473,7 +473,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <div class="text-center link-block">
-                                        <a class="J_menuItem" href="notifications.html">
+                                        <a class="J_menuItem" target="_top" href="notifications.html">
                                             <strong>查看所有 </strong>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
@@ -482,7 +482,7 @@
                             </ul>
                         </li>
                         <li class="hidden-xs">
-                            <a href="/"  target="_blank"><i class="fa fa-cart-arrow-down"></i> 首页</a>
+                            <a target="_top" href="/"  target="_blank"><i class="fa fa-cart-arrow-down"></i> 首页</a>
                         </li>
                         <li class="dropdown hidden-xs">
                             <a class="right-sidebar-toggle" aria-expanded="false">
@@ -497,7 +497,7 @@
                 </button>
                 <nav class="page-tabs J_menuTabs">
                     <div class="page-tabs-content">
-                        <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                        <a target="_top" href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
                     </div>
                 </nav>
                 <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
@@ -516,13 +516,13 @@
                         </li>
                     </ul>
                 </div>
-                <a href="<?php echo U('Admin/Login/loginout');?>" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i>退出</a>
+                <a target="_top" href="<?php echo U('Admin/Login/loginout');?>" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i>退出</a>
             </div>
             <div class="row J_mainContent" id="content-main">
                 <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
             </div>
             <div class="footer">
-                <div class="pull-right">&copy; 2015-2030 <a href="http://www.lbsnet.cn" target="_blank">武汉蓝宝石科技</a>
+                <div class="pull-right">&copy; 2015-2030 <a target="_top" href="http://www.lbsnet.cn" target="_blank">武汉蓝宝石科技</a>
                 </div>
             </div>
         </div>
@@ -534,15 +534,15 @@
                 <ul class="nav nav-tabs navs-3">
 
                     <li class="active">
-                        <a data-toggle="tab" href="#tab-1">
+                        <a data-toggle="tab" target="_top" href="#tab-1">
                             <i class="fa fa-gear"></i> 主题
                         </a>
                     </li>
-                    <li class=""><a data-toggle="tab" href="#tab-2">
+                    <li class=""><a data-toggle="tab" target="_top" href="#tab-2">
                         通知
                     </a>
                     </li>
-                    <li><a data-toggle="tab" href="#tab-3">
+                    <li><a data-toggle="tab" target="_top" href="#tab-3">
                         项目进度
                     </a>
                     </li>
@@ -599,21 +599,21 @@
                             <div class="title">皮肤选择</div>
                             <div class="setings-item default-skin nb">
                                 <span class="skin-name ">
-                         <a href="#" class="s-skin-0">
+                         <a target="_top" href="#" class="s-skin-0">
                              默认皮肤
                          </a>
                     </span>
                             </div>
                             <div class="setings-item blue-skin nb">
                                 <span class="skin-name ">
-                        <a href="#" class="s-skin-1">
+                        <a target="_top" href="#" class="s-skin-1">
                             蓝色主题
                         </a>
                     </span>
                             </div>
                             <div class="setings-item yellow-skin nb">
                                 <span class="skin-name ">
-                        <a href="#" class="s-skin-3">
+                        <a target="_top" href="#" class="s-skin-3">
                             黄色/紫色主题
                         </a>
                     </span>
@@ -630,7 +630,7 @@
                         <div>
 
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a1.jpg">
 
@@ -648,7 +648,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a2.jpg">
                                     </div>
@@ -660,7 +660,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a3.jpg">
 
@@ -678,7 +678,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a4.jpg">
                                     </div>
@@ -691,7 +691,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a8.jpg">
                                     </div>
@@ -704,7 +704,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a7.jpg">
                                     </div>
@@ -716,7 +716,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a3.jpg">
 
@@ -734,7 +734,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-message">
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="pull-left text-center">
                                         <img alt="image" class="img-circle message-avatar" src="/Application/Admin/View/Public/img/a4.jpg">
                                     </div>
@@ -757,7 +757,7 @@
 
                         <ul class="sidebar-list">
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>市场调研</h4> 按要求接收教材；
 
@@ -769,7 +769,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>可行性报告研究报上级批准 </h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
 
@@ -780,7 +780,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>立项阶段</h4> 东风商用车公司 采购综合综合查询分析系统项目进度阶段性报告武汉斯迪克科技有限公司
 
@@ -791,7 +791,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <span class="label label-primary pull-right">NEW</span>
                                     <h4>设计阶段</h4>
                                     <!--<div class="small pull-right m-t-xs">9小时以后</div>-->
@@ -801,7 +801,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>拆迁阶段</h4> 科研项目研究进展报告 项目编号: 项目名称: 项目负责人:
 
@@ -813,7 +813,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>建设阶段 </h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
 
@@ -824,7 +824,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_top" href="#">
                                     <div class="small pull-right m-t-xs">9小时以后</div>
                                     <h4>获证开盘</h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
 

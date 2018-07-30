@@ -7,26 +7,26 @@
         <meta name="description" content="<?php echo (msubstr($result["description"],0,180)); ?>">
         <link href="/Application/Home/View/Public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" /> 
+        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/nbase_b7e2fdc.css" />
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_main.css" />
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_core_92bd36a.css" />
 
-        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script> 
-        <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script> 
-        <script type="text/javascript" src="/Application/Home/View/Public/js/common.js"></script> 
+        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script>
+        <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script>
+        <script type="text/javascript" src="/Application/Home/View/Public/js/common.js"></script>
 
     </head>
-    
+
 <body >
 
         <script type="text/javascript">
             var arcticle_id ='<?php echo ($result["id"]); ?>';
-         </script>   
+         </script>
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/h_n_d/16.html';
+         var curenturl   ='/Home/News/hbxw/14.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
@@ -62,7 +62,7 @@
                   </span>
 
           <span class="msn"> <a href=""> <img src="/Application/Home/View/Public/images/sina.png" width="16" height="16" alt="" title="关注新浪微博"></a>  <a href=""> <img src="/Application/Home/View/Public/images/blog.png" width="16" height="16" alt="" title="关注腾讯微博"></a> <a href=""> <img src="/Application/Home/View/Public/images/weixin.png" width="16" height="16" alt="" title="关注官方微信"></a></span>
-          <span class="tell"><img src="/Application/Home/View/Public/images/contact.png" width="16" height="16" alt=""> <b>新闻热线：0714-12345678</b></span>
+          <span class="tell"><img src="/Application/Home/View/Public/images/contact.png" width="16" height="16" alt=""> <b>邮箱：1521910992@qq.com</b></span>
               </div>
           </div>
 
@@ -145,9 +145,9 @@
     </div>
 
 
-       
+
         <div id="wrapper" class="detail-wrapper">
-          
+
             <div id="container" class="clearfix">
                 <div class="detail-main">
                     <div id="pagelet-article">
@@ -155,7 +155,7 @@
                             <a href="/" target="_blank" ga_event="click_index">
                                 首页
                             </a>
-                           
+
                             <a href="/news_politics/" target="_blank" ga_event="click_channel">
                                 国内
                             </a>
@@ -240,6 +240,7 @@
                             相关阅读
                         </div>
                         <ul class="relatednews" data-node="listBox">
+
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="title-box">
@@ -300,6 +301,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="lbox left">
@@ -384,18 +386,19 @@
                                     </div>
                                 </div>
                             </li>
+
                         </ul>
                     </div>
                     <div class="d-union-1">
                     </div>
                     <div class="ad720" style="text-align:center;margin-bottom:20px">
                         <div class="ab1">
-                           
-                            
+
+
                         </div>
                         <div class="ab2 none">
-                           
-                           
+
+
                         </div>
                     </div>
                     <div id="pagelet-ncomment">
@@ -432,20 +435,20 @@ $(function(){
                    }else{
 
                         $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').removeClass('active');
-                   }          
+                   }
              })
  });
-               
+
                $('.csubmit').click(function(){
 
                         if($.cookie('<?php echo C('COOKIE_PREFIX') ?>username')==null || $.cookie('<?php echo C('COOKIE_PREFIX') ?>userid')==null){
-                                 login(); 
+                                 login();
                                  $('.rl-close').click(function(){
                                    loginhide();
                                  });
                                  viplogin();
                                  return ;
-                    
+
                         }
                         if($(this).hasClass('csubmit active')){
                            $.post('<?php echo U('Home/News/comment');?>',{id:arcticle_id,content:
@@ -484,18 +487,18 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>';  
+                            </li>';
                                      $('.clist').prepend(commenthtml) ;
-                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加  
+                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加
                                      $('.ctotalnum').text(ctotalnum);
                                  }
 
                            },'json');
-                            
-                        }       
-                                 
-                      })  
-       
+
+                        }
+
+                      })
+
 })
 
 </script>
@@ -523,8 +526,8 @@ $(function(){
                             </div>
                         </div>
 
-             <ul id="clist" class="clist" >   
-                 
+             <ul id="clist" class="clist" >
+
                  <?php if(is_array($comments)): $i = 0; $__LIST__ = $comments;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="citem clearfix">
                                 <div class="cavatar">
                                     <a href="" target="_blank">
@@ -555,16 +558,16 @@ $(function(){
                                                 <i class="cbtn">
                                                 </i>
                                             </a>
-                                           
+
                                         </div>
                                     </div>
                                 </div>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
-                    
+
                      <?php if($count >= 3): ?><a class="cloadmore show" href="javascript:ajaxmore();" >
                             点击加载更多
-                        </a><?php endif; ?>   
+                        </a><?php endif; ?>
 				    </div>
                 </div>
 
@@ -573,10 +576,10 @@ $(function(){
                     var pagenum=<?php echo ($pagenum); ?>;//总页数
 
                    function ajaxmore(){
-                        
+
                         $.ajax({
                              url:"<?php echo U('Home/News/ajaxmore');?>",
-                             type:'post',   
+                             type:'post',
                              data:{page:page,arcticle_id:arcticle_id},
                              datatype:'json',
                              beforeSend:function(){
@@ -584,7 +587,7 @@ $(function(){
                                 // setTimeout('alert(3)',3000);
                                 $('.cloadmore').css('background','none');
                                 $('.cloadmore').append('<img src="/Application/Home/View/Public/images/loading.gif"/>');
-                             }, 
+                             },
                              success:function(data){
 
                                 if(page++<=pagenum && data !==null){
@@ -619,7 +622,7 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>'; 
+                            </li>';
 
                                         $('.clist').append(commenthtml) ;
                                      })
@@ -638,9 +641,9 @@ $(function(){
 
                                 }else{
                                     $('.cloadmore').css('background','#A2A2A2');
-                                    $('.cloadmore').text('剩余'+shenyu+'条');  
-                                } 
-                             }  
+                                    $('.cloadmore').text('剩余'+shenyu+'条');
+                                }
+                             }
 
                         })
 
@@ -649,7 +652,7 @@ $(function(){
 
 
  <div class="detail-right">
-        
+
 
  <div id="pagelet-iad" class="sideGap" ga_event="click_banner_newspage_right">
       <div class="ab1">
@@ -659,7 +662,7 @@ $(function(){
         </div>
         </div>
 </div>
-   
+
 
 <div id="pagelet-hotgallery" class="sideGap" style="display: block;">
 <div class="dtag">精彩图片</div>
@@ -777,9 +780,9 @@ $(function(){
 
 </div>
  </div>
-           
+
 </div>
-     
+
      <!---->
 
       <div class="footer">
@@ -790,13 +793,13 @@ $(function(){
                     <a href="">太平洋时尚网</a>|<a href="">电视应用市场</a>|<a href="">智能电视</a></div>
                 </div>
                 <div class="banquan">
-                   <span>主 管：中共黄石市委宣传部 黄石市人民政府新闻办公室　主 办：蓝宝石网络工作室　电 话：0714-12345678 </span>
-                   <span>Copyright © 1998 - 2015 Tencent. All Rights Reserved. 鄂备0000000-1 蓝宝石公司 版权所有 腾讯网络文化经营许可证</span>
+                   <span>主 管：中共黄石市委宣传部 黄石市人民政府新闻办公室　主 办：蓝宝石网络　电 话：13554078820 </span>
+                   <span>Copyright © 2015 - 2019 Jasonccs. All Rights Reserved. 鄂ICP备15011090号-1 蓝宝石公司 版权所有 邮箱：1521910992@qq.com</span>
                 </div>
 
-      </div>  
+      </div> 
 
-     
+
     </body>
 
 </html>

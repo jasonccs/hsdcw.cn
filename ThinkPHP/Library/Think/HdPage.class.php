@@ -190,7 +190,7 @@ class Hdpage
     private function pageList()
     {
         //页码
-        $pageList = '';
+        $pageList =array();
         $start = max(1, min($this->selfPage - ceil($this->pageRow / 2), $this->totalPage - $this->pageRow));
         $end = min($this->pageRow + $start, $this->totalPage);
         if ($end == 1) //只有一页不显示页码

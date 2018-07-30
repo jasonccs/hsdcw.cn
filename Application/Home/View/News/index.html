@@ -7,7 +7,7 @@
 <meta name="description" content="黄石新闻门户网.梳理黄石新闻,足不出户知天下事.">
     <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <css href="__PUBLIC__/css/main.css" /> 
+    <css href="__PUBLIC__/css/main.css" />
     <css href="__PUBLIC__/css/news.css"/>
     <js  href="__PUBLIC__/js/jquery.1.10.2.min.js"/>
     <js  href="__PUBLIC__/js/date.js"/><!--头部日期js-->
@@ -21,19 +21,19 @@
 
 <div class="layout Q-g16b-b">
 	<div class="chief" role="main">
-		<h2 class="subTitle">黄石要闻</h2>  	
+		<h2 class="subTitle">黄石要闻</h2>
 <div id="news">
 <div>
 <div id="subHot" bosszone="js_jdt">
-		
-       <?php 
+
+       <?php
 
          if(!isset($newtop['id'])){
 			   echo '<a target="_blank" href="#">';
 			}else{
-			 
-                          echo '<a target="_blank" href="'.'/H_N_d/'.$newtop['id'].'">';
-                         
+
+                          echo '<a target="_blank" href="'.ACTION_NAME.'/'.$newtop['id'].'">';
+
 		}
 
          if(preg_match('/|/',$newtop['desc_image']) && $newtop['desc_image']  != ''){
@@ -44,9 +44,9 @@
          }else{
 
          		echo '<img src="__PUBLIC__/images/default.png" alt="'.$newtop['title'].'" width="100%" height="100%">';
-         	    
+
          };
- 
+
        ?>
 		<!--  -->
 
@@ -61,28 +61,28 @@
 	<if condition="$k%6 neq 0">
 	<div class="Q-tpList">
 		<div class="Q-tpWrap">
-				<a target="_blank" class="pic" href="{:U('/H_N_d/'.$vo['id'])}">
+				<a target="_blank" class="pic" href="{:U($current_url.$vo['id'])}">
 					<if condition="$vo['desc_image'] neq '' ">
-					    
-						   
-						     <?php  
+
+
+						     <?php
 						       if (!empty($vo['desc_image'])) {
 						       	  $listimg=explode('|',$vo['desc_image']);
-						          
+
 						       	  	 if($key>=2){
 						       	  	 	echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">';
 						       	  	 }else{
 						       	  	 	echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">';
-						       	  	 }				       	
+						       	  	 }
 						       }
 						     ?>
-						   
+
 						<else/>
 						  <img class="picto" src="__PUBLIC__/images/default.png"  width="" height="">
 					</if>
 				</a>
 				<div class="text">
-					<em class="f14 l24"><a target="_blank" class="linkto" href="{:U('/H_N_d/'.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
+					<em class="f14 l24"><a target="_blank" class="linkto" href="{:U($current_url.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
 					<p style="text-indent:20px">
 						{$vo.content|strip_tags|msubstr=0,100}
 					</p>
@@ -93,9 +93,9 @@
 									  <?php
 									     $keywords=explode('|',$vo['keywords']);
 									  	 foreach ($keywords as $key => $value) {
- 										    
-									  	       echo  '<a href="" target="_blank">'.$value.'</a>';	
- 										   					
+
+									  	       echo  '<a href="" target="_blank">'.$value.'</a>';
+
 									  	 }
 									  ?>
 									</span>
@@ -108,26 +108,26 @@
 				</div>
 		</div>
 	</div>
-  </if>	
+  </if>
   <if condition="$k%6 eq 0">
 		<div class="Q-pList">
 			<div class="content">
-			<em><a target="_blank" class="linkto" href="{:U('/H_N_d/'.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
+			<em><a target="_blank" class="linkto" href="{:U($current_url.$vo['id'])}">{$vo.title|msubstr=0,40}</a></em>
 					<ul>
-				
-						   <?php  
+
+						   <?php
 						       $newsurl='http://'.$_SERVER['HTTP_HOST']."/Home/News/detail/id/".$vo['id'].C('URL_HTML_SUFFIX');
 						       if (!empty($vo['desc_image'])) {
 						       	  $listimg=explode('|',$vo['desc_image']);
-						     
+
 						       foreach ($listimg as  $value){
 						       	    if(!empty($value)){
 						       	  	 	echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="'.$value.'" ></a></li>';
 						       	  	 }else{
 						       	  	 		echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="__PUBLIC__/images/default.png" ></a></li>';
-						       	  	 }	
+						       	  	 }
 						       }
-						       	  				       	
+
 						       }
 						     ?>
 					</ul>
@@ -158,45 +158,44 @@
 </div>
 
 
- <include file="News/right"/> 
+ <include file="News/right"/>
 
 </div>
 
-    <include file="Public/Tpl/footer"/> 
+    <include file="Public/Tpl/footer"/>
 
 </body>
 </html>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

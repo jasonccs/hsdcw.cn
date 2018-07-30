@@ -14,12 +14,12 @@ $(function(){
     	   $(this).css({'background':'','padding':'0px','color':'#000'});
     	}
 
-    })
+    });
 
     $('.artist li').each(function(){
-		
+
 		$(this).find('.cover').css('top', -$(this).height());
-		
+
 		$(this).hover(function(){
 			$(this).find('.cover').animate({
 				'top': '0'
@@ -34,12 +34,12 @@ $(function(){
 				}
 			});
 		});
-		
+
 	});
 	//会员登录拉下个人中心
 
 	$('.top_login>.login>b').mouseover(function(){
-         
+
          $(this).next().css('display','block');
          $(this).next().mouseleave(function(){
          	$(this).css('display','none');
@@ -48,14 +48,25 @@ $(function(){
 
 	//菜单切换的跟踪样式
 	$('.menu>.nav_body>.nav>ul>li>p>a').each(function () {
-        if ($($(this))[0].href == String(window.location))		 
-        $(this).addClass('cur');
+       let url= String(window.location),regx = /\d+/;
+       let new_url=url.replace(/\/\d+\.?|html|htm/,'.');
+
+        if(regx.test(url)){
+        	console.log();
+            if ($($(this))[0].href == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-4) == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-3) == new_url)
+                $(this).addClass('cur');
+		}else{
+            if ($($(this))[0].href == url)
+                $(this).addClass('cur');
+		}
+
+
     });
 
 });
 
 jQuery.fn.extend({
-	
+
 	slideFocus: function(){
 		var This = $(this);
 		var sWidth = $(This).width(),
@@ -91,7 +102,7 @@ jQuery.fn.extend({
 		});
 
 
-		// start setInterval		
+		// start setInterval
 		$(This).find('ul').css("width",sWidth * (len));
 		$(This).hover(function(){
 			clearInterval(Timer);
@@ -111,7 +122,7 @@ jQuery.fn.extend({
 			$(This).find('.btn span').stop(true,false).eq(index).addClass('on').siblings().removeClass('on');
 		};
 
-		
+
 		// show hide
 		function show(obj){ $(obj).stop(true,false).fadeIn();}
 		function hide(obj){ $(obj).stop(true,false).fadeOut();}
@@ -140,13 +151,13 @@ var o = {
 "q+" : Math.floor((this.getMonth() + 3) / 3),
 "S" : this.getMilliseconds()
 }
- 
+
 if (/(y+)/.test(format))
 {
 format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4
 - RegExp.$1.length));
 }
- 
+
 for (var k in o)
 {
 if (new RegExp("(" + k + ")").test(format))
@@ -160,18 +171,18 @@ return format;
 }
 
 
-function getTime(/** timestamp=0 **/) {  
-    var ts = arguments[0] || 0;  
-    var t,y,m,d,h,i,s;  
-    t = ts ? new Date(ts*1000) : new Date();  
-    y = t.getFullYear();  
-    m = t.getMonth()+1;  
-    d = t.getDate();  
-    h = t.getHours();  
-    i = t.getMinutes();  
-    s = t.getSeconds();  
-    // 可根据需要在这里定义时间格式  
-    return y+'-'+(m<10?'0'+m:m)+'-'+(d<10?'0'+d:d)+' '+(h<10?'0'+h:h)+':'+(i<10?'0'+i:i)+':'+(s<10?'0'+s:s);  
-}  
-  
+function getTime(/** timestamp=0 **/) {
+    var ts = arguments[0] || 0;
+    var t,y,m,d,h,i,s;
+    t = ts ? new Date(ts*1000) : new Date();
+    y = t.getFullYear();
+    m = t.getMonth()+1;
+    d = t.getDate();
+    h = t.getHours();
+    i = t.getMinutes();
+    s = t.getSeconds();
+    // 可根据需要在这里定义时间格式
+    return y+'-'+(m<10?'0'+m:m)+'-'+(d<10?'0'+d:d)+' '+(h<10?'0'+h:h)+':'+(i<10?'0'+i:i)+':'+(s<10?'0'+s:s);
+}
+
 
