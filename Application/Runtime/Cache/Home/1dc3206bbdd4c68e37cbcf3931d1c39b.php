@@ -7,26 +7,26 @@
         <meta name="description" content="<?php echo (msubstr($result["description"],0,180)); ?>">
         <link href="/Application/Home/View/Public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" /> 
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/nbase_b7e2fdc.css" />
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_main.css" />
         <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/ndetail_core_92bd36a.css" />
 
-        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script>
-        <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script>
-        <script type="text/javascript" src="/Application/Home/View/Public/js/common.js"></script>
+        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script> 
+        <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script> 
+        <script type="text/javascript" src="/Application/Home/View/Public/js/common.js"></script> 
 
     </head>
-
+    
 <body >
 
         <script type="text/javascript">
             var arcticle_id ='<?php echo ($result["id"]); ?>';
-         </script>
+         </script>   
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/hbxw/14.html';
+         var curenturl   ='/H_N_d/28.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
@@ -145,9 +145,9 @@
     </div>
 
 
-
+       
         <div id="wrapper" class="detail-wrapper">
-
+          
             <div id="container" class="clearfix">
                 <div class="detail-main">
                     <div id="pagelet-article">
@@ -155,7 +155,7 @@
                             <a href="/" target="_blank" ga_event="click_index">
                                 首页
                             </a>
-
+                           
                             <a href="/news_politics/" target="_blank" ga_event="click_channel">
                                 国内
                             </a>
@@ -240,7 +240,6 @@
                             相关阅读
                         </div>
                         <ul class="relatednews" data-node="listBox">
-
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="title-box">
@@ -301,7 +300,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="item clearfix" data-node="item">
                                 <div class="item-inner">
                                     <div class="lbox left">
@@ -386,19 +384,18 @@
                                     </div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                     <div class="d-union-1">
                     </div>
                     <div class="ad720" style="text-align:center;margin-bottom:20px">
                         <div class="ab1">
-
-
+                           
+                            
                         </div>
                         <div class="ab2 none">
-
-
+                           
+                           
                         </div>
                     </div>
                     <div id="pagelet-ncomment">
@@ -435,20 +432,20 @@ $(function(){
                    }else{
 
                         $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').removeClass('active');
-                   }
+                   }          
              })
  });
-
+               
                $('.csubmit').click(function(){
 
                         if($.cookie('<?php echo C('COOKIE_PREFIX') ?>username')==null || $.cookie('<?php echo C('COOKIE_PREFIX') ?>userid')==null){
-                                 login();
+                                 login(); 
                                  $('.rl-close').click(function(){
                                    loginhide();
                                  });
                                  viplogin();
                                  return ;
-
+                    
                         }
                         if($(this).hasClass('csubmit active')){
                            $.post('<?php echo U('Home/News/comment');?>',{id:arcticle_id,content:
@@ -487,18 +484,18 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>';
+                            </li>';  
                                      $('.clist').prepend(commenthtml) ;
-                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加
+                                     var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加  
                                      $('.ctotalnum').text(ctotalnum);
                                  }
 
                            },'json');
-
-                        }
-
-                      })
-
+                            
+                        }       
+                                 
+                      })  
+       
 })
 
 </script>
@@ -526,8 +523,8 @@ $(function(){
                             </div>
                         </div>
 
-             <ul id="clist" class="clist" >
-
+             <ul id="clist" class="clist" >   
+                 
                  <?php if(is_array($comments)): $i = 0; $__LIST__ = $comments;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="citem clearfix">
                                 <div class="cavatar">
                                     <a href="" target="_blank">
@@ -558,16 +555,16 @@ $(function(){
                                                 <i class="cbtn">
                                                 </i>
                                             </a>
-
+                                           
                                         </div>
                                     </div>
                                 </div>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
-
+                    
                      <?php if($count >= 3): ?><a class="cloadmore show" href="javascript:ajaxmore();" >
                             点击加载更多
-                        </a><?php endif; ?>
+                        </a><?php endif; ?>   
 				    </div>
                 </div>
 
@@ -576,10 +573,10 @@ $(function(){
                     var pagenum=<?php echo ($pagenum); ?>;//总页数
 
                    function ajaxmore(){
-
+                        
                         $.ajax({
                              url:"<?php echo U('Home/News/ajaxmore');?>",
-                             type:'post',
+                             type:'post',   
                              data:{page:page,arcticle_id:arcticle_id},
                              datatype:'json',
                              beforeSend:function(){
@@ -587,7 +584,7 @@ $(function(){
                                 // setTimeout('alert(3)',3000);
                                 $('.cloadmore').css('background','none');
                                 $('.cloadmore').append('<img src="/Application/Home/View/Public/images/loading.gif"/>');
-                             },
+                             }, 
                              success:function(data){
 
                                 if(page++<=pagenum && data !==null){
@@ -622,7 +619,7 @@ $(function(){
                                         </div>\
                                     </div>\
                                 </div>\
-                            </li>';
+                            </li>'; 
 
                                         $('.clist').append(commenthtml) ;
                                      })
@@ -641,9 +638,9 @@ $(function(){
 
                                 }else{
                                     $('.cloadmore').css('background','#A2A2A2');
-                                    $('.cloadmore').text('剩余'+shenyu+'条');
-                                }
-                             }
+                                    $('.cloadmore').text('剩余'+shenyu+'条');  
+                                } 
+                             }  
 
                         })
 
@@ -652,7 +649,7 @@ $(function(){
 
 
  <div class="detail-right">
-
+        
 
  <div id="pagelet-iad" class="sideGap" ga_event="click_banner_newspage_right">
       <div class="ab1">
@@ -662,7 +659,7 @@ $(function(){
         </div>
         </div>
 </div>
-
+   
 
 <div id="pagelet-hotgallery" class="sideGap" style="display: block;">
 <div class="dtag">精彩图片</div>
@@ -780,9 +777,9 @@ $(function(){
 
 </div>
  </div>
-
+           
 </div>
-
+     
      <!---->
 
       <div class="footer">
@@ -797,9 +794,9 @@ $(function(){
                    <span>Copyright © 2015 - 2019 Jasonccs. All Rights Reserved. 鄂ICP备15011090号-1 蓝宝石公司 版权所有 邮箱：1521910992@qq.com</span>
                 </div>
 
-      </div> 
+      </div>  
 
-
+     
     </body>
 
 </html>

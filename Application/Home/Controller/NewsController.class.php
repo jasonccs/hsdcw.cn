@@ -1,17 +1,9 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class NewsController extends Controller{
+class NewsController extends Controller {
 
-
-
-    public function _initialize()
-    {
-        $current_url=MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME.'/';
-        $this->assign('current_url',$current_url); //获取当前的路由
-    }
-
-    //黄石新闻
+	//黄石新闻
     public function index(){
 
         $db=M('news');
@@ -19,10 +11,10 @@ class NewsController extends Controller{
         $where['display']=0;
         $where['type']=array('in',array(2,3));
         $page=new \Think\HdPage($db->where($where)->count(),6);
-        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select();
+        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select(); 
         foreach ($hsxw as $key => $value) {
          $hsxw[$key]['commentnum']=$this->commenttotal($value['id']); //对应文章的评论数量
-        }
+        }    
         $this->assign('hsxw',$hsxw);
         $this->assign('page',$page->show(2));
 
@@ -47,7 +39,7 @@ class NewsController extends Controller{
         $hsxw=$db->limit($page->limit())->where( $where)->order(array('time'=>'desc'))->select();
          foreach ($hsxw as $key => $value) {
          $hsxw[$key]['commentnum']=$this->commenttotal($value['id']); //对应文章的评论数量
-        }
+        }      
         $this->assign('hsxw',$hsxw);
         $this->assign('page',$page->show(2));
         // dump($hsxw);
@@ -67,16 +59,17 @@ class NewsController extends Controller{
         $where['display']=0;
         $where['type']=array('in',array(2,3));
         $page=new \Think\HdPage($db->where( $where)->count(),6);
-        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select();
+        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select();  
          foreach ($hsxw as $key => $value) {
          $hsxw[$key]['commentnum']=$this->commenttotal($value['id']); //对应文章的评论数量
-        }
+        }    
         $this->assign('hsxw',$hsxw);
         $this->assign('page',$page->show(2));
         // dump($hsxw);
         $newtop=$db->where("cateid=4 and display=0 and type=1")->order(array('time'=>'desc'))->find();
         $this->assign('newtop',$newtop);
         $this->hot(4);//右侧热度排行
+       
         $this->display();
    }
 
@@ -91,10 +84,10 @@ class NewsController extends Controller{
         $where['display']=0;
         $where['type']=array('in',array(2,3));
         $page=new \Think\HdPage($db->where( $where)->count(),6);
-        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select();
+        $hsxw=$db->limit($page->limit())->where($where)->order(array('time'=>'desc'))->select();     
          foreach ($hsxw as $key => $value) {
          $hsxw[$key]['commentnum']=$this->commenttotal($value['id']); //对应文章的评论数量
-        }
+        } 
         $this->assign('hsxw',$hsxw);
         $this->assign('page',$page->show(2));
         // dump($hsxw);
@@ -114,10 +107,10 @@ class NewsController extends Controller{
 
   //文章评论总数
    public function commenttotal($id){
-
+  
       $comcount=M('comment')->where(array('arcticle_id'=>$id))->count('id');
        return $comcount;
-
+      
    }
 
     //文章详细内容
@@ -142,7 +135,7 @@ class NewsController extends Controller{
 
 
 
-   //评论文章
+   //评论文章   
    public function comment(){
 
          if(IS_AJAX){
@@ -153,7 +146,7 @@ class NewsController extends Controller{
                 'username'    =>I('username',null),
                 'content'     =>I('content',null,'strip_tags,trim'),
                 'time'        =>time(),
-
+   
             );
           // dump($comment);
            $result=M('comment')->add($comment);
@@ -178,11 +171,11 @@ class NewsController extends Controller{
        // dump($page);die;
         $this->ajaxReturn($comments);//评论内容
        }
-
+ 
 
    }
 
 
 
 }
-?>
+?>    

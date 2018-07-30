@@ -2,4 +2,5 @@
 Application/Runtime/*
 .idea
 ThinkPHP
+Application/Common/Config.php
 www.tar.gz

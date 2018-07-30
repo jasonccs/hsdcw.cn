@@ -7,7 +7,7 @@
 <meta name="description" content="黄石新闻门户网.梳理黄石新闻,足不出户知天下事.">
     <link href="/Application/Home/View/Public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/main.css" /> 
     <link rel="stylesheet" type="text/css" href="/Application/Home/View/Public/css/news.css" />
     <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.1.10.2.min.js"></script>
     <script type="text/javascript" src="/Application/Home/View/Public/js/date.js"></script><!--头部日期js-->
@@ -19,7 +19,7 @@
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/index.html';
+         var curenturl   ='/Home/News/index/page/2.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
@@ -141,13 +141,12 @@
 
 <div class="layout Q-g16b-b">
 	<div class="chief" role="main">
-		<h2 class="subTitle">黄石要闻</h2>
+		<h2 class="subTitle">黄石要闻</h2>  	
 <div id="news">
 <div>
 <div id="subHot" bosszone="js_jdt">
-
-       <?php
- if(!isset($newtop['id'])){ echo '<a target="_blank" href="#">'; }else{ echo '<a target="_blank" href="'.ACTION_NAME.'/'.$newtop['id'].'">'; } if(preg_match('/|/',$newtop['desc_image']) && $newtop['desc_image'] != ''){ $list_top_img=explode('|', $newtop['desc_image']); echo '<img src="'. $list_top_img[0].'" alt="'.$newtop['title'].'" width="750" height="346">'; }else{ echo '<img src="/Application/Home/View/Public/images/default.png" alt="'.$newtop['title'].'" width="100%" height="100%">'; }; ?>
+		
+       <?php  if(!isset($newtop['id'])){ echo '<a target="_blank" href="#">'; }else{ echo '<a target="_blank" href="'.'/H_N_d/'.$newtop['id'].'">'; } if(preg_match('/|/',$newtop['desc_image']) && $newtop['desc_image'] != ''){ $list_top_img=explode('|', $newtop['desc_image']); echo '<img src="'. $list_top_img[0].'" alt="'.$newtop['title'].'" width="750" height="346">'; }else{ echo '<img src="/Application/Home/View/Public/images/default.png" alt="'.$newtop['title'].'" width="100%" height="100%">'; }; ?>
 		<!--  -->
 
 		<div class="overlay"><?php echo (msubstr($newtop["title"],0,40)); ?></div>
@@ -159,14 +158,14 @@
 
 <?php if(is_array($hsxw)): $k = 0; $__LIST__ = $hsxw;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k; if($k%6 != 0): ?><div class="Q-tpList">
 		<div class="Q-tpWrap">
-				<a target="_blank" class="pic" href="<?php echo U($current_url.$vo['id']);?>">
+				<a target="_blank" class="pic" href="<?php echo U('/H_N_d/'.$vo['id']);?>">
 					<?php if($vo['desc_image'] != '' ): if (!empty($vo['desc_image'])) { $listimg=explode('|',$vo['desc_image']); if($key>=2){ echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">'; }else{ echo '<img class="picto" src="'.$listimg[0].'" width="120" height="96">'; } } ?>
-
+						   
 						<?php else: ?>
 						  <img class="picto" src="/Application/Home/View/Public/images/default.png"  width="" height=""><?php endif; ?>
 				</a>
 				<div class="text">
-					<em class="f14 l24"><a target="_blank" class="linkto" href="<?php echo U($current_url.$vo['id']);?>"><?php echo (msubstr($vo["title"],0,40)); ?></a></em>
+					<em class="f14 l24"><a target="_blank" class="linkto" href="<?php echo U('/H_N_d/'.$vo['id']);?>"><?php echo (msubstr($vo["title"],0,40)); ?></a></em>
 					<p style="text-indent:20px">
 						<?php echo (msubstr(strip_tags($vo["content"]),0,100)); ?>
 					</p>
@@ -185,14 +184,13 @@
 						</div>
 				</div>
 		</div>
-	</div><?php endif; ?>
+	</div><?php endif; ?>	
   <?php if($k%6 == 0): ?><div class="Q-pList">
 			<div class="content">
-			<em><a target="_blank" class="linkto" href="<?php echo U($current_url.$vo['id']);?>"><?php echo (msubstr($vo["title"],0,40)); ?></a></em>
+			<em><a target="_blank" class="linkto" href="<?php echo U('/H_N_d/'.$vo['id']);?>"><?php echo (msubstr($vo["title"],0,40)); ?></a></em>
 					<ul>
-
-						   <?php
- $newsurl='http://'.$_SERVER['HTTP_HOST']."/Home/News/detail/id/".$vo['id'].C('URL_HTML_SUFFIX'); if (!empty($vo['desc_image'])) { $listimg=explode('|',$vo['desc_image']); foreach ($listimg as $value){ if(!empty($value)){ echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="'.$value.'" ></a></li>'; }else{ echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="/Application/Home/View/Public/images/default.png" ></a></li>'; } } } ?>
+				
+						   <?php  $newsurl='http://'.$_SERVER['HTTP_HOST']."/Home/News/detail/id/".$vo['id'].C('URL_HTML_SUFFIX'); if (!empty($vo['desc_image'])) { $listimg=explode('|',$vo['desc_image']); foreach ($listimg as $value){ if(!empty($value)){ echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="'.$value.'" ></a></li>'; }else{ echo '<li class="pic"><a target="_blank" href="'.$newsurl.'"><img src="/Application/Home/View/Public/images/default.png" ></a></li>'; } } } ?>
 					</ul>
 			</div>
 			<div class="st">
@@ -298,7 +296,7 @@
 		</div>
 
 
-</div>
+</div> 
 
 </div>
 
@@ -314,7 +312,7 @@
                    <span>Copyright © 2015 - 2019 Jasonccs. All Rights Reserved. 鄂ICP备15011090号-1 蓝宝石公司 版权所有 邮箱：1521910992@qq.com</span>
                 </div>
 
-      </div> 
+      </div>  
 
 </body>
 </html>

@@ -67,7 +67,7 @@ return array(
   // 开启路由
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
-       ':module/:controller/:action/:id\d'              => 'Home/News/detail',//文章详情页路由
+       'H_N_d/:id\d'              => 'Home/News/detail',//文章详情页路由
         // 'house'          => array('/Home/Fang/index'),
     ),
 
