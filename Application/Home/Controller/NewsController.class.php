@@ -115,7 +115,7 @@ class NewsController extends Controller{
   //文章评论总数
    public function commenttotal($id){
 
-      $comcount=M('comment')->where(array('arcticle_id'=>$id))->count('id');
+      $comcount=M('comment')->where(array('article_id'=>$id))->count('id');
        return $comcount;
 
    }
@@ -126,9 +126,9 @@ class NewsController extends Controller{
          $id=I('id','','intval');
          $result=M('news')->find($id);
           M('news')->data(array('eye'=>$result['eye']+1))->where('id='.$id)->save();//浏览次数
-         $page=new \Think\HdPage(M('comment')->where("arcticle_id=$id")->count(),3);
-         $comments=M('comment')->limit($page->limit())->where(array('arcticle_id'=>$id))->order('time desc')->select();
-         $count=M('comment')->where(array('arcticle_id'=>$id))->count('id');
+         $page=new \Think\HdPage(M('comment')->where("article_id=$id")->count(),3);
+         $comments=M('comment')->limit($page->limit())->where(array('article_id'=>$id))->order('time desc')->select();
+         $count=M('comment')->where(array('article_id'=>$id))->count('id');
 
          // dump($count);
          $this->assign('count',$count);//评论数量
@@ -148,8 +148,7 @@ class NewsController extends Controller{
          if(IS_AJAX){
 
           $comment=array(
-
-                'arcticle_id' =>I('id','','intval'),
+                'article_id' =>I('id','','intval'),
                 'username'    =>I('username',null),
                 'content'     =>I('content',null,'strip_tags,trim'),
                 'time'        =>time(),
@@ -172,8 +171,8 @@ class NewsController extends Controller{
 
        if(IS_AJAX){
         $page=I('page','1','intval'); //传来第几页的信息
-        $arcticle_id =I('arcticle_id');//哪一篇文章的id 的评论
-        $comments=M('comment')->limit(($page-1)*3,3)->where(array('arcticle_id'=>$arcticle_id))->order('time desc')->select();
+        $arcticle_id =I('article_id');//哪一篇文章的id 的评论
+        $comments=M('comment')->limit(($page-1)*3,3)->where(array('article_id'=>$arcticle_id))->order('time desc')->select();
         // echo M('comment')->getLastSql();
        // dump($page);die;
         $this->ajaxReturn($comments);//评论内容
