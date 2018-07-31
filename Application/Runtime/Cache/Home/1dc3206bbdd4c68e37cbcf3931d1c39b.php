@@ -26,7 +26,7 @@
 
         <script type="text/javascript">
          var userloginurl='<?php echo U('Member/Login/login');?>';//
-         var curenturl   ='/Home/News/index/32.html';
+         var curenturl   ='/Home/News/index/13.html';
        </script>
 
        <script type="text/javascript" src="/Application/Home/View/Public/js/jquery.cookie.js"></script> 
@@ -442,15 +442,15 @@ $(function(){
 
                $('.csubmit').click(function(){
 
-                        if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
-                                 login();
-                                 $('.rl-close').click(function(){
-                                   loginhide();
-                                 });
-                                 viplogin();
-                                 return ;
-
-                        }
+                        // if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
+                        //          login();
+                        //          $('.rl-close').click(function(){
+                        //            loginhide();
+                        //          });
+                        //          viplogin();
+                        //          return ;
+                        //
+                        // }
                         if($(this).hasClass('csubmit active')){
                            $.post("<?php echo U('Home/News/comment');?>",{id:article_id,content:
                            $("textarea[name='cinput']").val(),username:$.cookie(COOKIE_PREFIX+'username')},function(data){

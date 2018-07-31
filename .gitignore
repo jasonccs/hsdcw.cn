@@ -4,3 +4,5 @@ Application/Runtime
 ThinkPHP
 Application/Common/Conf/config.php
 .htaccess
+404.html
+500.html

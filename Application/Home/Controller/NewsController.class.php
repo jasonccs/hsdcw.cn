@@ -148,15 +148,13 @@ class NewsController extends Controller{
          if(IS_AJAX){
 
           $comment=[
-
                 'article_id' =>I('id','','intval'),
                 'username'    =>I('username',''),
                 'content'     =>I('content','','strip_tags,trim'),
                 'time'        =>time(),
-
             ];
           // dump($comment);
-           $result=M('comment')->create($comment);
+           $result=M('comment')->add($comment);
            if($result){
               $comment['status']=true;
               $this->ajaxReturn($comment);
