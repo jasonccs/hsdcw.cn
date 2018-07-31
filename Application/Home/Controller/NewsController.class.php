@@ -146,13 +146,15 @@ class NewsController extends Controller{
    public function comment(){
 
          if(IS_AJAX){
-          $comment=array(
+
+          $comment=[
+
                 'article_id' =>I('id','','intval'),
-                'username'    =>I('username',null),
-                'content'     =>I('content',null,'strip_tags,trim'),
+                'username'    =>I('username',''),
+                'content'     =>I('content','','strip_tags,trim'),
                 'time'        =>time(),
 
-            );
+            ];
           // dump($comment);
            $result=M('comment')->create($comment);
            if($result){
