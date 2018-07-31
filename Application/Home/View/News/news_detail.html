@@ -21,7 +21,7 @@
 <body >
 
         <script type="text/javascript">
-            var arcticle_id ='{$result.id}';
+            let article_id ='{$result.id}';
          </script>
 
 <include file="Public/Tpl/head" />
@@ -306,22 +306,23 @@
 <js href="__PUBLIC__/js/jquery.cookie.js"/>
 <script type="text/javascript">
 $(function(){
+     let COOKIE_PREFIX='<?php echo C('COOKIE_PREFIX') ?>';
 
- $("textarea[name='cinput']").click(function(){
-       $(this).parents('.cbody').addClass('focus');
-       $(this).keyup(function(event){
-                  if($(this).val()!='' && $(this).val().length>1){
-                       $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').addClass('active');
-                   }else{
+     $("textarea[name='cinput']").click(function(){
+           $(this).parents('.cbody').addClass('focus');
+           $(this).keyup(function(event){
+                      if($(this).val()!='' && $(this).val().length>1){
+                           $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').addClass('active');
+                       }else{
 
-                        $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').removeClass('active');
-                   }
-             })
- });
+                            $(this).parents('.ctextarea').siblings('.caction').children('.csubmit').removeClass('active');
+                       }
+                 })
+     });
 
                $('.csubmit').click(function(){
 
-                        if($.cookie('<?php echo C('COOKIE_PREFIX') ?>username')==null || $.cookie('<?php echo C('COOKIE_PREFIX') ?>userid')==null){
+                        if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
                                  login();
                                  $('.rl-close').click(function(){
                                    loginhide();
@@ -331,8 +332,8 @@ $(function(){
 
                         }
                         if($(this).hasClass('csubmit active')){
-                           $.post('{:U('Home/News/comment')}',{id:arcticle_id,content:
-                           $("textarea[name='cinput']").val(),username:$.cookie('<?php echo C('COOKIE_PREFIX') ?>username')},function(data){
+                           $.post("{:U('Home/News/comment')}",{id:article_id,content:
+                           $("textarea[name='cinput']").val(),username:$.cookie(COOKIE_PREFIX+'username')},function(data){
 
                                  if(data.status==true){
                                       delete data['status'];
@@ -464,7 +465,7 @@ $(function(){
                         $.ajax({
                              url:"{:U('Home/News/ajaxmore')}",
                              type:'post',
-                             data:{page:page,arcticle_id:arcticle_id},
+                             data:{page:page,arcticle_id:article_id},
                              datatype:'json',
                              beforeSend:function(){
                                 // $('.cloadmore').text('正在加载!');
