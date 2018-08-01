@@ -16,9 +16,9 @@ class AliSmsSend
     public function sms($data = [])
     {
         $sms_config = [
-            'appKey'    => C('Ali.appKey','23590077'),//阿里大于APPKEY
-            'secretKey' => C('Ali.secretKey','a3bce5933073872d7c9fed03728a7635'),//阿里大于secretKey
-            'FreeSignName' => C('Ali.FreeSignName','能力'),//短信签名
+            'appKey'    => C('Ali.appKey',null,'23590077'),//阿里大于APPKEY
+            'secretKey' => C('Ali.secretKey',null,'a3bce5933073872d7c9fed03728a7635'),//阿里大于secretKey
+            'FreeSignName' => C('Ali.FreeSignName',null,'能力'),//短信签名
         ];
 //        $validate = new Validate([
 //            ['param', 'require|array', '参数必填|参数必须为数组'],
