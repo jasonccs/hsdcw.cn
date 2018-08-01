@@ -3,6 +3,7 @@
 namespace Member\Controller;
 
 use Common\ORG\Util\AliSmsSend;
+use Member\Model\VipUserModel;
 use Think\Controller;
 
 class LoginController extends Controller
@@ -76,15 +77,20 @@ class LoginController extends Controller
     {
         if (IS_AJAX) {
             $Send    = new AliSmsSend();
+            $mobile=I('post.mobile', '', 'trim,strip_tags');
+            $res_check=checkMobile($mobile);
+            if (!$res_check) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
             $result = $Send->sms([
                 'param' => ['code' => '123456', 'name' => '安德兔'],
-                'mobile' => I('post.mobile/s', '', 'trim,strip_tags'),
+                'mobile' => $mobile,
                 'template' => 'SMS_38400133',
             ]);
             if ($result !== true) {
-                $this->ajaxReturn($result);
+                $this->ajaxReturn($result);return false;
+            }else{
+                S('sms_'.$mobile,123456,array('type'=>'file','expire'=>60));
+                $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
-            $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
         }
 
     }

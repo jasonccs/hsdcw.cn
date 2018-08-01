@@ -82,8 +82,8 @@ function setTime(obj) {
 
 //短信验证码
 function mobileSendCode() {
-    let mobile=$("input[name='email']").val(),reg=/^[1][3,4,5,7,8][0-9]{9}$/;
-    if (mobile==='' || !reg.test(mobile)){
+    let mobile=$("input[name='email']"),reg=/^[1][3,4,5,7,8][0-9]{9}$/;
+    if (mobile.val()==='' || !reg.test(mobile.val())){
         $("input[name='email']").next().html('请输入正确的手机号');
         return false;
     }else{
@@ -92,16 +92,17 @@ function mobileSendCode() {
         $.ajax({
             url:'/Member/Login/aliSMS',
             type:'POST',
-            data:{'mobile':$("input[name='email']").val()},
+            data:{'mobile':mobile.val()},
             dataType:'json',
             // cache: false,
             // contentType: false,
             // processData: false,
-            success:function(s){
-                // $this.removeClass('lock-form');//解锁表单
-                // var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
-                // $('.panel-footer').html(html);
-                // return false;
+            success:function(data){
+                if (!data.status){
+                    $("input[name='email']").next().html(data.msg);
+                }else{
+                    $("input[name='email']").next().html(data.msg)
+                }
             }
         });
     }
