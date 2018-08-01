@@ -123,18 +123,15 @@ let login = function () {
     mobile.blur(function () {
         if (mobile.val()==='' ){
             mobile.next().html('手机号必填！');
-            return false;
         }else if (!reg.test(mobile.val())) {
             mobile.next().html('请输入正确手机号！');
         }else {
             mobile.next().html('');
-
         }
     });
     password.blur(function () {
         if (password.val()===''){
             password.next().html('密码必填！');
-            return false;
         }else{
             password.next().html('');
         }
@@ -142,15 +139,13 @@ let login = function () {
     mobile_code.blur(function () {
         if (mobile_code.val()===''){
             mobile_code.next().html('短信验证码必填！');
-            return false;
         }else{
             mobile_code.next().html('');
         }
     });
     verify.blur(function () {
         if (verify.val()===''){
-            verify.next().next().html('短信验证码必填！');
-            return false;
+            verify.next().next().html('图像验证码必填！');
         }else{
             verify.next().next().html('');
         }
@@ -225,7 +220,7 @@ let viplogin = function () {
                 }else{
                     $("input[name='email']").next().html('');
                 }
-                if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'){
+                if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'|| $("input[name='password']").next().html()==='密码必填！'){
                     $("input[name='password']").next().html(data.msg);
                 }else{
                     $("input[name='password']").next().html('');
