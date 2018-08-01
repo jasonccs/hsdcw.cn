@@ -49,7 +49,7 @@ class AliSmsSend
         $result = $this->simpleXml_to_array($result);
         if (isset($result['code'])) {
             if ($result['sub_code']=='isv.BUSINESS_LIMIT_CONTROL'){
-                return ['status' =>false,'msg'=>'一分钟内同一手机号只允许发送一次' ];
+                return ['status' =>false,'msg'=>'每小时内同一手机号只允许最多发送7次' ];
             }
             return $result['sub_code'];
         }
