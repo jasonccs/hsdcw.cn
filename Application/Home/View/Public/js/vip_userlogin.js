@@ -64,16 +64,16 @@ function mobileSendCode() {
     $.ajax({
         url:'/Member/Login/aliSMS',
         type:'POST',
-        data:{'mobile':13554078820},
+        data:{'mobile':$("input[name='email']").val()},
         dataType:'json',
         // cache: false,
         // contentType: false,
         // processData: false,
         success:function(s){
-            $this.removeClass('lock-form');//解锁表单
-            var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
-            $('.panel-footer').html(html);
-            return false;
+            // $this.removeClass('lock-form');//解锁表单
+            // var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
+            // $('.panel-footer').html(html);
+            // return false;
         }
     });
 }

@@ -84,7 +84,7 @@ class LoginController extends Controller
             if ($result !== true) {
                 $this->ajaxReturn($result);
             }
-            $this->ajaxReturn('短信下发成功!');
+            $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
         }
 
     }
