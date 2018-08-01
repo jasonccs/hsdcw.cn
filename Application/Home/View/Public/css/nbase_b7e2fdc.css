@@ -258,19 +258,19 @@ strong {
 	background:url(../images/sina_share.png) no-repeat center
 }
 .snsbox .snsbox-inner .snszone .sns-btn.sns-weibo.gray {
-	background:url() no-repeat center
+	background:url(../images/sina_share.png) no-repeat center
 }
 .snsbox .snsbox-inner .snszone .sns-btn.sns-weibo.gray.checked {
-	background:url() no-repeat center
+	background:url(../images/sina_share.png) no-repeat center
 }
 .snsbox .snsbox-inner .snszone .sns-btn.sns-tqq {
-	background:url() no-repeat center
+	background:url(../images/sina_share.png) no-repeat center
 }
 .snsbox .snsbox-inner .snszone .sns-btn.sns-tqq.gray {
-	background:url() no-repeat center
+	background:url(../images/sina_share.png) no-repeat center
 }
 .snsbox .snsbox-inner .snszone .sns-btn.sns-tqq.gray.checked {
-	background:url() no-repeat center
+	background:url(../images/sina_share.png) no-repeat center
 }
 .d-union-1 {
 	max-height:80px;
@@ -581,7 +581,7 @@ strong {
 .pop-login-sns {
   text-align: center;
   font-size: 14px;
- 
+
     height: 38px;
 }
 .pop-login-sns span {
@@ -884,7 +884,7 @@ strong {
     height: 50px;
     line-height: 50px;
     font-size: 16px;
-    font-family: "Microsoft Yahei", "微软雅黑",;
+    font-family: "Microsoft Yahei", "微软雅黑";
 }
 
 .pop-login-sns i {
