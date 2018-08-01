@@ -1,7 +1,7 @@
 let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <div class="rl-modal-header">\
 <h1>\
-<span class="active-title">登录</span>\
+<span class="active-title xa-user_login">登录</span>\
 <span data-fromto="signin:signup" class="xa-showSignup">注册</span>\
 </h1>\
 <button type="button" class="rl-close" id="aaaa"></button>\
@@ -23,8 +23,7 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">\
 <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" data-callback="checkverity"\
  maxlength="4" data-minlength="4" placeholder="请输入验证码">\
-<a href="javascript:void(0)" hidefocus="true" class="verify-img-wrap js-verify-refresh"></a>\
-<a href="javascript:void(0)" hidefocus="true" class="icon-refresh js-verify-refresh"></a>\
+<a href="javascript:void(0);" hidefocus="true" class="verify-img-wrap js-verify-refresh"><img src="/Admin/Login/verify" onclick="imgVerify(this)" width="87" height="36"></a>\
 <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>\
 </div><div class="rlf-group rlf-appendix form-control  clearfix">\
 <label for="auto-signin" class="rlf-autoin l" hidefocus="true">\
@@ -49,6 +48,12 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 </div>\
 </div>\
 </div><div class="modal-backdrop  in"></div>';
+
+
+function imgVerify(va) {
+    let src=$(va).attr('src');
+    $(va).attr('src',src+'?'+Math.random());
+}
 
 let login = function () {
     $('.footer').after(loginhtml);
@@ -109,6 +114,18 @@ $(function () {
     $('.userlogin').click(function () {
 
         login();
+
+        $('.xa-showSignup').click(function () {
+            $('.js-verify-row').css({'display':'block'});
+            $('.xa-user_login').removeClass('active-title');
+            $(this).addClass('active-title');
+        });
+
+        $('.xa-user_login').click(function () {
+            $('.js-verify-row').css({'display':'none'});
+            $('.xa-showSignup').removeClass('active-title');
+            $(this).addClass('active-title');
+        });
 
         $('.rl-close').click(function () {
 
