@@ -1,3 +1,7 @@
+//author :石全松
+//date   :2018-06-16
+//update :2018-08-01
+
 let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <div class="rl-modal-header">\
 <h1>\
@@ -60,7 +64,10 @@ function imgVerify(va) {
 }
 
 
-let  countdown=60;
+let countdown=60,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
+    // password=$("input[name='password']"),
+    // mobile_code=$("input[name='mobile-code']"),
+    // verify=$("input[name='verify']");
 //发送验证码倒计时
 function setTime(obj) {
     if (countdown === 0) {
@@ -82,9 +89,8 @@ function setTime(obj) {
 
 //短信验证码
 function mobileSendCode() {
-    let mobile=$("input[name='email']"),reg=/^[1][3,4,5,7,8][0-9]{9}$/;
     if (mobile.val()==='' || !reg.test(mobile.val())){
-        $("input[name='email']").next().html('请输入正确的手机号');
+        $("input[name='email']").next().html('请输入正确的手机号！');
         return false;
     }else{
         setTime($('.verify-mobile-wrap'));
@@ -110,6 +116,46 @@ function mobileSendCode() {
 
 let login = function () {
     $('.footer').after(loginhtml);
+    let mobile=$("input[name='email']"),
+        password=$("input[name='password']"),mobile_code=$("input[name='mobile-code']"),
+        verify=$("input[name='verify']");
+
+    mobile.blur(function () {
+        if (mobile.val()==='' ){
+            mobile.next().html('手机号必填！');
+            return false;
+        }else if (!reg.test(mobile.val())) {
+            mobile.next().html('请输入正确手机号！');
+        }else {
+            mobile.next().html('');
+
+        }
+    });
+    password.blur(function () {
+        if (password.val()===''){
+            password.next().html('密码必填！');
+            return false;
+        }else{
+            password.next().html('');
+        }
+    });
+    mobile_code.blur(function () {
+        if (mobile_code.val()===''){
+            mobile_code.next().html('短信验证码必填！');
+            return false;
+        }else{
+            mobile_code.next().html('');
+        }
+    });
+    verify.blur(function () {
+        if (verify.val()===''){
+            verify.next().next().html('短信验证码必填！');
+            return false;
+        }else{
+            verify.next().next().html('');
+        }
+    })
+
 };
 
 let loginhide = function () {
