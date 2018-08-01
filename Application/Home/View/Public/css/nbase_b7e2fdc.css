@@ -708,6 +708,15 @@ strong {
 	width: 84px;
 	height: 40px;
 }
+.verify-mobile-wrap{
+	position: absolute;
+	right: 31px;
+	top: 80px;
+	width: 84px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
 .rlf-tip-wrap {
   clear: both;
 }

@@ -13,8 +13,9 @@ let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <p class="rlf-tip-globle color-red" id="signin-globle-error"></p>\
 <div class="rlf-group pr has-error">\
 <input type="text" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" \
-class="xa-emailOrPhone ipt ipt-email js-own-name" placeholder="请输入登录邮箱/手机号">\
-<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确的邮箱或手机号"></p>\
+class="xa-emailOrPhone ipt ipt-email js-own-name" placeholder="请输入手机号">\
+<p class="rlf-tip-wrap errorHint color-red"></p>\
+<a href="javascript:mobileSendCode();" class="verify-mobile-wrap js-verify-refresh" style="display: none">发送验证码</a>\
 </div><div class="rlf-group  pr">\
 <input type="password" name="password" data-validate="require-password" class="ipt ipt-pwd js-loginPassword \
 js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off">\
@@ -56,6 +57,25 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 function imgVerify(va) {
     let src=$(va).attr('src');
     $(va).attr('src',src+'?'+Math.random());
+}
+
+//短信验证码
+function mobileSendCode() {
+    $.ajax({
+        url:'/Member/Login/aliSMS',
+        type:'POST',
+        data:{'mobile':$("input[name='email']").val()},
+        dataType:'json',
+        cache: false,
+        contentType: false,
+        processData: false,
+        success:function(s){
+            $this.removeClass('lock-form');//解锁表单
+            var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
+            $('.panel-footer').html(html);
+            return false;
+        }
+    });
 }
 
 let login = function () {
@@ -108,6 +128,38 @@ let viplogin = function () {
             }
 
         }, 'json');
+    });
+
+    //注册
+    $('.xa-register').click(function () {
+
+        $.post('' + user_register_url + '', {
+            mobile: $("input[name='email']").val(),
+            password: $("input[name='password']").val()
+        }, function (data) {
+
+            if (!data.status) {
+
+                $("#signin").addClass("rl-modal in shake");
+                let set = setTimeout(function () {
+                    $("#signin").removeClass('shake');
+                }, 1500);
+                if (data.msg==='手机号已经存在！'|| data.msg==='手机号必填！'){
+                    $("input[name='email']").next().html(data.msg);
+                }else{
+                    $("input[name='email']").next().html('');
+                }
+                if(data.msg==='密码必填！'){
+                    $("input[name='password']").next().html(data.msg);
+                }else{
+                    $("input[name='password']").next().html('');
+                }
+
+            }else{
+                $('#signup-form p ').html('');
+            }
+
+        }, 'json');
     })
 };
 
@@ -123,6 +175,7 @@ $(function () {
             $('.xa-user_login').removeClass('active-title');
             $('.rlf-group .xa-register').css({'display':'block'});
             $('.rlf-group .xa-login').css({'display':'none'});
+            $('.verify-mobile-wrap').css({'display':'block'});
             $('#signup-form p').html('');
             $(this).addClass('active-title');
         });
@@ -132,6 +185,8 @@ $(function () {
             $('.xa-showSignup').removeClass('active-title');
             $('.rlf-group  .xa-register').css({'display':'none'});
             $('.rlf-group  .xa-login').css({'display':'block'});
+            $('.verify-mobile-wrap').css({'display':'none'});
+            $('#signup-form p').html('');
             $(this).addClass('active-title');
         });
 
