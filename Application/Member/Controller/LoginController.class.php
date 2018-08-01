@@ -78,17 +78,18 @@ class LoginController extends Controller
         if (IS_AJAX) {
             $Send    = new AliSmsSend();
             $mobile=I('post.mobile', '', 'trim,strip_tags');
+            $generateCode=generateCode(6);
             $res_check=checkMobile($mobile);
             if (!$res_check) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
             $result = $Send->sms([
-                'param' => ['code' => '123456', 'name' => '安德兔'],
+                'param' => ['code' => $generateCode, 'name' => 'Mr.汤苏敏'],
                 'mobile' => $mobile,
                 'template' => 'SMS_38400133',
             ]);
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
             }else{
-                S('sms_'.$mobile,123456,array('type'=>'file','expire'=>60));
+                S('sms_'.$mobile,$generateCode,array('type'=>'file','expire'=>C('Ali.expireTime','',60)));
                 $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
         }
