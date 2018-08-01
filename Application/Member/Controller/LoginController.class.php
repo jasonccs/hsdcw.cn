@@ -82,14 +82,14 @@ class LoginController extends Controller
             $res_check=checkMobile($mobile);
             if (!$res_check) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
             $result = $Send->sms([
-                'param' => ['code' => $generateCode, 'name' => 'Mr.汤苏敏'],
+                'param' => ['code' => $generateCode, 'name' => 'Mr.小洪'],
                 'mobile' => $mobile,
                 'template' => 'SMS_38400133',
             ]);
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
             }else{
-                S('sms_'.$mobile,$generateCode,array('type'=>'file','expire'=>C('Ali.expireTime','',60)));
+                S('sms_'.$mobile,$generateCode,['type'=>'file','expire'=>C('Ali.expireTime','',60)]);
                 $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
         }
