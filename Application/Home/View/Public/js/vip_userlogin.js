@@ -1,5 +1,4 @@
-
-let loginhtml='<div id="signin" class="rl-modal in" aria-hidden="false">\
+let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <div class="rl-modal-header">\
 <h1>\
 <span class="active-title">登录</span>\
@@ -51,88 +50,91 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 </div>\
 </div><div class="modal-backdrop  in"></div>';
 
-let login=function(){
-     $('.footer').after(loginhtml);
+let login = function () {
+    $('.footer').after(loginhtml);
 };
 
-let loginhide=function(){
+let loginhide = function () {
 
-	$('#signin').remove();
-	$('.modal-backdrop').remove();
+    $('#signin').remove();
+    $('.modal-backdrop').remove();
 };
 
-let viplogin= function() {
-	// body...
-$('.xa-login').click(function(){
+let viplogin = function () {
+    // body...
+    $('.xa-login').click(function () {
 
-		  	  $.post(''+userloginurl+'',{username:$("input[name='email']").val(),pwd:$("input[name='password']").val()},function(data){
+        $.post('' + userloginurl + '', {
+            username: $("input[name='email']").val(),
+            pwd: $("input[name='password']").val()
+        }, function (data) {
 
- 						if(data.status==false){
+            if (data.status == false) {
 
- 							  $("#signin").addClass("rl-modal in shake");
-						        var set = setTimeout(function(){
-						            $("#signin").removeClass('shake');
-						        },1500)
+                $("#signin").addClass("rl-modal in shake");
+                var set = setTimeout(function () {
+                    $("#signin").removeClass('shake');
+                }, 1500);
 
-						         $("input[name='email']").next().html('请输入正确的邮箱或手机号');
+                $("input[name='email']").next().html('请输入正确的邮箱或手机号');
 
- 						}else{
- 								if(data.status==true && data.pwderr=='error' ){
- 									$("#signin").addClass("rl-modal in shake");
-							        var set = setTimeout(function(){
-							            $("#signin").removeClass('shake');
-							        },1500);
-						      	 $("input[name='password']").next().html('请输入正确的密码');
-						      	 $("input[name='email']").next().html('');
+            } else {
+                if (data.status && data.pwderr == 'error') {
+                    $("#signin").addClass("rl-modal in shake");
+                    var set = setTimeout(function () {
+                        $("#signin").removeClass('shake');
+                    }, 1500);
+                    $("input[name='password']").next().html('请输入正确的密码');
+                    $("input[name='email']").next().html('');
 
-						      	}
-						      	if(data.status==true && data.pwderr=='true'){
-						      	  $("input[name='password']").next().html('');
-						      	  $("input[name='email']").next().html('');
-						      	  $('.top_login .login i').css({'display':'block'});
-						      	  $('.top_login .login a').css({'display':'none'});
-						      	  window.location.href=curenturl;
+                }
+                if (data.status && data.pwderr == 'true') {
+                    $("input[name='password']").next().html('');
+                    $("input[name='email']").next().html('');
+                    $('.top_login .login i').css({'display': 'block'});
+                    $('.top_login .login a').css({'display': 'none'});
+                    window.location.href = curenturl;
 
-						      	}
+                }
 
- 						}
+            }
 
-		  	  },'json');
-		  })
+        }, 'json');
+    })
 };
 
 
-$(function(){
+$(function () {
 
-	 $('.userlogin').click(function(){
+    $('.userlogin').click(function () {
 
-	       login();
+        login();
 
-		   $('.rl-close').click(function(){
+        $('.rl-close').click(function () {
 
-	            loginhide();
+            loginhide();
 
-	    	});
+        });
 
-		   viplogin();
-		  $('.pop-sns-qq').click(function(){
-		  	   if(curenturl=='/'){
-                  $.cookie('lbsnet_cur_redircturl', document.domain,{path:'/'});
-                  // debugger;
-		  	   }else{
-                  $.cookie('lbsnet_cur_redircturl', curenturl,{path:'/'});
-		  	   }
+        viplogin();
+        $('.pop-sns-qq').click(function () {
+            if (curenturl == '/') {
+                $.cookie('lbsnet_cur_redircturl', document.domain, {path: '/'});
+                // debugger;
+            } else {
+                $.cookie('lbsnet_cur_redircturl', curenturl, {path: '/'});
+            }
 
-		  })
-	});
-   //会员退出
-    $('.user_center .outlogin').click(function(){
-		$.post('/Member/Login/loginout',{'id':11},function(data){
-			if(data.status==true){
-				window.location.reload();
-			}
-		},'json');
-	})
+        })
+    });
+    //会员退出
+    $('.user_center .outlogin').click(function () {
+        $.post('/Member/Login/loginout', {'id': 11}, function (data) {
+            if (data.status) {
+                window.location.reload();
+            }
+        }, 'json');
+    })
 
 });
 
