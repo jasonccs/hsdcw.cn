@@ -30,7 +30,7 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 <input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">下次自动登录</label>\
 <a href="/user/newforgot" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>\
 </div><div class="rlf-group clearfix">\
-<input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login">\
+<input type="button" value="登录"  class="btn-red btn-full xa-login">\
 </div>\
 </form>\
 </div>\
@@ -118,12 +118,14 @@ $(function () {
         $('.xa-showSignup').click(function () {
             $('.js-verify-row').css({'display':'block'});
             $('.xa-user_login').removeClass('active-title');
+            $('.rlf-group .btn-full').val('注册').removeClass('xa-login').addClass('xa-register');
             $(this).addClass('active-title');
         });
 
         $('.xa-user_login').click(function () {
             $('.js-verify-row').css({'display':'none'});
             $('.xa-showSignup').removeClass('active-title');
+            $('.rlf-group .btn-full').val('登录').removeClass('xa-register').addClass('xa-login');
             $(this).addClass('active-title');
         });
 
