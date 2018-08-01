@@ -64,11 +64,11 @@ function mobileSendCode() {
     $.ajax({
         url:'/Member/Login/aliSMS',
         type:'POST',
-        data:{'mobile':$("input[name='email']").val()},
+        data:{'mobile':13554078820},
         dataType:'json',
-        cache: false,
-        contentType: false,
-        processData: false,
+        // cache: false,
+        // contentType: false,
+        // processData: false,
         success:function(s){
             $this.removeClass('lock-form');//解锁表单
             var html = (s.code != 1 ? '错误代码：' : '')+s.msg;

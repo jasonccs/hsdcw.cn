@@ -2,7 +2,7 @@
 
 namespace Member\Controller;
 
-use Common\Model\Send;
+use Common\ORG\Util\AliSmsSend;
 use Think\Controller;
 
 class LoginController extends Controller
@@ -75,7 +75,7 @@ class LoginController extends Controller
     public function aliSMS()
     {
         if (IS_AJAX) {
-            $Send = new Send;
+            $Send    = new AliSmsSend();
             $result = $Send->sms([
                 'param' => ['code' => '123456', 'name' => '安德兔'],
                 'mobile' => I('post.mobile/s', '', 'trim,strip_tags'),
