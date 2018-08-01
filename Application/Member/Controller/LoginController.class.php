@@ -3,7 +3,6 @@
 namespace Member\Controller;
 
 use Common\Model\Send;
-use Member\Model\VipUserModel;
 use Think\Controller;
 
 class LoginController extends Controller
@@ -16,9 +15,9 @@ class LoginController extends Controller
 
         if (IS_AJAX) {
 
-            $user = I('username', null);
-            $pwd = I('pwd', null);
-            $res = M('vipuser')->where(array('username' => $user))->find();
+            $mobile = I('post.mobile', '','trim,strip_tags');
+            $pwd = I('post.pwd', '','trim,strip_tags');
+            $res = M('vipuser')->where(['mobile' => $mobile])->find();
             if (!$res) {//用户查找不到
                 $error = array('status' => false);
                 $this->ajaxReturn($error);
@@ -29,7 +28,7 @@ class LoginController extends Controller
                     $this->ajaxReturn($error);
                 } else {//用户存在 密码相等
                     $error = array('status' => true, 'pwderr' => 'true');
-                    cookie('username', $user, array('expire' => 3600));
+                    cookie('username', $res['username'], array('expire' => 3600));
                     cookie('userid', $res['id'], array('expire' => 3600));
                     $this->ajaxReturn($error);
                 }

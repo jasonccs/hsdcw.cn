@@ -93,7 +93,7 @@ let viplogin = function () {
     $('.xa-login').click(function () {
 
         $.post('' + userloginurl + '', {
-            username: $("input[name='email']").val(),
+            mobile: $("input[name='email']").val(),
             pwd: $("input[name='password']").val()
         }, function (data) {
 
