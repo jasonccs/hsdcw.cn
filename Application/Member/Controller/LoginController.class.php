@@ -3,7 +3,6 @@
 namespace Member\Controller;
 
 use Common\ORG\Util\AliSmsSend;
-use Member\Model\VipUserModel;
 use Think\Controller;
 
 class LoginController extends Controller
