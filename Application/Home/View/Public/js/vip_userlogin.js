@@ -15,7 +15,7 @@ let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <input type="text" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" \
 class="xa-emailOrPhone ipt ipt-email js-own-name" placeholder="请输入手机号">\
 <p class="rlf-tip-wrap errorHint color-red"></p>\
-<a href="javascript:mobileSendCode();" class="verify-mobile-wrap js-verify-refresh" style="display: none">发送验证码</a>\
+<a href="javascript:mobileSendCode();" class="verify-mobile-wrap js-verify-refresh" style="display: none">获取验证码</a>\
 </div><div class="rlf-group  pr">\
 <input type="password" name="password" data-validate="require-password" class="ipt ipt-pwd js-loginPassword \
 js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off">\
@@ -59,23 +59,52 @@ function imgVerify(va) {
     $(va).attr('src',src+'?'+Math.random());
 }
 
+
+let  countdown=60;
+//发送验证码倒计时
+function setTime(obj) {
+    if (countdown === 0) {
+        // obj.attr('disabled',false);
+        obj.attr('href','javascript:mobileSendCode();');
+        obj.html("获取验证码");
+        countdown = 60;
+        return;
+    } else {
+        // obj.attr('disabled',true);
+        obj.removeAttr('href');
+        obj.html("已发送(" + countdown + "s)");
+        countdown--;
+    }
+    setTimeout(function() {
+            setTime(obj) }
+        ,1000)
+}
+
 //短信验证码
 function mobileSendCode() {
-    $.ajax({
-        url:'/Member/Login/aliSMS',
-        type:'POST',
-        data:{'mobile':$("input[name='email']").val()},
-        dataType:'json',
-        // cache: false,
-        // contentType: false,
-        // processData: false,
-        success:function(s){
-            // $this.removeClass('lock-form');//解锁表单
-            // var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
-            // $('.panel-footer').html(html);
-            // return false;
-        }
-    });
+    let mobile=$("input[name='email']").val(),reg=/^[1][3,4,5,7,8][0-9]{9}$/;
+    if (mobile==='' || !reg.test(mobile)){
+        $("input[name='email']").next().html('请输入正确的手机号');
+        return false;
+    }else{
+        setTime($('.verify-mobile-wrap'));
+        mobile.next().html('');
+        $.ajax({
+            url:'/Member/Login/aliSMS',
+            type:'POST',
+            data:{'mobile':$("input[name='email']").val()},
+            dataType:'json',
+            // cache: false,
+            // contentType: false,
+            // processData: false,
+            success:function(s){
+                // $this.removeClass('lock-form');//解锁表单
+                // var html = (s.code != 1 ? '错误代码：' : '')+s.msg;
+                // $('.panel-footer').html(html);
+                // return false;
+            }
+        });
+    }
 }
 
 let login = function () {
@@ -104,7 +133,7 @@ let viplogin = function () {
                     $("#signin").removeClass('shake');
                 }, 1500);
 
-                $("input[name='email']").next().html('请输入正确的邮箱或手机号');
+                $("input[name='email']").next().html('请输入正确的手机号');
 
             } else {
                 if (data.status && data.pwderr == 'error') {
