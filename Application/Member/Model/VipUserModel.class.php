@@ -23,20 +23,21 @@ class VipUserModel extends Model
         ['password', 'checkPassword', '6-16位密码，区分大小写，不能用空格！', 0, 'callback'], // 自定义函数验证密码格式
 
         ['mobile-code', 'require', '短信验证码必填！'], //默认情况下用正则进行验证
+        ['mobile-code', 'integer', '短信验证码不正确！'], //默认情况下用正则进行验证
         ['mobile-code', 'checkMobileCode', '短信验证码不正确！',0,'callback'], //默认情况下用正则进行验证
 
         ['verify', 'require', '图像验证码必填！'], //默认情况下用正则进行验证
         ['verify', 'checkVerify', '图像验证码不正确！',0,'callback'], //默认情况下用正则进行验证
     ];
 
-    protected  function checkMobile(String  $mobile){
+    protected  function checkMobile(String  $mobile=''){
         if(!preg_match("/^1[345678]{1}\d{9}$/",$mobile)){
             return false;
         }
         return true;
     }
 
-    protected  function checkPassword(String  $password){
+    protected  function checkPassword(String  $password=''){
         if(!preg_match("/[0-9a-z]{6,16}$/i",$password)){
             return false;
         }
@@ -44,7 +45,7 @@ class VipUserModel extends Model
     }
 
     //检测短信验证码
-    protected  function checkMobileCode(int  $mobile_code,int $mobile){
+    protected  function checkMobileCode(int  $mobile_code,String $mobile=''){
         $redis=new Redis();
         $res=$redis->get($mobile);
         if($res!=$mobile_code){

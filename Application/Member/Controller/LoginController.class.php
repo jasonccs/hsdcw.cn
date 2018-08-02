@@ -77,15 +77,18 @@ class LoginController extends Controller
     public function aliSMS()
     {
         if (IS_AJAX) {
-            $Send    = new AliSmsSend();
             $mobile=I('post.mobile', '', 'trim,strip_tags');
-            $generateCode=generateCode(6);
             $res_check=checkMobile($mobile);
             if (!$res_check||empty($mobile)) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
+            $vipUserModel= D('VipUser');
+            if (!$vipUserModel->create($_POST,1)) $this->ajaxReturn(['status'=>false,'msg'=>$vipUserModel->getError()]);
+            $Send    = new AliSmsSend();
+            $generateCode=generateCode(6);
             $result = $Send->sms([
                 'param' => ['code' => $generateCode],
                 'mobile' => $mobile,
-                'template' => C('SMS_TEMPLATE_VERIFY','','SMS_141505009'),
+                'template' => C('Ali.SMS_TEMPLATE_VERIFY','','SMS_141505009'),
+//                'template' => 'SMS_38105041',
             ]);
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
@@ -93,7 +96,7 @@ class LoginController extends Controller
 //                S('sms_'.$mobile,$generateCode,['type'=>'file','expire'=>C('Ali.expireTime','',60)]);
                 $redis=new  Redis();
                 $redis->connect(C('Redis.REDIS_HOST','','127.0.0.1'),C('Redis.REDIS_PORT','',6379));
-                $redis->set($mobile,$generateCode,60);
+                $redis->set($mobile,$generateCode,120);
                 $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
         }
