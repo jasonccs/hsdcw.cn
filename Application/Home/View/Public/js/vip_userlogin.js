@@ -64,7 +64,7 @@ function imgVerify(va) {
 }
 
 
-let countdown=60,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
+let countdown=10,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     // password=$("input[name='password']"),
     // mobile_code=$("input[name='mobile-code']"),
     // verify=$("input[name='verify']");
@@ -74,12 +74,14 @@ function setTime(obj) {
         // obj.attr('disabled',false);
         obj.attr('href','javascript:mobileSendCode();');
         obj.html("获取验证码");
-        countdown = 60;
+        obj.prev().prev().attr('disabled');
+        countdown = 10;
         return;
     } else {
         // obj.attr('disabled',true);
         obj.removeAttr('href');
         obj.html("已发送(" + countdown + "s)");
+        obj.prev().prev().removeAttr('disabled');
         countdown--;
     }
     setTimeout(function() {
@@ -93,34 +95,36 @@ function mobileSendCode() {
     let reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     if (mobile.val()==='' || !reg.test(mobile.val())){
         $("input[name='email']").next().html('请输入正确的手机号！');
-        return false;
+        sendSms(mobile.val());
     }else{
-        setTime($('.verify-mobile-wrap'));
-        mobile.next().html('');
-        $.ajax({
-            url:'/Member/Login/aliSMS',
-            type:'POST',
-            data:{'mobile':mobile.val()},
-            dataType:'json',
-            // cache: false,
-            // contentType: false,
-            // processData: false,
-            success:function(data){
-                if (!data.status){//报错机制
-                    $("input[name='email']").next().html(data.msg);
-                    // let obj=$('.verify-mobile-wrap');
-                    // if(countdown !== 60){
-                    //     obj.attr('href','javascript:mobileSendCode();');
-                    //     obj.html("获取验证码");
-                    //     return false;
-                    // }
-
-                }else{
-                    $("input[name='email']").next().html(data.msg)
-                }
+            let res=sendSms(mobile.val());
+            if (res) {
+                setTime($('.verify-mobile-wrap'));
+                mobile.next().html('');
             }
-        });
     }
+}
+
+function sendSms(mobile) {
+    let result=false;
+    $.ajax({
+        url:'/Member/Login/aliSMS',
+        type:'POST',
+        data:{'mobile':mobile},
+        dataType:'json',
+        cache: false,
+        async : false,
+        success:function(data){
+            if (!data.status){//报错机制
+                $("input[name='email']").next().html(data.msg);
+                 result=false;
+            }else{//短信发送成功
+                $("input[name='email']").next().html(data.msg);
+                 result=true;
+            }
+        }
+    });
+    return result
 }
 
 let login = function () {

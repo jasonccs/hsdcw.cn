@@ -46,35 +46,41 @@ class AliSmsSend
         $req->setRecNum($data['mobile']);
         $req->setSmsTemplateCode($data['template']);
         $result = $c->execute($req);
-        $result = $this->simpleXml_to_array($result);
+//        $result = $this->simpleXml_to_array($result);
+        $result = objectToArray($result);
+//        dump($result);die;
         if (isset($result['code'])) {
-            if ($result['sub_code']=='isv.BUSINESS_LIMIT_CONTROL'){
+            if ($result['code']==15){
                 return ['status' =>false,'msg'=>'同一手机号发送次数过多！' ];
+            }elseif ($result['code']==40){
+                return ['status' =>false,'msg'=>'短信模板不存在！' ];
+            }else{
+                return $result['code'];
             }
-            return $result['sub_code'];
+
         }
         return true;
     }
 
-    private function simpleXml_to_array($obj)
-    {
-        if (count($obj) >= 1) {
-            $result = $keys = [];
-            foreach ($obj as $key => $value) {
-                isset($keys[$key]) ? ($keys[$key] += 1) : ($keys[$key] = 1);
-                if ($keys[$key] == 1) {
-                    $result[$key] = $this->simpleXml_to_array($value);
-                } elseif ($keys[$key] == 2) {
-                    $result[$key] = [$result[$key], $this->simpleXml_to_array($value)];
-                } else if ($keys[$key] > 2) {
-                    $result[$key][] = $this->simpleXml_to_array($value);
-                }
-            }
-            return $result;
-        } else if (count($obj) == 0) {
-            return (string)$obj;
-        }
-    }
+//    private function simpleXml_to_array($obj)
+//    {
+//        if (count($obj) >= 1) {
+//            $result = $keys = [];
+//            foreach ($obj as $key => $value) {
+//                isset($keys[$key]) ? ($keys[$key] += 1) : ($keys[$key] = 1);
+//                if ($keys[$key] == 1) {
+//                    $result[$key] = $this->simpleXml_to_array($value);
+//                } elseif ($keys[$key] == 2) {
+//                    $result[$key] = [$result[$key], $this->simpleXml_to_array($value)];
+//                } else if ($keys[$key] > 2) {
+//                    $result[$key][] = $this->simpleXml_to_array($value);
+//                }
+//            }
+//            return $result;
+//        } else if (count($obj) == 0) {
+//            return (string)$obj;
+//        }
+//    }
 
 }
 
