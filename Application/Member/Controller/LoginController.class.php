@@ -85,7 +85,7 @@ class LoginController extends Controller
             $result = $Send->sms([
                 'param' => ['code' => $generateCode],
                 'mobile' => $mobile,
-                'template' => 'SMS_38105041',
+                'template' => C('SMS_TEMPLATE_VERIFY','','SMS_141505009'),
             ]);
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
@@ -93,7 +93,7 @@ class LoginController extends Controller
 //                S('sms_'.$mobile,$generateCode,['type'=>'file','expire'=>C('Ali.expireTime','',60)]);
                 $redis=new  Redis();
                 $redis->connect(C('Redis.REDIS_HOST','','127.0.0.1'),C('Redis.REDIS_PORT','',6379));
-                $redis->set('mobile_code',$generateCode,60);
+                $redis->set($mobile,$generateCode,60);
                 $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
         }

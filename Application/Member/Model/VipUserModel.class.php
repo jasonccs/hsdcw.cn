@@ -44,9 +44,9 @@ class VipUserModel extends Model
     }
 
     //检测短信验证码
-    protected  function checkMobileCode(int  $mobile_code){
+    protected  function checkMobileCode(int  $mobile_code,int $mobile){
         $redis=new Redis();
-        $res=$redis->get('mobile_code');
+        $res=$redis->get($mobile);
         if($res!=$mobile_code){
             return false;
         }
