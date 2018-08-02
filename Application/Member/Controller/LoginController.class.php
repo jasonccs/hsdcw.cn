@@ -3,6 +3,7 @@
 namespace Member\Controller;
 
 use Common\ORG\Util\AliSmsSend;
+use Think\Cache\Driver\Redis;
 use Think\Controller;
 
 class LoginController extends Controller
@@ -56,8 +57,9 @@ class LoginController extends Controller
     {
         $data=[
             'mobile'=> I('post.mobile', '', 'trim,strip_tags'),
-            'mobile_verify'=> I('post.mobile_verify', '', 'trim,strip_tags'),
             'password'=> I('post.password', '', 'trim,strip_tags'),
+            'mobile-code'=> I('post.mobile-code', '', 'trim,strip_tags'),
+            'verify'=> I('post.verify', '', 'trim,strip_tags'),
         ];
         $vipUserModel= D('VipUser');
         if ($vipUserModel->create($_POST,1)){
@@ -88,7 +90,10 @@ class LoginController extends Controller
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
             }else{
-                S('sms_'.$mobile,$generateCode,['type'=>'file','expire'=>C('Ali.expireTime','',60)]);
+//                S('sms_'.$mobile,$generateCode,['type'=>'file','expire'=>C('Ali.expireTime','',60)]);
+                $redis=new  Redis();
+                $redis->connect(C('Redis.REDIS_HOST','','127.0.0.1'),C('Redis.REDIS_PORT','',6379));
+                $redis->set('mobile_code',$generateCode,60);
                 $this->ajaxReturn(['status'=>true,'msg'=>'短信下发成功!']);
             }
         }

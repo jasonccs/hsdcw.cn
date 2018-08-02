@@ -30,9 +30,9 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
  maxlength="4" data-minlength="4" placeholder="请输入短信验证码">\
 <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>\
 <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" placeholder="请输入图像验证码">\
-<a href="javascript:void(0);" class="verify-img-wrap js-verify-refresh"><img src="/Admin/Login/verify" onclick="imgVerify(this)" width="87" height="36"></a>\
+<a href="javascript:void(0);" class="verify-img-wrap js-verify-refresh"><img src="/Member/Verify/verify" onclick="imgVerify(this)" width="87" height="36"></a>\
 <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>\
-</div><div class="rlf-group rlf-appendix form-control  clearfix">\
+</div><div class="rlf-group rlf-appendix form-control  clearfix" style="display: block">\
 <label for="auto-signin" class="rlf-autoin l" hidefocus="true">\
 <input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">下次自动登录</label>\
 <a href="/user/newforgot" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>\
@@ -89,6 +89,8 @@ function setTime(obj) {
 
 //短信验证码
 function mobileSendCode() {
+    // console.log(mobile.val());
+    let reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     if (mobile.val()==='' || !reg.test(mobile.val())){
         $("input[name='email']").next().html('请输入正确的手机号！');
         return false;
@@ -104,7 +106,11 @@ function mobileSendCode() {
             // contentType: false,
             // processData: false,
             success:function(data){
-                if (!data.status){
+                if (!data.status){//报错机制
+                    let obj=$('.verify-mobile-wrap');
+                    obj.attr('href','javascript:mobileSendCode();');
+                    obj.html("获取验证码");
+                    countdown = 60;
                     $("input[name='email']").next().html(data.msg);
                 }else{
                     $("input[name='email']").next().html(data.msg)
@@ -205,8 +211,10 @@ let viplogin = function () {
     $('.xa-register').click(function () {
 
         $.post('' + user_register_url + '', {
-            mobile: $("input[name='email']").val(),
-            password: $("input[name='password']").val()
+            'mobile': $("input[name='email']").val(),
+            'password': $("input[name='password']").val(),
+            'mobile-code': $("input[name='mobile-code']").val(),
+            'verify': $("input[name='verify']").val()
         }, function (data) {
 
             if (!data.status) {
@@ -220,13 +228,27 @@ let viplogin = function () {
                 }else{
                     $("input[name='email']").next().html('');
                 }
+
                 if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'|| $("input[name='password']").next().html()==='密码必填！'){
                     $("input[name='password']").next().html(data.msg);
                 }else{
                     $("input[name='password']").next().html('');
                 }
 
+                if(data.msg==='短信验证码不正确！' || data.msg==='短信验证码必填！'){
+                    $("input[name='mobile-code']").next().html(data.msg);
+                }else{
+                    $("input[name='mobile-code']").next().html('');
+                }
+
+                if(data.msg==='图像验证码必填！' || data.msg==='图像验证码不正确！'){
+                    $("input[name='verify']").next().next().html(data.msg);
+                }else{
+                    $("input[name='verify']").next().next().html('');
+                }
+
             }else{
+                loginhide();
                 $('#signup-form p ').html('');
             }
 
@@ -247,6 +269,7 @@ $(function () {
             $('.rlf-group .xa-register').css({'display':'block'});
             $('.rlf-group .xa-login').css({'display':'none'});
             $('.verify-mobile-wrap').css({'display':'block'});
+            $('.rlf-appendix').css({'display':'none'});
             $('#signup-form p').html('');
             $(this).addClass('active-title');
         });
@@ -257,6 +280,7 @@ $(function () {
             $('.rlf-group  .xa-register').css({'display':'none'});
             $('.rlf-group  .xa-login').css({'display':'block'});
             $('.verify-mobile-wrap').css({'display':'none'});
+            $('.rlf-appendix').css({'display':'block'});
             $('#signup-form p').html('');
             $(this).addClass('active-title');
         });

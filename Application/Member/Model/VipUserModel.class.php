@@ -2,7 +2,9 @@
 
 namespace Member\Model;
 
+use Think\Cache\Driver\Redis;
 use Think\Model;
+use Think\Verify;
 
 //会员表
 class VipUserModel extends Model
@@ -16,9 +18,15 @@ class VipUserModel extends Model
         ['mobile', '', '手机号已经存在！', 0, 'unique', 1], // 在新增的时候验证name字段是否唯一
         ['mobile', 'checkMobile', '手机格式不正确！', 0, 'callback'], // 自定义函数验证密码格式
 
-        ['mobile_verify', 'require', '验证码必须！'], //默认情况下用正则进行验证
+
         ['password', 'require', '密码必填！'], // 在新增的时候验证name字段是否唯一
         ['password', 'checkPassword', '6-16位密码，区分大小写，不能用空格！', 0, 'callback'], // 自定义函数验证密码格式
+
+        ['mobile-code', 'require', '短信验证码必填！'], //默认情况下用正则进行验证
+        ['mobile-code', 'checkMobileCode', '短信验证码不正确！',0,'callback'], //默认情况下用正则进行验证
+
+        ['verify', 'require', '图像验证码必填！'], //默认情况下用正则进行验证
+        ['verify', 'checkVerify', '图像验证码不正确！',0,'callback'], //默认情况下用正则进行验证
     ];
 
     protected  function checkMobile(String  $mobile){
@@ -33,6 +41,22 @@ class VipUserModel extends Model
             return false;
         }
         return true;
+    }
+
+    //检测短信验证码
+    protected  function checkMobileCode(int  $mobile_code){
+        $redis=new Redis();
+        $res=$redis->get('mobile_code');
+        if($res!=$mobile_code){
+            return false;
+        }
+        return true;
+    }
+
+    //检测图像验证码
+    protected  function checkVerify(String  $verify_code,String $mobile=''){
+        $verify = new Verify();
+        return $verify->check($verify_code, $mobile);
     }
 
     //字段映射
