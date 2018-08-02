@@ -64,7 +64,7 @@ function imgVerify(va) {
 }
 
 
-let countdown=10,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
+let countdown=120,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     // password=$("input[name='password']"),
     // mobile_code=$("input[name='mobile-code']"),
     // verify=$("input[name='verify']");
@@ -75,7 +75,7 @@ function setTime(obj) {
         obj.attr('href','javascript:mobileSendCode();');
         obj.html("获取验证码");
         obj.prev().prev().attr('disabled');
-        countdown = 10;
+        countdown = 120;
         return;
     } else {
         // obj.attr('disabled',true);
