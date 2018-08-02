@@ -30,7 +30,9 @@ class VerifyController extends Controller
     public function aa()
     {
         $redis = new Redis();
-        $redis->set('test','hello world!');
+//        $redis->set('test','hello world!');
+//        $redis->set('mobile_code','hello world',60);
+
         dump($redis->get('mobile_code'));
     }
 

@@ -107,11 +107,14 @@ function mobileSendCode() {
             // processData: false,
             success:function(data){
                 if (!data.status){//报错机制
-                    let obj=$('.verify-mobile-wrap');
-                    obj.attr('href','javascript:mobileSendCode();');
-                    obj.html("获取验证码");
-                    countdown = 60;
                     $("input[name='email']").next().html(data.msg);
+                    // let obj=$('.verify-mobile-wrap');
+                    // if(countdown !== 60){
+                    //     obj.attr('href','javascript:mobileSendCode();');
+                    //     obj.html("获取验证码");
+                    //     return false;
+                    // }
+
                 }else{
                     $("input[name='email']").next().html(data.msg)
                 }
