@@ -27,7 +27,7 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 </div>\
 <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">\
 <input type="text" name="mobile-code" class="ipt ipt-verify l" data-validate="require-mobile-code" \
- maxlength="4" data-minlength="4" placeholder="请输入短信验证码">\
+ maxlength="6" data-minlength="6" placeholder="请输入短信验证码">\
 <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>\
 <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" placeholder="请输入图像验证码">\
 <a href="javascript:void(0);" class="verify-img-wrap js-verify-refresh"><img src="/Member/Verify/verify" onclick="imgVerify(this)" width="87" height="36"></a>\

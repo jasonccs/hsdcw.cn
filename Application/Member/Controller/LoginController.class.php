@@ -81,7 +81,7 @@ class LoginController extends Controller
             $mobile=I('post.mobile', '', 'trim,strip_tags');
             $generateCode=generateCode(6);
             $res_check=checkMobile($mobile);
-            if (!$res_check) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
+            if (!$res_check||empty($mobile)) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
             $result = $Send->sms([
                 'param' => ['code' => $generateCode, 'name' => 'Mr.小洪'],
                 'mobile' => $mobile,

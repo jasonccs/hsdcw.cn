@@ -1,5 +1,5 @@
 <?php
-    
+
     /**
      * 检测手机号
      * @param String $mobile
@@ -12,7 +12,7 @@
         }
         return true;
     }
-    
+
     /**
      * 短信验证码
      * @param int $length
@@ -21,6 +21,6 @@
     function generateCode($length = 6) {
         $min = pow(10 , ($length - 1));
         $max = pow(10, $length) - 1;
-        return mt_rand($min, $max);
+        return intval(mt_rand($min, $max));
     }
 
