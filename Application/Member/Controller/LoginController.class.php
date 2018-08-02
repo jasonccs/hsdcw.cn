@@ -55,20 +55,22 @@ class LoginController extends Controller
     //前台注册会员
     public function register()
     {
-        $data=[
-            'mobile'=> I('post.mobile', '', 'trim,strip_tags'),
-            'password'=> I('post.password', '', 'trim,strip_tags'),
-            'mobile-code'=> I('post.mobile-code', '', 'trim,strip_tags'),
-            'verify'=> I('post.verify', '', 'trim,strip_tags'),
-        ];
-        $vipUserModel= D('VipUser');
-        if ($vipUserModel->create($_POST,1)){
-            $result=$vipUserModel->add($data);
-            if ($result){
-                $this->ajaxReturn(['status'=>true,'msg'=>'注册成功！']);
+        if (IS_AJAX){
+            $data=[
+                'mobile'=> I('post.mobile', '', 'trim,strip_tags'),
+                'password'=> I('post.password', '', 'trim,strip_tags'),
+                'mobile-code'=> I('post.mobile-code', '', 'trim,strip_tags'),
+                'verify'=> I('post.verify', '', 'trim,strip_tags'),
+            ];
+            $vipUserModel= D('VipUser');
+            if ($vipUserModel->create($_POST,1)){
+                $result=$vipUserModel->add($data);
+                if ($result){
+                    $this->ajaxReturn(['status'=>true,'msg'=>'注册成功！']);
+                }
+            }else{
+                $this->ajaxReturn(['status'=>false,'msg'=>$vipUserModel->getError()]);
             }
-        }else{
-            $this->ajaxReturn(['status'=>false,'msg'=>$vipUserModel->getError()]);
         }
     }
 
