@@ -83,9 +83,9 @@ class LoginController extends Controller
             $res_check=checkMobile($mobile);
             if (!$res_check||empty($mobile)) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);
             $result = $Send->sms([
-                'param' => ['code' => $generateCode, 'name' => 'Mr.小洪'],
+                'param' => ['code' => $generateCode],
                 'mobile' => $mobile,
-                'template' => 'SMS_38400133',
+                'template' => 'SMS_38105041',
             ]);
             if ($result !== true) {
                 $this->ajaxReturn($result);return false;
