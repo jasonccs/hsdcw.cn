@@ -1,7 +1,7 @@
 <?php
 return [
     //'配置项'=>'配置值'
-
+    
     'verify' =>[
         'fontSize' => 14, // 验证码字体大小
         'length' => 2, // 验证码位数
@@ -14,4 +14,5 @@ return [
         'imageW' =>120,
         'imageH'   =>30,
     ],
+
 ];
