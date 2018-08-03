@@ -249,6 +249,7 @@ let viplogin = function () {
                 }
 
                 if(data.msg==='图像验证码必填！' || data.msg==='图像验证码不正确！'){
+                    imgVerify($('.verify-img-wrap'));
                     $("input[name='verify']").next().next().html(data.msg);
                 }else{
                     $("input[name='verify']").next().next().html('');
