@@ -298,7 +298,7 @@
                         </div>
                         <div class="ceditzone clearfix">
                             <div class="cavatar" data-node="cavatar">
-                                <img src="{$Think.session.user_info.head_portrait|default='../../../Public/images/default_head.png'}" width="40" height="40"/>
+                                <img src="{$Think.session.user_info.head_portrait|default='__STATIC__/images/default_head.png'}" width="40" height="40"/>
                             </div>
                             <div class="cbody cedit" data-node="cedit">
                                 <div class="ctextarea" >
@@ -343,7 +343,7 @@ $(function(){
                                     var  commenthtml='<li class="citem clearfix">\
                                 <div class="cavatar">\
                                     <a href="" target="_blank">\
-                                        <img src="" />\
+                                        <img src="'+data.head_portrait+'" />\
                                     </a>\
                                 </div>\
                                 <div class="cbody">\
@@ -415,7 +415,7 @@ $(function(){
                             <li class="citem clearfix">
                                 <div class="cavatar">
                                     <a href="" target="_blank">
-                                        <img src="{$vo.head_portrait|default='../../../Public/images/default_head.png'}" width="40" height="40" />
+                                        <img src="{$vo.head_portrait|default='__STATIC__/images/default_head.png'}" width="40" height="40" />
                                     </a>
                                 </div>
                                 <div class="cbody">
@@ -479,10 +479,11 @@ $(function(){
 
                                 if(page++<=pagenum && data !==null){
                                      $.each(data,function(key,value){
+                                         let head_portrait=value.head_portrait==''?'__STATIC__/images/default_head.png':value.head_portrait;
                                 var  commenthtml='<li class="citem clearfix">\
                                 <div class="cavatar">\
                                     <a href="" target="_blank">\
-                                        <img src="'+value.head_portrait+'" />\
+                                        <img src="'+head_portrait+'" />\
                                     </a>\
                                 </div>\
                                 <div class="cbody">\

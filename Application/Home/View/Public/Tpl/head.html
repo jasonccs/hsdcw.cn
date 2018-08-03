@@ -23,7 +23,7 @@
                 <span class="login">
                    <if condition="session('user_info') neq null">
                       <i style="">
-                      <img src="{$Think.session.user_info.head_portrait|default='../../../Public/images/default_head.png'}" width="40" height="40"/></i>
+                      <img src="{$Think.session.user_info.head_portrait|default='__STATIC__/images/default_head.png'}" width="40" height="40"/></i>
                       <!--<b><a href="" >{$Think.cookie.username}</a></b>-->
                       <b><a href="" >{$Think.session.user_info.username}</a></b>
                       <div class="user_center">

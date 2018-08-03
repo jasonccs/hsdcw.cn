@@ -159,8 +159,10 @@ class NewsController extends Controller{
             ];
           // dump($comment);
            $result=M('comment')->add($comment);
+           $user_info=M('vipuser')->field('head_portrait')->find($comment['user_id']);
            if($result){
               $comment['status']=true;
+              $comment['head_portrait']=empty($user_info['head_portrait'])?'':$user_info['head_portrait'];
               $this->ajaxReturn($comment);
            }
 
