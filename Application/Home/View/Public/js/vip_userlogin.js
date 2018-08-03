@@ -250,6 +250,7 @@ let viplogin = function () {
 
                 if(data.msg==='图像验证码必填！' || data.msg==='图像验证码不正确！'){
                     imgVerify($('.verify-img-wrap'));
+                    layer.msg('注册成功！');
                     $("input[name='verify']").next().next().html(data.msg);
                 }else{
                     $("input[name='verify']").next().next().html('');
@@ -257,7 +258,7 @@ let viplogin = function () {
 
             }else{
                 loginhide();
-                layer.msg('注册成功！');
+                layui.use(['layer', 'element'], function(){ layer.msg('注册成功');});
                 $('#signup-form p ').html('');
             }
 
