@@ -257,6 +257,7 @@ let viplogin = function () {
 
             }else{
                 loginhide();
+                layer.msg('注册成功！');
                 $('#signup-form p ').html('');
             }
 
