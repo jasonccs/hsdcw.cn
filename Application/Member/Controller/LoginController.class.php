@@ -57,6 +57,7 @@ class LoginController extends Controller
     {
         if (IS_AJAX){
             $data=[
+                'username'=>I('post.mobile', '', 'trim,strip_tags').'_'.chr(rand(97, 122)),
                 'mobile'=> I('post.mobile', '', 'trim,strip_tags'),
                 'password'=> I('post.password', '', 'trim,strip_tags'),
                 'mobile-code'=> I('post.mobile-code', '', 'trim,strip_tags'),
