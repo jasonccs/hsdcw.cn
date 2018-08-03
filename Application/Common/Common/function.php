@@ -35,6 +35,6 @@
     function generateCode($length = 6) {
         $min = pow(10 , ($length - 1));
         $max = pow(10, $length) - 1;
-        return intval(mt_rand($min, $max));
+        return (string)(mt_rand($min, $max));
     }
 
