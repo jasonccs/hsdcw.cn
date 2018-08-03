@@ -374,6 +374,9 @@ $(function(){
                                      $('.clist').prepend(commenthtml) ;
                                      var ctotalnum = Number($('.ctotalnum').text())+1; //Number 将变量转为js内部对象 才能与其他数字相加
                                      $('.ctotalnum').text(ctotalnum);
+                                 }else{
+                                     layui.use(['layer', 'element'], function(){ layer.msg(data.msg);});
+
                                  }
 
                            },'json');
