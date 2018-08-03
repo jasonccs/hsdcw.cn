@@ -236,7 +236,7 @@ let viplogin = function () {
                     $("input[name='email']").next().html('');
                 }
 
-                if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'|| $("input[name='password']").next().html()==='密码必填！'){
+                if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'){
                     $("input[name='password']").next().html(data.msg);
                 }else{
                     $("input[name='password']").next().html('');
