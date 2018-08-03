@@ -127,7 +127,7 @@ class NewsController extends Controller{
          $result=M('news')->find($id);
           M('news')->data(array('eye'=>$result['eye']+1))->where('id='.$id)->save();//浏览次数
          $page=new \Think\HdPage(M('comment')->where("article_id=$id")->count(),3);
-         $comments=M('comment')->limit($page->limit())->where(array('article_id'=>$id))->order('time desc')->select();
+         $comments=M('comment')->limit($page->limit())->where(array('article_id'=>$id))->order('created_at desc')->select();
          $count=M('comment')->where(array('article_id'=>$id))->count('id');
 
          // dump($count);
@@ -151,7 +151,6 @@ class NewsController extends Controller{
                 'article_id' =>I('id','','intval'),
                 'username'    =>I('username',''),
                 'content'     =>I('content','','strip_tags,trim'),
-                'time'        =>time(),
             ];
           // dump($comment);
            $result=M('comment')->add($comment);

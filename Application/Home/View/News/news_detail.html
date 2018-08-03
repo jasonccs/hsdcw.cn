@@ -306,7 +306,7 @@
 <js href="__PUBLIC__/js/jquery.cookie.js"/>
 <script type="text/javascript">
 $(function(){
-     let COOKIE_PREFIX='<?php echo C('COOKIE_PREFIX') ?>';
+     let COOKIE_PREFIX="<?php echo C('COOKIE_PREFIX') ?>";
 
      $("textarea[name='cinput']").click(function(){
            $(this).parents('.cbody').addClass('focus');
@@ -322,7 +322,8 @@ $(function(){
 
                $('.csubmit').click(function(){
 
-                        if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
+                        // if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
+                        if($.cookie(COOKIE_PREFIX+'username')==null || user_id==''){
                                  login();
                                  $('.rl-close').click(function(){
                                    loginhide();
@@ -333,7 +334,7 @@ $(function(){
                         }
                         if($(this).hasClass('csubmit active')){
                            $.post("{:U('Home/News/comment')}",{id:article_id,content:
-                           $("textarea[name='cinput']").val(),username:$.cookie(COOKIE_PREFIX+'username')},function(data){
+                           $("textarea[name='cinput']").val(),user_id:user_id,username:$.cookie(COOKIE_PREFIX+'username')},function(data){
 
                                  if(data.status==true){
                                       delete data['status'];
@@ -425,7 +426,7 @@ $(function(){
                                     <div class="ctxt">{$vo.content|msubstr=0,150}</div>
                                     <div class="cinfo clearfix">
                                         <span class="ctime">
-                                            {$vo.time|date='Y-m-d H:i',###}
+                                            {$vo.created_at}
                                         </span>
                                         <div class="c-actions">
                                             <a class="cdigg " href="javascript:;" data-node="cdigg" data-commentid="6608997803"

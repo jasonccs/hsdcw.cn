@@ -31,7 +31,7 @@ class LoginController extends Controller
                     $success = array('status' => true, 'pwderr' => 'true');
                     session('user_info',['user_id'=>$res['id'],'username'=>$res['username'],'head_portrait'=>$res['head_portrait']]);
                     cookie('username', $res['username'], ['expire' => 3600]);
-                    cookie('userid', $res['id'], ['expire' => 3600]);
+//                    cookie('userid', $res['id'], ['expire' => 3600]);
                     $this->ajaxReturn($success);
                 }
 
@@ -46,11 +46,10 @@ class LoginController extends Controller
     {
         session('user_info',null);
         cookie('username',null);
-        cookie('userid',null);
-        if (cookie(null) == null && session('user_info')==null) {
+//        cookie('userid',null);
+        if (empty(session('user_info'))) {
             $data = array('status' => true);
             $this->ajaxReturn($data);
-
         };
     }
 
