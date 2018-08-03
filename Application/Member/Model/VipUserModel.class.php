@@ -30,10 +30,12 @@ class VipUserModel extends Model
         ['verify', 'checkVerify', '图像验证码不正确！',0,'callback'], //默认情况下用正则进行验证
     ];
 
+    protected $mobile='';
     protected  function checkMobile(String  $mobile=''){
         if(!preg_match("/^1[345678]{1}\d{9}$/",$mobile)){
             return false;
         }
+        $this->mobile=$mobile;
         return true;
     }
 
@@ -45,10 +47,10 @@ class VipUserModel extends Model
     }
 
     //检测短信验证码
-    protected  function checkMobileCode(int  $mobile_code,String $mobile=''){
+    protected  function checkMobileCode(int  $mobile_code ){
         $redis=new Redis();
-        $res=$redis->get($mobile);
-        if($res!=$mobile_code){
+        $res=$redis->get($this->mobile);
+        if($res!=$mobile_code || !$res){
             return false;
         }
         return true;

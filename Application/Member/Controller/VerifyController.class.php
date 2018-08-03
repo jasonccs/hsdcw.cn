@@ -31,9 +31,15 @@ class VerifyController extends Controller
     {
         $redis = new Redis();
 //        $redis->set('test','hello world!');
-//        $redis->set('mobile_code','hello world',60);
-
-        dump($redis->get('mobile_code'));
+//        $redis->set('13554078820','hello world',120);
+//
+//        $res=$redis->get('13554078820');
+//        dump($res);
+//        if($res!='hello world'){
+//            return false;
+//        }
+        dump( $redis->get('18086506759'));
+        dump($redis->get('18086506759')=='120');
     }
 
 

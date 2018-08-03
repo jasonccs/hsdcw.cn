@@ -231,7 +231,7 @@ let viplogin = function () {
                     $("#signin").removeClass('shake');
                 }, 1500);
                 if (data.msg==='手机号已经存在！'|| data.msg==='手机号必填！' || data.msg==='手机格式不正确！'){
-                    $("input[name='email']").next().html(data.msg);
+                        $("input[name='email']").next().html(data.msg);
                 }else{
                     $("input[name='email']").next().html('');
                 }
