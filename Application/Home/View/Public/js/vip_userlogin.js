@@ -257,8 +257,8 @@ let viplogin = function () {
                 }
 
             }else{
-                loginhide();
                 layui.use(['layer', 'element'], function(){ layer.msg('注册成功');});
+                loginhide();
                 $('#signup-form p ').html('');
             }
 
