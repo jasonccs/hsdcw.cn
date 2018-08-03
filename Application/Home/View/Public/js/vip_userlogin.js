@@ -319,7 +319,7 @@ $(function () {
     });
     //会员退出
     $('.user_center .outlogin').click(function () {
-        $.post('/Member/Login/loginout', {'id': 11}, function (data) {
+        $.post('/Member/Login/loginOut', {'id': 11}, function (data) {
             if (data.status) {
                 window.location.reload();
             }

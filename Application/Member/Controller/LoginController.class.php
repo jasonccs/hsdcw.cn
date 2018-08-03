@@ -28,10 +28,11 @@ class LoginController extends Controller
                     $error = array('status' => true, 'pwderr' => 'error');
                     $this->ajaxReturn($error);
                 } else {//用户存在 密码相等
-                    $error = array('status' => true, 'pwderr' => 'true');
-                    cookie('username', $res['username'], array('expire' => 3600));
-                    cookie('userid', $res['id'], array('expire' => 3600));
-                    $this->ajaxReturn($error);
+                    $success = array('status' => true, 'pwderr' => 'true');
+                    session('user_info',['user_id'=>$res['id'],'username'=>$res['username'],'head_portrait'=>$res['head_portrait']]);
+                    cookie('username', $res['username'], ['expire' => 3600]);
+                    cookie('userid', $res['id'], ['expire' => 3600]);
+                    $this->ajaxReturn($success);
                 }
 
             }
@@ -41,10 +42,12 @@ class LoginController extends Controller
     }
 
     //前台会员退出
-    public function loginout()
+    public function loginOut()
     {
-
-        if (cookie(null) == null) {
+        session('user_info',null);
+        cookie('username',null);
+        cookie('userid',null);
+        if (cookie(null) == null && session('user_info')==null) {
             $data = array('status' => true);
             $this->ajaxReturn($data);
 

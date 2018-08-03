@@ -29,7 +29,14 @@ class VerifyController extends Controller
 
     public function aa()
     {
-        $redis = new Redis();
+//        session('user_name','2289');
+
+//         session('user_id',11);
+        dump(session('user_info'));
+        dump(session('user_info.username'));
+//        echo session('username');
+//        echo session('user_id');
+//        $redis = new Redis();
 //        $redis->set('test','hello world!');
 //        $redis->set('13554078820','hello world',120);
 //
@@ -38,8 +45,8 @@ class VerifyController extends Controller
 //        if($res!='hello world'){
 //            return false;
 //        }
-        dump( $redis->get('18086506759'));
-        dump($redis->get('18086506759')=='120');
+//        dump( $redis->get('18086506759'));
+//        dump($redis->get('18086506759')=='120');
     }
 
 

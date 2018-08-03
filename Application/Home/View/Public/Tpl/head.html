@@ -17,16 +17,17 @@
                   <span class="date">今天是：</span>
                   <span class="weather">
 
-                  <!-- <iframe width="340" scrolling="no" height="40" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&wind=0&num=2"></iframe> -->
+                   <iframe width="340" scrolling="no" height="40" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&wind=0&num=2"></iframe>
 
                   </span>
               </div>
               <div class="top_login">
                 <span class="login">
-                   <if condition=" cookie('username') nheq null and cookie('userid') nheq null">
+                   <if condition="session('user_info') neq null">
                       <i style="">
-                      <img src="{$Think.cookie.userphoto}" width="40" height="40"/></i>
-                      <b><a href="" >你好{$Think.cookie.username}</a></b>
+                      <img src="{$Think.session.user_info.head_portrait|default='../../../Public/images/default_head_image.jpg'}" width="40" height="40"/></i>
+                      <!--<b><a href="" >{$Think.cookie.username}</a></b>-->
+                      <b><a href="" >{$Think.session.user_info.username}</a></b>
                       <div class="user_center">
                           <ul>
                               <li><a href="">个人中心</a></li>

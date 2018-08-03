@@ -3,10 +3,10 @@ return array(
 	//'配置项'=>'配置值'
 	/* 数据库设置 */
     'TMPL_PARSE_STRING' =>array(
-		
+
 		'__PUBLIC__' =>__ROOT__. '/Application/Home/View/Public', // 更改默认的/Public 替换规则
 		'__JS__' => '/Public/JS/', // 增加新的JS类库路径替换规则
-	
+
 
 		),
 
@@ -15,39 +15,37 @@ return array(
 
 
 	'APP_SUB_DOMAIN_DEPLOY'   =>    1, // 开启子域名配置
-	'APP_SUB_DOMAIN_RULES'    =>    array(   
+	'APP_SUB_DOMAIN_RULES'    =>    array(
 	    'admin.localhost'    => 'Home/Xuan/index',  // admin.domain1.com域名指向Home模块
-	   
-	),
 
-  
+	),
 
     /**** 价格搜索范围   ****/
 		'prices'=>array(
 			'0'=>array(
 				array(
 					'0-6000',
-					'6000元以下'		
+					'6000元以下'
 				),
 				array(
-					'6000-8000',		
-					'6000-8000元'	
+					'6000-8000',
+					'6000-8000元'
 				),
 				array(
-					'8000-10000',		
-					'8000-10000元'	
+					'8000-10000',
+					'8000-10000元'
 				),
 				array(
-					'10000-12000',		
-					'10000-12000元'	
+					'10000-12000',
+					'10000-12000元'
 				),
 				array(
-					'12000-14000',		
-					'12000-14000元以上'	
+					'12000-14000',
+					'12000-14000元以上'
 				),
 				array(
-					'14000',		
-					'14000元以上'	
+					'14000',
+					'14000元以上'
 				)
 			),
 			'1'=>array(
@@ -75,7 +73,7 @@ return array(
 						'7000',
 						'7000元以上'
 				)
-			)		
+			)
 		),
 
 
@@ -131,7 +129,7 @@ return array(
 						'130',
 						'130㎡以上'
 				)
-				
+
 		),
 
 );
