@@ -170,7 +170,7 @@ class NewsController extends Controller{
        if(IS_AJAX){
         $page=I('page','1','intval'); //传来第几页的信息
         $arcticle_id =I('article_id');//哪一篇文章的id 的评论
-        $comments=M('comment')->limit(($page-1)*3,3)->where(array('article_id'=>$arcticle_id))->order('time desc')->select();
+        $comments=M('comment')->limit(($page-1)*3,3)->where(array('article_id'=>$arcticle_id))->order('created_at desc')->select();
         // echo M('comment')->getLastSql();
        // dump($page);die;
         $this->ajaxReturn($comments);//评论内容
