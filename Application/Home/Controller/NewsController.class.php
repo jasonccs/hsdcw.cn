@@ -157,21 +157,25 @@
         {
             
             if (IS_AJAX) {
-                
+                if (empty(session('user_info'))) {
+                    $comment['status'] = false;
+                    $comment['msg'] = '请先登录！';
+                    $this->ajaxReturn($comment);
+                }
                 $comment = [
                     'article_id' => I('id', '', 'intval'),
-                    'user_id' => I('user_id', '', 'intval'),
+                    'user_id' => session('user_info.user_id'),
                     'username' => I('username', ''),
                     'content' => I('content', '', 'strip_tags,trim'),
                 ];
                 $commont_db = M('comment');
                 $map['created_at'] = ['between', [date("Y-m-d"), date("Y-m-d", strtotime("+1 day"))]];
                 $count = $commont_db->where($map)->where(['user_id' => $comment['user_id']])->where(['status'=>1])->count();
-                if ($count >=3) {
-                    $comment['status'] = false;
-                    $comment['msg'] = '每天最多评论三次！';
-                    $this->ajaxReturn($comment);
-                }
+//                if ($count >=3) {
+//                    $comment['status'] = false;
+//                    $comment['msg'] = '每天最多评论三次！';
+//                    $this->ajaxReturn($comment);
+//                }
                 $result = $commont_db->add($comment);
                 $user_info = M('vipuser')->field('head_portrait')->find($comment['user_id']);
                 if ($result) {
@@ -192,14 +196,20 @@
             if (IS_AJAX) {
                 $page = I('page', '1', 'intval'); //传来第几页的信息
                 $arcticle_id = I('article_id');//哪一篇文章的id 的评论
-                $comments = M('comment')->alias('c')
+                $comments_db = M('comment')->alias('c')
                     ->field('c.id,c.created_at,c.content,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
                     ->join('__VIPUSER__ AS v ON c.user_id = v.id', 'left')
                     ->where(['article_id' => $arcticle_id])
-                    ->order('created_at desc')
-                    ->limit(($page - 1) * 3, 3)->select();
-//         echo M('comment')->getLastSql();
-//        dump($comments);die;
+                    ->order('created_at desc');
+    
+//                $count=$comments_db->count();
+                $comments=$comments_db->limit(($page - 1) * 3, 3)->select();
+                
+//                $data=[
+////                    'status'=>ceil($count/3)==$page?true:false,
+////                    'msg'=>'查询结果!',
+////                    'data'=>$comments,
+////                ];
                 $this->ajaxReturn($comments);//评论内容
             }
             

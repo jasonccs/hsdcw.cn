@@ -324,7 +324,7 @@ $(function(){
                $('.csubmit').click(function(){
 
                         // if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
-                        if($.cookie(COOKIE_PREFIX+'username')==null || user_id==''){
+                        if($.cookie(COOKIE_PREFIX+'username')==null || username===''){
                                  login();
                                  $('.rl-close').click(function(){
                                    loginhide();
@@ -334,8 +334,12 @@ $(function(){
 
                         }
                         if($(this).hasClass('csubmit active')){
-                           $.post("{:U('Home/News/comment')}",{id:article_id,content:
-                           $("textarea[name='cinput']").val(),user_id:user_id,username:$.cookie(COOKIE_PREFIX+'username')},function(data){
+                           $.post("{:U('Home/News/comment')}",{
+                               id:article_id,
+                               content: $("textarea[name='cinput']").val(),
+                               // user_id:user_id,
+                               // username:$.cookie(COOKIE_PREFIX+'username')
+                           },function(data){
 
                                  if(data.status){
                                       delete data['status'];
@@ -349,7 +353,7 @@ $(function(){
                                 <div class="cbody">\
                                     <div class="cuser">\
                                         <a class="cname" href="" target="_blank">\
-                                            '+data.username+'</a>\
+                                            '+username+'</a>\
                                     </div>\
                                     <div class="ctxt">'+data.content+'</div>\
                                     <div class="cinfo clearfix">\
@@ -453,7 +457,7 @@ $(function(){
                     </volist>
                 </ul>
 
-                     <if condition="$count EGT 3">
+                     <if condition="$count GT 3">
                         <a class="cloadmore show" href="javascript:ajaxmore();" >
                             点击加载更多
                         </a>
@@ -462,8 +466,7 @@ $(function(){
                 </div>
 
 <script type="text/javascript">
-                    var page=2;
-                    var pagenum={$pagenum};//总页数
+                    let page=2;
 
                    function ajaxmore(){
 
@@ -480,7 +483,7 @@ $(function(){
                              },
                              success:function(data){
 
-                                if(page++<=pagenum && data !==null){
+                                if(page++<={$pagenum} && data !==null){
                                      $.each(data,function(key,value){
                                          let head_portrait=value.head_portrait==''?'__STATIC__/images/default_head.png':value.head_portrait;
                                 var  commenthtml='<li class="citem clearfix">\
@@ -524,8 +527,8 @@ $(function(){
                               }
                              },
                              complete:function(){
-                                var shenyu={$count}-(page-1)*3;
-                                if(shenyu<0){
+                                let shenyu={$count}-(page-1)*3;
+                                if(shenyu<=0){
                                     $('.cloadmore').css({'cursor':'not-allowed','background':'#A2A2A2'});
                                     $('.cloadmore').text('没有了');
                                     $('.cloadmore').removeAttr('href') ;
