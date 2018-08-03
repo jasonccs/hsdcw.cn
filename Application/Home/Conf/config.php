@@ -1,13 +1,12 @@
 <?php
-return array(
+return [
 	//'配置项'=>'配置值'
 	/* 数据库设置 */
     'TMPL_PARSE_STRING' =>array(
 
 		'__PUBLIC__' =>__ROOT__. '/Application/Home/View/Public', // 更改默认的/Public 替换规则
-		'__JS__' => '/Public/JS/', // 增加新的JS类库路径替换规则
-
-
+		'__JS__' => '/Public/JS', // 增加新的JS类库路径替换规则
+		'__STATIC__' => '/Public', // 增加新的JS类库路径替换规则
 		),
 
 
@@ -132,4 +131,4 @@ return array(
 
 		),
 
-);
+];
