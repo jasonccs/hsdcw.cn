@@ -130,6 +130,26 @@ jQuery.fn.extend({
 });
 
 
+//文章评论点赞方法
+function thumbs(id){
+    let result=false;
+    $.ajax({
+        url:'/Home/Comment/thumbs',
+        type:'POST',
+        data:{'id':id},
+        dataType:'json',
+        cache: false,
+        async : false,
+        success:function(data){
+            if (data.status){
+                result=true;
+            }else{
+                result=false;
+            }
+        }
+    });
+    return result
+}
 
 
 

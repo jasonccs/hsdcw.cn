@@ -171,11 +171,11 @@
                 $commont_db = M('comment');
                 $map['created_at'] = ['between', [date("Y-m-d"), date("Y-m-d", strtotime("+1 day"))]];
                 $count = $commont_db->where($map)->where(['user_id' => $comment['user_id']])->where(['status'=>1])->count();
-//                if ($count >=3) {
-//                    $comment['status'] = false;
-//                    $comment['msg'] = '每天最多评论三次！';
-//                    $this->ajaxReturn($comment);
-//                }
+                if ($count >=3) {
+                    $comment['status'] = false;
+                    $comment['msg'] = '每天最多评论三次！';
+                    $this->ajaxReturn($comment);
+                }
                 $result = $commont_db->add($comment);
                 $user_info = M('vipuser')->field('head_portrait')->find($comment['user_id']);
                 if ($result) {

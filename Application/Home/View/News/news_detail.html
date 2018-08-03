@@ -13,8 +13,6 @@
         <css  href="__PUBLIC__/css/ndetail_core_92bd36a.css"/>
 
         <js href="__PUBLIC__/js/jquery.1.10.2.min.js"/>
-        <js href="__PUBLIC__/js/date.js"/>
-        <js href="__PUBLIC__/js/common.js"/>
 
     </head>
 
@@ -437,7 +435,7 @@ $(function(){
                                             {$vo.created_at}
                                         </span>
                                         <div class="c-actions">
-                                            <a class="cdigg " href="javascript:;" data-node="cdigg" data-commentid="6608997803"
+                                            <a class="cdigg " href="javascript:thumbs('{$vo.id}');" data-commentid="6608997803"
                                             ga_event="click_good_comment">
                                                 <span class="digg-num">
                                                     {$vo.click}
