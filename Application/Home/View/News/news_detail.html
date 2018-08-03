@@ -298,12 +298,13 @@
                         </div>
                         <div class="ceditzone clearfix">
                             <div class="cavatar" data-node="cavatar">
+                                <img src="{$Think.session.user_info.head_portrait|default='../../../Public/images/default_head.png'}" width="40" height="40"/>
                             </div>
                             <div class="cbody cedit" data-node="cedit">
                                 <div class="ctextarea" >
                                     <textarea  name="cinput" class="cinput" maxlength="160"  placeholder="写下你的评论..."></textarea>
                                 </div>
-<js href="__PUBLIC__/js/jquery.cookie.js"/>
+<!--<js href="__PUBLIC__/js/jquery.cookie.js"/>-->
 <script type="text/javascript">
 $(function(){
      let COOKIE_PREFIX="<?php echo C('COOKIE_PREFIX') ?>";
@@ -336,7 +337,7 @@ $(function(){
                            $.post("{:U('Home/News/comment')}",{id:article_id,content:
                            $("textarea[name='cinput']").val(),user_id:user_id,username:$.cookie(COOKIE_PREFIX+'username')},function(data){
 
-                                 if(data.status==true){
+                                 if(data.status){
                                       delete data['status'];
                                       // console.log(data);
                                     var  commenthtml='<li class="citem clearfix">\
@@ -414,7 +415,7 @@ $(function(){
                             <li class="citem clearfix">
                                 <div class="cavatar">
                                     <a href="" target="_blank">
-                                        <img src="{$vo.head_portrait}" />
+                                        <img src="{$vo.head_portrait|default='../../../Public/images/default_head.png'}" width="40" height="40" />
                                     </a>
                                 </div>
                                 <div class="cbody">
@@ -465,7 +466,7 @@ $(function(){
 
                         $.ajax({
                              url:"{:U('Home/News/ajaxmore')}",
-                             type:'post',
+                             type:'get',
                              data:{page:page,article_id:article_id},
                              datatype:'json',
                              beforeSend:function(){
@@ -481,7 +482,7 @@ $(function(){
                                 var  commenthtml='<li class="citem clearfix">\
                                 <div class="cavatar">\
                                     <a href="" target="_blank">\
-                                        <img src="" />\
+                                        <img src="'+value.head_portrait+'" />\
                                     </a>\
                                 </div>\
                                 <div class="cbody">\
@@ -496,7 +497,7 @@ $(function(){
                                         <div class="c-actions">\
                                             <a class="cdigg " href="javascript:;" ga_event="click_good_comment">\
                                                 <span class="digg-num">\
-                                                    572\
+                                                   '+ value.click+'\
                                                 </span>\
                                                 <i class="cbtn">\
                                                 </i>\

@@ -127,10 +127,14 @@ class NewsController extends Controller{
          $result=M('news')->find($id);
           M('news')->data(array('eye'=>$result['eye']+1))->where('id='.$id)->save();//浏览次数
          $page=new \Think\HdPage(M('comment')->where("article_id=$id")->count(),3);
-         $comments=M('comment')->limit($page->limit())->where(array('article_id'=>$id))->order('created_at desc')->select();
-         $count=M('comment')->where(array('article_id'=>$id))->count('id');
+         $comments=M('comment')->alias('c')
+           ->field('c.id,c.created_at,c.content,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
+           ->join('__VIPUSER__ AS v ON c.user_id = v.id','left')
+           ->where(['article_id'=>$id])
+           ->order('created_at desc')->limit($page->limit())->select();
+         $count=M('comment')->where(['article_id'=>$id])->count('id');
 
-         // dump($count);
+//          dump($comments);
          $this->assign('count',$count);//评论数量
          $this->assign('comments',$comments);//评论内容
          $this->assign('pagenum',$page->totalPage);//只分配总页数
@@ -149,6 +153,7 @@ class NewsController extends Controller{
 
           $comment=[
                 'article_id' =>I('id','','intval'),
+                'user_id' =>I('user_id','','intval'),
                 'username'    =>I('username',''),
                 'content'     =>I('content','','strip_tags,trim'),
             ];
@@ -171,8 +176,8 @@ class NewsController extends Controller{
         $page=I('page','1','intval'); //传来第几页的信息
         $arcticle_id =I('article_id');//哪一篇文章的id 的评论
         $comments=M('comment')->alias('c')
-            ->field('c.id,c.created_at,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
-            ->join('__VIPUSER__ AS v ON c.user_id = v.id')
+            ->field('c.id,c.created_at,c.content,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
+            ->join('__VIPUSER__ AS v ON c.user_id = v.id','left')
             ->where(array('article_id'=>$arcticle_id))
             ->order('created_at desc')
             ->limit(($page-1)*3,3)->select();
