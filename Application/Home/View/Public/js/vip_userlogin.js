@@ -239,21 +239,26 @@ let viplogin = function () {
                 if(data.msg==='密码必填！' || data.msg==='6-16位密码，区分大小写，不能用空格！'){
                     $("input[name='password']").next().html(data.msg);
                 }else{
-                    $("input[name='password']").next().html('');
+                    if ($("input[name='password']").next().html()!=='密码必填！'){
+                        $("input[name='password']").next().html('');
+                    }
                 }
 
                 if(data.msg==='短信验证码不正确！' || data.msg==='短信验证码必填！'){
                     $("input[name='mobile-code']").next().html(data.msg);
                 }else{
-                    $("input[name='mobile-code']").next().html('');
+                    if ($("input[name='mobile-code']").next().html()!=='短信验证码必填！'){
+                        $("input[name='mobile-code']").next().html('');
+                    }
                 }
 
                 if(data.msg==='图像验证码必填！' || data.msg==='图像验证码不正确！'){
                     imgVerify($('.verify-img-wrap'));
-                    layer.msg('注册成功！');
                     $("input[name='verify']").next().next().html(data.msg);
                 }else{
-                    $("input[name='verify']").next().next().html('');
+                    if ($("input[name='verify']").next().html()!=='图像验证码必填！'){
+                        $("input[name='verify']").next().html('');
+                    }
                 }
 
             }else{
