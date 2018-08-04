@@ -28,8 +28,13 @@ class LoginController extends Controller
                     $error = array('status' => true, 'pwderr' => 'error');
                     $this->ajaxReturn($error);
                 } else {//用户存在 密码相等
-                    $success = array('status' => true, 'pwderr' => 'true');
-                    session('user_info',['user_id'=>$res['id'],'username'=>$res['username'],'head_portrait'=>$res['head_portrait']]);
+                    $success = ['status' => true, 'pwderr' => 'true'];
+                    session(['expire' => 10]);
+                    session('user_info',
+                        ['user_id'=>$res['id'],
+                            'username'=>$res['username'],
+                            'head_portrait'=>$res['head_portrait']
+                        ]);
                     cookie('username', $res['username']);
 //                    cookie('userid', $res['id'], ['expire' => 3600]);
                     $this->ajaxReturn($success);
@@ -57,7 +62,7 @@ class LoginController extends Controller
     //前台注册会员
     public function register()
     {
-        if (IS_AJAX){
+        if (IS_POST){
             $data=[
                 'username'=>I('post.mobile', '', 'trim,strip_tags').'_'.chr(rand(97, 122)),
                 'mobile'=> I('post.mobile', '', 'trim,strip_tags'),
@@ -81,7 +86,7 @@ class LoginController extends Controller
     //阿里云短信验证码
     public function aliSMS()
     {
-        if (IS_AJAX) {
+        if (IS_POST) {
             $mobile=I('post.mobile', '', 'trim,strip_tags');
             $res_check=checkMobile($mobile);
             if (!$res_check||empty($mobile)) $this->ajaxReturn(['status'=>false,'msg'=>'手机格式不正确！']);

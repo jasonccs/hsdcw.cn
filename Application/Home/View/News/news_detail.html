@@ -322,13 +322,21 @@ $(function(){
                $('.csubmit').click(function(){
 
                         // if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
-                        if($.cookie(COOKIE_PREFIX+'username')==null || username===''){
-                                 login();
-                                 $('.rl-close').click(function(){
+                        if($.cookie(COOKIE_PREFIX+'username')==null || "{$Think.session.user_info.username}" ===''){
+                                login();
+                                $('.xa-showSignup').click(function () {
+                                    register_tab($(this));
+                                });
+
+                                $('.xa-user_login').click(function () {
+                                    login_tab($(this));
+                                });
+
+                                $('.rl-close').click(function(){
                                    loginhide();
-                                 });
-                                 viplogin();
-                                 return ;
+                                });
+                                viplogin();
+                                return ;
 
                         }
                         if($(this).hasClass('csubmit active')){
@@ -499,7 +507,7 @@ $(function(){
                                         <span class="ctime">\
                                             '+getTime(value.time)+'</span>\
                                         <div class="c-actions">\
-                                            <a class="cdigg " href="javascript:;" ga_event="click_good_comment">\
+                                            <a class="cdigg " href="javascript:void(0);" ga_event="click_good_comment" data-commentid="{$vo.id}" onclick="thumbs(this);">\
                                                 <span class="digg-num">\
                                                    '+ value.click+'\
                                                 </span>\

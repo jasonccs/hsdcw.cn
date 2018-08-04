@@ -14,5 +14,12 @@ return [
         'imageW' =>120,
         'imageH'   =>30,
     ],
-
+    
+    /*session设置*/
+//    'SESSION_OPTIONS'=>[
+//        'expire'=>10,
+//        'path'=>TEMP_PATH.'/Session/',
+//    ],
+    
+    
 ];

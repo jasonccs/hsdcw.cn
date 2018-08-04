@@ -34,6 +34,22 @@ class VerifyController extends Controller
 //         session('user_id',11);
         dump(session('user_info'));
         dump(session('user_info.username'));
+        dump(cookie('username'));
+//
+//        session(array('name' => 'abc', 'id' => 'aaa', 'expire' => 10));
+//        session('a', '12345');
+//        echo session('a');//12345
+//
+//        $_SESSION['expiretime'] = time() + 10;
+//        $_SESSION['a']=1111111;
+//        session_id('aaa');
+    
+//        $session_data['data'] = 1111;
+//        $session_data['expire'] = time()+10;
+//        $_SESSION['a'] = $session_data;
+//
+//        dump( session('a'));//12345
+        
 //        echo session('username');
 //        echo session('user_id');
 //        $redis = new Redis();

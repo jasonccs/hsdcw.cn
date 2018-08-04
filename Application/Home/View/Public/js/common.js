@@ -143,7 +143,20 @@ function thumbs(that){
                 $(that).children('.digg-num').text(Number($(that).children('.digg-num').text())+1);
                 result=true;
             }else{
-                layui.use(['layer', 'element'], function(){ layer.msg(data.msg);});
+                // layui.use(['layer', 'element'], function(){ layer.msg(data.msg);});
+                login();
+                $('.xa-showSignup').click(function () {
+                    register_tab($(this));
+                });
+
+                $('.xa-user_login').click(function () {
+                    login_tab($(this));
+                });
+
+                $('.rl-close').click(function () {
+                    loginhide();
+                });
+                viplogin();
                 result=false;
             }
         }

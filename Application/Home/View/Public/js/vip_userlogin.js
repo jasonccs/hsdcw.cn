@@ -127,6 +127,31 @@ function sendSms(mobile) {
     return result
 }
 
+//登录tab
+let login_tab=function (that) {
+    $('.js-verify-row').css({'display':'none'});
+    $('.xa-showSignup').removeClass('active-title');
+    $('.rlf-group  .xa-register').css({'display':'none'});
+    $('.rlf-group  .xa-login').css({'display':'block'});
+    $('.verify-mobile-wrap').css({'display':'none'});
+    $('.rlf-appendix').css({'display':'block'});
+    $('#signup-form p').html('');
+    that.addClass('active-title');
+
+};
+
+//注册tab
+let register_tab=function (that) {
+    $('.js-verify-row').css({'display':'block'});
+    $('.xa-user_login').removeClass('active-title');
+    $('.rlf-group .xa-register').css({'display':'block'});
+    $('.rlf-group .xa-login').css({'display':'none'});
+    $('.verify-mobile-wrap').css({'display':'block'});
+    $('.rlf-appendix').css({'display':'none'});
+    $('#signup-form p').html('');
+    that.addClass('active-title');
+};
+
 let login = function () {
     $('.footer').after(loginhtml);
     let mobile=$("input[name='email']"),
@@ -279,31 +304,15 @@ $(function () {
         login();
 
         $('.xa-showSignup').click(function () {
-            $('.js-verify-row').css({'display':'block'});
-            $('.xa-user_login').removeClass('active-title');
-            $('.rlf-group .xa-register').css({'display':'block'});
-            $('.rlf-group .xa-login').css({'display':'none'});
-            $('.verify-mobile-wrap').css({'display':'block'});
-            $('.rlf-appendix').css({'display':'none'});
-            $('#signup-form p').html('');
-            $(this).addClass('active-title');
+            register_tab($(this));
         });
 
         $('.xa-user_login').click(function () {
-            $('.js-verify-row').css({'display':'none'});
-            $('.xa-showSignup').removeClass('active-title');
-            $('.rlf-group  .xa-register').css({'display':'none'});
-            $('.rlf-group  .xa-login').css({'display':'block'});
-            $('.verify-mobile-wrap').css({'display':'none'});
-            $('.rlf-appendix').css({'display':'block'});
-            $('#signup-form p').html('');
-            $(this).addClass('active-title');
+            login_tab($(this));
         });
 
         $('.rl-close').click(function () {
-
             loginhide();
-
         });
 
         viplogin();
