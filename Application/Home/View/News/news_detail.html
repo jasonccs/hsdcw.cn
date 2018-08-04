@@ -435,8 +435,7 @@ $(function(){
                                             {$vo.created_at}
                                         </span>
                                         <div class="c-actions">
-                                            <a class="cdigg " href="javascript:thumbs('{$vo.id}');" data-commentid="6608997803"
-                                            ga_event="click_good_comment">
+                                            <a class="cdigg " href="javascript:void(0)" data-commentid="{$vo.id}" onclick="thumbs(this);" ga_event="click_good_comment">
                                                 <span class="digg-num">
                                                     {$vo.click}
                                                 </span>

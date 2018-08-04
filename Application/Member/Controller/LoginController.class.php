@@ -30,7 +30,7 @@ class LoginController extends Controller
                 } else {//用户存在 密码相等
                     $success = array('status' => true, 'pwderr' => 'true');
                     session('user_info',['user_id'=>$res['id'],'username'=>$res['username'],'head_portrait'=>$res['head_portrait']]);
-                    cookie('username', $res['username'], ['expire' => 3600]);
+                    cookie('username', $res['username']);
 //                    cookie('userid', $res['id'], ['expire' => 3600]);
                     $this->ajaxReturn($success);
                 }

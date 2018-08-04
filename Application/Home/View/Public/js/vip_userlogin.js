@@ -112,8 +112,8 @@ function sendSms(mobile) {
         type:'POST',
         data:{'mobile':mobile},
         dataType:'json',
-        cache: false,
-        async : false,
+        // cache: false,
+        // async : false,
         success:function(data){
             if (!data.status){//报错机制
                 $("input[name='email']").next().html(data.msg);

@@ -9,7 +9,7 @@
         
         
         protected $_validate = [
-            ['mobile', 'require', '点赞的id 不能为空！'], // 在新增的时候验证name字段是否唯一
+            ['id', 'require', '点赞的id 不能为空！'], // 在新增的时候验证name字段是否唯一
         ];
         
         //点赞

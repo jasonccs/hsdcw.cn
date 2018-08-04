@@ -131,17 +131,16 @@ jQuery.fn.extend({
 
 
 //文章评论点赞方法
-function thumbs(id){
+function thumbs(that){
     let result=false;
     $.ajax({
         url:'/Home/Comment/thumbs',
         type:'POST',
-        data:{'id':id},
+        data:{'id':$(that).attr('data-commentid')},
         dataType:'json',
-        cache: false,
-        async : false,
         success:function(data){
             if(data.status){
+                $(that).children('.digg-num').text(Number($(that).children('.digg-num').text())+1);
                 result=true;
             }else{
                 result=false;
