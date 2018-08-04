@@ -143,6 +143,7 @@ function thumbs(that){
                 $(that).children('.digg-num').text(Number($(that).children('.digg-num').text())+1);
                 result=true;
             }else{
+                layui.use(['layer', 'element'], function(){ layer.msg(data.msg);});
                 result=false;
             }
         }
