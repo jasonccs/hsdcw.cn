@@ -141,7 +141,7 @@ function thumbs(id){
         cache: false,
         async : false,
         success:function(data){
-            if (data.status){
+            if(data.status){
                 result=true;
             }else{
                 result=false;
