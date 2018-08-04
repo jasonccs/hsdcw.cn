@@ -281,8 +281,8 @@ let viplogin = function () {
                     imgVerify($('.verify-img-wrap'));
                     $("input[name='verify']").next().next().html(data.msg);
                 }else{
-                    if ($("input[name='verify']").next().html()!=='图像验证码必填！'){
-                        $("input[name='verify']").next().html('');
+                    if ($("input[name='verify']").next().next().html()!=='图像验证码必填！'){
+                        $("input[name='verify']").next().next().html('');
                     }
                 }
 
