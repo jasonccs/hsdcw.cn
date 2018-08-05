@@ -35,6 +35,7 @@ class NewsModel extends RelationModel
       ]
     ];
     
+    //后去相关的id
     public function getCateId($article_id){
         
         $res=self::field('cateid')->find($article_id);
@@ -48,7 +49,17 @@ class NewsModel extends RelationModel
     public function aboutNews ($article_id)
     {
         $cate_id=$this->getCateId($article_id);
-        $about=self::field('id,title,cateid,keywords,tag,source,desc_image,description,time')->relation(true)->where('cateid='.$cate_id)->order('eye desc')->limit(4)->select();
+        $map['cateid']=['neq',$cate_id];
+        $where['id']=['neq',$article_id];
+        $article_ids=self::field('id')->where($where)->where('cateid='.$cate_id)->select();
+        if(count($article_ids)>4){
+            $except_article_id=randArray($article_ids,4,false);
+        }else{
+//            $except_article_id=$article_ids;
+        }
+//        dump($except_article_id);
+//        dump($article_ids);die;
+        $about=self::field('id,title,cateid,keywords,tag,source,desc_image,description,time')->relation(true)->where($map)->order('eye desc')->limit(4)->select();
         return $about;
     }
     
