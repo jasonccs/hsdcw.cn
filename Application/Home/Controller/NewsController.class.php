@@ -10,7 +10,9 @@
         
         public function _initialize()
         {
-            $current_url = MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . '/';
+//            $current_url = MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . '/';
+            $current_url = __ACTION__. '/';
+//            echo $current_url,__ACTION__;
             $this->assign('current_url', $current_url); //获取当前的路由
         }
         
