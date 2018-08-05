@@ -51,13 +51,13 @@ class NewsModel extends RelationModel
         $cate_id=$this->getCateId($article_id);
         $where['id']=['neq',$article_id];
         $article_ids=self::field('id')->where($where)->where('cateid='.$cate_id)->select();
-        if(count($article_ids)>4){
+        if(count($article_ids)>=4){
             $except_article_id=randArray($article_ids,4,false);
         }else{
-            $except_article_id=$article_ids;
+            $except_article_id=randArray($article_ids,count($article_ids),false);
         }
         $map['id']=['in',$except_article_id];
-        $about=self::field('id,title,cateid,keywords,tag,source,desc_image,description,time')->relation(true)->where($map)->order('eye desc')->limit(4)->select();
+        $about=self::field('id,title,cateid,keywords,tag,source,desc_image,description,time')->relation(true)->where($map)->limit(4)->select();
         return $about;
     }
     
