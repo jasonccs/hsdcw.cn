@@ -15,7 +15,7 @@ class NewsController extends Controller
     }
     public function addnews()
     {
-        $this->datatree();
+        $this->dataTree();
         $this->display();
     }
     /**
@@ -72,8 +72,8 @@ class NewsController extends Controller
     public function allnews(){   
         $db=M('news');
         $page=new \Think\HdPage($db->count(),5);
-        $data=$db->alias('a')->field('a.id,title,keywords,content,newsname,a.display,a.time,a.type')
-        ->limit($page->limit())->join('LEFT JOIN __NEWS_CATEGORY__ b ON b.id=a.cateid')
+        $data=$db->alias('a')->field('a.id,a.title,keywords,content,b.title as newsname,a.display,a.time,a.type')
+        ->limit($page->limit())->join('LEFT JOIN __SYS_MENU__ b ON b.id=a.cateid')
         ->where("'a.display'=0")->order(array('a.time'=>'desc','a.id'=>'desc'))->select();     
         $this->assign('allnews',$data);
         $this->assign('page',$page->show());
@@ -111,7 +111,7 @@ class NewsController extends Controller
             }
            $data['desc_image']= $str_desc_image;
            $this->assign('data',$data);
-           $this->datatree();
+           $this->dataTree();
            //dump($data);
            $this->display(); 
           }
@@ -203,10 +203,10 @@ class NewsController extends Controller
 
 
      //新闻类别
-     public function datatree(){
+     public function dataTree(){
          $catetree=new \Think\HdData();
 
-         $data=M('news_category')->field('id,newsname,pid')->select();
+         $data=M('sys_menu')->field('id,title as newsname,pid')->select();
          $news_category=$catetree::tree($data,'newsname','id','pid');
          $this->assign('news_category',$news_category);
 
