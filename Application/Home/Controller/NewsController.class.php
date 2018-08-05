@@ -144,7 +144,7 @@
                 ->order('created_at desc')->limit($page->limit())->select();
             $count = M('comment')->where(['article_id' => $id])->count('id');
 
-//          dump($comments);
+//          dump($result);
             $this->assign('count', $count);//评论数量
             $this->assign('comments', $comments);//评论内容
             $this->assign('pagenum', $page->totalPage);//只分配总页数

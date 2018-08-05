@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>黄石新闻_黄石最大的门户网站_{$result.title}_黄石之窗</title>
+        <title>黄石新闻_{$result.title}</title>
         <meta name="keywords" content="{$result.keywords}">
         <meta name="description" content="{$result.description|msubstr=0,180}">
         <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -54,26 +54,17 @@
                         <div class="article-actions">
                             <div class="top-actions clearfix">
                                 <ul class="tag-list">
-                                    <li class="tag-item">
-                                        <a class="tag-link" href="" target="_blank" ga_event="click_tag">
-                                            时政
-                                        </a>
-                                    </li>
-                                    <li class="tag-item">
-                                        <a class="tag-link" href="" target="_blank" ga_event="click_tag">
-                                            宏观经济
-                                        </a>
-                                    </li>
-                                    <li class="tag-item">
-                                        <a class="tag-link" href="" target="_blank" ga_event="click_tag">
-                                            国内宏观
-                                        </a>
-                                    </li>
-                                    <li class="tag-item">
-                                        <a class="tag-link" href="" target="_blank" ga_event="click_tag">
-                                            经济
-                                        </a>
-                                    </li>
+                                    <volist name=":explode('，',$result['tag'])" id="tag">
+
+                                        <if condition="$tag neq '' ">
+                                            <li class="tag-item">
+                                                <a class="tag-link" href="" target="_blank" ga_event="click_tag">
+                                                    {$tag}
+                                                </a>
+                                            </li>
+                                        </if>
+
+                                    </volist>
                                 </ul>
                                 <a class="areport" target="_blank" href=""
                                 ga_event="report_news">
