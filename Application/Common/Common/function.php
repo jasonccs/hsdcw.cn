@@ -52,45 +52,39 @@ function randArray ( array $arr, int $length=4, bool $type=true)
     if ($type){
         $new =[];
         if(count($arr) == count($arr, 1)){ //一维数组
-    
             $rand_keys = array_rand($arr, $length);
             foreach ( $rand_keys as $key => $value ) {
                 $new[]= $arr[$value];
             }
         }else{//多维数组
-    
             $rand_keys = array_rand($arr, $length);
+            $arr_name=[];
+            foreach ($arr[$rand_keys[0]] as $value){
+                $arr_name=array_keys($arr[$rand_keys[0]],$value,false);
+            }
             foreach ( $rand_keys as $key => $value ) {
-                foreach ( $value as $key1 =>$value2){
-                    $new[]= $value2;
-                }
+                $new[]= $arr[$value][$arr_name[0]];
             }
 
         }
         
     }else{
+        $new = '';
         if(count($arr) == count($arr, 1)) { //一维数组
     
-            $new = '';
             $rand_keys = array_rand($arr, $length);
             foreach ( $rand_keys as $key => $value ) {
                 $new .= $arr[$value] . ',';
             }
             $new = rtrim($new, ',');
         }else{
-            $new = '';
             $rand_keys = array_rand($arr, $length);
-            var_dump($rand_keys);
-            var_dump($rand_keys[0]);
-//            var_dump($rand_keys[0]);
-            var_dump($arr[$rand_keys]);
-//            var_dump(array_keys($arr,$arr[$rand_keys[0]],1));
+            $arr_name=[];
+            foreach ($arr[$rand_keys[0]] as $value){
+                $arr_name=array_keys($arr[$rand_keys[0]],$value,false);
+            }
             foreach ( $rand_keys as $key => $value ) {
-//                echo $value,',';
-
-//               var_dump($arr[$value]);
-//               var_dump($arr[$value],1,false);
-                    $new .= $arr[$value]['id'] . ',';
+                    $new .= $arr[$value][$arr_name[0]] . ',';
             }
             $new = rtrim($new, ',');
         }
