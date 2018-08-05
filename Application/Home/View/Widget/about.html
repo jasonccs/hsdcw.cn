@@ -3,21 +3,18 @@
             <li class="item clearfix" data-node="item">
             <div class="item-inner">
                 <div class="title-box">
-                    <a ga_event="click_title_relevant" class="link title" href="{:U($url.$vo['id'])}"
-                       target="_blank" data-node="title">
+                    <a ga_event="click_title_relevant" class="link title" href="{:U($url.$vo['id'])}" data-node="title">
                         {$vo.title}
                     </a>
                 </div>
                 <div class="abstract">
-                    <a ga_event="click_abstract_relevant" class="link" href=""
-                       target="_blank">
+                    <a ga_event="click_abstract_relevant" class="link" href="">
                         {$vo.description|msubstr=0,150}
                     </a>
                 </div>
                 <div class="news_foot  clearfix">
                     <div class="left lnews_foot ">
-                        <a class="lbtn source" href=""
-                           target="_blank">
+                        <a class="lbtn source" href="">
                             {$vo.source|msubstr=0,20}&nbsp;&sdot;
                         </a>
                         <span class="lbtn comment">
@@ -34,9 +31,8 @@
             <li class="item clearfix" data-node="item">
             <div class="item-inner">
                 <div class="lbox left">
-                    <a ga_event="click_img_relevant" href="{:U($url.$vo['id'])}"
-                       target="_blank">
-                        <img class="feedimg middle-mode" src=""
+                    <a ga_event="click_img_relevant" href="{:U($url.$vo['id'])}">
+                        <img class="feedimg middle-mode" src="{:substr($vo['desc_image'],0,strpos($vo['desc_image'],'|'))?substr($vo['desc_image'],0,strpos($vo['desc_image'],'|')):'__PUBLIC__/images/default.png'}"
                              alt="{$vo.title}" onload="this.style.opacity=1;">
                     </a>
                 </div>
@@ -44,27 +40,24 @@
                     <!--hold-->
                     <div class="rbox-inner">
                         <div class="title-box">
-                            <a ga_event="click_title_relevant" class="link title" href="{:U($url.$vo['id'])}"
-                               target="_blank" data-node="title">
+                            <a ga_event="click_title_relevant" class="link title" href="{:U($url.$vo['id'])}" data-node="title">
                                 {$vo.title}
                             </a>
                         </div>
                         <div class="abstract">
-                            <a ga_event="click_abstract_relevant" class="link" href="{:U($url.$vo['id'])}"
-                               target="_blank">
+                            <a ga_event="click_abstract_relevant" class="link" href="{:U($url.$vo['id'])}">
                                 {$vo.description|msubstr=0,150}
                             </a>
                         </div>
                         <div class="news_foot  clearfix">
                             <div class="left lnews_foot ">
-                                <a class="lbtn source" href=""
-                                   target="_blank">
+                                <a class="lbtn source" href="">
                                     {$vo.source|msubstr=0,20}&nbsp;&sdot;
                                 </a>
                                 <span class="lbtn comment">
                                                         {$vo.comment|count}评论&nbsp;&sdot;
                                                     </span>
-                                <span class="lbtn time" data-publishtime="五月 26, 2016, 11:40 a.m.">
+                                <span class="lbtn time" data-publishtime="   {$vo.time|date='Y-m-d',###}">
                                                       {$vo.time|date='Y-m-d',###}
                                                     </span>
                             </div>
