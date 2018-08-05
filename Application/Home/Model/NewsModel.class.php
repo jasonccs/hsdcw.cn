@@ -35,10 +35,21 @@ class NewsModel extends RelationModel
       ]
     ];
     
-    public function aboutNews ()
+    public function getCateId($article_id){
+        
+        $res=self::field('cateid')->find($article_id);
+        if (!empty($res)){
+            return $res['cateid'];
+        }else{
+            return 1;
+        }
+    }
+    
+    public function aboutNews ($article_id)
     {
-        $res = self::where('')->select();
-        return $res;
+        $cate_id=$this->getCateId($article_id);
+        $about=self::field('id,title,cateid,keywords,tag,source,desc_image,description,time')->relation(true)->where('cateid='.$cate_id)->order('eye desc')->limit(4)->select();
+        return $about;
     }
     
 }
