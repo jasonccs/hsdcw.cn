@@ -66,7 +66,7 @@ function load_config($file,$parse=CONF_PARSE){
             return parse_ini_file($file);
         case 'yaml':
             return yaml_parse_file($file);
-        case 'xml': 
+        case 'xml':
             return (array)simplexml_load_file($file);
         case 'json':
             return json_decode(file_get_contents($file), true);
@@ -132,7 +132,7 @@ function G($start,$end='',$dec=4) {
         }else{
             return number_format(($_info[$end]-$_info[$start]),$dec);
         }
-
+        
     }else{ // 记录时间和内存使用
         $_info[$start]  =  microtime(TRUE);
         if(MEMORY_LIMIT_ON) $_mem[$start]           =  memory_get_usage();
@@ -163,7 +163,7 @@ function L($name=null, $value=null) {
             foreach($replace as &$v){
                 $v = '{$'.$v.'}';
             }
-            return str_replace($replace,$value,isset($_lang[$name]) ? $_lang[$name] : $name);        
+            return str_replace($replace,$value,isset($_lang[$name]) ? $_lang[$name] : $name);
         }
         $_lang[$name] = $value; // 语言定义
         return null;
@@ -213,7 +213,7 @@ function compile($filename) {
  * @return string
  */
 function T($template='',$layer=''){
-
+    
     // 解析模版资源地址
     if(false === strpos($template,'://')){
         $template   =   'http://'.str_replace(':', '/',$template);
@@ -223,24 +223,24 @@ function T($template='',$layer=''){
     $module =   isset($info['user'])?$info['user'].'/':MODULE_NAME.'/';
     $extend =   $info['scheme'];
     $layer  =   $layer?$layer:C('DEFAULT_V_LAYER');
-
+    
     // 获取当前主题的模版路径
     $auto   =   C('AUTOLOAD_NAMESPACE');
     if($auto && isset($auto[$extend])){ // 扩展资源
         $baseUrl    =   $auto[$extend].$module.$layer.'/';
-    }elseif(C('VIEW_PATH')){ 
+    }elseif(C('VIEW_PATH')){
         // 改变模块视图目录
         $baseUrl    =   C('VIEW_PATH');
-    }elseif(defined('TMPL_PATH')){ 
+    }elseif(defined('TMPL_PATH')){
         // 指定全局视图目录
         $baseUrl    =   TMPL_PATH.$module;
     }else{
         $baseUrl    =   APP_PATH.$module.$layer.'/';
     }
-
+    
     // 获取主题
     $theme  =   substr_count($file,'/')<2 ? C('DEFAULT_THEME') : '';
-
+    
     // 分析模板文件规则
     $depr   =   C('TMPL_FILE_DEPR');
     if('' == $file) {
@@ -269,10 +269,10 @@ function T($template='',$layer=''){
  * @return mixed
  */
 function I($name,$default='',$filter=null,$datas=null) {
-	static $_PUT	=	null;
-	if(strpos($name,'/')){ // 指定修饰符
-		list($name,$type) 	=	explode('/',$name,2);
-	}elseif(C('VAR_AUTO_STRING')){ // 默认强制转换为字符串
+    static $_PUT	=	null;
+    if(strpos($name,'/')){ // 指定修饰符
+        list($name,$type) 	=	explode('/',$name,2);
+    }elseif(C('VAR_AUTO_STRING')){ // 默认强制转换为字符串
         $type   =   's';
     }
     if(strpos($name,'.')) { // 指定参数来源
@@ -281,58 +281,58 @@ function I($name,$default='',$filter=null,$datas=null) {
         $method =   'param';
     }
     switch(strtolower($method)) {
-        case 'get'     :   
-        	$input =& $_GET;
-        	break;
-        case 'post'    :   
-        	$input =& $_POST;
-        	break;
-        case 'put'     :   
-        	if(is_null($_PUT)){
-            	parse_str(file_get_contents('php://input'), $_PUT);
-        	}
-        	$input 	=	$_PUT;        
-        	break;
+        case 'get'     :
+            $input =& $_GET;
+            break;
+        case 'post'    :
+            $input =& $_POST;
+            break;
+        case 'put'     :
+            if(is_null($_PUT)){
+                parse_str(file_get_contents('php://input'), $_PUT);
+            }
+            $input 	=	$_PUT;
+            break;
         case 'param'   :
             switch($_SERVER['REQUEST_METHOD']) {
                 case 'POST':
                     $input  =  $_POST;
                     break;
                 case 'PUT':
-                	if(is_null($_PUT)){
-                    	parse_str(file_get_contents('php://input'), $_PUT);
-                	}
-                	$input 	=	$_PUT;
+                    if(is_null($_PUT)){
+                        parse_str(file_get_contents('php://input'), $_PUT);
+                    }
+                    $input 	=	$_PUT;
                     break;
                 default:
                     $input  =  $_GET;
             }
             break;
-        case 'path'    :   
+        case 'path'    :
             $input  =   array();
             if(!empty($_SERVER['PATH_INFO'])){
                 $depr   =   C('URL_PATHINFO_DEPR');
-                $input  =   explode($depr,trim($_SERVER['PATH_INFO'],$depr));            
+                $input  =   explode($depr,trim($_SERVER['PATH_INFO'],$depr));
             }
             break;
-        case 'request' :   
-        	$input =& $_REQUEST;   
-        	break;
-        case 'session' :   
-        	$input =& $_SESSION;   
-        	break;
-        case 'cookie'  :   
-        	$input =& $_COOKIE;    
-        	break;
-        case 'server'  :   
-        	$input =& $_SERVER;    
-        	break;
-        case 'globals' :   
-        	$input =& $GLOBALS;    
-        	break;
-        case 'data'    :   
-        	$input =& $datas;      
-        	break;
+        case 'request' :
+            $input =& $_REQUEST;
+            break;
+        case 'session' :
+            $input =& $_SESSION;
+            break;
+        case 'cookie'  :
+            $input =& $_COOKIE;
+            break;
+        case 'server'  :
+            $input =& $_SERVER;
+            break;
+        case 'globals' :
+            $input =& $GLOBALS;
+            break;
+        case 'data'    :
+            $input =& $datas;
+            break;
         default:
             return null;
     }
@@ -358,7 +358,7 @@ function I($name,$default='',$filter=null,$datas=null) {
                         return   isset($default) ? $default : null;
                     }
                 }else{
-                    $filters    =   explode(',',$filters);                    
+                    $filters    =   explode(',',$filters);
                 }
             }elseif(is_int($filters)){
                 $filters    =   array($filters);
@@ -378,23 +378,23 @@ function I($name,$default='',$filter=null,$datas=null) {
             }
         }
         if(!empty($type)){
-        	switch(strtolower($type)){
-        		case 'a':	// 数组
-        			$data 	=	(array)$data;
-        			break;
-        		case 'd':	// 数字
-        			$data 	=	(int)$data;
-        			break;
-        		case 'f':	// 浮点
-        			$data 	=	(float)$data;
-        			break;
-        		case 'b':	// 布尔
-        			$data 	=	(boolean)$data;
-        			break;
+            switch(strtolower($type)){
+                case 'a':	// 数组
+                    $data 	=	(array)$data;
+                    break;
+                case 'd':	// 数字
+                    $data 	=	(int)$data;
+                    break;
+                case 'f':	// 浮点
+                    $data 	=	(float)$data;
+                    break;
+                case 'b':	// 布尔
+                    $data 	=	(boolean)$data;
+                    break;
                 case 's':   // 字符串
                 default:
                     $data   =   (string)$data;
-        	}
+            }
         }
     }else{ // 变量默认值
         $data       =    isset($default)?$default:null;
@@ -407,11 +407,11 @@ function array_map_recursive($filter, $data) {
     $result = array();
     foreach ($data as $key => $val) {
         $result[$key] = is_array($val)
-         ? array_map_recursive($filter, $val)
-         : call_user_func($filter, $val);
+            ? array_map_recursive($filter, $val)
+            : call_user_func($filter, $val);
     }
     return $result;
- }
+}
 
 /**
  * 设置和获取统计数据
@@ -744,7 +744,7 @@ function tag($tag, &$params=NULL) {
 /**
  * 执行某个行为
  * @param string $name 行为名称
- * @param string $tag 标签名称（行为类无需传入） 
+ * @param string $tag 标签名称（行为类无需传入）
  * @param Mixed $params 传入的参数
  * @return void
  */
@@ -876,17 +876,20 @@ function layout($layout) {
  * @param string|array $vars 传入的参数，支持数组和字符串
  * @param string|boolean $suffix 伪静态后缀，默认为true表示获取配置值
  * @param boolean $domain 是否显示域名
+ * @param boolean $replaceAction 当 $url='' | $url='#' 当前控制器模块方法拼接的url
  * @return string
  */
-function U($url='',$vars='',$suffix=true,$domain=false) {
+function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
     // 解析URL
     $info   =  parse_url($url);
-    $url    =  !empty($info['path'])?$info['path']:ACTION_NAME;
+    if($replaceAction){
+        $url  = !empty($info['path'])?$info['path']:ACTION_NAME;
+    }
     if(isset($info['fragment'])) { // 解析锚点
         $anchor =   $info['fragment'];
         if(false !== strpos($anchor,'?')) { // 解析参数
             list($anchor,$info['query']) = explode('?',$anchor,2);
-        }        
+        }
         if(false !== strpos($anchor,'@')) { // 解析域名
             list($anchor,$host)    =   explode('@',$anchor, 2);
         }
@@ -911,7 +914,7 @@ function U($url='',$vars='',$suffix=true,$domain=false) {
             }
         }
     }
-
+    
     // 解析参数
     if(is_string($vars)) { // aaa=1&bbb=2 转换成数组
         parse_str($vars,$vars);
@@ -985,12 +988,12 @@ function U($url='',$vars='',$suffix=true,$domain=false) {
             
         }
     }
-
+    
     if(C('URL_MODEL') == 0) { // 普通模式URL转换
         $url        =   __APP__.'?'.C('VAR_MODULE')."={$module}&".http_build_query(array_reverse($var));
         if($urlCase){
             $url    =   strtolower($url);
-        }        
+        }
         if(!empty($vars)) {
             $vars   =   http_build_query($vars);
             $url   .=   '&'.$vars;
@@ -1000,7 +1003,9 @@ function U($url='',$vars='',$suffix=true,$domain=false) {
             $url    =   __APP__.'/'.rtrim($url,$depr);
         }else{
             $module =   (defined('BIND_MODULE') && BIND_MODULE==$module )? '' : $module;
-            $url    =   __APP__.'/'.($module?$module.MODULE_PATHINFO_DEPR:'').implode($depr,array_reverse($var));
+            if ($replaceAction){
+                $url    =   __APP__.'/'.($module?$module.MODULE_PATHINFO_DEPR:'').implode($depr,array_reverse($var));
+            }
         }
         if($urlCase){
             $url    =   strtolower($url);
@@ -1008,7 +1013,7 @@ function U($url='',$vars='',$suffix=true,$domain=false) {
         if(!empty($vars)) { // 添加参数
             foreach ($vars as $var => $val){
                 if('' !== trim($val))   $url .= $depr . $var . $depr . urlencode($val);
-            }                
+            }
         }
         if($suffix) {
             $suffix   =  $suffix===true?C('URL_HTML_SUFFIX'):$suffix;
@@ -1252,16 +1257,16 @@ function session($name='',$value='') {
             $class  =   strpos($type,'\\')? $type : 'Think\\Session\\Driver\\'. ucwords(strtolower($type));
             $hander =   new $class();
             session_set_save_handler(
-                array(&$hander,"open"), 
-                array(&$hander,"close"), 
-                array(&$hander,"read"), 
-                array(&$hander,"write"), 
-                array(&$hander,"destroy"), 
-                array(&$hander,"gc")); 
+                array(&$hander,"open"),
+                array(&$hander,"close"),
+                array(&$hander,"read"),
+                array(&$hander,"write"),
+                array(&$hander,"destroy"),
+                array(&$hander,"gc"));
         }
         // 启动session
         if(C('SESSION_AUTO_START'))  session_start();
-    }elseif('' === $value){ 
+    }elseif('' === $value){
         if(''===$name){
             // 获取全部的session
             return $prefix ? $_SESSION[$prefix] : $_SESSION;
@@ -1294,17 +1299,17 @@ function session($name='',$value='') {
         }elseif($prefix){ // 获取session
             if(strpos($name,'.')){
                 list($name1,$name2) =   explode('.',$name);
-                return isset($_SESSION[$prefix][$name1][$name2])?$_SESSION[$prefix][$name1][$name2]:null;  
+                return isset($_SESSION[$prefix][$name1][$name2])?$_SESSION[$prefix][$name1][$name2]:null;
             }else{
-                return isset($_SESSION[$prefix][$name])?$_SESSION[$prefix][$name]:null;                
-            }            
+                return isset($_SESSION[$prefix][$name])?$_SESSION[$prefix][$name]:null;
+            }
         }else{
             if(strpos($name,'.')){
                 list($name1,$name2) =   explode('.',$name);
-                return isset($_SESSION[$name1][$name2])?$_SESSION[$name1][$name2]:null;  
+                return isset($_SESSION[$name1][$name2])?$_SESSION[$name1][$name2]:null;
             }else{
                 return isset($_SESSION[$name])?$_SESSION[$name]:null;
-            }            
+            }
         }
     }elseif(is_null($value)){ // 删除session
         if(strpos($name,'.')){
@@ -1322,20 +1327,20 @@ function session($name='',$value='') {
             }
         }
     }else{ // 设置session
-		if(strpos($name,'.')){
-			list($name1,$name2) =   explode('.',$name);
-			if($prefix){
-				$_SESSION[$prefix][$name1][$name2]   =  $value;
-			}else{
-				$_SESSION[$name1][$name2]  =  $value;
-			}
-		}else{
-			if($prefix){
-				$_SESSION[$prefix][$name]   =  $value;
-			}else{
-				$_SESSION[$name]  =  $value;
-			}
-		}
+        if(strpos($name,'.')){
+            list($name1,$name2) =   explode('.',$name);
+            if($prefix){
+                $_SESSION[$prefix][$name1][$name2]   =  $value;
+            }else{
+                $_SESSION[$name1][$name2]  =  $value;
+            }
+        }else{
+            if($prefix){
+                $_SESSION[$prefix][$name]   =  $value;
+            }else{
+                $_SESSION[$name]  =  $value;
+            }
+        }
     }
     return null;
 }
@@ -1446,7 +1451,7 @@ function load_ext_file($path) {
 /**
  * 获取客户端IP地址
  * @param integer $type 返回类型 0 返回IP地址 1 返回IPV4地址数字
- * @param boolean $adv 是否进行高级模式获取（有可能被伪装） 
+ * @param boolean $adv 是否进行高级模式获取（有可能被伪装）
  * @return mixed
  */
 function get_client_ip($type = 0,$adv=false) {
@@ -1480,53 +1485,53 @@ function get_client_ip($type = 0,$adv=false) {
  */
 function send_http_status($code) {
     static $_status = array(
-            // Informational 1xx
-            100 => 'Continue',
-            101 => 'Switching Protocols',
-            // Success 2xx
-            200 => 'OK',
-            201 => 'Created',
-            202 => 'Accepted',
-            203 => 'Non-Authoritative Information',
-            204 => 'No Content',
-            205 => 'Reset Content',
-            206 => 'Partial Content',
-            // Redirection 3xx
-            300 => 'Multiple Choices',
-            301 => 'Moved Permanently',
-            302 => 'Moved Temporarily ',  // 1.1
-            303 => 'See Other',
-            304 => 'Not Modified',
-            305 => 'Use Proxy',
-            // 306 is deprecated but reserved
-            307 => 'Temporary Redirect',
-            // Client Error 4xx
-            400 => 'Bad Request',
-            401 => 'Unauthorized',
-            402 => 'Payment Required',
-            403 => 'Forbidden',
-            404 => 'Not Found',
-            405 => 'Method Not Allowed',
-            406 => 'Not Acceptable',
-            407 => 'Proxy Authentication Required',
-            408 => 'Request Timeout',
-            409 => 'Conflict',
-            410 => 'Gone',
-            411 => 'Length Required',
-            412 => 'Precondition Failed',
-            413 => 'Request Entity Too Large',
-            414 => 'Request-URI Too Long',
-            415 => 'Unsupported Media Type',
-            416 => 'Requested Range Not Satisfiable',
-            417 => 'Expectation Failed',
-            // Server Error 5xx
-            500 => 'Internal Server Error',
-            501 => 'Not Implemented',
-            502 => 'Bad Gateway',
-            503 => 'Service Unavailable',
-            504 => 'Gateway Timeout',
-            505 => 'HTTP Version Not Supported',
-            509 => 'Bandwidth Limit Exceeded'
+        // Informational 1xx
+        100 => 'Continue',
+        101 => 'Switching Protocols',
+        // Success 2xx
+        200 => 'OK',
+        201 => 'Created',
+        202 => 'Accepted',
+        203 => 'Non-Authoritative Information',
+        204 => 'No Content',
+        205 => 'Reset Content',
+        206 => 'Partial Content',
+        // Redirection 3xx
+        300 => 'Multiple Choices',
+        301 => 'Moved Permanently',
+        302 => 'Moved Temporarily ',  // 1.1
+        303 => 'See Other',
+        304 => 'Not Modified',
+        305 => 'Use Proxy',
+        // 306 is deprecated but reserved
+        307 => 'Temporary Redirect',
+        // Client Error 4xx
+        400 => 'Bad Request',
+        401 => 'Unauthorized',
+        402 => 'Payment Required',
+        403 => 'Forbidden',
+        404 => 'Not Found',
+        405 => 'Method Not Allowed',
+        406 => 'Not Acceptable',
+        407 => 'Proxy Authentication Required',
+        408 => 'Request Timeout',
+        409 => 'Conflict',
+        410 => 'Gone',
+        411 => 'Length Required',
+        412 => 'Precondition Failed',
+        413 => 'Request Entity Too Large',
+        414 => 'Request-URI Too Long',
+        415 => 'Unsupported Media Type',
+        416 => 'Requested Range Not Satisfiable',
+        417 => 'Expectation Failed',
+        // Server Error 5xx
+        500 => 'Internal Server Error',
+        501 => 'Not Implemented',
+        502 => 'Bad Gateway',
+        503 => 'Service Unavailable',
+        504 => 'Gateway Timeout',
+        505 => 'HTTP Version Not Supported',
+        509 => 'Bandwidth Limit Exceeded'
     );
     if(isset($_status[$code])) {
         header('HTTP/1.1 '.$code.' '.$_status[$code]);
@@ -1536,9 +1541,9 @@ function send_http_status($code) {
 }
 
 function think_filter(&$value){
-	// TODO 其他安全过滤
-
-	// 过滤查询特殊字符
+    // TODO 其他安全过滤
+    
+    // 过滤查询特殊字符
     if(preg_match('/^(EXP|NEQ|GT|EGT|LT|ELT|OR|XOR|LIKE|NOTLIKE|NOT BETWEEN|NOTBETWEEN|BETWEEN|NOTIN|NOT IN|IN)$/i',$value)){
         $value .= ' ';
     }
@@ -1551,8 +1556,8 @@ function in_array_case($value,$array){
 
 
 /**
-** 截取中文字符串
-**/
+ ** 截取中文字符串
+ **/
 function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true){
     if(function_exists("mb_substr")){
         $slice= mb_substr($str, $start, $length, $charset);
@@ -1565,12 +1570,12 @@ function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true){
         $re['big5'] = "/[x01-x7f]|[x81-xfe]([x40-x7e]|xa1-xfe])/";
         preg_match_all($re[$charset], $str, $match);
         $slice = join("",array_slice($match[0], $start, $length));
-    }    
-        $fix='';
-        if(strlen($slice) < strlen($str)){
-            $fix='...';
-        }
-        return $suffix ? $slice.$fix : $slice;
+    }
+    $fix='';
+    if(strlen($slice) < strlen($str)){
+        $fix='...';
+    }
+    return $suffix ? $slice.$fix : $slice;
 }
 
 
@@ -1578,49 +1583,49 @@ function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true){
 
 
 function remove_Url_Param($var, $url = null)
-    {
-
-        
-        $pathinfo_dli = C("URL_PATHINFO_DEPR");
-        if (!is_null($url)) {
-            $url_format = strstr($url, "&") ? $url . '&' : $url . $pathinfo_dli;
-            $url = str_replace($pathinfo_dli, "###", $url_format);
-            $search = array(
-                "/$var" . "###" . ".*?" . "###" . "/",
-                "/$var=.*?&/i",
-                "/\?&/",
-                "/&&/"
-            );
-            $replace = array(
-                "",
-                "",
-                "?",
-                ""
-            );
-            $url_replace = preg_replace($search, $replace, $url);
-            $url_rtrim = rtrim(rtrim($url_replace, "&"), "###");
-            return str_replace("###", $pathinfo_dli, $url_rtrim);
-        }
-        $get = $_GET;
-        unset($get[C("VAR_APP")]);
-        unset($get[C("VAR_CONTROLLER")]);
-        unset($get[C("VAR_ACTION")]);
-        $url = '';
-        $url_type = C("URL_MODEL");
-        foreach ($get as $k => $v) {
-            if ($k === $var)
-                continue;
-            if ($url_type == 2) {
-                $url .= $pathinfo_dli . $k . $pathinfo_dli . $v;
-            } else {
-                $url .= "&" . $k . "=" . $v;
-            }
-        }
-        $url_rtrim = trim(trim($url, $pathinfo_dli), '&');
-        $url_str = empty($url_rtrim) ? "" : $pathinfo_dli . $url_rtrim;
+{
+    
+    
+    $pathinfo_dli = C("URL_PATHINFO_DEPR");
+    if (!is_null($url)) {
+        $url_format = strstr($url, "&") ? $url . '&' : $url . $pathinfo_dli;
+        $url = str_replace($pathinfo_dli, "###", $url_format);
+        $search = array(
+            "/$var" . "###" . ".*?" . "###" . "/",
+            "/$var=.*?&/i",
+            "/\?&/",
+            "/&&/"
+        );
+        $replace = array(
+            "",
+            "",
+            "?",
+            ""
+        );
+        $url_replace = preg_replace($search, $replace, $url);
+        $url_rtrim = rtrim(rtrim($url_replace, "&"), "###");
+        return str_replace("###", $pathinfo_dli, $url_rtrim);
+    }
+    $get = $_GET;
+    unset($get[C("VAR_APP")]);
+    unset($get[C("VAR_CONTROLLER")]);
+    unset($get[C("VAR_ACTION")]);
+    $url = '';
+    $url_type = C("URL_MODEL");
+    foreach ($get as $k => $v) {
+        if ($k === $var)
+            continue;
         if ($url_type == 2) {
-            return __METH__ . $url_str;
+            $url .= $pathinfo_dli . $k . $pathinfo_dli . $v;
         } else {
-            return __METH__ . "&" . trim($url_str, "&");
+            $url .= "&" . $k . "=" . $v;
         }
     }
+    $url_rtrim = trim(trim($url, $pathinfo_dli), '&');
+    $url_str = empty($url_rtrim) ? "" : $pathinfo_dli . $url_rtrim;
+    if ($url_type == 2) {
+        return __METH__ . $url_str;
+    } else {
+        return __METH__ . "&" . trim($url_str, "&");
+    }
+}

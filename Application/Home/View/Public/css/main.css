@@ -60,8 +60,8 @@ a:active { -moz-outline-style: none; outline: none; }
 .nav li,.nav a{float: left;}
 .nav li{margin-top: 0px; line-height: 30px;
 	width: 30%;}
-.nav a.b{padding-right:15px;width: 63px; float: left;}
-.nav a.b2{padding-right:15px;width: 40px;}
+.nav a.b{margin-right:15px;width: 63px; float: left;}
+.nav a.b2{margin-right:15px;width: 40px;}
 .nav .w-60{width: 60px;}
 .nav .bd{width: 1px;height: 51px;margin: 15px 15px 0 0;background: #60a0ce;display: inline;}
 .nav ul{overflow: hidden;width: 860px;margin-top: 5px;}

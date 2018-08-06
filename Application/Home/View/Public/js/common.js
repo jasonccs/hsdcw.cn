@@ -5,13 +5,15 @@
 $(function(){
 
     $('.menu>.nav_body>.nav>ul>li>a').hover(function(){
-        $(this).css({'background':'#B73102','padding':'0px','color':'#fff'});
+        $(this).css({'background':'#B73102','color':'#fff'});
          //$(this).siblings().css({'background':'','padding':'0px','color':'#000'});
     },function(){
     	if($(this).hasClass('cur')){
-    	   $(this).css({'background':'','padding':'0px','color':'#fff'});
+    	   // $(this).css({'color':'#fff'});
+            $(this).removeAttr('style')
     	}else{
-    	   $(this).css({'background':'','padding':'0px','color':'#000'});
+    	   // $(this).css({'background':'','padding':'0px','color':'#000'});
+			$(this).removeAttr('style')
     	}
 
     });
@@ -52,7 +54,7 @@ $(function(){
        let new_url=url.replace(/\/\d+\.?|html|htm/,'.');
 
         if(regx.test(url)){
-        	console.log();
+        	console.log(url);
             if ($($(this))[0].href == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-4) == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-3) == new_url)
                 $(this).addClass('cur');
 		}else{

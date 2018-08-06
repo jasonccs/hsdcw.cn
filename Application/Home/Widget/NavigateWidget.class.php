@@ -10,11 +10,7 @@ class NavigateWidget extends Controller
     public function navMenu()
     {
         $all_menu = D('SysMenu')->allMenu();
-
-//        $cate = new HdData();
-//        $menu = $cate::tree($all_menu, 'title', 'id', 'pid');
-//        $menu=$cate::tree($all_menu);
-//        $all_menu = [
+//        $all_menu2 = [
 //            [
 //                [
 //                    "id" => 4,
@@ -168,25 +164,31 @@ class NavigateWidget extends Controller
 //                ],
 //            ],
 //        ];
-        $menu=self::generateTree($all_menu);
-                dump($menu);
-        $this->assign('all_menu', $menu);
+        $menu=self::generateTree($all_menu,'id','pid');
+        $temp = [];
+        foreach ( $menu as $key => $value ) {
+            if ( is_array($value) ) {
+                $temp[$key] = $value['son'];
+            }
+        }
+        $this->assign('all_menu', $temp);
         $this->display('Widget:nav');
     }
 
-    public function generateTree($items,$pid ="pid"){
-            $map  = [];
-            $tree = [];
-            foreach ($items as &$it){ $map[$it['id']] = &$it; }  //数据的ID名生成新的引用索引树
-            foreach ($items as &$it){
-                $parent = &$map[$it[$pid]];
-                if($parent) {
-                    $parent['son'][] = &$it;
-                }else{
-                    $tree[] = &$it;
+    public function generateTree($arr,$id='id',$pid='pid',$kid=0,$level=0){
+            $list =[];
+            foreach ($arr as $k=>$v){
+                if ($v[$pid] == $kid){
+                    $v['level']=$level;
+                    $v['son'] = self::generateTree($arr,$id,$pid,$v[$id],$level+1);
+                    if (empty($v['son'])){
+                        unset($v['son']);
+                    }
+                    $list[]=$v;
                 }
             }
-            return $tree;
+            return $list;
+        
     }
 
 
