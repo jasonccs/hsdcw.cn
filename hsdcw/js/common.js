@@ -16,7 +16,7 @@ $(function(){
 });
 
 jQuery.fn.extend({
-	
+
 	slideFocus: function(){
 		var This = $(this);
 		var sWidth = $(This).width(),
@@ -52,7 +52,7 @@ jQuery.fn.extend({
 		});
 
 
-		// start setInterval		
+		// start setInterval
 		$(This).find('ul').css("width",sWidth * (len));
 		$(This).hover(function(){
 			clearInterval(Timer);
@@ -72,7 +72,7 @@ jQuery.fn.extend({
 			$(This).find('.btn span').stop(true,false).eq(index).addClass('on').siblings().removeClass('on');
 		};
 
-		
+
 		// show hide
 		function show(obj){ $(obj).stop(true,false).fadeIn();}
 		function hide(obj){ $(obj).stop(true,false).fadeOut();}

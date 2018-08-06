@@ -60,7 +60,11 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 
 function imgVerify(va) {
     let src=$(va).attr('src');
-    $(va).attr('src',src+'?'+Math.random());
+    if (src.indexOf('?') > 0) {
+        $(va).attr("src", src.replace(/\?.*$/, '') + '?' + Math.random());
+    } else {
+        $(va).attr('src',src+'?'+Math.random());
+    }
 }
 
 

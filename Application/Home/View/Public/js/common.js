@@ -4,7 +4,7 @@
 
 $(function(){
 
-    $('.menu>.nav_body>.nav>ul>li>p>a').hover(function(){
+    $('.menu>.nav_body>.nav>ul>li>a').hover(function(){
         $(this).css({'background':'#B73102','padding':'0px','color':'#fff'});
          //$(this).siblings().css({'background':'','padding':'0px','color':'#000'});
     },function(){
@@ -44,10 +44,10 @@ $(function(){
          $(this).next().mouseleave(function(){
          	$(this).css('display','none');
          })
-	})
+	});
 
 	//菜单切换的跟踪样式
-	$('.menu>.nav_body>.nav>ul>li>p>a').each(function () {
+	$('.menu>.nav_body>.nav>ul>li>a').each(function () {
        let url= String(window.location),regx = /\d+/;
        let new_url=url.replace(/\/\d+\.?|html|htm/,'.');
 

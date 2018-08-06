@@ -2,6 +2,8 @@
 namespace Admin\Controller;
 
 use Think\Controller;
+use Think\HdData;
+
 /**
 * @ 文章管理器
 */
@@ -11,7 +13,7 @@ class NewsController extends Controller
      * 添加文章
      */
     public function index(){
-         
+
     }
     public function addnews()
     {
@@ -48,15 +50,15 @@ class NewsController extends Controller
                 $desc_image .= $value . '|';
             }
              $info = array(
-                 'cateid'      => I('cateid', null,'intval'), 
-                 'title'       => I('title', null), 
-                 'type'        => I('type', null), 
-                 'desc_image'  => $desc_image, 
-                 'keywords'    => I('keywords', null), 
+                 'cateid'      => I('cateid', null,'intval'),
+                 'title'       => I('title', null),
+                 'type'        => I('type', null),
+                 'desc_image'  => $desc_image,
+                 'keywords'    => I('keywords', null),
                  'source'      => I('source',null),
                  'tag'         => I('tag',null),
-                 'description' => I('description', null), 
-                 'content'     => I('content', null, 'html_entity_decode,trim'), 
+                 'description' => I('description', null),
+                 'content'     => I('content', null, 'html_entity_decode,trim'),
                  'time'        => I('time') ? strtotime(I('time')) : time());
             // dump($info);die;
             $data = M('news')->add($info);
@@ -69,12 +71,12 @@ class NewsController extends Controller
     }
 
     //读取所有文章
-    public function allnews(){   
+    public function allnews(){
         $db=M('news');
         $page=new \Think\HdPage($db->count(),5);
         $data=$db->alias('a')->field('a.id,a.title,keywords,content,b.title as newsname,a.display,a.time,a.type')
         ->limit($page->limit())->join('LEFT JOIN __SYS_MENU__ b ON b.id=a.cateid')
-        ->where("'a.display'=0")->order(array('a.time'=>'desc','a.id'=>'desc'))->select();     
+        ->where("'a.display'=0")->order(array('a.time'=>'desc','a.id'=>'desc'))->select();
         $this->assign('allnews',$data);
         $this->assign('page',$page->show());
         $this->display();
@@ -102,7 +104,7 @@ class NewsController extends Controller
          if(IS_GET){
            $id=I('id');
            $data=M('news')->find($id);
-        
+
             $str_desc_image=explode('|',$data['desc_image']);
             foreach($str_desc_image as $k=>$v){
                  if(empty($str_desc_image[$k])){
@@ -113,82 +115,82 @@ class NewsController extends Controller
            $this->assign('data',$data);
            $this->dataTree();
            //dump($data);
-           $this->display(); 
+           $this->display();
           }
 
-    } 
-   
+    }
+
    //更新文章
      public function updateinfo(){
 
         if(IS_POST){
                         $img=I('desc_image');
-                     
+
                             foreach ($img as $key => $value) {
                                if($img[$key]==''){
                                   array_splice($img, $key); //移除数组中指定的元素
-                               } 
+                               }
                             }
 
                             foreach ($img as $k => $v) {
                                      $desc_image .= $v . '|';
-                             }  
-                       
+                             }
+
                         // dump($img);
                         // dump($desc_image);
 
                          if($img==''&& count($img)<1){//图片全被删除光.即0张
                              $info = array(
                              'id'          =>I('id',null,'intval'),
-                             'cateid'      => I('cateid', null), 
-                             'title'       => I('title', null), 
-                             'type'        => I('type', null), 
+                             'cateid'      => I('cateid', null),
+                             'title'       => I('title', null),
+                             'type'        => I('type', null),
                              'desc_image'  => null, // 清空此字段
-                             'keywords'    => I('keywords', null), 
+                             'keywords'    => I('keywords', null),
                              'source'      => I('source',null),
                              'tag'         => I('tag',null),
-                             'description' => I('description', null), 
-                             'content'     => I('content', null, 'html_entity_decode,trim'), 
+                             'description' => I('description', null),
+                             'content'     => I('content', null, 'html_entity_decode,trim'),
                              'time'        => I('time') ? strtotime(I('time')) : time(),
-                             ); 
+                             );
 
                          }else if($img==null && count($img)>1){//说明没有添加新图片,但是图片最少有一张
                               $info = array(
                              'id'          =>I('id',null,'intval'),
-                             'cateid'        => I('cateid', null), 
-                             'title'       => I('title', null), 
-                             'type'        => I('type', null), 
+                             'cateid'        => I('cateid', null),
+                             'title'       => I('title', null),
+                             'type'        => I('type', null),
                              //  'desc_image'  => $desc_image,  清空此字段
-                             'keywords'    => I('keywords', null), 
-                             'description' => I('description', null), 
+                             'keywords'    => I('keywords', null),
+                             'description' => I('description', null),
                             'source'      => I('source',null),
                              'tag'         => I('tag',null),
-                             'content'     => I('content', null, 'html_entity_decode,trim'), 
+                             'content'     => I('content', null, 'html_entity_decode,trim'),
                              'time'        => I('time') ? strtotime(I('time')) : time(),
-                             ); 
+                             );
                          }else{//说明图片有存在添加新的
                               $info = array(
                              'id'          =>I('id',null,'intval'),
-                             'cateid'      => I('cateid', null), 
-                             'title'       => I('title', null), 
-                             'type'        => I('type', null), 
+                             'cateid'      => I('cateid', null),
+                             'title'       => I('title', null),
+                             'type'        => I('type', null),
                              'desc_image'  => $desc_image,  //清空此字段
-                             'keywords'    => I('keywords', null), 
-                             'description' => I('description', null), 
+                             'keywords'    => I('keywords', null),
+                             'description' => I('description', null),
                             'source'      => I('source',null),
                              'tag'         => I('tag',null),
-                             'content'     => I('content', null, 'html_entity_decode,trim'), 
+                             'content'     => I('content', null, 'html_entity_decode,trim'),
                              'time'        => I('time') ? strtotime(I('time')) : time(),
                              );
-                              
+
                          };
 
                         // dump($info);die;
-                 
+
                         $data = M('news')->save($info);
-                            
+
                         if (false !== $data || 0 !== $data ){
-                            $this->success('更新成功！'); 
+                            $this->success('更新成功！');
                         } else {
                             $this->error('更新失败！');
                         }
@@ -204,10 +206,9 @@ class NewsController extends Controller
 
      //新闻类别
      public function dataTree(){
-         $catetree=new \Think\HdData();
-
+         $cate_tree=new HdData();
          $data=M('sys_menu')->field('id,title as newsname,pid')->select();
-         $news_category=$catetree::tree($data,'newsname','id','pid');
+         $news_category=$cate_tree::tree($data,'newsname','id','pid');
          $this->assign('news_category',$news_category);
 
      }

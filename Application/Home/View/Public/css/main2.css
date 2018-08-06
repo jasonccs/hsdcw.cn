@@ -19,12 +19,8 @@ a:active { -moz-outline-style: none; outline: none; }
     box-sizing: inherit;
 }*/
 .tab ul li a{font-size: 14px;}
-/*.nav>ul>li>p>a.cur{background: #B73102; color: #fff;}*/
-/*.nav>ul>li>p>a.cur:hover{color: #fff;}*/
-
-.nav>ul>li>a.cur{background: #B73102; color: #fff;}
-.nav>ul>li>a.cur:hover{color: #fff;}
-
+.nav>ul>li>p>a.cur{background: #B73102; color: #fff;}
+.nav>ul>li>p>a.cur:hover{color: #fff;}
 /*顶部悬浮导航*/
 .top_xuanfu{ height: 40px; width: 100%;background:#f9f9f9; /*position: fixed;*/}
 .top_xuanfu .top_nav{ width:1100px; height: 40px;background:#f9f9f9; margin: 0 auto;}
@@ -56,12 +52,11 @@ a:active { -moz-outline-style: none; outline: none; }
 /*导航*/
 .nav{float: right;overflow: hidden;line-height: 28px;font-size: 14px;}
 .nav a{color: #000; font-size: 14px;float: left;}
-.nav>ul>li>a{color: #000; font-size: 14px;margin-top: 15px;height: 20px;width:26%; line-height: 20px; float: left;display: block; text-align: center;}
-.nav li,.nav a{float: left;}
-.nav li{margin-top: 0px; line-height: 30px;
-	width: 30%;}
-.nav a.b{padding-right:15px;width: 63px; float: left;}
-.nav a.b2{padding-right:15px;width: 40px;}
+.nav>ul>li>p>a{color: #000; font-size: 14px;margin-top: 15px;height: 20px;width:100%; line-height: 20px; float: left;display: block; text-align: center;}
+.nav li,.nav p{float: left;}
+.nav li{margin-top: 0px; line-height: 30px;}
+.nav p.b{padding-right:15px;width: 63px; float: left;}
+.nav p.b2{padding-right:15px;width: 40px;}
 .nav .w-60{width: 60px;}
 .nav .bd{width: 1px;height: 51px;margin: 15px 15px 0 0;background: #60a0ce;display: inline;}
 .nav ul{overflow: hidden;width: 860px;margin-top: 5px;}
@@ -268,42 +263,42 @@ a:active { -moz-outline-style: none; outline: none; }
 .section-focus-pic .controler2 .next:hover i{right:10px;background-position:-62px -24px;_background:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='imgs/star_04.png');}
 
 
-.newcarpic-content {
-	width: 1030px;
-	margin: 0 auto;
-	padding: 15px 0 0 5px;
-	overflow: hidden;
-	text-align: center;
+ .newcarpic-content {
+width: 1030px;
+margin: 0 auto;
+padding: 15px 0 0 5px;
+overflow: hidden;
+text-align: center;
 }
 
 .newcarpic-content dt div {
-	line-height: 30px;
-	margin-top: 10px;
-	font-family:'微软雅黑';
-	font-size: 16px;
-	font-weight: bold;
-	color: #333;
+line-height: 30px;
+margin-top: 10px;
+font-family:'微软雅黑';
+font-size: 16px;
+font-weight: bold;
+color: #333;
 }
-.newcarpic-content dt {
-	height: 245px;
-	padding: 0px 10px 0 0;
-	float: left;
+ .newcarpic-content dt {
+height: 245px;
+padding: 0px 10px 0 0;
+float: left;
 }
 
 .newcarpic-content dd {
-	width: 130px;
-	height: 125px;
-	float: left;
-	/*padding-left: 5px;*/
-	text-align: center;
+width: 130px;
+height: 125px;
+float: left;
+/*padding-left: 5px;*/
+text-align: center;
 }
 
 .newcarpic-content dd div {
-	height: 18px;
-	line-height: 18px;
-	padding-top: 5px;
-	overflow: hidden;
-	word-break: break-all;
+height: 18px;
+line-height: 18px;
+padding-top: 5px;
+overflow: hidden;
+word-break: break-all;
 }
 
 
@@ -396,24 +391,24 @@ a:active { -moz-outline-style: none; outline: none; }
 
 @-webkit-keyframes shake {
 
-	0%, 100% {-webkit-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-30px);}
-	20%, 40%, 60%, 80% {-webkit-transform: translateX(30px);}
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-30px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(30px);}
 }
 @-moz-keyframes shake {
-	0%, 100% {-moz-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-30px);}
-	20%, 40%, 60%, 80% {-moz-transform: translateX(30px);}
+    0%, 100% {-moz-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-30px);}
+    20%, 40%, 60%, 80% {-moz-transform: translateX(30px);}
 }
 
 
 
 .shake{
-	-webkit-animation-name:shake;
-	-webkit-animation-duration:1s;
-	-moz-animation-name:shake;
-	-moz-animation-duration:1s;
-}
+    -webkit-animation-name:shake;
+    -webkit-animation-duration:1s;
+    -moz-animation-name:shake;
+    -moz-animation-duration:1s;
+    }
 
 
 .page_tag {
