@@ -186,7 +186,7 @@ $(function(){
 
                         }
                         if($(this).hasClass('csubmit active')){
-                           $.post("{:U('Home/Comment/comment')}",{
+                           $.post("{:U('/Home/Comment/comment')}",{
                                id:article_id,
                                content: $("textarea[name='cinput']").val(),
                                // user_id:user_id,
