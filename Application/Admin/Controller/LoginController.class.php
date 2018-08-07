@@ -50,7 +50,7 @@ class LoginController extends Controller {
 
      session_unset();
      session_destroy();
-     $this->success('退出成功！',U('Admin/Login/index'));
+     $this->success('退出成功！',U('/Admin/Login/index'));
 
 
    }
