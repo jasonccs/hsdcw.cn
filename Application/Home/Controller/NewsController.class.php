@@ -140,11 +140,12 @@
             $comments = M('comment')->alias('c')
                 ->field('c.id,c.created_at,c.content,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
                 ->join('__VIPUSER__ AS v ON c.user_id = v.id', 'left')
-                ->where(['article_id' => $id])
-                ->order('created_at desc')->limit($page->limit())->select();
-            $count = M('comment')->where(['article_id' => $id])->count('id');
+                ->where('article_id='.$id.' and c.`status`=1')
+                ->order('created_at desc')
+                ->limit($page->limit())->select();
+            $count = M('comment')->where('article_id='.$id.' and status=1')->count('id');
 
-//          dump($result);
+//          dump($comments);die;
             $this->assign('count', $count);//评论数量
             $this->assign('comments', $comments);//评论内容
             $this->assign('pagenum', $page->totalPage);//只分配总页数
@@ -166,7 +167,7 @@
                 $comments_db = M('comment')->alias('c')
                     ->field('c.id,c.created_at,c.content,c.article_id,c.user_id,c.click,v.username,v.head_portrait')
                     ->join('__VIPUSER__ AS v ON c.user_id = v.id', 'left')
-                    ->where(['article_id' => $arcticle_id])
+                    ->where('article_id='.$arcticle_id.' and c.status=1')
                     ->order('created_at desc');
 
 //                $count=$comments_db->count();

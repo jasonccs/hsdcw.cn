@@ -1,18 +1,22 @@
 <?php
-    
+
     namespace Home\Controller;
-    
-    
+
+
     class CommentController extends CommonController
     {
-        
-        
+
+
         //评论文章
         public function comment ()
         {
-            
+
             if ( IS_AJAX ) {
-                $comment = [ 'article_id' => I('id', '', 'intval'), 'user_id' => session('user_info.user_id'), 'username' => I('username', ''), 'content' => I('content', '', 'strip_tags,trim'), ];
+                $comment = [ 'article_id' => I('id', '', 'intval'),
+                    'user_id' => session('user_info.user_id'),
+                    'username' => I('username', ''),
+                    'content' => I('content', '', 'strip_tags,trim')
+                ];
                 $commont_db = M('comment');
                 $map['created_at'] = [ 'between', [ date("Y-m-d"), date("Y-m-d", strtotime("+1 day")) ] ];
                 $count = $commont_db->where($map)->where([ 'user_id' => $comment['user_id'] ])->where([ 'status' => 1 ])->count();
@@ -28,10 +32,10 @@
                     $comment['head_portrait'] = empty($user_info['head_portrait']) ? '' : $user_info['head_portrait'];
                     $this->ajaxReturn($comment);
                 }
-                
+
             }
         }
-        
+
         //评论点赞
         public function thumbs ()
         {
@@ -48,7 +52,6 @@
                 }
             }
         }
-        
+
     }
-    
-    
+
