@@ -132,7 +132,7 @@ function G($start,$end='',$dec=4) {
         }else{
             return number_format(($_info[$end]-$_info[$start]),$dec);
         }
-        
+
     }else{ // 记录时间和内存使用
         $_info[$start]  =  microtime(TRUE);
         if(MEMORY_LIMIT_ON) $_mem[$start]           =  memory_get_usage();
@@ -213,7 +213,7 @@ function compile($filename) {
  * @return string
  */
 function T($template='',$layer=''){
-    
+
     // 解析模版资源地址
     if(false === strpos($template,'://')){
         $template   =   'http://'.str_replace(':', '/',$template);
@@ -223,7 +223,7 @@ function T($template='',$layer=''){
     $module =   isset($info['user'])?$info['user'].'/':MODULE_NAME.'/';
     $extend =   $info['scheme'];
     $layer  =   $layer?$layer:C('DEFAULT_V_LAYER');
-    
+
     // 获取当前主题的模版路径
     $auto   =   C('AUTOLOAD_NAMESPACE');
     if($auto && isset($auto[$extend])){ // 扩展资源
@@ -237,10 +237,10 @@ function T($template='',$layer=''){
     }else{
         $baseUrl    =   APP_PATH.$module.$layer.'/';
     }
-    
+
     // 获取主题
     $theme  =   substr_count($file,'/')<2 ? C('DEFAULT_THEME') : '';
-    
+
     // 分析模板文件规则
     $depr   =   C('TMPL_FILE_DEPR');
     if('' == $file) {
@@ -363,7 +363,7 @@ function I($name,$default='',$filter=null,$datas=null) {
             }elseif(is_int($filters)){
                 $filters    =   array($filters);
             }
-            
+
             if(is_array($filters)){
                 foreach($filters as $filter){
                     if(function_exists($filter)) {
@@ -697,7 +697,7 @@ function A($name,$layer='',$level=0) {
     $level  =   $level? : ($layer == C('DEFAULT_C_LAYER')?C('CONTROLLER_LEVEL'):1);
     if(isset($_action[$name.$layer]))
         return $_action[$name.$layer];
-    
+
     $class  =   parse_res_name($name,$layer,$level);
     if(class_exists($class)) {
         $action             =   new $class();
@@ -882,9 +882,9 @@ function layout($layout) {
 function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
     // 解析URL
     $info   =  parse_url($url);
-    if($replaceAction){
+//    if($replaceAction){
         $url  = !empty($info['path'])?$info['path']:ACTION_NAME;
-    }
+//    }
     if(isset($info['fragment'])) { // 解析锚点
         $anchor =   $info['fragment'];
         if(false !== strpos($anchor,'?')) { // 解析参数
@@ -914,7 +914,7 @@ function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
             }
         }
     }
-    
+
     // 解析参数
     if(is_string($vars)) { // aaa=1&bbb=2 转换成数组
         parse_str($vars,$vars);
@@ -925,7 +925,7 @@ function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
         parse_str($info['query'],$params);
         $vars = array_merge($params,$vars);
     }
-    
+
     // URL组装
     $depr       =   C('URL_PATHINFO_DEPR');
     $urlCase    =   C('URL_CASE_INSENSITIVE');
@@ -966,7 +966,7 @@ function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
                 $var[$varController]   =   parse_name($var[$varController]);
             }
             $module =   '';
-            
+
             if(!empty($path)) {
                 $var[$varModule]    =   implode($depr,$path);
             }else{
@@ -985,10 +985,10 @@ function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
                 $module =   $var[$varModule];
                 unset($var[$varModule]);
             }
-            
+
         }
     }
-    
+
     if(C('URL_MODEL') == 0) { // 普通模式URL转换
         $url        =   __APP__.'?'.C('VAR_MODULE')."={$module}&".http_build_query(array_reverse($var));
         if($urlCase){
@@ -1003,9 +1003,9 @@ function U($url='',$vars='',$suffix=true,$domain=false,$replaceAction=false) {
             $url    =   __APP__.'/'.rtrim($url,$depr);
         }else{
             $module =   (defined('BIND_MODULE') && BIND_MODULE==$module )? '' : $module;
-            if ($replaceAction){
+//            if ($replaceAction){
                 $url    =   __APP__.'/'.($module?$module.MODULE_PATHINFO_DEPR:'').implode($depr,array_reverse($var));
-            }
+//            }
         }
         if($urlCase){
             $url    =   strtolower($url);
@@ -1134,7 +1134,7 @@ function F($name, $value='', $path=DATA_PATH) {
         if (is_null($value)) {
             // 删除缓存
             if(false !== strpos($name,'*')){
-                return false; // TODO 
+                return false; // TODO
             }else{
                 unset($_cache[$name]);
                 return Think\Storage::unlink($filename,'F');
@@ -1542,7 +1542,7 @@ function send_http_status($code) {
 
 function think_filter(&$value){
     // TODO 其他安全过滤
-    
+
     // 过滤查询特殊字符
     if(preg_match('/^(EXP|NEQ|GT|EGT|LT|ELT|OR|XOR|LIKE|NOTLIKE|NOT BETWEEN|NOTBETWEEN|BETWEEN|NOTIN|NOT IN|IN)$/i',$value)){
         $value .= ' ';
@@ -1584,8 +1584,8 @@ function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true){
 
 function remove_Url_Param($var, $url = null)
 {
-    
-    
+
+
     $pathinfo_dli = C("URL_PATHINFO_DEPR");
     if (!is_null($url)) {
         $url_format = strstr($url, "&") ? $url . '&' : $url . $pathinfo_dli;
