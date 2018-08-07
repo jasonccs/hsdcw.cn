@@ -7,7 +7,7 @@
     <meta name="keywords" content="响应式后台">
     <meta name="description" content="使用了Html5+CSS3等现代技术">
 
-    <link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico"> 
+    <link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico">
     <link href="__PUBLIC__/css/bootstrap.min14ed.css" rel="stylesheet">
     <link href="__PUBLIC__/css/font-awesome.min93e3.css" rel="stylesheet">
     <link href="__PUBLIC__/css/plugins/iCheck/custom.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <link href="__PUBLIC__/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     <link href="__PUBLIC__/css/animate.min.css" rel="stylesheet">
     <link href="__PUBLIC__/css/style.css" rel="stylesheet">
-   
+
      <!-- Sweet Alert -->
     <link href="__PUBLIC__/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <link href="__PUBLIC__/css/animate.min.css" rel="stylesheet">
@@ -35,16 +35,16 @@
 <script type="text/javascript">
     window.UEDITOR_HOME_URL="__ROOT__/Public/Static/"
     window.onload=function(){
-        window.UEDITOR_CONFIG.initialFrameWidth=900 ; 
-        window.UEDITOR_CONFIG.initialFrameHeight=320 ; 
+        window.UEDITOR_CONFIG.initialFrameWidth=900 ;
+        window.UEDITOR_CONFIG.initialFrameHeight=320 ;
 
-        // window.UEDITOR_CONFIG.imageUrl="__ROOT__/Upload/"; 
-        //window.UEDITOR_CONFIG.imagePath="{|U:'Admin/Addshop/addshop'}"; 
+        // window.UEDITOR_CONFIG.imageUrl="__ROOT__/Upload/";
+        //window.UEDITOR_CONFIG.imagePath="{|U:'Admin/Addshop/addshop'}";
        var ue = UE.getEditor('editor', {
               autoHeightEnabled: false,//内容超过高度,编辑器出现滚条
               });
     }
-</script>      
+</script>
 
 </head>
 
@@ -62,12 +62,12 @@
                         </div>
                     </div>
                     <div class="ibox-content">
-              <form action="{:U('Admin/News/updateinfo')}" class="form-horizontal m-t" id="signupForm" method="post" enctype="multipart/form-data">              
+              <form action="{:U('/Admin/News/updateinfo')}" class="form-horizontal m-t" id="signupForm" method="post" enctype="multipart/form-data">
 
                         <table class="table table-striped table-bordered table-hover dataTables-example">
                             <tbody>
-                                    
-                                <input type="hidden" name="id" value="{$data.id}"/>    
+
+                                <input type="hidden" name="id" value="{$data.id}"/>
                                 <div class="select_cate" select_cate="{$data.cateid}"></div>
 
                                    <tr class="gradeX col-md">
@@ -83,24 +83,24 @@
 
                                                   $(function(){
                                                       var select_cid= $('.select_cate').attr('select_cate');
-                                                                         
-                                                      var options =$('.m-b').find("option"); 
-                                      
+
+                                                      var options =$('.m-b').find("option");
+
                                                        for(var i=1;i<=options.length;i++){
                                                           if (options.eq(i).val()==select_cid){
                                                               options.eq(i).attr("selected", true);
-                                                          }                                                                                                      
+                                                          }
                                                         }
                                                   })
                                          </script>
-                                   
+
                                 </tr>
                                 <tr class="gradeA col-md  ">
                                     <td>文章标题</td>
                                     <td class="form-group"><input type="text" id="title" name="title" class="form-control m-input" placeholder="请输入标题" value="{$data.title}" required="" aria-required="true" minlength="2" maxlength="80" ></td>
-                                   
+
                                 </tr>
-                                
+
                                   <div class="select_cid" select_cid="{$data.type}"></div>
                                  <tr class="gradeX col-md ">
                                     <td>所属类别</td>
@@ -112,20 +112,20 @@
                                     </div>
                                        <script type="text/javascript">
                                               $(function(){
-                                                  var select_cid= $('.select_cid').attr('select_cid');              
-                                                  var options =$("input[type='radio']");  
+                                                  var select_cid= $('.select_cid').attr('select_cid');
+                                                  var options =$("input[type='radio']");
                                                    for(var i=0;i<=options.length;i++){
                                                       if (options.eq(i).val()==select_cid){
                                                          options.eq(i).attr("checked", true);
                                                          options.eq(i).parent('div').addClass('checked');
-                                                      }                                                                              
+                                                      }
                                                     }
                                               })
                                         </script>
 
                                     </td>
                                 </tr>
-                                
+
                                  <tr class="gradeX col-md ">
                                     <td>文章来源(50字以内)</td>
                                     <td class="form-group"><input type="text" id="source" name="source"    maxlength="10" class="form-control m-input" placeholder="请输入tag" value="{$data.source}"  required="" aria-required="true">
@@ -138,7 +138,7 @@
          <div>
          <input id="file" type="file" multiple="true"  value="" >
          <div id="allimages" style="display:none">
-             
+
              <if condition="!empty($data['desc_image'])">
                   <foreach name="data['desc_image']" item="vo" >
                          <input type="text" name="desc_image[]" class="hd-w200 ipt3" value="{$vo}">
@@ -159,7 +159,7 @@
                         'fileTypeDesc' : '上传文件',//上传描述
                         'fileTypeExts' : '*.gif; *.jpg; *.png;*.jpeg;*.bmp',
                         'swf'      : '__ROOT__/Public/Static/uploadify/uploadify.swf',
-                        'uploader' : "{:U('Admin/News/uploadImage')}",
+                        'uploader' : "{:U('/Admin/News/uploadImage')}",
                         'method' : 'POST',  //方法，服务端可以用$_POST数组获取数据
                         'buttonText':'选择文件',
                         'fileSizeLimit' : '3145728KB',
@@ -169,12 +169,12 @@
                         'height':25,
                         'successTimeout':15,//等待服务器响应时间
                         'removeTimeout' : 0.5,//成功显示时间 onUploadError
-                        'overrideEvents' : [ 'onDialogClose','onUploadError', 'onSelectError' ],  
+                        'overrideEvents' : [ 'onDialogClose','onUploadError', 'onSelectError' ],
                          //检测FLASH失败调用
                         'onFallback':function(){
                             alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
                         },
-                       
+
                         'onUploadSuccess' : function(file, data, response) {
                             data=$.parseJSON(data);
                             var imageUrl = data.imgPath?data.imgPath:'__ROOT__/Public/Static/uploadify/default.png';
@@ -184,7 +184,7 @@
 
                             var images='<input type="text"  name="desc_image[]" class="hd-w200 ipt3" value="'+data.imgPath+'"'+'/>';
                             // if($("#allimages ul li").length>this.settings.uploadLimit){alert(0); return;}
-                            $("#allimages").prepend(images); 
+                            $("#allimages").prepend(images);
 
 
                         },
@@ -205,42 +205,42 @@
                                     break;
                             }
                         },
-                       'onUploadError':function(file, errorCode, errorMsg) {  
-                        //手工取消不弹出提示  
-                        if (errorCode == SWFUpload.UPLOAD_ERROR.FILE_CANCELLED  || errorCode == SWFUpload.UPLOAD_ERROR.UPLOAD_STOPPED) {  
-                            return;  
-                        }   
-                        var msgText = "上传失败";  
-                        switch (errorCode) {  
-                            case SWFUpload.UPLOAD_ERROR.HTTP_ERROR:  
-                                msgText += "HTTP 错误\n" + errorMsg;  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.MISSING_UPLOAD_URL:  
-                                msgText += "上传文件丢失，请重新上传";  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.IO_ERROR:  
-                                msgText += "IO错误";  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.SECURITY_ERROR:  
-                                msgText += "安全性错误\n" + errorMsg;  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.UPLOAD_LIMIT_EXCEEDED:  
-                                msgText += "每次最多上传 " + this.settings.uploadLimit + "个";  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.UPLOAD_FAILED:  
-                                msgText += errorMsg;  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.SPECIFIED_FILE_ID_NOT_FOUND:  
-                                msgText += "找不到指定文件，请重新操作";  
-                                break;  
-                            case SWFUpload.UPLOAD_ERROR.FILE_VALIDATION_FAILED:  
-                                msgText += "参数错误";  
-                                break;  
-                            default:  
-                                msgText += "文件:" + file.name + "\n错误码:" + errorCode + "\n"  
-                                        + errorMsg + "\n" + errorString;  
-                        }  
-                        alert(msgText);  
+                       'onUploadError':function(file, errorCode, errorMsg) {
+                        //手工取消不弹出提示
+                        if (errorCode == SWFUpload.UPLOAD_ERROR.FILE_CANCELLED  || errorCode == SWFUpload.UPLOAD_ERROR.UPLOAD_STOPPED) {
+                            return;
+                        }
+                        var msgText = "上传失败";
+                        switch (errorCode) {
+                            case SWFUpload.UPLOAD_ERROR.HTTP_ERROR:
+                                msgText += "HTTP 错误\n" + errorMsg;
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.MISSING_UPLOAD_URL:
+                                msgText += "上传文件丢失，请重新上传";
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.IO_ERROR:
+                                msgText += "IO错误";
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.SECURITY_ERROR:
+                                msgText += "安全性错误\n" + errorMsg;
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.UPLOAD_LIMIT_EXCEEDED:
+                                msgText += "每次最多上传 " + this.settings.uploadLimit + "个";
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.UPLOAD_FAILED:
+                                msgText += errorMsg;
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.SPECIFIED_FILE_ID_NOT_FOUND:
+                                msgText += "找不到指定文件，请重新操作";
+                                break;
+                            case SWFUpload.UPLOAD_ERROR.FILE_VALIDATION_FAILED:
+                                msgText += "参数错误";
+                                break;
+                            default:
+                                msgText += "文件:" + file.name + "\n错误码:" + errorCode + "\n"
+                                        + errorMsg + "\n" + errorString;
+                        }
+                        alert(msgText);
                       } ,
 
 
@@ -263,21 +263,21 @@
     <script type="text/javascript">
             $(function(){
               $('#uploadList>ul').on('click','li',function(){
-                 
-                  var imgpath    = $(this).attr('path'); 
+
+                  var imgpath    = $(this).attr('path');
                   var index      = $(this).index();//点击的索引
                       $.ajax({
                           type:"post",
-                          url:"{:U('Admin/Common/delImg')}",
-                          dataType: "json", 
+                          url:"{:U('/Admin/Common/delImg')}",
+                          dataType: "json",
                           data:{delimgpath:imgpath},
                           success:function(data){
                             if(data.status==true){
-                                
+
                                 $("#uploadList>ul>li:eq("+index+")").remove();
-                                $("#allimages>input:eq("+index+")").remove();                          
+                                $("#allimages>input:eq("+index+")").remove();
                                 swal({title:"太帅了",text:"已删除",type:"success"})
-                                                                                     
+
                             }
                           }
                       })
@@ -292,12 +292,12 @@
 
                                     </td>
 
-                                   
+
                                 </tr>
                                  <tr class="gradeX col-md">
                                     <td>文章描述(100字内)</td>
                                     <td class="form-group"><textarea type="text" name="description" class="form-control m-input" placeholder="请输入标题"  minlength="2" maxlength="120"  required="" aria-required="true"style="resize:none;">{$data.description}</textarea></td>
-                                   
+
                                 </tr>
 
                                 <tr class="gradeX col-md ">
@@ -306,25 +306,25 @@
 
                                 </td>
 
-                          
+
                                 <tr class="gradeC">
                                     <td>发布时间</td>
                                     <td>
                                     <div class="form-group">
-                                     
+
                                         <div class="col-sm-10">
                                             <input class="form-control layer-date" placeholder="YYYY-MM-DD hh:mm:ss" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" name="time" value="{$data.time|date='Y-m-d H:i:s',###}" >
                                             <label class="laydate-icon"></label>
                                         </div>
                                     </div>
                                     </td>
-                                  
-                                </tr>                             
-                                                      
+
+                                </tr>
+
                                 <tr class="gradeX col-md">
                                     <td>正文内容</td>
                                     <td><textarea type="text" name="content" id="editor" placeholder="请输入标题">{$data.content}</textarea></td>
-                                   
+
                                 </tr>
 
 
@@ -336,18 +336,18 @@
                                     <i class="fa fa-check"></i> <strong>确定</strong>
                                     </button>
                                     </th>
-                                
-                                   
+
+
                                 </tr>
                             </tfoot>
-                        
+
                         </table>
-</form>    
+</form>
                     </div>
                 </div>
             </div>
         </div>
-       
+
     </div>
     <script src="__PUBLIC__/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/js/plugins/jeditable/jquery.jeditable.js"></script>
@@ -359,7 +359,7 @@
         $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
     </script>
    <script src="__PUBLIC__/js/plugins/layer/laydate/laydate.js"></script>
-   
+
     <script src="__PUBLIC__/js/plugins/validate/jquery.validate.min.js"></script>
     <script src="__PUBLIC__/js/plugins/validate/messages_zh.min.js"></script>
     <script src="__PUBLIC__/js/demo/form-validate-demo.min.js"></script>

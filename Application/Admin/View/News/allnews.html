@@ -142,7 +142,7 @@
                 confirmButtonText: "删除",
                 closeOnConfirm: false
                }, function () {
-                $.post("{:U('Admin/News/del')}",{id:idtext},function(data){
+                $.post("{:U('/Admin/News/del')}",{id:idtext},function(data){
                           html.remove();
                           swal("删除成功！", "您已经永久删除了这条信息。", "success");
                           if(data.status==false){
