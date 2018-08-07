@@ -337,39 +337,38 @@ $(function(){
                                 if(page++<={$pagenum} && data !==null){
                                      $.each(data,function(key,value){
                                          let head_portrait=value.head_portrait==''?'__STATIC__/images/default_head.png':value.head_portrait;
-                                var  commenthtml='<li class="citem clearfix">\
-                                <div class="cavatar">\
-                                    <a href="" target="_blank">\
-                                        <img src="'+head_portrait+'" />\
-                                    </a>\
-                                </div>\
-                                <div class="cbody">\
-                                    <div class="cuser">\
-                                        <a class="cname" href="" target="_blank">\
-                                            '+value.username+'</a>\
-                                    </div>\
-                                    <div class="ctxt">'+value.content+'</div>\
-                                    <div class="cinfo clearfix">\
-                                        <span class="ctime">\
-                                            '+getTime(value.time)+'</span>\
-                                        <div class="c-actions">\
-                                            <a class="cdigg " href="javascript:void(0);" ga_event="click_good_comment" data-commentid="{$vo.id}" onclick="thumbs(this);">\
-                                                <span class="digg-num">\
-                                                   '+ value.click+'\
-                                                </span>\
-                                                <i class="cbtn">\
-                                                </i>\
-                                            </a>\
-                                            <a class="creply" href="javascript:;" data-node="creply" ga_event="click_reply_comment">\
-                                                <i class="cbtn">\
-                                                </i>\
-                                            </a>\
-                                        </div>\
-                                    </div>\
-                                </div>\
-                            </li>';
-
-                                        $('.clist').append(commenthtml) ;
+                                let  comment_html='<li class="citem clearfix">\
+                                            <div class="cavatar">\
+                                                <a href="" target="_blank">\
+                                                    <img src="'+head_portrait+'" />\
+                                                </a>\
+                                            </div>\
+                                            <div class="cbody">\
+                                                <div class="cuser">\
+                                                    <a class="cname" href="" target="_blank">\
+                                                        '+value.username+'</a>\
+                                                </div>\
+                                                <div class="ctxt">'+value.content+'</div>\
+                                                <div class="cinfo clearfix">\
+                                                    <span class="ctime">\
+                                                        '+getTime(value.time)+'</span>\
+                                                    <div class="c-actions">\
+                                                        <a class="cdigg " href="javascript:void(0);" ga_event="click_good_comment" data-commentid="{$vo.id}" onclick="thumbs(this);">\
+                                                            <span class="digg-num">\
+                                                               '+ value.click+'\
+                                                            </span>\
+                                                            <i class="cbtn">\
+                                                            </i>\
+                                                        </a>\
+                                                        <a class="creply" href="javascript:;" data-node="creply" ga_event="click_reply_comment">\
+                                                            <i class="cbtn">\
+                                                            </i>\
+                                                        </a>\
+                                                    </div>\
+                                                </div>\
+                                            </div>\
+                                        </li>';
+                                        $('.clist').append(comment_html) ;
                                      })
 
                               }else{
