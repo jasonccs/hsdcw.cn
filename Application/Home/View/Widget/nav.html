@@ -15,7 +15,12 @@
         <elseif condition="$key eq 2"/>
             <li style="width: 28%">
                 <volist name="vo" id="vo2" key="k" >
-                    <a href="{:U($vo2['url'])}" class="b2">{$vo2.title}</a>
+                    <if  condition="$vo2['url'] eq '/Home/Fang/index'">
+                             <a href="{:U($vo2['url'],'',false)}" class="b2">{$vo2.title}</a>
+                        <else/>
+                             <a href="{:U($vo2['url'])}" class="b2">{$vo2.title}</a>
+                    </if>
+
                 </volist>
             </li>
         <else/>

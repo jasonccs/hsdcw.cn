@@ -7,11 +7,9 @@
   <meta name="description" content="">
   <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <css href="__PUBLIC__/css/main.css" /> 
-    <css href="__PUBLIC__/css/house.css" /> 
-    <js href="__PUBLIC__/js/jquery.1.10.2.min.js"/> 
-    <js href="__PUBLIC__/js/date.js"/> 
-    <js href="__PUBLIC__/js/common.js"/> 
+    <css href="__PUBLIC__/css/main.css" />
+    <css href="__PUBLIC__/css/house.css" />
+    <js href="__PUBLIC__/js/jquery.1.10.2.min.js"/>
 </head>
 <body>
   <include file="Public/Tpl/head" />
@@ -30,7 +28,7 @@
             <li>
                 <a class="fl" href="javascript:void(0)">2号线</a>
                 <a href="" class="close fl" title="删除"></a>
-            </li> 
+            </li>
           </ul>
         </div>
           <div class="sousuo">
@@ -39,7 +37,7 @@
                   <volist name="diqu" id="vo" >
                     <dd> {$vo}</dd>
                  </volist>
-              
+
                    <if condition="!empty($sondiqu) and count($sondiqu) gt 1">
                     <dl>
                        <volist name="sondiqu" id="vo" >
@@ -47,7 +45,7 @@
                       </volist>
                     </dl>
                    </if>
-               
+
               </dl>
                <dl>
                  <dt>价格</dt>
@@ -67,7 +65,7 @@
                     <dd> {$vo}</dd>
                 </volist>
               </dl>
-          </div> 
+          </div>
      </div>
 
      <div class="fangchanjieguo">
@@ -80,31 +78,31 @@
                     <li><a href="">开盘时间</a></li>
                     <li><a href="">点评数</a></li>
                   </ul>
-            </div> 
+            </div>
             <div class="soushow">
                <ul>
-                
+
 
                    <volist name="goods" id="vo" >
-       
-      
 
-              
+
+
+
                  <li>
                    <div class="fimg">
-                      <a href="{:U('Fang/show',array('gid'=>$vo['gid']))}"><img src="{$vo.goods_img}" width="180" height="106"></a>
+                      <a href="{:U('/Home/Fang/show',array('gid'=>$vo['gid']))}"><img src="{$vo.goods_img}" width="180" height="106"></a>
 
                    </div>
                    <div class="finfo">
                          <div class="finfo_one">
-                          <h2><a href="{:U('Fang/show',array('gid'=>$vo['gid']))}">  {$vo.main_title}</a>
+                          <h2><a href="{:U('/Home/Fang/show',array('gid'=>$vo['gid']))}">  {$vo.main_title}</a>
                             <img src="__PUBLIC__/images/hot.png" width="24" height="14"/>
                             </h2>
                                 <div id="sjina_C32_03">
-                                    
+
                                   <ul class="star_group">
                                   <!-- orange-star为橘黄色星星，half为各一半星星，gray-star为灰色星星 -->
-                                  
+
                                    <script>
                                   //   var allstar = 3;
                                   //   var halfstar = 1;
@@ -126,10 +124,10 @@
                                     <li class="orange-star"></li>
                                     <li class="half-star"></li>
                                     <li class="gray-star"></li>
-                                                                    
+
                                   </ul>
                                     <span class="value_num">(359条评论)</span>
-                               
+
                                 </div>
                        </div>
                        <div class="finfo_two">
@@ -153,11 +151,11 @@
                  </li>
 
               </volist>
-                 
+
                 </ul>
 
                <div class="house_page"> {$page}</div>
-            </div> 
+            </div>
         </div>
 
 <!-- 右侧开始 -->
@@ -178,7 +176,7 @@
                       <li class="zf-opn">东西湖区</li>
                       <li class="zf-opn">汉阳区</li>
                       <li class="zf-opn">武昌区</li>
-                    
+
                   </ul>
       </div>
     </li>
@@ -208,7 +206,7 @@
       <label for="" class="fl zf-lab">手机号码：</label>
       <input type="text" class="zf-input" autocomplete="off" id="entrust_cellphone" onblur="checkMobile(this.value);">
     </li>
-  
+
     <li id="adver_yanzhengma" class="clearfix" style="margin-bottom:10px;display:none;">
       <img id="entrust_adver_mf_authimg" width="76" height="32" onclick="MobileSendCode.getNewImgCode('entrust')" src="" style="margin: 0px 5px 0 0px;float:left;">
       <input id="adver_mf_authcode" type="text" value="" style="float:left;width:130px;height:28px;border:1px solid #cecece;text-indent:4px;">
@@ -223,7 +221,7 @@
   </ul>
 
 </div>
-            
+
 <div class="contentHot" id="sjina_C13_09">
         <div class="hotTool hidden">
           <h3 class="fl" ctm-data="newlp_bt"><a href="" target="_blank" ctm-data-idx="1">黄石最新楼盘</a></h3>
@@ -233,71 +231,71 @@
           <dl>
             <dt>
               <span class="mc">楼盘名称</span><span class="jg">价格</span><span class="lt">论坛</span><span class="db">对比</span>
-            </dt> 
-                          
+            </dt>
+
             <dd>
               <span class="mc"><a href="http://..com/3/" target="_blank" title="大华滨江天地三期铂金瑞府">大华滨江天地三期</a></span>
               <span class="jg">--</span>
               <span class="lt">--</span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153070','大华滨江天地三期铂金瑞府');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://shijitianjie..com/" target="_blank" title="世纪天街">世纪天街</a></span>
               <span class="jg">--</span>
               <span class="lt"><a href="http://shijitianjie..com/bbs/" target="_blank" title="世纪天街业主论坛">BBS</a></span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153066','世纪天街');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://guanggushijichengas." target="_blank" title="奥山光谷世纪城">奥山光谷世纪城</a></span>
               <span class="jg">--</span>
               <span class="lt"><a href="http://guanggushijichengas.bbs/" target="_blank" title="奥山光谷世纪城业主论坛">BBS</a></span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153062','奥山光谷世纪城');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://baolichengsohozhongxin." target="_blank" title="保利城SOHO中心">保利城SOHO中心</a></span>
               <span class="jg">15200元/㎡</span>
               <span class="lt">--</span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153058','保利城SOHO中心');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://sjtdsjgg." target="_blank" title="盛景天地盛景公馆">盛景天地盛景公馆</a></span>
               <span class="jg">--</span>
               <span class="lt">--</span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153056','盛景天地盛景公馆');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://188guojishequgg." target="_blank" title="光谷188国际社区">光谷188国际社区</a></span>
               <span class="jg">--</span>
               <span class="lt"><a href="http://188guojishequgg.bbs/" target="_blank" title="光谷188国际社区业主论坛">BBS</a></span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153050','光谷188国际社区');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://xinchengjinghui." target="_blank" title="新城璟汇">新城璟汇</a></span>
               <span class="jg">--</span>
               <span class="lt">--</span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153048','新城璟汇');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://hailunchuntian027.3/" target="_blank" title="海伦春天三期">海伦春天三期</a></span>
               <span class="jg">--</span>
               <span class="lt"><a href="http://hailunchuntian027.bbs/" target="_blank" title="海伦春天三期业主论坛">BBS</a></span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153038','海伦春天三期');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://xingfutiandiyiqiht." target="_blank" title="海天幸福天地一期">海天幸福天地一期</a></span>
               <span class="jg">5600元/㎡</span>
               <span class="lt"><a href="http://xingfutiandiyiqiht.bbs/" target="_blank" title="海天幸福天地一期业主论坛">BBS</a></span>
               <span class="db"><a href="javascript:void(0);" onclick="add('2610153030','海天幸福天地一期');">+</a></span>
             </dd>
-                                      
+
             <dd>
               <span class="mc"><a href="http://xingfushidaigongyu." target="_blank" title="幸福时代公寓">幸福时代公寓</a></span>
               <span class="jg">11500元/㎡</span>
@@ -307,7 +305,7 @@
                                   </dl>
         </div>
       </div>
-  
+
 
       <div style="position: relative;text-align: center;">
         <div class="news_adv"><a href=""><img src="/Application/Home/View/Public/images/news_adv.jpg"></a></div>
@@ -324,7 +322,7 @@
 <!-- 折线图 -->
     <div id="main" style="height:220px;width:1098px; margin:20px auto 0px; border:1px solid #ddd"></div>
 
-    
+
 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
     <script type="text/javascript">
         // 路径配置
@@ -333,7 +331,7 @@
                 echarts: 'http://echarts.baidu.com/build/dist'
             }
         });
-        
+
         // 使用
         require(
             [
@@ -342,8 +340,8 @@
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
-                
+                var myChart = ec.init(document.getElementById('main'));
+
                 var option = option = {
    title: {
        text: "2016黄石房价折线图",
@@ -391,7 +389,7 @@
    },
    // calculable: true,
    series: [
-     
+
        {
            name: "黄石房价",
            type: "line",
@@ -400,11 +398,11 @@
        }
    ]
 };
-                
-                    
-              window.onresize = myChart.resize;  
-                // 为echarts对象加载数据 
-                myChart.setOption(option); 
+
+
+              window.onresize = myChart.resize;
+                // 为echarts对象加载数据
+                myChart.setOption(option);
             }
         );
     </script>
@@ -414,45 +412,45 @@
 <h3 class="cloumn-name">其他推荐</h3>
 
     <dl class="recommend-xfmy ">
- 
+
     <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
      <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
      <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
      <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
      <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
      <dd>
         <p class="pic"><a href="" target="_blank"><img src=""></a></p>
         <p class="words"><a href="" target="_blank">朝阳 东湖湾</a>
-            </p>                        
+            </p>
         <p class="words2"><span class="org bold floatr">1300万</span>3室2厅</p>
     </dd>
 
-   
+
 </dl>
 <input id="xfmy_count" type="hidden" value="5">
 <div class="clear"></div>
@@ -469,7 +467,7 @@
         </dt>
     </dl>
     <div class="flinks">
-          
+
                   <a target="_blank" href="">腾讯旅游网</a>
                   <a target="_blank" href="">腾讯旅游网</a>
                   <a target="_blank" href="">腾讯旅游网</a>
@@ -485,19 +483,19 @@
                   <a target="_blank" href="">腾讯旅游网</a>
                   <a target="_blank" href="">腾讯旅游网</a>
                   <a target="_blank" href="">腾讯旅游网</a>
-              
-          
-              
-               
-              
-            
-              
+
+
+
+
+
+
+
     </div>
     <div class="clear"></div>
 </div>
 <!-- 友情连接 -->
 
-    <include file="Public/Tpl/footer"/> 
+    <include file="Public/Tpl/footer"/>
 
 </body>
 </html>

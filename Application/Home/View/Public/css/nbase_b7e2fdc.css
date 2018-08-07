@@ -938,3 +938,13 @@ strong {
     height: 32px;
     display: block;
 }
+
+.relatednews>.empty{
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+	height: 35px;
+	display: inline-block;
+	line-height: 35px;
+	color: #958f8f
+}
