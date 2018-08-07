@@ -54,7 +54,7 @@ $(function(){
        let new_url=url.replace(/\/\d+\.?|html|htm/,'.');
 
         if(regx.test(url)){
-        	console.log(url);
+        	// console.log(url);
             if ($($(this))[0].href == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-4) == new_url || $($(this))[0].href.substring(0,$($(this))[0].href.length-3) == new_url)
                 $(this).addClass('cur');
 		}else{

@@ -6,7 +6,7 @@ use Think\Controller;
 
 /*房产控制器*/
 
-class FangController extends CommonController
+class FangController extends Controller
 {
     protected $db;       //数据连接句柄
     private $lid;         //分类主键
@@ -14,6 +14,13 @@ class FangController extends CommonController
     private $mianji;     //房子面积主键
     private $huxing;      //房子户型
     private $url_p;
+
+    public function _initialize()
+    {
+        if (method_exists($this, '__auto')) {
+            $this->__auto();
+        }
+    }
 
     public function __auto()
     {
