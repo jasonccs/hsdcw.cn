@@ -23,13 +23,13 @@ $(function () {
 
             $(This).find('.next').click(function(){
                 index++;
-                if(index == len){index = 0;}
+                if(index === len){index = 0;}
                 Tony(index);
             });
 
             $(This).find('.pre').click(function(){
                 index--;
-                if(index == -1){index = len - 1;}
+                if(index === -1){index = len - 1;}
                 Tony(index);
             });
 
@@ -44,7 +44,7 @@ $(function () {
                 Timer=setInterval(function(){
                     Tony(index);
                     index++;
-                    if(len == index){index = 0;}
+                    if(len === index){index = 0;}
                 }, 2000)
             }).trigger("mouseleave");
 

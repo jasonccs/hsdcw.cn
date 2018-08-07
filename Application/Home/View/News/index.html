@@ -24,29 +24,9 @@
 <div>
 <div id="subHot" bosszone="js_jdt">
 
-       <?php
 
-         if(!isset($newtop['id'])){
-			   echo '<a target="_blank" href="#">';
-			}else{
-
-                          echo '<a target="_blank" href="'.ACTION_NAME.'/'.$newtop['id'].'">';
-
-		}
-
-         if(preg_match('/|/',$newtop['desc_image']) && $newtop['desc_image']  != ''){
-         	$list_top_img=explode('|', $newtop['desc_image']);
-         //	foreach ($list_top_img as $value) {
-         		echo '<img src="'. $list_top_img[0].'" alt="'.$newtop['title'].'" width="750" height="346">';
-         	//}
-         }else{
-
-         		echo '<img src="__PUBLIC__/images/default.png" alt="'.$newtop['title'].'" width="100%" height="100%">';
-
-         };
-
-       ?>
-		<!--  -->
+		<a target="_blank" href="{:U($current_url.$newtop['id'])}">
+		<img  src="{:substr($newtop['desc_image'],0,strpos($newtop['desc_image'],'|'))?substr($newtop['desc_image'],0,strpos($newtop['desc_image'],'|')):'__PUBLIC__/images/default.png'}" width="100%" height="100%" />
 
 		<div class="overlay">{$newtop.title|msubstr=0,40}</div>
 		</a>
