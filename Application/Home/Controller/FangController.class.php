@@ -38,7 +38,7 @@ class FangController extends CommonController
         $this->setGoods(); //设置商品展示结果
         $total = $this->db->totalNum();//统计符合搜索参数的记录的总条数
         // echo  $total; echo __SELF__; echo $_GET['p'];
-        $Page = new \Think\Page($total, 4);
+        $Page = new \Think\Page($total, 6);
         $limit = $Page->firstRow . ',' . $Page->listRows;
         $goods = $this->db->getGoods($limit);
         $this->assign('goods', $goods);
