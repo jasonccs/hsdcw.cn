@@ -2,13 +2,13 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
-   
+
    /**
     * 显示登录页
     */
-    
+
     public function index(){
-    
+
        $this->display('login');
     }
 
@@ -21,8 +21,8 @@ class LoginController extends Controller {
     	  if(IS_POST){
         	$db=M('user');
 	      	$username =I('username',null);
-	      	$password =I('password',null); 
-	      	$code =I('code',null); 
+	      	$password =I('password',null);
+	      	$code =I('code',null);
 	        $username_info=$db->where(array('username'=>$username))->find();
 	        if(is_null($username_info)){
 	        	$this->error('用户名不存在！');
@@ -33,12 +33,12 @@ class LoginController extends Controller {
 	        }else{
                 session('admin_id',$username_info['id']);
                 session('username',$username_info['username']);
-	        	$this->success('登录成功',U('Admin/Index/index'));
+	        	$this->success('登录成功',U('/Admin/Index/index'));
 
 	        }
-	       
+
         }
-      	
+
 
 
     }
@@ -63,7 +63,7 @@ class LoginController extends Controller {
 		    ob_end_clean();//清除缓存
 	        //C('verify'); //读取Common/conf/config.php验证码的配置
 	    	$verify=new \Think\Verify(C('verify'));
-	        $verify->entry();  
+	        $verify->entry();
 	}
 
 
