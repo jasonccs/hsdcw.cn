@@ -411,7 +411,7 @@ table {
     position: fixed;
     z-index: 9998;
     opacity: .3;
-    FILTER: alpha(opacity=30);
+    /*FILTER: alpha(opacity=30);*/
     _position: absolute
 }
 
@@ -629,14 +629,14 @@ a.mu_hoverline:hover {
     right: 0;
     bottom: 10px;
     _bottom: auto;
-    _top: expression(documentElement.scrollTop ? documentElement.scrollTop + documentElement.clientHeight - 120:document.body.scrollTop + document.body.clientHeight - 120)
+    _top: 0
 }
 
 .m-wallet-charge-pop-wrap {
     width: 223px;
     height: 149px;
     right: 36px;
-    _top: expression(documentElement.scrollTop ? documentElement.scrollTop + documentElement.clientHeight - 170:document.body.scrollTop + document.body.clientHeight - 170)
+    _top:0
 }
 
 .m-safe-lession-pop-wrap .close_btn, .m-wallet-charge-pop-wrap .close_btn {
@@ -660,7 +660,7 @@ a.mu_hoverline:hover {
     right: 65px;
     width: 32px;
     height: 32px;
-    background: url(about:blank)
+    /*background: url('fsd')*/
 }
 
 .md_process .md_process_wrap {
