@@ -11,7 +11,7 @@
         public function comment ()
         {
             parent::_initialize(true);
-            if ( IS_AJAX ) {
+            if ( IS_POST ) {
                 $comment = [ 'article_id' => I('id', '', 'intval'),
                     'user_id' => session('user_info.user_id'),
                     'username' => I('username', ''),
@@ -33,6 +33,8 @@
                     $this->ajaxReturn($comment);
                 }
 
+            }else{
+                $this->ajaxReturn([ 'status' => false, 'msg' => '非法请求！' ]);
             }
         }
 
@@ -40,7 +42,7 @@
         public function thumbs ()
         {
             parent::_initialize(true);
-            if ( IS_AJAX ) {
+            if ( IS_POST ) {
                 $id = I('id', '', 'intval');
                 $comentModel = D('Comment');
                 if ( $comentModel->create($_POST, 1) ) {
@@ -51,6 +53,8 @@
                 } else {
                     $this->ajaxReturn([ 'status' => false, 'msg' => $comentModel->getError() ]);
                 }
+            }else{
+                $this->ajaxReturn([ 'status' => false, 'msg' => '非法请求！' ]);
             }
         }
 
