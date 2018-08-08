@@ -1,0 +1,37 @@
+<?php var_dump($all_menu);?>
+<volist name="all_menu" id="vo"  >
+
+    <if condition=" $key  eq 0 ">
+            <li style="width: 30%">
+                <volist name="vo" id="vo2"  key="k" >
+                    <a href="{:U($vo2['url'])}" class="b">{$vo2.title}</a>
+                </volist>
+            </li>
+        <elseif condition="$key  eq 1"/>
+            <li style="width: 22%">
+                <volist name="vo" id="vo2" key="k" >
+                    <a href="{:U($vo2['url'])}" class="b2">{$vo2.title}</a>
+                </volist>
+            </li>
+        <elseif condition="$key eq 2"/>
+            <li style="width: 28%">
+                <volist name="vo" id="vo2" key="k" >
+                    <if  condition="$vo2['url'] eq '/Home/Fang/index'">
+                             <a href="{:U($vo2['url'],'',false)}" class="b2">{$vo2.title}</a>
+                        <else/>
+                             <a href="{:U($vo2['url'])}" class="b2">{$vo2.title}</a>
+                    </if>
+
+                </volist>
+            </li>
+        <else/>
+            <li style="width: 20%">
+                <volist name="vo" id="vo2"  key="k" >
+                    <a href="{:U($vo2['url'])}" class="b">{$vo2.title}</a>
+                </volist>
+            </li>
+    </if>
+
+</volist>
+
+
