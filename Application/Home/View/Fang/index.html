@@ -362,24 +362,10 @@
 <div id="main" style="height:220px;width:1098px; margin:20px auto 0px; border:1px solid #ddd"></div>
 
 
-<script src="/Public/Static/baidu/echarts.js"></script>
+<script src="/Public/Static/baidu/echarts/echarts.min.js"></script>
 <script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: 'http://echarts.baidu.com/build/dist'
-        }
-    });
-
-    // 使用
-    require(
-        [
-            'echarts',
-            'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-        ],
-        function (ec) {
             // 基于准备好的dom，初始化echarts图表
-            var myChart = ec.init(document.getElementById('main'));
+            var myChart = echarts.init(document.getElementById('main'));
 
             var option = option = {
                 title: {
@@ -432,7 +418,7 @@
                     {
                         name: "黄石房价",
                         type: "line",
-                        data: [1320, 2400, 1900, 2500, 2100, 2320, 3000]
+                        data: [1320, 2400, 1900, 2500, 2100, 2320, 3000,1320, 2400, 1900, 2500, 2100]
 
                     }
                 ]
@@ -442,8 +428,7 @@
             window.onresize = myChart.resize;
             // 为echarts对象加载数据
             myChart.setOption(option);
-        }
-    );
+
 </script>
 <!-- 折线图 -->
 <!-- 免佣推荐开始 -->
