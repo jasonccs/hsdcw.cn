@@ -7,7 +7,7 @@ use Think\Page;
 
 /*房产控制器*/
 
-class FangController extends Controller
+class FangController extends CommentController
 {
     protected $db;       //数据连接句柄
     private $lid;         //分类主键
@@ -16,12 +16,12 @@ class FangController extends Controller
     private $huxing;      //房子户型
     private $url_p;
 
-    public function _initialize()
-    {
-        if (method_exists($this, '__auto')) {
-            $this->__auto();
-        }
-    }
+//    public function _initialize()
+//    {
+//        if (method_exists($this, '__auto')) {
+//            $this->__auto();
+//        }
+//    }
 
     public function __auto()
     {

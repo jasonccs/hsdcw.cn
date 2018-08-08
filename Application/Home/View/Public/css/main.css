@@ -79,8 +79,8 @@ a:active { -moz-outline-style: none; outline: none; }
 
 /* 栏目*/
 .lanmu{width: 100%;height: 40px;line-height: 40px;}
-.lanmu>.bread{width: 1100px;height: 40px;line-height: 40px; margin: 0 auto;}
-.lanmu>.bread>a{font-size:16px;}
+.lanmu>.bread{width: 1100px;height: 40px;line-height: 40px; margin: 0 auto;  color: #666;}
+.lanmu>.bread>a{font-size:14px;}
 
 
 

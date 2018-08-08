@@ -3,28 +3,27 @@
     namespace Home\Controller;
 
     use Think\Controller;
-
-    class NewsController extends Controller
+    use Think\HdPage;
+    class NewsController extends CommonController
     {
+
 
 
         public function _initialize()
         {
-//            $current_url = MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . '/';
+////            $current_url = MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . '/';
             $current_url = __ACTION__. '/';
-//            echo $current_url,__ACTION__;
             $this->assign('current_url', $current_url); //获取当前的路由
         }
 
         //黄石新闻
         public function index()
         {
-
             $db = M('news');
             $where['cateid'] = 2;
             $where['display'] = 0;
             $where['type'] = ['in', [2, 3]];
-            $page = new \Think\HdPage($db->where($where)->count(), 6);
+            $page = new HdPage($db->where($where)->count(), 6);
             $hsxw = $db->limit($page->limit())->where($where)->order(['time' => 'desc'])->select();
             foreach ($hsxw as $key => $value) {
                 $hsxw[$key]['commentnum'] = $this->commenttotal($value['id']); //对应文章的评论数量
@@ -133,6 +132,7 @@
         public function detail()
         {
 
+//            echo __ACTION__ ;
             $id = I('id', '', 'intval');
             $result = M('news')->find($id);
             M('news')->data(['eye' => $result['eye'] + 1])->where('id=' . $id)->save();//浏览次数

@@ -10,7 +10,7 @@
         //评论文章
         public function comment ()
         {
-
+            parent::_initialize(true);
             if ( IS_AJAX ) {
                 $comment = [ 'article_id' => I('id', '', 'intval'),
                     'user_id' => session('user_info.user_id'),
@@ -39,6 +39,7 @@
         //评论点赞
         public function thumbs ()
         {
+            parent::_initialize(true);
             if ( IS_AJAX ) {
                 $id = I('id', '', 'intval');
                 $comentModel = D('Comment');

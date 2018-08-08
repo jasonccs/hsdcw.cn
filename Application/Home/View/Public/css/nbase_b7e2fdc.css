@@ -151,10 +151,10 @@ strong {
 }
 
 .detail-wrapper a {
-	color:#406599
+	color:#666666;
 }
 .detail-wrapper a:hover {
-	color:#7696b3
+	color:#B73102
 }
 .detail-main {
 	float:left;
