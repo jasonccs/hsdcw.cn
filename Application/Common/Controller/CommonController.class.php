@@ -9,10 +9,10 @@ use Think\Controller;
 class CommonController extends Controller{
 
 
-	 public function delImg(){
-
-         echo 11;
-	 }
+	 public function _initialize(){
+	     
+	     echo 111;
+     }
 
 }
 

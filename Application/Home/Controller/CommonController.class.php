@@ -13,7 +13,7 @@ class CommonController extends Controller
 //  protected $db;
     protected $login_status=false; //是否需要开启登录
 
-    function _initialize($status=false)
+    public function _initialize($status=false)
     {
 
         $this->login_status=$status;
