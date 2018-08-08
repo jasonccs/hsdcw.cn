@@ -5,14 +5,14 @@
         <title>黄石新闻_{$result.title}</title>
         <meta name="keywords" content="{$result.keywords}">
         <meta name="description" content="{$result.description|msubstr=0,180}">
-        <link href="__PUBLIC__/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="/Public/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <css href="__PUBLIC__/css/main.css" />
-        <css  href="__PUBLIC__/css/nbase_b7e2fdc.css"/>
-        <css  href="__PUBLIC__/css/ndetail_main.css"/>
-        <css  href="__PUBLIC__/css/ndetail_core_92bd36a.css"/>
+        <css href="__CSS__/main.css" />
+        <css  href="__CSS__/nbase_b7e2fdc.css"/>
+        <css  href="__CSS__/ndetail_main.css"/>
+        <css  href="__CSS__/ndetail_core_92bd36a.css"/>
 
-        <js href="__PUBLIC__/js/jquery.1.10.2.min.js"/>
+        <js href="__JS__/jquery.1.10.2.min.js"/>
 
     </head>
 
@@ -330,7 +330,7 @@ $(function(){
                                 // $('.cloadmore').text('正在加载!');
                                 // setTimeout('alert(3)',3000);
                                 $('.cloadmore').css('background','none');
-                                $('.cloadmore').append('<img src="__PUBLIC__/images/loading.gif"/>');
+                                $('.cloadmore').append('<img src="__IMAGES__/loading.gif"/>');
                              },
                              success:function(data){
 

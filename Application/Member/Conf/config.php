@@ -2,6 +2,16 @@
 return [
     //'配置项'=>'配置值'
 
+
+    'TMPL_PARSE_STRING' => array(
+
+        '__PUBLIC__' => __ROOT__ . '/Application/Member/View/Public', // 更改默认的/Public 替换规则
+        '__STATIC__' => '/Public', // 增加新的JS类库路径替换规则
+    ),
+
+
+
+
     'verify' =>[
         'fontSize' => 14, // 验证码字体大小
         'length' => 2, // 验证码位数
@@ -14,12 +24,12 @@ return [
         'imageW' =>120,
         'imageH'   =>30,
     ],
-    
+
     /*session设置*/
 //    'SESSION_OPTIONS'=>[
 //        'expire'=>10,
 //        'path'=>TEMP_PATH.'/Session/',
 //    ],
-    
-    
+
+
 ];
