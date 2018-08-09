@@ -3,7 +3,6 @@
 namespace Home\Widget;
 
 use Think\Controller;
-use Think\HdData;
 
 class NavigateWidget extends Controller
 {
@@ -188,7 +187,7 @@ class NavigateWidget extends Controller
                 }
             }
             return $list;
-        
+
     }
 
 
