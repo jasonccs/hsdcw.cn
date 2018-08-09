@@ -1054,9 +1054,7 @@ body {
     background-repeat: no-repeat
 }
 
-#body_wrap {
-    padding: 20px 0 0
-}
+
 
 .header .header_top {
     float: right
@@ -1427,7 +1425,8 @@ body {
 }
 
 #body_wrap {
-    padding: 30px 0 0
+    padding: 20px 0 0;
+    min-height: 650px;
 }
 
 .pad-20 {
