@@ -390,7 +390,7 @@ table {
 }
 
 .media_screen_1200 .wrap {
-    width: 1100px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto
 }
@@ -411,7 +411,7 @@ table {
     position: fixed;
     z-index: 9998;
     opacity: .3;
-    /*FILTER: alpha(opacity=30);*/
+    FILTER: alpha(opacity=30);
     _position: absolute
 }
 
@@ -436,7 +436,7 @@ a.mu_hoverline:hover {
 
 .mu_nav_wrap {
     float: left;
-    width: 218px;
+    width: 240px;
     _display: inline
 }
 
@@ -446,7 +446,7 @@ a.mu_hoverline:hover {
 
 .mu_content_wrap {
     float: right;
-    width: 846px;
+    width: 940px
 }
 
 .media_screen_960 .mu_content_wrap {
@@ -454,7 +454,7 @@ a.mu_hoverline:hover {
 }
 
 .media_screen_1200 .mu_content_wrap {
-    width: 858px
+    width: 940px
 }
 
 .mu_content_wrap .mu_browser_content_wrap {
@@ -629,14 +629,14 @@ a.mu_hoverline:hover {
     right: 0;
     bottom: 10px;
     _bottom: auto;
-    _top: 0
+    _top:0px;
 }
 
 .m-wallet-charge-pop-wrap {
     width: 223px;
     height: 149px;
     right: 36px;
-    _top:0
+    _top: 0px;
 }
 
 .m-safe-lession-pop-wrap .close_btn, .m-wallet-charge-pop-wrap .close_btn {
@@ -660,7 +660,7 @@ a.mu_hoverline:hover {
     right: 65px;
     width: 32px;
     height: 32px;
-    /*background: url('fsd')*/
+    background: url(about:blank)
 }
 
 .md_process .md_process_wrap {
@@ -1035,6 +1035,15 @@ body {
     margin: 0 6px 0 30px
 }
 
+.logo {
+    float: left;
+    width: 130px;
+    height: 34px;
+    margin: 20px 20px 0 0;
+    overflow: hidden;
+    text-indent: -999em;
+    background: url(https://s10.mogucdn.com/p1/150604/upload_iezdiobqme3wemzzgezdambqmmyde_130x34.png) no-repeat
+}
 
 .l_banner {
     display: inline-block;
@@ -1054,7 +1063,9 @@ body {
     background-repeat: no-repeat
 }
 
-
+#body_wrap {
+    padding: 20px 0 0
+}
 
 .header .header_top {
     float: right
@@ -1425,8 +1436,7 @@ body {
 }
 
 #body_wrap {
-    padding: 20px 0 0;
-    min-height: 650px;
+    padding: 30px 0 0
 }
 
 .pad-20 {
@@ -2258,69 +2268,951 @@ select.wallet-form-input {
     margin-left: 0
 }
 
-.safe-box {
-    height: 60px;
-    padding-left: 70px;
-    background: url(/Public/images/10sz8d_iezdsodgg42tizjrgezdambqmmyde_67x180.png) 0 0 no-repeat
+.wrap_p2p {
+    background: #fff url("https://s10.mogucdn.com/p1/150701/upload_ieztom3dme4dsmbsgizdambqgyyde_1x1.gif") 270px top repeat-y;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 30px
 }
 
-.safe-box.safe-3 {
-    background-position: 0 0
+.wrap_p2p .md_process .md_process_wrap {
+    position: relative;
+    height: 32px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+    *zoom: 1
 }
 
-.safe-box.safe-2 {
-    background-position: 0 -60px
+.wrap_p2p .md_process .md_process_sd {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    height: 36px;
+    -webkit-transition: width .5s ease-in;
+    transition: width .5s ease-in
 }
 
-.safe-box.safe-1 {
-    background-position: 0 -120px
+.wrap_p2p .md_process .md_process_i {
+    position: absolute;
+    top: 24px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font: normal 14px/26px helvetica, tahoma, arial, sans-serif;
+    color: #fff;
+    text-align: center
 }
 
-.safe-box h4 {
-    font-size: 18px;
-    line-height: 34px;
-    font-weight: 700
+.wrap_p2p .md_process .md_process_tip, .wrap_p2p .md_process .md_process_tip_bt {
+    position: absolute;
+    top: 30px;
+    width: 88px;
+    height: 20px;
+    left: 50%;
+    margin-left: -44px;
+    font: normal 12px/26px helvetica, tahoma, arial, sans-serif;
+    color: #999
 }
 
-.safe-box p {
-    line-height: 26px;
-    font-size: 12px
+.wrap_p2p .md_process .md_process_tip {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 14px
 }
 
-.wallet-account-box {
-    padding: 0 0 0 140px;
-    height: 120px
+.wrap_p2p .md_process .md_process_tip_bt {
+    top: auto;
+    bottom: -28px
 }
 
-.wallet-account-box .wallet-link {
-    margin-left: 30px
+.wrap_p2p .md_process.md_process_len2 .md_process_wrap {
+    width: 178px;
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrtqolcmyztmmbvg4zdambqhayde_142x36.png") 0 18px repeat-x
 }
 
-.wallet-account-box h4 {
-    line-height: 28px;
+.wrap_p2p .md_process.md_process_len2 .md_process_sd {
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrdczjyg5stkmbvg4zdambqmeyde_142x36.png") 36px 0 repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_i1 {
+    left: 0
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step1_5 .md_process_sd {
+    width: 88px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step1 .md_process_sd {
+    width: 36px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step1 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step1_5 .md_process_i1 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_i2 {
+    left: 143px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step2_5 .md_process_sd {
+    width: 230px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step2 .md_process_sd {
+    width: 178px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step2 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step2 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step2_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step2_5 .md_process_i2 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_i3 {
+    left: 284px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step3 .md_process_sd, .wrap_p2p .md_process.md_process_len2 .md_process_step3_5 .md_process_sd {
+    width: 320px
+}
+
+.wrap_p2p .md_process.md_process_len2 .md_process_step3 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step3 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step3 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step3_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step3_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len2 .md_process_step3_5 .md_process_i3 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_wrap {
+    width: 320px;
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrtqolcmyztmmbvg4zdambqhayde_142x36.png") 0 18px repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_sd {
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrdczjyg5stkmbvg4zdambqmeyde_142x36.png") 36px 0 repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_i1 {
+    left: 0
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step1_5 .md_process_sd {
+    width: 88px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step1 .md_process_sd {
+    width: 36px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step1 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step1_5 .md_process_i1 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_i2 {
+    left: 143px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step2_5 .md_process_sd {
+    width: 230px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step2 .md_process_sd {
+    width: 178px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step2 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step2 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step2_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step2_5 .md_process_i2 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_i3 {
+    left: 284px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step3 .md_process_sd, .wrap_p2p .md_process.md_process_len3 .md_process_step3_5 .md_process_sd {
+    width: 320px
+}
+
+.wrap_p2p .md_process.md_process_len3 .md_process_step3 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step3 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step3 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step3_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step3_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len3 .md_process_step3_5 .md_process_i3 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_wrap {
+    width: 503px;
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrtqolcmyztmmbvg4zdambqhayde_142x36.png") 0 18px repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_sd {
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrdczjyg5stkmbvg4zdambqmeyde_142x36.png") 36px 0 repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_i1 {
+    left: 0
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step1_5 .md_process_sd {
+    width: 88px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step1 .md_process_sd {
+    width: 36px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step1 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step1_5 .md_process_i1 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_i2 {
+    left: 161px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step2_5 .md_process_sd {
+    width: 230px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step2 .md_process_sd {
+    width: 178px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step2 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step2 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step2_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step2_5 .md_process_i2 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_i3 {
+    left: 320px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step3_5 .md_process_sd {
+    width: 372px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step3 .md_process_sd {
+    width: 320px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step3 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step3 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step3 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step3_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step3_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step3_5 .md_process_i3 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_i4 {
+    left: 479px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step4 .md_process_sd, .wrap_p2p .md_process.md_process_len4 .md_process_step4_5 .md_process_sd {
+    width: 462px
+}
+
+.wrap_p2p .md_process.md_process_len4 .md_process_step4 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4 .md_process_i4 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4_5 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len4 .md_process_step4_5 .md_process_i4 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_wrap {
+    width: 660px;
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrtqolcmyztmmbvg4zdambqhayde_142x36.png") 0 18px repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_sd {
+    background: url("https://s10.mogucdn.com/p1/160315/upload_ifrdczjyg5stkmbvg4zdambqmeyde_142x36.png") 36px 0 repeat-x
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_i1 {
+    left: 0
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step1_5 .md_process_sd {
+    width: 88px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step1 .md_process_sd {
+    width: 36px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step1 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step1_5 .md_process_i1 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_i2 {
+    left: 161px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step2_5 .md_process_sd {
+    width: 230px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step2 .md_process_sd {
+    width: 178px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step2 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step2 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step2_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step2_5 .md_process_i2 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_i3 {
+    left: 320px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step3_5 .md_process_sd {
+    width: 372px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step3 .md_process_sd {
+    width: 320px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step3 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step3 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step3 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step3_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step3_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step3_5 .md_process_i3 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_i4 {
+    left: 479px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step4_5 .md_process_sd {
+    width: 514px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step4 .md_process_sd {
+    width: 462px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step4 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4 .md_process_i4 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4_5 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step4_5 .md_process_i4 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_i5 {
+    left: 638px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_sd, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_sd {
+    width: 604px
+}
+
+.wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_i4 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5 .md_process_i5 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_i1 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_i2 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_i3 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_i4 .md_process_tip, .wrap_p2p .md_process.md_process_len5 .md_process_step5_5 .md_process_i5 .md_process_tip {
+    color: #f8705c
+}
+
+.wrap_p2p .wallet-certification-result {
+    color: #333;
+    padding: 20px 0 40px
+}
+
+.wrap_p2p .wallet-certification-result h3 {
     font-size: 16px
 }
 
-.wallet-account-box p {
+.wrap_p2p .wallet-certification-info .wallet-certification-info-wrap {
+    margin-left: -120px
+}
+
+.wrap_p2p .wallet-certification-info-wrap span {
+    display: inline-block;
+    width: 100px;
+    text-align: right
+}
+
+.wrap_p2p .wallet-certification-tip {
+    height: 180px;
+    border-right: 1px dashed #ebebeb
+}
+
+.wrap_p2p .wallet-certification-tip p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #444
+}
+
+.wrap_p2p .wallet-cards-list {
+    padding: 30px 0;
+    overflow: hidden;
+    margin-right: -15px
+}
+
+.wrap_p2p .wallet-card {
+    width: 280px;
+    margin: 10px 15px 15px 0
+}
+
+.wrap_p2p:after, .wrap_p2p:before {
+    display: table;
+    content: " "
+}
+
+.wrap_p2p:after {
+    content: "";
+    clear: both
+}
+
+.wrap_p2p .mu_nav_wrap {
+    float: left;
+    width: 270px;
+    border: none
+}
+
+.wrap_p2p .mu_content_wrap {
+    height: inherit;
+    float: right;
+    width: 870px;
+    padding: 30px
+}
+
+.wrap_p2p .mu_content_wrap .panel-body-head {
+    position: relative;
+    font-size: 18px;
+    padding: 10px 0 20px
+}
+
+.wrap_p2p .wallet-panel {
+    border: none;
+    margin: 0
+}
+
+.wrap_p2p .wallet-panel .wallet-panel-header {
+    background: #fff;
+    border: none;
+    padding: 0;
+    color: #333;
+    border-bottom: 1px dashed #dedddd;
+    padding-bottom: 30px
+}
+
+.wrap_p2p .wallet-panel-header .wallet-head-tab {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    background: #faf6f6;
+    width: 100%
+}
+
+.wrap_p2p .wallet-panel-header .wallet-head-tab li {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    float: left;
+    width: 138px;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 0;
+    border: none
+}
+
+.wrap_p2p .wallet-panel-header .wallet-head-tab li a {
+    color: #333
+}
+
+.wrap_p2p .wallet-panel-header .wallet-head-tab li.active, .wrap_p2p .wallet-panel-header .wallet-head-tab li:hover {
+    border: none;
+    background: transparent;
+    font-weight: 700
+}
+
+.wrap_p2p .wallet-panel-header .wallet-head-tab i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 144px;
+    height: 48px;
+    border-top: 4px solid #fa6f57
+}
+
+.left-nav .left-nav-list-head {
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 500
+}
+
+.left-nav .left-nav-list {
+    font-size: 14px
+}
+
+.icon {
+    background: url("https://s10.mogucdn.com/p1/150630/upload_ie2toyjqhftdoojrgizdambqhayde_268x240.png") 0 0 no-repeat;
+    width: 78px;
+    height: 78px;
+    display: inline-block
+}
+
+.icon-data {
+    background-position: 0 0
+}
+
+.left-nav .left-nav-icon {
+    padding: 44px 0;
+    text-align: center
+}
+
+.left-nav .left-nav-icon .avatar {
+    border-radius: 50% 50%
+}
+
+.left-nav .left-nav-list-head {
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 46px;
+    height: 46px;
+    margin: 0 28px
+}
+
+.left-nav .left-nav-list {
+    padding-bottom: 30px
+}
+
+.left-nav .left-nav-list li {
+    line-height: 46px;
+    padding: 0 28px 0 24px
+}
+
+.left-nav .left-nav-list li a {
+    position: relative;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #e9e9e9
+}
+
+.left-nav .left-nav-list li a .check {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 46px
+}
+
+.left-nav .left-nav-list li.active a, .left-nav .left-nav-list li a:hover {
+    font-weight: 700
+}
+
+.left-nav .left-nav-list .child-li a {
+    padding-left: 30px
+}
+
+.J-nav {
+    position: relative
+}
+
+.J-nav i {
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 46px;
+    left: 0;
+    top: 0;
+    background: #f8705c
+}
+
+.process-bar {
+    padding: 20px 0
+}
+
+.wallet-panel-body {
+    min-height: 400px
+}
+
+.m-fppay {
+    margin: 0 auto;
+    width: 860px
+}
+
+.wallet-certification-header {
+    margin: 0 20px 60px;
+    border-bottom: 1px solid #ebebeb
+}
+
+.wallet-certification-header .wallet-title {
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #303030;
+    line-height: 94px
+}
+
+.wallet-certification-body {
+    padding: 20px 20px 40px
+}
+
+.wallet-certification-body.step2 .wallet-form-control .wallet-form-tip {
+    margin: 0 0 0 150px
+}
+
+.wallet-certification-body.step2 p {
+    width: 860px;
+    margin: 0 auto 25px;
+    font-size: 14px;
+    color: #333
+}
+
+.wallet-certification-banks {
+    border-top: 1px dashed #f3f3f3;
+    padding: 20px 0 40px;
+    margin-top: 20px
+}
+
+.wallet-certification-banks h4 {
+    font-size: 16px
+}
+
+.wallet-certification-banks img {
+    width: 100%
+}
+
+.wallet-form-credit {
+    display: none
+}
+
+.wallet-form-credit.show {
+    display: block
+}
+
+.wallet-certification-footer {
+    margin-top: 20px;
+    text-align: center
+}
+
+.wallet-certification-result {
+    padding: 20px 0 50px;
+    color: #303030;
+    text-align: center
+}
+
+.wallet-certification-result h3 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 18px
+}
+
+.step0 .wallet-certification-result {
+    padding: 0 0 110px
+}
+
+.step0 .wallet-certification-result p {
+    margin: 20px 0;
+    font-size: 14px
+}
+
+.step3 .wallet-certification-result p {
+    font-size: 14px;
+    color: #999;
+    width: 120px;
+    margin: 0 auto 20px;
+    text-align: left;
+    line-height: 28px
+}
+
+.wallet-certification-info {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 30px;
+    height: 90px
+}
+
+.wallet-certification-info .wallet-certification-info-wrap {
+    position: absolute;
+    width: 360px;
+    top: 12px;
+    left: 50%;
+    margin-left: -90px
+}
+
+.wallet-certification-tips {
+    padding: 30px 0
+}
+
+.wallet-certification-tip {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 33%;
+    height: 230px;
+    border-right: 1px solid #ebebeb;
+    font-size: 16px;
+    color: #575757;
+    text-align: center
+}
+
+.wallet-certification-tip:last-child {
+    border-right: 0 none
+}
+
+.wallet-certification-tip p {
+    display: inline-block;
+    *display: inline;
+    color: #575757;
+    line-height: 30px;
+    text-align: left
+}
+
+.wallet-certification-tip .tip-icon {
+    display: block;
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 30px;
+    background: url(https://s10.mogucdn.com/pic/140911/1blhwf_ieydmojtmizwcyrtmmytambqhayde_344x86.png) no-repeat
+}
+
+.wallet-certification-tip .tip-icon.tip-icon-book {
+    background-position: -1px -1px
+}
+
+.wallet-certification-tip .tip-icon.tip-icon-lock {
+    background-position: -87px -1px
+}
+
+.wallet-certification-tip .tip-icon.tip-icon-person {
+    background-position: -173px -1px
+}
+
+.wallet-certification-tip .tip-icon.tip-icon-card {
+    background-position: -259px -1px
+}
+
+.ui-confirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%
+}
+
+.ui-confirm .mask {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .2);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)
+}
+
+.ui-confirm .box {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    padding: 1rem 0 0;
+    min-width: 220px;
+    max-width: 310px;
+    font-size: 15px;
+    background: #fff;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.ui-confirm .tit {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+    font-weight: 400;
+    color: #333;
+    border-radius: 3px 3px 0 0
+}
+
+.ui-confirm .content {
+    color: #666;
+    font-size: 1.4rem;
+    padding: 1rem 1.4rem 2rem;
+    text-align: center
+}
+
+.ui-confirm .action {
+    position: relative;
+    min-height: 34px;
+    text-align: center
+}
+
+.ui-confirm .action:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    z-index: 15;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5)
+}
+
+.ui-confirm .action .btn {
+    display: inline-block;
+    min-width: 80px;
+    width: 50%;
+    margin: 0;
+    padding: 0 4%;
+    height: 42px;
+    background: none;
+    border: none;
+    color: #fa5976;
+    line-height: 42px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.ui-confirm .action .btn:nth-child(2) {
+    border-left: 1px solid #dedddd
+}
+
+.ui-confirm .action-sheets .btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 1.6rem
+}
+
+.ui-confirm .action-sheets .btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    z-index: 15;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5)
+}
+
+.ui-confirm .action-sheets .btn-cancel {
+    color: #666
+}
+
+.ui-confirm .box {
+    max-width: 450px
+}
+
+.ui-confirm .cancel {
+    position: absolute !important;
+    top: -123px;
+    right: 18px;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 5px !important;
+    min-width: 5px !important;
+    height: 5px !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    border: 0 none !important
+}
+
+.ui-confirm .cancel:before {
+    content: "×";
+    font-size: 20px;
+    color: #999 !important
+}
+
+.ui-confirm .content {
+    font-size: 14px !important;
+    padding: 60px 20px 40px
+}
+
+.ui-confirm .action-sheets {
+    padding: 20px 60px
+}
+
+.ui-confirm .action-sheets:before {
+    display: none
+}
+
+.ui-confirm .action-sheets .btn {
+    padding: 0;
+    margin: 0 10px;
+    width: 130px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.ui-confirm .action-sheets .btn-change {
+    border: 1px solid #999;
+    border-radius: 2px;
+    color: #666
+}
+
+.ui-confirm .action-sheets .btn-retry {
+    border: 0 none;
+    background-color: #ff5777;
+    border-radius: 2px;
+    color: #fff
+}
+
+.md_process.md_process_len2 .md_process_wrap {
+    width: 292px;
+    background: url("/Public/images/upload_ieztezjwga4danldgmzdambqgyyde_260x33.png") 0 18px repeat-x
+}
+
+.md_process.md_process_len2 .md_process_i1 {
+    left: 3px
+}
+
+.md_process.md_process_len2 .md_process_i2 {
+    left: 263px
+}
+
+.md_process.md_process_len2 .md_process_sd {
+    background: url("/Public/images/upload_iezdmnlfmy3tanldgmzdambqmmyde_260x26.png") 26px 0 repeat-x
+}
+
+.md_process.md_process_len2 .md_process_step1 .md_process_sd {
+    width: 143px
+}
+
+.md_process.md_process_len2 .md_process_step2 .md_process_sd {
+    width: 286px
+}
+
+.md_process.md_process_len2 .md_process_step3 .md_process_sd {
+    width: 546px
+}
+
+.md_process.md_process_len2 .md_process_tip {
+    width: 120px;
+    margin-left: -60px
+}
+
+.result {
+    text-align: center
+}
+
+.result .result-title {
+    margin-bottom: 23px
+}
+
+.result .result-title p {
+    width: auto;
+    margin: 0;
+    font-size: 16px;
+    color: #ff414c;
     line-height: 24px
 }
 
-.account-icon {
-    background: url(https://s10.mogucdn.com/pic/150513/10sz8d_ie2tgmrugrrdmmzsgezdambqhayde_120x480.png) 0 0 no-repeat
+.result .result-content-table {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 auto
 }
 
-.account-icon.edit {
-    background-position: 0 0
+.result .result-content-table .key {
+    width: 100px;
+    text-align: right;
+    color: #999
 }
 
-.account-icon.safe {
-    background-position: 0 -120px
+.result .result-content-table .value {
+    text-align: left
 }
 
-.account-icon.name {
-    background-position: 0 -240px
-}
-
-.account-icon.qua {
-    background-position: 0 0
+.result .result-content-table td {
+    padding-bottom: 5px
 }

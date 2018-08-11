@@ -1,0 +1,105 @@
+<div class="mu_content_wrap">
+
+    <div class="wallet-panel">
+        <div class="wallet-panel-header tabs">
+            <div class="tabs-group">
+                <div class="tab-item active" data-channel="idcard">用身份证实名</div>
+                <div class="tab-item" data-channel="bankcard">用银行卡实名</div>
+            </div>
+        </div>
+        <div class="wallet-panel-body">
+
+            <div class="process-bar">
+                <div class="md_process md_process_len2">
+                    <div class="md_process_wrap md_process_step1">
+                        <div class="md_process_sd"></div>
+
+
+
+                        <i class="md_process_i md_process_i1">
+                            1
+                            <span class="md_process_tip">验证身份信息</span>
+                        </i>
+
+
+
+                        <i class="md_process_i md_process_i2">
+                            <img src="/Public/images/dagou.png" width="26" height="26" alt="">
+                            2
+                            <span class="md_process_tip">实名结果</span>
+                        </i>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step.1 -->
+            <div class="wallet-tab profile active">
+                <div class="wallet-certification-body step1">
+                    <form class="wallet-form">
+                        <div class="wallet-form-control">
+                            <label class="wallet-form-label">账户名：</label>
+                            <div class="wallet-form-text">qq_d9bhzm924c96b</div>
+                            <div class="wallet-form-notice success">已通过安全检查！</div>
+                        </div>
+                        <div class="wallet-form-control">
+                            <label class="wallet-form-label" for="realname">真实姓名：</label>
+                            <input id="realname" name="name" class="wallet-form-input" type="text">
+                            <div class="wallet-form-notice hidden"></div>
+                        </div>
+                        <div class="wallet-form-control">
+                            <label class="wallet-form-label" for="identification">身份证号码：</label>
+                            <input id="identification" name="idNo" class="wallet-form-input" type="text">
+                            <div class="wallet-form-notice hidden"></div>
+                        </div>
+                        <div class="wallet-form-control">
+                            <label class="wallet-form-label" for="mobile">手机号码：</label>
+                            <input id="mobile" name="mobile" class="wallet-form-input" maxlength="11" type="text">
+                            <div class="wallet-form-notice hidden"></div>
+                        </div>
+                        <div class="wallet-form-control">
+                            <label class="wallet-form-label" for="checkcode">手机验证码：</label>
+                            <input id="checkcode" name="checkcode" class="wallet-form-input code" type="text" value="" required="required">
+                            <button id="sendCodeBtn" type="button" class="wallet-form-btn">发送验证码</button>
+                        </div>
+                        <div class="wallet-form-action">
+                            <button id="checkIdentification" class="wallet-btn orange" type="button">立即实名</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="wallet-tab complete">
+                <div class="wallet-certification-body step2">
+                    <div class="result">
+                        <div class="result-title">
+                            <p>恭喜你</p>
+                            <p>已完成实名认证</p>
+                        </div>
+                        <div class="result-content">
+                            <table class="result-content-table">
+                                <tbody><tr>
+                                    <td class="key">真实姓名：</td>
+                                    <td class="value"><span id="realNameText"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="key">身份证号码：</td>
+                                    <td class="value"><span id="realIdText"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="key">手机号码：</td>
+                                    <td class="value"><span id="realPhoneText"></span></td>
+                                </tr>
+                                </tbody></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="mu_nav_wrap">
+    <!-- nav -->
+    <div class="mu_nav">
+        <div class="mu_title account_title">账户管理</div>
+        <ul class="mu_nav_item J_nav">
+            <li data-reg="{:U('/User/userInfo')}" class="active c">
+                <a href="{:U('/Member/User/userInfo')}" data-ptp-cache-id="1.ib51K.0.0.Z5hyT4i">账户信息</a>
+            </li>
+            <!--<li data-reg="/User/cards">-->
+                <!--<a href="{:U('/Member/User/cards')}">我的银行卡</a>-->
+            <!--</li>-->
+            <li data-reg="/wallet/realname">
+                <a href="{:U('/Member/User/realName')}">实名认证</a>
+            </li>
+            <li data-reg="{:U('/Member/Wallet/cards')}">
+                <a href="{:U('/Member/Wallet/cards')}">修改钱包手机号</a>
+            </li>
+        </ul>
+        <div class="mu_title display_title">资金明细</div>
+        <ul class="mu_nav_item J_nav">
+            <li data-reg="/wallet/(fund|detail)/manage">
+                <a href="/wallet/fund/manage">交易记录</a>
+            </li>
+            <li data-reg="/wallet/(fund|detail)/flow">
+                <a href="/wallet/fund/flow">充值提现</a>
+            </li>
+
+            <li data-reg="/wallet/(fund|detail)/refund">
+                <a href="/wallet/fund/refund">退款记录</a>
+            </li>
+
+
+            <li data-reg="/wallet\/(fund|detail)\/(payment|fundsExport)">
+                <a href="/wallet/fund/payment">收支明细</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+</div>

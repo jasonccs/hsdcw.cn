@@ -16,14 +16,20 @@ class UserController extends CommonController
     }
     
     //会员中心
-    public function UserInfo()
+    public function userInfo()
     {
-
-
+        $user_info=D('VipUser')->UserInfo();
+//        dump($user_info);
+        $this->assign('user_info',$user_info);
         $this->display();
 
     }
 
+    //实名认证
+    public function realName(){
+    
+        $this->display('real_name');
+    }
 
 
 }
