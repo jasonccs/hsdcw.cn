@@ -14,7 +14,7 @@
 
 
 <body class="media_screen_1200">
-<include file="Home@Public/Tpl/head" />
+<include file="Common@Tpl/head" />
 
 <div id="body_wrap">
     <div class="wrap clearfix">
@@ -37,9 +37,31 @@
                         <a href="/wallet/phone">修改钱包手机号</a>
                     </li>
                 </ul>
+                <div class="mu_title display_title">资金明细</div>
+                <ul class="mu_nav_item J_nav">
+                    <li data-reg="/wallet/(fund|detail)/manage" class="active c">
+                        <a href="/wallet/fund/manage">交易记录</a>
+                    </li>
+                    <li data-reg="/wallet/(fund|detail)/flow">
+                        <a href="/wallet/fund/flow">充值提现</a>
+                    </li>
+
+                    <li data-reg="/wallet/(fund|detail)/refund">
+                        <a href="/wallet/fund/refund">退款记录</a>
+                    </li>
+
+
+                    <li data-reg="/wallet\/(fund|detail)\/(payment|fundsExport)">
+                        <a href="/wallet/fund/payment">收支明细</a>
+                    </li>
+
+                </ul>
+            </div>
+
+
             </div>
             <!-- nav end -->
-        </div>
+
 
         <div class="mu_content_wrap">
             <div class="wallet-panel">
@@ -71,7 +93,7 @@
     </div>
 </div>
 
-<include file="Home@Public/Tpl/footer" />
+<include file="Common@Tpl/footer" />
 
 </body>
 </html>

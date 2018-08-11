@@ -3,10 +3,11 @@
 namespace Home\Controller;
 
 use Think\Controller;
+use Common\Controller\CommonController;
 
 /*房产控制器*/
 
-class HouseController extends Controller
+class HouseController extends CommonController
 {
     protected $db;       //数据连接句柄
     private $lid;         //分类主键

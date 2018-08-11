@@ -3,6 +3,7 @@
     namespace Home\Controller;
 
     use Think\Controller;
+    use Common\Controller\CommonController;
     use Think\HdPage;
     class NewsController extends CommonController
     {
@@ -12,6 +13,7 @@
         public function _initialize()
         {
 ////            $current_url = MODULE_NAME . '/' . CONTROLLER_NAME . '/' . ACTION_NAME . '/';
+            parent::_initialize(false);
             $current_url = __ACTION__. '/';
             $this->assign('current_url', $current_url); //获取当前的路由
         }

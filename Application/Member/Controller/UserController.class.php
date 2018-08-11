@@ -2,11 +2,11 @@
 
 namespace Member\Controller;
 
-use Home\Controller\CommentController;
+use Common\Controller\CommonController;
 use Think\Controller;
 
 //会员中心
-class UserController extends CommentController
+class UserController extends CommonController
 {
 
     public function _initialize ( $status = false )

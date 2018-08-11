@@ -94,3 +94,21 @@ function randArray ( array $arr, int $length=4, bool $type=true)
    
     return $new;
 }
+
+
+//递归
+function generateTree($arr,$id='id',$pid='pid',$kid=0,$level=0){
+    $list =[];
+    foreach ($arr as $k=>$v){
+        if ($v[$pid] == $kid){
+            $v['level']=$level;
+            $v['son'] = generateTree($arr,$id,$pid,$v[$id],$level+1);
+            if (empty($v['son'])){
+                unset($v['son']);
+            }
+            $list[]=$v;
+        }
+    }
+    return $list;
+    
+}
