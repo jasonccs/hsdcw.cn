@@ -29,7 +29,11 @@ class CommonController extends Controller{
              
              if ($this->login_status) {
                  if (empty(session('user_info')) || empty(session('user_info.username')) || empty(session('user_info.user_id'))) {
-                     $this->ajaxReturn(['status' => false, 'msg' => '请先登录！']);
+                     if (MODULE_NAME=='Member'){
+                          $this->redirect('/');
+                     }else{
+                         $this->ajaxReturn(['status' => false, 'msg' => '请先登录！']);
+                     }
                  }
              }
             
