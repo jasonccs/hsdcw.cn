@@ -18,7 +18,7 @@ class CommonController extends Controller{
          {
             
              $this->login_status=$status;
-             $this->assign('a','关于我们11111');
+             $this->assign('a','关于我们');
 
              $all_menu=new NavigateWidget();
              $this->assign('all_menu',$all_menu->navMenu());
