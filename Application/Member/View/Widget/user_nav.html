@@ -9,7 +9,7 @@
             <!--<li data-reg="/User/cards">-->
                 <!--<a href="{:U('/Member/User/cards')}">我的银行卡</a>-->
             <!--</li>-->
-            <li data-reg="/wallet/realName">
+            <li data-reg="/wallet/realname">
                 <a href="{:U('/Member/User/realName')}">实名认证</a>
             </li>
             <li data-reg="{:U('/Member/Wallet/cards')}">
@@ -18,8 +18,8 @@
         </ul>
         <div class="mu_title display_title">资金明细</div>
         <ul class="mu_nav_item J_nav">
-            <li data-reg="/wallet/(fund|detail)/manage">
-                <a href="/wallet/fund/manage">交易记录</a>
+            <li data-reg="{:U('/Member/User/tradeHistory')}">
+                <a href="{:U('/Member/User/tradeHistory')}">交易记录</a>
             </li>
             <li data-reg="/wallet/(fund|detail)/flow">
                 <a href="/wallet/fund/flow">充值提现</a>

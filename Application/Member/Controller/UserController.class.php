@@ -31,5 +31,10 @@ class UserController extends CommonController
         $this->display();
     }
 
-
+    //交易记录
+    public function tradeHistory(){
+        $this->display();
+    }
+    
+    
 }

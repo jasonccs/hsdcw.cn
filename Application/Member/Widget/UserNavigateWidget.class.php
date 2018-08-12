@@ -28,6 +28,8 @@ class UserNavigateWidget extends Controller
             case 'realName':
                 $this->display('Widget:real_name_content_wrap');
                 break;
+            case 'tradeHistory':
+                $this->display('Widget:trade_history_content_wrap');
                 
         }
         
