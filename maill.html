@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>销售网络</title>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+</head>
+
+
+<style type="text/css">
+body {
+    font: 14px/1.5 "Microsoft Yahei",Arial;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+	body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+ol, li, ul, dl, dt, dd {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0 none;
+}
+
+.floor .btn {
+    display: inline-block;
+    margin-left: 15px;
+}
+body {
+    min-width: 1200px;
+    overflow-x: hidden;
+     background-color: #f7f7f5; 
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0 none;
+}
+
+.wrapper {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.floor .box {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    font-size: 0;
+    text-align: center;
+    padding-right: 3px;
+    background-color: #fff;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.floor .box>a {
+    display: block;
+}
+.floor .box-list {
+    display: inline-block;
+    width: 100%;
+    line-height: 0;
+    text-align: justify;
+}
+.floor .color-list {
+    padding-top: 19px;
+}
+:root .floor .color-list li.selected, :root .floor .color-list li:hover {
+    border-color: #fff;
+}
+.floor .color-list li.selected, .floor .color-list li:hover {
+    margin: 0 4px;
+    border: 2px solid #008ddc;
+    -webkit-box-shadow: 0 7px 10px 0 rgba(87,87,84,.3);
+    -moz-box-shadow: 0 7px 10px 0 rgba(87,87,84,.3);
+    box-shadow: 0 7px 10px 0 rgba(87,87,84,.3);
+}
+.floor .color-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 0;
+    text-align: center;
+    background-color: #fff;
+    -webkit-transition: opacity .4s linear;
+    -moz-transition: opacity .4s linear;
+    -ms-transition: opacity .4s linear;
+    -o-transition: opacity .4s linear;
+    transition: opacity .4s linear;
+}
+
+.floor .btn:first-child:after {
+    content: "查看详情";
+    color: gray;
+    border-color: #e6e6e6;
+}
+
+.floor .color-list li {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 2px 6px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+}
+.floor .prompt-price {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px 0 29px;
+    color: #f51919;
+    font-size: 12px;
+    line-height: 24px;
+}
+.floor-list {
+    padding-bottom: 40px;
+}
+.floor .price {
+    color: #f51919;
+    font-size: 16px;
+    line-height: 1;
+}
+.floor .btn:after {
+    display: block;
+    width: 100px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15px / 50%;
+}
+.floor .btn.putin-shopcart::after, .floor .btn.full-book::after {
+    content: "加入购物车";
+    color: rgb(255, 255, 255);
+    background-color: rgb(245, 25, 25);
+    border-color: rgb(245, 25, 25);
+}
+
+.floor.c_8 .box>a>span, .floor.c_8 .box>a>img {
+    margin-top: 43px;
+    width: 172px;
+    height: 172px;
+}
+.floor .box>a>img {
+    position: relative;
+    visibility: hidden;
+    vertical-align: top;
+    width: 100%;
+}
+.floor .box:hover {
+    transform: translate3d(0,-2px,0);
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+ .floor.c_8 .box {
+    height: 380px;
+      width: 263px;
+}
+.floor.c_8 .box>a>span, .floor.c_8 .box>a>img {
+    margin-top: 43px;
+    width: 172px;
+    height: 172px;
+}
+
+
+.floor .prompt {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    padding: 6px 0 29px;
+    max-width: 185px;
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.floor .box-list:after {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.floor .btn.putin-shopcart:after, .floor .btn.full-book:after {
+    content: "加入购物车";
+    color: #fff;
+    border-color: #f51919;
+    background-color: #f51919;
+}
+
+
+.floor .btn:after {
+    display: block;
+    width: 100px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15px / 50%;
+}
+
+
+.rmb-symbol::before {
+    content: "¥";
+    margin-right: 2px;
+    color: rgb(245, 25, 25);
+    font-size: 14px;
+    font-family: "Avenir Roman", "Microsoft YaHei", 微软雅黑;
+}
+
+</style>
+<body>
+	<div class="wrapper">
+		<div class="floor-list">
+				<li class="floor c_8">
+                    
+                <ul class="box-list">
+                                <li class="box">
+                                    <a target="_blank" data-name="原装闪充充电器" href="/product/249?colorSkuid=4020">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="原装闪充充电器">
+                                                    <li class="white selected" style="background-color: #ffffff" title="白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png" data-href="/product/249?colorSkuid=4020" data-skuid="4020" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：原装闪充充电器 白色">已选：原装闪充充电器 白色</span>
+                                                <span class="prompt-price rmb-symbol">79.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/249?colorSkuid=4020"></a>
+                                                        <a class="btn putin-shopcart" data-name="原装闪充充电器" data-spustr="/product/249?colorSkuid=4020"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">原装闪充充电器</p>
+                                            <p class="feature">双引擎闪充|充电更快速</p>
+                                            <p class="price rmb-symbol">79.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="低压闪充数据线" href="/product/9989?colorSkuid=4273">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="低压闪充数据线">
+                                                    <li class="selected" style="background-color: #d8d8d8" title="灰白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png" data-href="/product/9989?colorSkuid=4273" data-skuid="4273" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：低压闪充数据线 灰白色">已选：低压闪充数据线 灰白色</span>
+                                                <span class="prompt-price rmb-symbol">29.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/9989?colorSkuid=4273"></a>
+                                                        <a class="btn putin-shopcart" data-name="低压闪充数据线" data-spustr="/product/9989?colorSkuid=4273"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">低压闪充数据线</p>
+                                            <p class="feature">原装品质|高速传输</p>
+                                            <p class="price rmb-symbol">29.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="XE710耳机" href="/product/10383?colorSkuid=5071">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="XE710耳机">
+                                                    <li class="white selected" style="background-color: #ffffff" title="白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png" data-href="/product/10383?colorSkuid=5071" data-skuid="5071" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：XE710耳机 白色">已选：XE710耳机 白色</span>
+                                                <span class="prompt-price rmb-symbol">199.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10383?colorSkuid=5071"></a>
+                                                        <a class="btn putin-shopcart" data-name="XE710耳机" data-spustr="/product/10383?colorSkuid=5071"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">XE710耳机</p>
+                                            <p class="feature">经典Hi-Fi音质|入耳式设计</p>
+                                            <p class="price rmb-symbol">199.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="飞智 拉伸手柄" href="/product/10091?colorSkuid=4508">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="飞智 拉伸手柄">
+                                                    <li class="selected" style="background-color: #262626" title="星曜黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png" data-href="/product/10091?colorSkuid=4508" data-skuid="4508" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：飞智 拉伸手柄 星曜黑">已选：飞智 拉伸手柄 星曜黑</span>
+                                                <span class="prompt-price rmb-symbol">189.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10091?colorSkuid=4508"></a>
+                                                        <a class="btn putin-shopcart" data-name="飞智 拉伸手柄" data-spustr="/product/10091?colorSkuid=4508"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">飞智 拉伸手柄</p>
+                                            <p class="feature">适配海量安卓手游</p>
+                                            <p class="price rmb-symbol">189.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="捷波朗 势代 运动耳机" href="/product/10179?colorSkuid=4726">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="捷波朗 势代 运动耳机">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png" data-href="/product/10179?colorSkuid=4726" data-skuid="4726" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：捷波朗 势代 运动耳机 黑">已选：捷波朗 势代 运动耳机 黑</span>
+                                                <span class="prompt-price rmb-symbol">199.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10179?colorSkuid=4726"></a>
+                                                        <a class="btn putin-shopcart" data-name="捷波朗 势代 运动耳机" data-spustr="/product/10179?colorSkuid=4726"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">捷波朗 势代 运动耳机</p>
+                                            <p class="feature">限时直降100元</p>
+                                            <p class="price rmb-symbol">199.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="X9s硅胶保护壳" href="/product/10058?colorSkuid=4427">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="X9s硅胶保护壳">
+                                                        <li class="selected" style="background-color: #ff0000" title="中国红" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png" data-href="/product/10058?colorSkuid=4427" data-skuid="4427" data-saleable="1"></li>
+                                                        <li class="" style="background-color: #548dd4" title="天青蓝" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/4428_1531882892162hd_530x530.png" data-href="/product/10058?colorSkuid=4428" data-skuid="4428" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：X9s硅胶保护壳 中国红">已选：X9s硅胶保护壳 中国红</span>
+                                                <span class="prompt-price rmb-symbol">39.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10058?colorSkuid=4427"></a>
+                                                        <a class="btn putin-shopcart" data-name="X9s硅胶保护壳" data-spustr="/product/10058?colorSkuid=4427"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">X9s硅胶保护壳</p>
+                                            <p class="feature">领券优惠39元|免费领取</p>
+                                            <p class="price rmb-symbol">39.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="JBL Flip4音乐万花筒">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
+                                                <span class="prompt-price rmb-symbol">599.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
+                                                        <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">JBL Flip4音乐万花筒</p>
+                                            <p class="feature">限时直降400元促销</p>
+                                            <p class="price rmb-symbol">599.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="RoWrite 手写本">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
+                                                <span class="prompt-price rmb-symbol">799.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
+                                                        <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">RoWrite 手写本</p>
+                                            <p class="feature">新品上市|智能书写</p>
+                                            <p class="price rmb-symbol">799.00</p>
+                                        </div>
+                                </li>
+                                 <li class="box">
+                                    <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="JBL Flip4音乐万花筒">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
+                                                <span class="prompt-price rmb-symbol">599.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
+                                                        <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">JBL Flip4音乐万花筒</p>
+                                            <p class="feature">限时直降400元促销</p>
+                                            <p class="price rmb-symbol">599.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="RoWrite 手写本">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
+                                                <span class="prompt-price rmb-symbol">799.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
+                                                        <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">RoWrite 手写本</p>
+                                            <p class="feature">新品上市|智能书写</p>
+                                            <p class="price rmb-symbol">799.00</p>
+                                        </div>
+                                </li>
+                                 <li class="box">
+                                    <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="JBL Flip4音乐万花筒">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
+                                                <span class="prompt-price rmb-symbol">599.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
+                                                        <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">JBL Flip4音乐万花筒</p>
+                                            <p class="feature">限时直降400元促销</p>
+                                            <p class="price rmb-symbol">599.00</p>
+                                        </div>
+                                </li>
+                                <li class="box">
+                                    <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
+                                        <span class="hide"></span>
+                                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                                    </a>
+                                        <div class="color-wrapper">
+                                            <ul class="color-list" data-name="RoWrite 手写本">
+                                                    <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                                            </ul>
+                                            <div>
+                                                <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
+                                                <span class="prompt-price rmb-symbol">799.00</span>
+                                            </div>
+                                            <div class="btn-wrapper">
+                                                <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
+                                                        <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                                            </div>
+                                        </div>
+                                        <div class="prodinfo">
+                                            <p class="name">RoWrite 手写本</p>
+                                            <p class="feature">新品上市|智能书写</p>
+                                            <p class="price rmb-symbol">799.00</p>
+                                        </div>
+                                </li>
+
+                </ul>
+            </li>
+		</div>
+	
+
+	</div>
+
+
+</body>
+</html>
