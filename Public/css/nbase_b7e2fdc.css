@@ -9,17 +9,14 @@ section,summary,time,mark,audio,video,input,button{
 	margin:0;
 	padding:0;
 	border:0;
-	font-size:100%;
-	font:inherit;
 	vertical-align:baseline
 }
+body, html, input { font: 12px/1.5 "Microsoft YaHei","微软雅黑","宋体","黑体"; }
 :focus{outline:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display:block
 }
-body {
-	line-height:1
-}
+
 ol,ul {
 	list-style:none
 }
@@ -36,7 +33,7 @@ table {
 }
 a {
 	color:#4f5157;
-	text-decoration:none
+	text-decoration:none;
 }
 @-webkit-keyframes popUp {
 	from {
@@ -57,7 +54,6 @@ to {
 }
 html,body {
 	min-height:100%;
-	font:12px/1.5 "Microsoft YaHei","微软雅黑","宋体","黑体";
 	-webkit-font-smoothing:antialiased;
 	background:#fff
 }
