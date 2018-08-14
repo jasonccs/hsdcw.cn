@@ -3,11 +3,7 @@
     margin-left: 15px;
 }
 
-body {
-    min-width: 1100px;
-    overflow-x: hidden;
-    background-color: #f7f7f5;
-}
+
 
 a {
     text-decoration: none;
@@ -65,7 +61,7 @@ a {
     font-size: 0;
     text-align: center;
     padding-right: 3px;
-    background-color: #fff;
+    background-color:#f7f7f5;
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
@@ -108,7 +104,7 @@ a {
     text-align: center;
     opacity: 0;
     filter: alpha(opacity=0);
-    background-color: #fff;
+    background-color: #f7f7f5;
     -webkit-transition: opacity .4s linear;
     -moz-transition: opacity .4s linear;
     -ms-transition: opacity .4s linear;
