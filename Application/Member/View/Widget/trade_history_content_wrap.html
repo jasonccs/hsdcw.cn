@@ -1,0 +1,71 @@
+<div class="mu_content_wrap">
+    <div class="wallet-trade-box clearfix">
+        <div class="wallet-trade-yelbox">
+            <h4> 0.00</h4>
+            <p>可用资金（元）</p>
+        </div>
+        <ul class="wallet-trade-bluebox">
+            <li class="b-right">
+                <h4> 0.00</h4>
+                <p>提现中资金（元）</p>
+            </li>
+            <li class="b-right">
+                <h4>0.00 </h4>
+                <p>担保中资金（元）</p>
+            </li>
+            <li>
+                <h4> 0.00</h4>
+                <p>商家保证金（元）</p>
+            </li>
+        </ul>
+    </div>
+    <div class="wallet-panel pad-20">
+        <div class="wallet-labels-group">
+            <form id="J-form" action="">
+
+                <!-- 查询日期 -->
+
+                <div class="wallet-label">
+                    <label for="">查询日期:</label>
+                    <input class="wallet-filter-input" value="" type="text" placeholder="选择日期" name="startCreatedTime" id="startCreatedTime">
+                    -
+                    <input class="wallet-filter-input" value="" type="text" placeholder="选择日期" name="endCreatedTime" id="endCreatedTime">
+                    <a href="" class="wallet-btn sm orange J-cate">查询</a>
+                </div>
+
+                <div class="wallet-label">
+                    <label for="">类型:</label>
+                    <a class="wallet-label-link J-cate  wallet-orange " data-id="orderType" data-value="0" href="">买买买</a>
+                    <a class="wallet-label-link J-cate " data-id="orderType" data-value="1" href="">充值</a>
+                    <a class="wallet-label-link J-cate " data-id="orderType" data-value="4" href="">提现</a>
+                    <input type="hidden" name="orderType" id="orderType" value="0">
+                </div>
+            </form>
+        </div>
+
+        <!-- table -->
+        <!-- 买买买、退款 -->
+        <table class="wallet-trade-table">
+            <thead>
+            <tr>
+                <th width="100px">创建时间</th>
+                <th width="42%">名称 | 订单编号</th>
+                <th>金额（元）</th>
+                <th width="60px">状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+
+
+            </tbody>
+        </table>
+        <!-- /table -->
+
+
+        <!-- 分页 -->
+
+    </div>
+</div>

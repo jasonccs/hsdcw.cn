@@ -436,7 +436,7 @@ a.mu_hoverline:hover {
 
 .mu_nav_wrap {
     float: left;
-    width: 240px;
+    width: 218px;
     _display: inline
 }
 
@@ -454,7 +454,7 @@ a.mu_hoverline:hover {
 }
 
 .media_screen_1200 .mu_content_wrap {
-    width: 846px
+    width: 858px
 }
 
 .mu_content_wrap .mu_browser_content_wrap {
@@ -2261,7 +2261,7 @@ select.wallet-form-input {
 .safe-box {
     height: 60px;
     padding-left: 70px;
-    background: url(https://s10.mogucdn.com/pic/150512/10sz8d_iezdsodgg42tizjrgezdambqmmyde_67x180.png) 0 0 no-repeat
+    background: url(/Public/images/10sz8d_iezdsodgg42tizjrgezdambqmmyde_67x180.png) 0 0 no-repeat
 }
 
 .safe-box.safe-3 {

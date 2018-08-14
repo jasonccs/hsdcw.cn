@@ -1,0 +1,37 @@
+<div class="mu_content_wrap">
+    <div class="wallet-panel">
+        <div class="wallet-panel-header">
+
+
+            <if condition="$user_info.is_certification eq 0">
+                <div class="safe-box safe-1">
+                    <h4>您的账户安全等级较弱</h4>
+                    <p>完成 <a class="wallet-link" href="">实名认证</a>，让账户唯你所有</p></div>
+                <else/>
+                <div class="safe-box safe-3">
+                    <h4>您的账户安全等级较好</h4>
+                    <p>请继续保持!</p>
+                </div>
+            </if>
+
+
+        </div>
+
+        <div class="wallet-panel-body pad-20">
+            <div class="wallet-account-box account-icon safe">
+                <h4>账户安全信息</h4>
+                <p>实名认证： {$user_info.is_certification==0?'未认证'：'已认证'} <a id="J_realname" class="wallet-link" target="_blank" href="" data-ptp-cache-id="1.ib51K.0.0.Z5hyT4i">认证</a>
+                </p>
+                <p>手机验证： {$user_info.mobile?'未开启':$user_info.mobile} </p>
+            </div>
+            <hr class="border-hr">
+            <div class="wallet-account-box account-icon edit">
+                <h4>账户基本信息</h4>
+                <p>真实姓名：{$user_info.truename}</p>
+                <p>身份证号码：{$user_info.id_card}</p>
+                <p>手机号码：{$user_info.mobile}</p>
+                <p>认证时间：{$user_info.certification_time}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,7 +22,7 @@
             let article_id ='{$result.id}';
          </script>
 
-<include file="Public/Tpl/head" />
+<include file="Common@Tpl/head" />
 
         <div id="wrapper" class="detail-wrapper">
 
@@ -167,7 +167,7 @@ $(function(){
 
                $('.csubmit').click(function(){
 
-                        // if($.cookie(COOKIE_PREFIX+'username')==null || $.cookie(COOKIE_PREFIX+'userid')==null){
+                        // if( || $.cookie(COOKIE_PREFIX+'userid')==null){
                         if($.cookie(COOKIE_PREFIX+'username')==null || "{$Think.session.user_info.username}" ===''){
                                 login();
                                 $('.xa-showSignup').click(function () {
@@ -529,7 +529,7 @@ $(function(){
 
      <!---->
 
-    <include file="Public/Tpl/footer"/>
+    <include file="Common@Tpl/footer"/>
 
 
     </body>

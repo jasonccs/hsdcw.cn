@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <block name="title"><title>标题</title></block>
+    <link href="__IMAGES__/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <css href="__CSS__/main.css" />
+    <css href="__CSS__/user.css"/>
+    <css href="__CSS__/user_warp.css"/>
+    <js  href="__JS__/jquery.1.10.2.min.js"/>
+
+</head>
+
+
+<body class="media_screen_1200">
+<include file="Common@Tpl/head" />
+
+<div id="body_wrap">
+    <div class="wrap clearfix">
+
+        {:W('UserNavigate/userNavMenu',['action'=>ACTION_NAME ])}
+
+        <block name="contentWrap">{:W('UserNavigate/menuContentWrap')}</block>
+
+    </div>
+</div>
+
+<include file="Common@Tpl/footer" />
+<js href="__JS__/date-packgist.js"/>
+
+</body>
+</html>
+

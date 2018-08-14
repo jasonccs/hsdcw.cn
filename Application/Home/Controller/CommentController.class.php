@@ -1,6 +1,7 @@
 <?php
 
     namespace Home\Controller;
+    use Common\Controller\CommonController;
 
 
     class CommentController extends CommonController
