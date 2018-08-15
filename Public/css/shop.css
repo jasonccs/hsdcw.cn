@@ -1,16 +1,13 @@
+@charset "utf-8";
 .floor .btn {
     display: inline-block;
     margin-left: 15px;
 }
-
-
-
-a {
+.color-wrapper .btn-wrapper a {
     text-decoration: none;
     cursor: pointer;
     outline: 0 none;
 }
-
 .wrapper {
     position: relative;
     width: 1100px;
@@ -50,7 +47,6 @@ a {
     margin-right: 2px;
     color: #f51919;
     font-size: 14px;
-    font-family: "Avenir Roman", "Microsoft YaHei", "å¾®è½¯é›…é»‘";
 }
 
 .floor .box {
@@ -61,7 +57,7 @@ a {
     font-size: 0;
     text-align: center;
     padding-right: 3px;
-    background-color:#f7f7f5;
+    background-color:#ededed;
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
@@ -104,7 +100,7 @@ a {
     text-align: center;
     opacity: 0;
     filter: alpha(opacity=0);
-    background-color: #f7f7f5;
+    background-color: #ededed;
     -webkit-transition: opacity .4s linear;
     -moz-transition: opacity .4s linear;
     -ms-transition: opacity .4s linear;
@@ -266,6 +262,20 @@ a {
     margin-right: 2px;
     color: rgb(245, 25, 25);
     font-size: 14px;
-    font-family: "Avenir Roman", "Microsoft YaHei", 微软雅黑;
+    font-family: "Avenir Roman", "Microsoft YaHei";
 }
 
+.tab_shop {
+    width: 1100px;
+    height: 40px;
+    margin: 20px auto;
+    border: 1px solid #ddd ;
+    line-height: 30px;
+}
+.tab_shop ul li{
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}

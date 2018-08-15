@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <block name="title"><title>商城</title></block>
     <link href="__IMAGES__/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <css href="__CSS__/house.css" />
     <css href="__CSS__/main.css" />
     <css href="__CSS__/shop.css"/>
     <js  href="__JS__/jquery.1.10.2.min.js"/>
@@ -12,7 +12,46 @@
 
 <body>
 <include file="Common@Tpl/head" />
+<div class="lanmu">
+    <div class="bread">
+        <a href="/">首页</a>
+        <span>&gt;</span>
+        <a href="">在线商城</a>
+    </div>
+</div>
+<div class="fangchan">
+    <div class="yixuan">
+        <ul class="clearfix tiaojian">
+            <li style="border:none;color:#000;">已选条件</li>
 
+
+        </ul>
+    </div>
+    <div class="sousuo">
+        <dl>
+            <dt>区域</dt>
+            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/lid/1">黄石</a></dd><dd> <a href="/Home/Fang/index/lid/2">大冶</a></dd><dd> <a href="/Home/Fang/index/lid/3">阳新</a></dd><dd> <a href="/Home/Fang/index/lid/4">武汉</a></dd>
+
+        </dl>
+        <dl>
+            <dt>价格</dt>
+            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/price/0-2000">2000元以下</a></dd><dd> <a href="/Home/Fang/index/price/2000-3000">2000-3000元</a></dd><dd> <a href="/Home/Fang/index/price/3000-4000">3000-4000元</a></dd><dd> <a href="/Home/Fang/index/price/4000-5000">4000-5000元</a></dd><dd> <a href="/Home/Fang/index/price/5000-7000">5000-7000元以上</a></dd><dd> <a href="/Home/Fang/index/price/7000">7000元以上</a></dd>        </dl>
+        <dl>
+            <dt>面积</dt>
+            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/mianji/0-50">50㎡以下</a></dd><dd> <a href="/Home/Fang/index/mianji/50-70">50-70㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/70-90">70-90㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/90-110">90-110㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/110-130">110-130㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/130">130㎡以上</a></dd>        </dl>
+        <dl>
+            <dt>户型</dt>
+            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/huxing/1">1居室</a></dd><dd> <a href="/Home/Fang/index/huxing/2">2居室</a></dd><dd> <a href="/Home/Fang/index/huxing/3">3居室</a></dd><dd> <a href="/Home/Fang/index/huxing/4">4居室</a></dd><dd> <a href="/Home/Fang/index/huxing/5">5居室及以上</a></dd>        </dl>
+    </div>
+</div>
+<div class="tab_shop">
+    <ul>
+        <li><a href="">默认排序</a></li>
+        <li><a href="">价格</a></li>
+        <li><a href="">销量</a></li>
+        <li><a href="">点评数</a></li>
+    </ul>
+</div>
 <div class="wrapper">
     <div class="floor-list">
         <li class="floor c_8">
