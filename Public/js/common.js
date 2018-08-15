@@ -50,8 +50,8 @@ $(function(){
 
 	//菜单切换的跟踪样式
 	$('.menu>.nav_body>.nav>ul>li>a').each(function () {
-       var url= String(window.location),regx = /\d+/
-       var new_url=url.replace(/\/\d+\.?|html|htm/,'.')
+       var url= String(window.location),regx = /\d+/;
+       var new_url=url.replace(/\/\d+\.?|html|htm/,'.');
 
         if(regx.test(url)){
         	// console.log(url);

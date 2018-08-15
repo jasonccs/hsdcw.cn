@@ -55,7 +55,7 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 <i class="icon-qq"></i>     </a>\
 </div>\
 </div>\
-</div><div class="modal-backdrop  in"></div>'
+</div><div class="modal-backdrop  in"></div>';
 
 
 function imgVerify(va) {
