@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <block name="title"><title>商城</title></block>
-    <link href="__IMAGES__/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <css href="__CSS__/house.css" />
-    <css href="__CSS__/main.css" />
+    <link href="__IMAGES__/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <css href="__CSS__/house.css"/>
+    <css href="__CSS__/main.css"/>
     <css href="__CSS__/shop.css"/>
-    <js  href="__JS__/jquery.1.10.2.min.js"/>
+    <js href="__JS__/jquery.1.10.2.min.js"/>
 </head>
 
 <body>
-<include file="Common@Tpl/head" />
+<include file="Common@Tpl/head"/>
 <div class="lanmu">
     <div class="bread">
         <a href="/">首页</a>
@@ -29,19 +29,34 @@
     </div>
     <div class="sousuo">
         <dl>
+            <dt>分类</dt>
+            <dd><a class="active" href="/Home/Fang/index">不限</a></dd>
+            <dd><a href="/Home/Fang/index">吃在黄石</a></dd>
+            <dd><a href="/Home/Fang/index/lid/1">玩在黄石</a></dd>
+            <dd><a href="/Home/Fang/index/lid/2">住在黄石</a></dd>
+            <dd><a href="/Home/Fang/index/lid/3">黄石影讯</a></dd>
+            <dd><a href="/Home/Fang/index/lid/3">都是丽人</a></dd>
+            <dd><a href="/Home/Fang/index/lid/4">商城超市</a></dd>
+            <dd><a href="/Home/Fang/index/lid/4">电子数码</a></dd>
+        </dl>
+        <dl>
             <dt>区域</dt>
-            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/lid/1">黄石</a></dd><dd> <a href="/Home/Fang/index/lid/2">大冶</a></dd><dd> <a href="/Home/Fang/index/lid/3">阳新</a></dd><dd> <a href="/Home/Fang/index/lid/4">武汉</a></dd>
-
+            <dd><a class="active" href="/Home/Fang/index">不限</a></dd>
+            <dd><a href="/Home/Fang/index/lid/1">黄石</a></dd>
+            <dd><a href="/Home/Fang/index/lid/2">大冶</a></dd>
+            <dd><a href="/Home/Fang/index/lid/3">阳新</a></dd>
         </dl>
         <dl>
             <dt>价格</dt>
-            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/price/0-2000">2000元以下</a></dd><dd> <a href="/Home/Fang/index/price/2000-3000">2000-3000元</a></dd><dd> <a href="/Home/Fang/index/price/3000-4000">3000-4000元</a></dd><dd> <a href="/Home/Fang/index/price/4000-5000">4000-5000元</a></dd><dd> <a href="/Home/Fang/index/price/5000-7000">5000-7000元以上</a></dd><dd> <a href="/Home/Fang/index/price/7000">7000元以上</a></dd>        </dl>
-        <dl>
-            <dt>面积</dt>
-            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/mianji/0-50">50㎡以下</a></dd><dd> <a href="/Home/Fang/index/mianji/50-70">50-70㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/70-90">70-90㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/90-110">90-110㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/110-130">110-130㎡</a></dd><dd> <a href="/Home/Fang/index/mianji/130">130㎡以上</a></dd>        </dl>
-        <dl>
-            <dt>户型</dt>
-            <dd> <a class="active" href="/Home/Fang/index">不限</a></dd><dd> <a href="/Home/Fang/index/huxing/1">1居室</a></dd><dd> <a href="/Home/Fang/index/huxing/2">2居室</a></dd><dd> <a href="/Home/Fang/index/huxing/3">3居室</a></dd><dd> <a href="/Home/Fang/index/huxing/4">4居室</a></dd><dd> <a href="/Home/Fang/index/huxing/5">5居室及以上</a></dd>        </dl>
+            <dd><a class="active" href="/Home/Fang/index">不限</a></dd>
+            <dd><a href="/Home/Fang/index/price/0-2000">2000元以下</a></dd>
+            <dd><a href="/Home/Fang/index/price/2000-3000">2000-3000元</a></dd>
+            <dd><a href="/Home/Fang/index/price/3000-4000">3000-4000元</a></dd>
+            <dd><a href="/Home/Fang/index/price/4000-5000">4000-5000元</a></dd>
+            <dd><a href="/Home/Fang/index/price/5000-7000">5000-7000元以上</a></dd>
+            <dd><a href="/Home/Fang/index/price/7000">7000元以上</a></dd>
+        </dl>
+
     </div>
 </div>
 <div class="tab_shop">
@@ -59,11 +74,14 @@
                 <li class="box">
                     <a target="_blank" data-name="原装闪充充电器" href="/product/249?colorSkuid=4020">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="原装闪充充电器">
-                            <li class="white selected" style="background-color: #ffffff" title="白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png" data-href="/product/249?colorSkuid=4020" data-skuid="4020" data-saleable="1"></li>
+                            <li class="white selected" style="background-color: #ffffff" title="白色"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/4020_1531821268937hd_530x530.png"
+                                data-href="/product/249?colorSkuid=4020" data-skuid="4020" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：原装闪充充电器 白色">已选：原装闪充充电器 白色</span>
@@ -71,7 +89,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/249?colorSkuid=4020"></a>
-                            <a class="btn putin-shopcart" data-name="原装闪充充电器" data-spustr="/product/249?colorSkuid=4020"></a>
+                            <a class="btn putin-shopcart" data-name="原装闪充充电器"
+                               data-spustr="/product/249?colorSkuid=4020"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -83,11 +102,14 @@
                 <li class="box">
                     <a target="_blank" data-name="低压闪充数据线" href="/product/9989?colorSkuid=4273">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="低压闪充数据线">
-                            <li class="selected" style="background-color: #d8d8d8" title="灰白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png" data-href="/product/9989?colorSkuid=4273" data-skuid="4273" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #d8d8d8" title="灰白色"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/4273_1531821431651hd_530x530.png"
+                                data-href="/product/9989?colorSkuid=4273" data-skuid="4273" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：低压闪充数据线 灰白色">已选：低压闪充数据线 灰白色</span>
@@ -95,7 +117,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/9989?colorSkuid=4273"></a>
-                            <a class="btn putin-shopcart" data-name="低压闪充数据线" data-spustr="/product/9989?colorSkuid=4273"></a>
+                            <a class="btn putin-shopcart" data-name="低压闪充数据线"
+                               data-spustr="/product/9989?colorSkuid=4273"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -107,11 +130,14 @@
                 <li class="box">
                     <a target="_blank" data-name="XE710耳机" href="/product/10383?colorSkuid=5071">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="XE710耳机">
-                            <li class="white selected" style="background-color: #ffffff" title="白色" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png" data-href="/product/10383?colorSkuid=5071" data-skuid="5071" data-saleable="1"></li>
+                            <li class="white selected" style="background-color: #ffffff" title="白色"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/5071_1531902328482hd_530x530.png"
+                                data-href="/product/10383?colorSkuid=5071" data-skuid="5071" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：XE710耳机 白色">已选：XE710耳机 白色</span>
@@ -119,7 +145,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10383?colorSkuid=5071"></a>
-                            <a class="btn putin-shopcart" data-name="XE710耳机" data-spustr="/product/10383?colorSkuid=5071"></a>
+                            <a class="btn putin-shopcart" data-name="XE710耳机"
+                               data-spustr="/product/10383?colorSkuid=5071"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -131,11 +158,14 @@
                 <li class="box">
                     <a target="_blank" data-name="飞智 拉伸手柄" href="/product/10091?colorSkuid=4508">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="飞智 拉伸手柄">
-                            <li class="selected" style="background-color: #262626" title="星曜黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png" data-href="/product/10091?colorSkuid=4508" data-skuid="4508" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #262626" title="星曜黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/08/4508_1531884338122hd_530x530.png"
+                                data-href="/product/10091?colorSkuid=4508" data-skuid="4508" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：飞智 拉伸手柄 星曜黑">已选：飞智 拉伸手柄 星曜黑</span>
@@ -143,7 +173,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10091?colorSkuid=4508"></a>
-                            <a class="btn putin-shopcart" data-name="飞智 拉伸手柄" data-spustr="/product/10091?colorSkuid=4508"></a>
+                            <a class="btn putin-shopcart" data-name="飞智 拉伸手柄"
+                               data-spustr="/product/10091?colorSkuid=4508"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -155,11 +186,14 @@
                 <li class="box">
                     <a target="_blank" data-name="捷波朗 势代 运动耳机" href="/product/10179?colorSkuid=4726">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="捷波朗 势代 运动耳机">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png" data-href="/product/10179?colorSkuid=4726" data-skuid="4726" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/26/4726_1531901437432hd_530x530.png"
+                                data-href="/product/10179?colorSkuid=4726" data-skuid="4726" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：捷波朗 势代 运动耳机 黑">已选：捷波朗 势代 运动耳机 黑</span>
@@ -167,7 +201,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10179?colorSkuid=4726"></a>
-                            <a class="btn putin-shopcart" data-name="捷波朗 势代 运动耳机" data-spustr="/product/10179?colorSkuid=4726"></a>
+                            <a class="btn putin-shopcart" data-name="捷波朗 势代 运动耳机"
+                               data-spustr="/product/10179?colorSkuid=4726"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -179,12 +214,17 @@
                 <li class="box">
                     <a target="_blank" data-name="X9s硅胶保护壳" href="/product/10058?colorSkuid=4427">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="X9s硅胶保护壳">
-                            <li class="selected" style="background-color: #ff0000" title="中国红" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png" data-href="/product/10058?colorSkuid=4427" data-skuid="4427" data-saleable="1"></li>
-                            <li class="" style="background-color: #548dd4" title="天青蓝" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/4428_1531882892162hd_530x530.png" data-href="/product/10058?colorSkuid=4428" data-skuid="4428" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #ff0000" title="中国红"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/4427_1531882873555hd_530x530.png"
+                                data-href="/product/10058?colorSkuid=4427" data-skuid="4427" data-saleable="1"></li>
+                            <li class="" style="background-color: #548dd4" title="天青蓝"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/4428_1531882892162hd_530x530.png"
+                                data-href="/product/10058?colorSkuid=4428" data-skuid="4428" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：X9s硅胶保护壳 中国红">已选：X9s硅胶保护壳 中国红</span>
@@ -192,7 +232,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10058?colorSkuid=4427"></a>
-                            <a class="btn putin-shopcart" data-name="X9s硅胶保护壳" data-spustr="/product/10058?colorSkuid=4427"></a>
+                            <a class="btn putin-shopcart" data-name="X9s硅胶保护壳"
+                               data-spustr="/product/10058?colorSkuid=4427"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -204,11 +245,14 @@
                 <li class="box">
                     <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="JBL Flip4音乐万花筒">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                                data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
@@ -216,7 +260,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
-                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒"
+                               data-spustr="/product/10104?colorSkuid=4539"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -228,11 +273,14 @@
                 <li class="box">
                     <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="RoWrite 手写本">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                                data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
@@ -240,7 +288,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
-                            <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                            <a class="btn putin-shopcart" data-name="RoWrite 手写本"
+                               data-spustr="/product/10462?colorSkuid=5219"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -252,11 +301,14 @@
                 <li class="box">
                     <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="JBL Flip4音乐万花筒">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                                data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
@@ -264,7 +316,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
-                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒"
+                               data-spustr="/product/10104?colorSkuid=4539"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -276,11 +329,14 @@
                 <li class="box">
                     <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="RoWrite 手写本">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                                data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
@@ -288,7 +344,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
-                            <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                            <a class="btn putin-shopcart" data-name="RoWrite 手写本"
+                               data-spustr="/product/10462?colorSkuid=5219"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -300,11 +357,14 @@
                 <li class="box">
                     <a target="_blank" data-name="JBL Flip4音乐万花筒" href="/product/10104?colorSkuid=4539">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="JBL Flip4音乐万花筒">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png" data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/4539_1531900648875hd_530x530.png"
+                                data-href="/product/10104?colorSkuid=4539" data-skuid="4539" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：JBL Flip4音乐万花筒 黑">已选：JBL Flip4音乐万花筒 黑</span>
@@ -312,7 +372,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10104?colorSkuid=4539"></a>
-                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒" data-spustr="/product/10104?colorSkuid=4539"></a>
+                            <a class="btn putin-shopcart" data-name="JBL Flip4音乐万花筒"
+                               data-spustr="/product/10104?colorSkuid=4539"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -324,11 +385,14 @@
                 <li class="box">
                     <a target="_blank" data-name="RoWrite 手写本" href="/product/10462?colorSkuid=5219">
                         <span class="hide"></span>
-                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" style="visibility: visible;">
+                        <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                             style="visibility: visible;">
                     </a>
                     <div class="color-wrapper">
                         <ul class="color-list" data-name="RoWrite 手写本">
-                            <li class="selected" style="background-color: #000000" title="黑" data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png" data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
+                            <li class="selected" style="background-color: #000000" title="黑"
+                                data-img="https://shopstatic.vivo.com.cn/vivoshop/commodity/19/5219_1533202404720hd_530x530.png"
+                                data-href="/product/10462?colorSkuid=5219" data-skuid="5219" data-saleable="1"></li>
                         </ul>
                         <div>
                             <span class="prompt" title="已选：RoWrite 手写本 黑">已选：RoWrite 手写本 黑</span>
@@ -336,7 +400,8 @@
                         </div>
                         <div class="btn-wrapper">
                             <a class="btn" target="_blank" href="/product/10462?colorSkuid=5219"></a>
-                            <a class="btn putin-shopcart" data-name="RoWrite 手写本" data-spustr="/product/10462?colorSkuid=5219"></a>
+                            <a class="btn putin-shopcart" data-name="RoWrite 手写本"
+                               data-spustr="/product/10462?colorSkuid=5219"></a>
                         </div>
                     </div>
                     <div class="prodinfo">
@@ -353,7 +418,7 @@
 
 </div>
 
-<include file="Common@Tpl/footer" />
+<include file="Common@Tpl/footer"/>
 
 </body>
 </html>
