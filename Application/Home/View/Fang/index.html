@@ -69,7 +69,7 @@
     $(function () {
             $('.fangchan .sousuo dl dd a').each(function () {
                if($(this).hasClass('active') && $(this).text()!=='不限'){
-                   let a='';
+                   var a='';
 
                      a +='<li class="selected">\n' +
                          ' <a class="fl" href="javascript:void(0)">'+$(this).text()+'</a>\n' +

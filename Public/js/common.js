@@ -134,7 +134,7 @@ jQuery.fn.extend({
 
 //文章评论点赞方法
 function thumbs(that){
-    let result=false;
+    var result=false;
     $.ajax({
         url:'/Home/Comment/thumbs',
         type:'POST',
