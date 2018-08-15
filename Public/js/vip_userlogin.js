@@ -2,7 +2,7 @@
 //date   :2018-06-16
 //update :2018-08-01
 
-let loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
+var loginhtml = '<div id="signin" class="rl-modal in" aria-hidden="false">\
 <div class="rl-modal-header">\
 <h1>\
 <span class="active-title xa-user_login">登录</span>\
@@ -59,7 +59,7 @@ js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" max
 
 
 function imgVerify(va) {
-    let src=$(va).attr('src');
+    var src=$(va).attr('src');
     if (src.indexOf('?') > 0) {
         $(va).attr("src", src.replace(/\?.*$/, '') + '?' + Math.random());
     } else {
@@ -68,7 +68,7 @@ function imgVerify(va) {
 }
 
 
-let countdown=120,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
+var countdown=120,reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     // password=$("input[name='password']"),
     // mobile_code=$("input[name='mobile-code']"),
     // verify=$("input[name='verify']");
@@ -96,12 +96,12 @@ function setTime(obj) {
 //短信验证码
 function mobileSendCode() {
     // console.log(mobile.val());
-    let reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
+    var reg=/^[1][3,4,5,7,8][0-9]{9}$/,mobile=$("input[name='email']");
     if (mobile.val()==='' || !reg.test(mobile.val())){
         $("input[name='email']").next().html('请输入正确的手机号！');
         sendSms(mobile.val());
     }else{
-            let res=sendSms(mobile.val());
+        var res=sendSms(mobile.val());
             if (res) {
                 setTime($('.verify-mobile-wrap'));
                 mobile.next().html('');
@@ -110,7 +110,7 @@ function mobileSendCode() {
 }
 
 function sendSms(mobile) {
-    let result=false;
+    var result=false;
     $.ajax({
         url:'/Member/Login/aliSMS',
         type:'POST',
@@ -132,7 +132,7 @@ function sendSms(mobile) {
 }
 
 //登录tab
-let login_tab=function (that) {
+var login_tab=function (that) {
     $('.js-verify-row').css({'display':'none'});
     $('.xa-showSignup').removeClass('active-title');
     $('.rlf-group  .xa-register').css({'display':'none'});
@@ -145,7 +145,7 @@ let login_tab=function (that) {
 };
 
 //注册tab
-let register_tab=function (that) {
+var register_tab=function (that) {
     $('.js-verify-row').css({'display':'block'});
     $('.xa-user_login').removeClass('active-title');
     $('.rlf-group .xa-register').css({'display':'block'});
@@ -156,9 +156,9 @@ let register_tab=function (that) {
     that.addClass('active-title');
 };
 
-let login = function () {
+var login = function () {
     $('.footer').after(loginhtml);
-    let mobile=$("input[name='email']"),
+    var mobile=$("input[name='email']"),
         password=$("input[name='password']"),mobile_code=$("input[name='mobile-code']"),
         verify=$("input[name='verify']");
 
@@ -195,13 +195,13 @@ let login = function () {
 
 };
 
-let loginhide = function () {
+var loginhide = function () {
 
     $('#signin').remove();
     $('.modal-backdrop').remove();
 };
 
-let viplogin = function () {
+var viplogin = function () {
     // body...
     $('.xa-login').click(function () {
 
@@ -213,7 +213,7 @@ let viplogin = function () {
             if (data.status === false) {
 
                 $("#signin").addClass("rl-modal in shake");
-                let set = setTimeout(function () {
+                var set = setTimeout(function () {
                     $("#signin").removeClass('shake');
                 }, 1500);
 
@@ -256,7 +256,7 @@ let viplogin = function () {
             if (!data.status) {
 
                 $("#signin").addClass("rl-modal in shake");
-                let set = setTimeout(function () {
+                var set = setTimeout(function () {
                     $("#signin").removeClass('shake');
                 }, 1500);
                 if (data.msg==='手机号已经存在！'|| data.msg==='手机号必填！' || data.msg==='手机格式不正确！'){
