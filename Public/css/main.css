@@ -13,11 +13,11 @@
 .top_nav .top_tianqi .date,.msn{color: #000; float: left; }
 .top_nav .top_tianqi .weather{float: left; height: 25px; line-height: 20px; margin:8px 20px;}
 .top_nav .top_login{width: 500px; height: 40px; line-height: 40px; float: left;}
-.top_nav .top_login .login{width: 200px; height: 40px; line-height: 40px; float: left;position: relative;}
+.top_nav .top_login .login{width: 230px; height: 40px; line-height: 40px; float: left;position: relative;}
 .top_nav .top_login .tell{width: 190px; height: 40px; line-height: 40px; float: right; }
 .top_nav .top_login .login i{border-radius:23px;width:36px; height:36px;float: left}
 .top_nav .top_login .login i img{border-radius:23px;width:36px; height:36px;overflow: hidden;}
-.top_nav .top_login .login b{ float: left;margin-left: 20px;width: 90px; overflow: hidden; text-align: center;}
+.top_nav .top_login .login b{ float: left;margin-left: 20px;width: 100px; overflow: hidden; text-align: center;}
 .top_nav .top_login .login .user_center{ position: absolute; width: 90px; height: auto; top: 30px; left: 54px;background:#B73102;opacity:0.9;filter:alpha(opacity=90); display: none;}
 .top_nav .top_login .login .user_center>ul>li{ width: 90px; height: 25px; line-height: 25px;text-align: center; color: #fff}
 .top_nav .top_login .login .user_center>ul>li:first-child{ width: 90px; height: 25px; line-height: 25px;text-align: center; color: #fff;border-bottom: 1px dotted #fff;}
