@@ -1,0 +1,107 @@
+
+button {
+    cursor: pointer
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #008ddc;
+    border: 1px solid #008ddc
+}
+
+.btn-blue:hover {
+    background-color: #0098e7;
+    border-color: #0098e7
+}
+
+.btn-confirm, .btn-append {
+    background-color: #ff4e4f;
+    color: #fff;
+    border: 1px solid #ff4e4f
+}
+
+.btn-confirm:hover, .btn-append:hover {
+    background-color: #e22122;
+    border: 1px solid #e22122
+}
+
+.btn-cancel {
+    background-color: #f3f3f3;
+    color: #666;
+    border: 1px solid #e6e6e6
+}
+
+.btn-cancel:hover {
+    background-color: #e6e6e6
+}
+
+.btn-disabled {
+    background-color: #a8a8a8;
+    color: #fff;
+    border: 1px solid #a8a8a8;
+    cursor: not-allowed
+}
+
+.btn-appointment {
+    background-color: #ffaa06;
+    border: 1px solid #ffaa06;
+    color: #fff
+}
+
+.btn-appointment:hover {
+    background-color: #ff7800;
+    border-color: #ff7800
+}
+
+
+
+.mask {
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    z-index: 99;
+    display: none
+}
+
+
+
+.icon-checkbox.checked {
+    background-position: 0 -24px
+}
+
+.icon-checkbox.disabled {
+    background-position: 0 -48px
+}
+
+.btn--normal, .btn--sm, .btn--md, .btn--lg {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: content-box;
+    user-select: none;
+    background: none !important;
+    word-wrap: normal;
+    white-space: nowrap;
+    outline: 0;
+    border: 0 !important;
+    line-height: 0;
+    font-size: 0;
+    padding: 0;
+    display: inline-table;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    zoom: 1
+}
+
+.btn--normal:after, .btn--sm:after, .btn--md:after, .btn--lg:after, .laser-buy:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}

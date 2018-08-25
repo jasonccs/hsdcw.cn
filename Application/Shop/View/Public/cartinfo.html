@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <block name="title"><title>商城</title></block>
+    <link href="__IMAGES__/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <css href="__CSS__/house.css"/>
+    <css href="__CSS__/main.css"/>
+    <css href="__CSS__/shop.css"/>
+    <css href="__CSS__/shopcart.css"/>
+    <css href="__CSS__/iconfont_f0745dd.css"/>
+    <js href="__JS__/jquery.1.10.2.min.js"/>
+
+    <css href="__CSS__/global_17d3c50.css"/>
+    <css href="__CSS__/layout_7098a09.css"/>
+    <css href="__CSS__/dialog_232f414.css"/>
+
+
+    <script>
+        var webCtx = '',normalCommodityNumLimit = 5;
+    </script>
+
+
+</head>
+
+<body>
+<include file="Common@Tpl/head"/>
+
+<script src="https://shopstatic.vivo.com.cn/vivoshop/web/dist/js/plugins/jquery-placeholder/jquery-placeholder_e51dc06.js"></script>
+
+<js href="__JS__/shop/TweenMax.min_92cf05a.js" />
+<js href="__JS__/shop/vivo-stat_dc86f87.js" />
+<js href="__JS__/shop/vivo-stat_dc86f87.js" />
+<js href="__JS__/shop/dialog_ed9efd8.js" />
+<js href="__JS__/shop/vivo-track_d4673e0.js" />
+<js href="__JS__/shop/vivo-common_a9d87e0.js" />
+<js href="__JS__/shop/index_cd0c92d.js" />
+
+<section class="results"></section>
+
+<div class="wrapper ">
+    <table class="main-title-module">
+        <tbody><tr>
+            <td></td>
+            <th class="main-title-txt">我的购物车</th>
+            <td><a class="continue-shopping" href="/index.html">继续购物 <b>&gt; </b></a></td>
+        </tr>
+        </tbody></table>
+    <div class="cart-head">
+        <table class="order-table">
+            <tbody><tr>
+                <th class="check-col">
+                    <label class="J_viewCheckAll">
+                        <i class="checkbox checked"></i>
+                        <a href="javascript:void(0);">全选</a>
+                    </label>
+                </th>
+                <th class="goods-col">商品名称</th>
+                <th class="price-col">价格（元）</th>
+                <th class="quantity-col">数量</th>
+                <th class="benefit-col">优惠</th>
+                <th class="vcoin-col">赠送积分</th>
+                <th class="sum-col">小计（元）</th>
+                <th class="action-col">操作</th>
+            </tr>
+
+            </tbody></table>
+    </div>
+
+
+
+    <div class="prod-list-wrap J_viewWrap" data-uniquecode="1_4849">
+        <table class="order-table ">
+            <tbody><tr class="prod-line">
+                <td class="check-col">
+
+                    <input type="hidden" class="J_viewInfo" data-uniquecode="1_4849" data-carttype="1" data-suitecode="" data-suitediscount="" data-suitevcoin="" data-suitestatus="">
+                    <input type="hidden" class="J_mainInfo" data-skuid="4849" data-saleprice="1598" data-marketprice="1798" data-vcoin="1598" data-marketable="1" data-disabled="1" data-fullpay="1" data-store="5460" value="4849">
+                    <i class="checkbox J_viewCheckBox J_operate checked" data-uniquecode="1_4849"></i>
+                </td>
+
+                <td class="prod-pic">
+                    <a href="/product/10263?colorSkuid=4849" target="_blank">
+                        <div class="figure">
+                            <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/49/4849_1534841954872hd_bi_100x100.png">
+
+                        </div>
+                    </a>
+                    <div class="tip-arrow arrow-down"><em></em><span></span></div>
+                </td>
+                <td class="goods-col">
+
+                    <a class="goods-link" href="/product/10263?colorSkuid=4849" target="_blank">Y85全面屏4GB+64GB</a>
+                    <br>颜色：香槟金
+
+
+                    <div class="attach-line  J_serviceTable">
+                        <div class="service-popup-hd">
+                            <label class="J_servicePanelLabel">
+                                选择手机服务
+                            </label><i class="icon-triangle"><span class="code-triangle"></span></i>
+                        </div>
+
+                        <div class="service-popup J_servicePanel">
+                            <div class="popup-title">选择手机服务 <a href="/helpcenter/broken-screen/" target="_blank">详情</a></div>
+
+                            <ul class="cart-service-tags cl seritem-icon-sui">
+                                <li class="cart-service-tags-item">
+                                    <div class="service-item-hd" data-index="0">
+                                        <label><i class="seritem-icon"></i>Y系列/Z1碎屏宝 <span class="item-price"><dfn>¥</dfn> 99.00</span></label>
+                                        <em class="down"></em>
+                                    </div>
+                                    <i class="prod-param-checked"></i>
+                                    <div class="child-list">
+
+                                        <div class="broken J_serviceItem" data-skuid="4505" data-categoryid="" data-index="0">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="4505" data-saleprice="99" data-marketprice="99" data-name="Y系列/Z1碎屏宝" data-categoryid="12" data-vcoin="99">
+                                            <label><i class="seritem-icon"></i>Y系列/Z1碎屏宝
+                                                <span class="item-price"><dfn>¥</dfn> 99.00</span></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="tags cart-service-tags cl seritem-icon-yan">
+                                <li class="cart-service-tags-item">
+                                    <div class="service-item-hd">
+                                        <label><i class="seritem-icon"></i>请选择</label>
+                                        <em class="down"></em>
+                                    </div>
+                                    <i class="prod-param-checked"></i>
+                                    <div class="child-list">
+                                        <div class="delay J_serviceItem" data-skuid="1638" data-categoryid="13">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="1638" data-saleprice="69" data-marketprice="69" data-name="半年延保" data-categoryid="13" data-vcoin="69">
+                                            <label><i class="seritem-icon"></i>半年延保
+                                                <span class="item-price"><dfn>¥</dfn> 69.00</span></label>
+                                        </div>
+                                        <div class="delay J_serviceItem" data-skuid="1639" data-categoryid="13">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="1639" data-saleprice="109" data-marketprice="109" data-name="一年延保" data-categoryid="13" data-vcoin="109">
+                                            <label><i class="seritem-icon"></i>一年延保
+                                                <span class="item-price"><dfn>¥</dfn> 109.00</span></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="cl btns">
+                                <button type="button" class="btn--sm btn--pop  J_serviceConfirmBtn J_operate">
+                                    <i class="btn-inner">确定</i>
+                                </button>
+                                <button class="btn-cancel J_serviceCancelBtn">取消</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </td>
+                <td class="price-col">1798.00</td>
+
+                <td>
+                                    <span class="number-box">
+                                        <a class="reduce-num J_reduceNum J_operate" href="javascript:;">-</a>
+                                        <input type="number" class="prod-num J_viewNum J_operate" min="1" value="1" title="请输入购买量" readonly="">
+                                        <a class="add-num J_addNum J_operate" href="javascript:;">+</a></span>
+                    <span class="help-line J_tip" style="display: none"></span>
+                </td>
+
+                <td><span class="J_viewDiscount">- 200.00</span></td>
+                <td class="J_viewVcoin">1598</td>
+                <td class="total-price J_viewSalePrice">1598.00</td>
+                <td>
+                    <input type="hidden" class="J_viewMarketPrice" value="1798.00">
+                    <a href="javascript:;" class="favorite J_favorite" data-skuid="4849" data-uniquecode="1_4849">加入到收藏夹</a>
+                    <br> <a href="javascript:;" class="J_delSingle" data-uniquecode="1_4849">删除</a>
+                </td>
+
+            </tr>
+            <tr class="prod-line">
+                <td class="check-col">
+
+                    <input type="hidden" class="J_viewInfo" data-uniquecode="1_4849" data-carttype="1" data-suitecode="" data-suitediscount="" data-suitevcoin="" data-suitestatus="">
+                    <input type="hidden" class="J_mainInfo" data-skuid="4849" data-saleprice="1598" data-marketprice="1798" data-vcoin="1598" data-marketable="1" data-disabled="1" data-fullpay="1" data-store="5460" value="4849">
+                    <i class="checkbox J_viewCheckBox J_operate checked" data-uniquecode="1_4849"></i>
+                </td>
+
+                <td class="prod-pic">
+                    <a href="/product/10263?colorSkuid=4849" target="_blank">
+                        <div class="figure">
+                            <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/49/4849_1534841954872hd_bi_100x100.png">
+
+                        </div>
+                    </a>
+                    <div class="tip-arrow arrow-down"><em></em><span></span></div>
+                </td>
+                <td class="goods-col">
+
+                    <a class="goods-link" href="/product/10263?colorSkuid=4849" target="_blank">Y85全面屏4GB+64GB</a>
+                    <br>颜色：香槟金
+
+
+                    <div class="attach-line  J_serviceTable">
+                        <div class="service-popup-hd">
+                            <label class="J_servicePanelLabel">
+                                选择手机服务
+                            </label><i class="icon-triangle"><span class="code-triangle"></span></i>
+                        </div>
+
+                        <div class="service-popup J_servicePanel">
+                            <div class="popup-title">选择手机服务 <a href="/helpcenter/broken-screen/" target="_blank">详情</a></div>
+
+                            <ul class="cart-service-tags cl seritem-icon-sui">
+                                <li class="cart-service-tags-item">
+                                    <div class="service-item-hd" data-index="0">
+                                        <label><i class="seritem-icon"></i>Y系列/Z1碎屏宝 <span class="item-price"><dfn>¥</dfn> 99.00</span></label>
+                                        <em class="down"></em>
+                                    </div>
+                                    <i class="prod-param-checked"></i>
+                                    <div class="child-list">
+
+                                        <div class="broken J_serviceItem" data-skuid="4505" data-categoryid="" data-index="0">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="4505" data-saleprice="99" data-marketprice="99" data-name="Y系列/Z1碎屏宝" data-categoryid="12" data-vcoin="99">
+                                            <label><i class="seritem-icon"></i>Y系列/Z1碎屏宝
+                                                <span class="item-price"><dfn>¥</dfn> 99.00</span></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="tags cart-service-tags cl seritem-icon-yan">
+                                <li class="cart-service-tags-item">
+                                    <div class="service-item-hd">
+                                        <label><i class="seritem-icon"></i>请选择</label>
+                                        <em class="down"></em>
+                                    </div>
+                                    <i class="prod-param-checked"></i>
+                                    <div class="child-list">
+                                        <div class="delay J_serviceItem" data-skuid="1638" data-categoryid="13">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="1638" data-saleprice="69" data-marketprice="69" data-name="半年延保" data-categoryid="13" data-vcoin="69">
+                                            <label><i class="seritem-icon"></i>半年延保
+                                                <span class="item-price"><dfn>¥</dfn> 69.00</span></label>
+                                        </div>
+                                        <div class="delay J_serviceItem" data-skuid="1639" data-categoryid="13">
+                                            <input type="hidden" class="J_serviceInfo" data-skuid="1639" data-saleprice="109" data-marketprice="109" data-name="一年延保" data-categoryid="13" data-vcoin="109">
+                                            <label><i class="seritem-icon"></i>一年延保
+                                                <span class="item-price"><dfn>¥</dfn> 109.00</span></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="cl btns">
+                                <button type="button" class="btn--sm btn--pop  J_serviceConfirmBtn J_operate">
+                                    <i class="btn-inner">确定</i>
+                                </button>
+                                <button class="btn-cancel J_serviceCancelBtn">取消</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </td>
+                <td class="price-col">1798.00</td>
+
+                <td>
+                                    <span class="number-box">
+                                        <a class="reduce-num J_reduceNum J_operate" href="javascript:;">-</a>
+                                        <input type="number" class="prod-num J_viewNum J_operate" min="1" value="1" title="请输入购买量" readonly="">
+                                        <a class="add-num J_addNum J_operate" href="javascript:;">+</a></span>
+                    <span class="help-line J_tip" style="display: none"></span>
+                </td>
+
+                <td><span class="J_viewDiscount">- 200.00</span></td>
+                <td class="J_viewVcoin">1598</td>
+                <td class="total-price J_viewSalePrice">1598.00</td>
+                <td>
+                    <input type="hidden" class="J_viewMarketPrice" value="1798.00">
+                    <a href="javascript:;" class="favorite J_favorite" data-skuid="4849" data-uniquecode="1_4849">加入到收藏夹</a>
+                    <br> <a href="javascript:;" class="J_delSingle" data-uniquecode="1_4849">删除</a>
+                </td>
+
+            </tr>
+            </tbody></table>
+    </div>
+
+
+    <div class="prod-attach-wrap" data-attachcode="1_4849">
+        <div class="prod-attach-inner">
+            <table class="order-table J_attachTable">
+
+
+                <tbody><tr class="attach-line gift">
+                    <td class="goods-col" colspan="2">
+                        <input type="hidden" class="J_giftInfo" data-skuid="4392" data-saleprice="69" data-marketprice="69" data-name="运动臂带" data-categoryid="363" data-vcoin="69">
+                        <strong class="attach-services-type">
+                            【赠品】：
+                        </strong>
+                        <a href="/product/10049" target="_blank">
+                            <div class="figure">
+                                <img src="https://shopstatic.vivo.com.cn/vivoshop/commodity/92/4392_1534844519025hd_bi_100x100.png">
+                            </div>
+                            <p class="gift-info">运动臂带</p>
+                        </a>
+                    </td>
+                    <td class="price-col">
+                        69.00
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+
+
+                </tbody></table>
+        </div>
+    </div>
+</div>
+<div class="cart-toolbar-wrap">
+    <div class="cart-toolbar-wrap" id="fixed-bottom-bar" style="left: 0px;">
+
+        <div class="wrapper ">
+            <div class="cart-toolbar-inner cl">
+                <div class="option-operation">
+                    <ul>
+                        <li><label class="J_viewCheckAll"><i class="checkbox checked"></i> &nbsp; <a href="javascript:void(0);">全选</a></label></li>
+                        <li><a class="J_delMultiple" href="javascript:void(0);">删除选中的商品</a></li>
+                    </ul>
+                </div>
+
+                <div class="cart-toolbar-right">
+                    <table class="cart-toolbar-table">
+                        <tbody><tr>
+                            <td class="sum-area">
+
+
+                                <p class="sum-area-infoI">
+                                    已选商品<em><b id="J_totalSkuNum">1</b></em>件，合计（不含运费）：<b class="price"><dfn>¥</dfn><span id="J_totalSalePrice">1598.00</span></b>
+                                </p>
+
+                                <p class="sum-area-infoII">
+                                    ( 商品总价：<span class="price"><dfn>¥</dfn><span id="J_totalMarketPrice">1798.00</span>
+                                                   优惠：<span class="price">-<dfn>¥</dfn><span id="J_totalDiscount">200.00</span></span> )
+                                    </span></p>
+
+                            </td>
+                            <td class="btn-area">
+                                <button class="btn--lg cart-btn-submit J_btnConfirm" type="button" title="去结算"><i class="btn-inner">去结算</i></button>
+                            </td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<ul id="side-bar" class="nolocked">
+    <li class="iconshop icon-cart-fine shopcart" data-index="1" data-name="购物车">
+        <div class="prompt"><span class="triangle"></span>购物车</div>
+        <div class="contentbox shopcart-fixbox">
+            <span class="triangle"></span>
+            <ul></ul>
+            <div class="result">
+                <div>
+                    <p>共6件商品</p>
+                    <p class="rmb-symbol"></p>
+                </div>
+                <a class="clearing" href="/shoppingcart" target="_blank">立即结算</a>
+            </div>
+        </div>
+        <span class="prodnum" style="visibility: visible;">6</span>
+    </li>
+    <li class="iconshop icon-earpiece service" data-index="2" data-name="小v客服">
+        <a id="J_online-service" target="_blank" href="http://kefu.vivo.com.cn/robot-vivo/pcChat.html"></a>
+        <div class="prompt"><span class="triangle"></span>小v客服</div>
+    </li>
+    <li class="iconshop icon-ask-fine help" data-index="3" data-name="帮助中心">
+        <a target="_blank" href="/helpcenter/service-promise/"></a>
+        <div class="prompt"><span class="triangle"></span>帮助中心</div>
+    </li>
+    <li class="iconshop icon-top backtop" data-index="5" data-name="返回顶部">
+        <div class="prompt"><span class="triangle"></span>返回顶部</div>
+    </li>
+</ul>
+<include file="Common@Tpl/footer"/>
+</body>
+</html>
+
+
+
